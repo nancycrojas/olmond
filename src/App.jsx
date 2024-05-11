@@ -1,10 +1,14 @@
-import { Heading } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
+
+import { Header } from "@/components/Header";
+import { Home } from "@/components/Home";
 
 function App() {
   return (
-    <>
-      <Heading size="md">Olmond</Heading>
-    </>
+    <Container maxW="full" bg="#060606">
+      <Header />
+      <Home />
+    </Container>
   );
 }
 
