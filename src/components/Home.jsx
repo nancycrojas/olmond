@@ -1,3 +1,5 @@
+import "animate.css";
+
 import { Button, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -10,21 +12,28 @@ export const Home = () => {
       justifyContent="center"
       gap={8}
     >
-      <Heading w="70%" fontSize={{ base: "40px", md: "80px" }}>
-        Lorem ipsum dolor sit amet.
+      <Heading
+        w="70%"
+        fontSize={{ base: "30px", md: "40px" }}
+        lineHeight="inherit"
+        mb={8}
+      >
+        Únete a la revolución de la IA, el análisis de datos y la automatización
+        de procesos. Transforma tu negocio y alcanza nuevos niveles de
+        innovación y eficiencia.
       </Heading>
-      <Text w="70%" mb={8}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-        molestias distinctio odit commodi facilis hic voluptatum libero harum
-        mollitia impedit?
+      <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
+        Descubre cómo la IA, el análisis de datos y la automatización pueden
+        llevar tu negocio al siguiente nivel.
       </Text>
       <Link href="/#contact" _hover="">
         <Button
+          className="animate__animated animate__slideInRight"
           variant="outline"
           size="lg"
           color="white"
-          bgGradient="linear(to-r, #014643, #014643)"
-          _hover={{ bgGradient: "linear(to-r, #014643,#014643)" }}
+          bgGradient="linear(to-r, #256a60, #256a60)"
+          _hover={{ bgGradient: "linear(to-r, #256a60,#256a60)" }}
           rightIcon={<FaLongArrowAltRight />}
         >
           Habla con nosotros

@@ -37,7 +37,7 @@ const ContactForm = () => {
             <FormLabel>Mensaje</FormLabel>
             <Textarea placeholder="Mensaje" bg="white" color="black" />
           </FormControl>
-          <Button bg="#014643" color="white" px={8}>
+          <Button bg="#256a60" color="white" px={8}>
             Enviar
           </Button>
         </VStack>

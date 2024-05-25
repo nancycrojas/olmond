@@ -14,7 +14,7 @@ function App() {
   return (
     <Container
       maxW="full"
-      // bg="#060606"
+      bg="#060606"
       bgImage={`url(${background})`}
       bgPosition="center"
       bgRepeat="no-repeat"

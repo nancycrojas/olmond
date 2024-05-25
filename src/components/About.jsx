@@ -1,11 +1,9 @@
-import { Button, Heading, Stack, Text } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
 const About = () => {
   return (
     <Stack
       id="about"
-      p={8}
       color="white"
       textAlign="center"
       alignItems="center"
@@ -19,9 +17,14 @@ const About = () => {
         Sobre Nosotros
       </Heading>
       <Text fontSize="2xl">
-        Somos una consultora que se especializa en la implementación de
-        inteligencia artificial en empresas, con el objetivo de mejorar el
-        rendimiento de sus operaciones.
+        En Olmond Consulting, transformamos tu empresa con soluciones de RPA,
+        Data Analytics y Chatbots de IA. Nuestra misión es empoderar a las
+        organizaciones, ofreciendo herramientas innovadoras y personalizadas que
+        impulsan su transformación digital. Nos comprometemos a ser tu socio
+        estratégico, guiándote en el cambiante paisaje tecnológico con
+        consultoría de vanguardia, desarrollo y capacitación en IA. ¡Mejora tu
+        competitividad y eficiencia operativa con Olmond Consulting, y convertí
+        la tecnología en tu ventaja!
       </Text>
 
       <Stack spacing={32}>
@@ -30,41 +33,42 @@ const About = () => {
           align="center"
           textAlign="center"
           spacing={5}
-          maxW={["90%", "75%"]}
           m="auto"
+          gap={20}
         >
-          <Heading as="h3" size="xl" mb={10}>
-            Lorem ipsum dolor sit.
+          <Heading as="h3" size="2xl" mb={10}>
+            ¿Por qué nosotros?
+          </Heading>
+          <Box>
+            <Heading as="h4" fontSize="4xl">
+              Enfoque estratégico
+            </Heading>
+          </Box>
+          <Text fontSize="2xl">
+            No solo implementamos tecnología, sino que te guiamos en tu camino
+            hacia la transformación digital.
+          </Text>
+          <Heading as="h4" fontSize="4xl">
+            Resultados medibles
           </Heading>
           <Text fontSize="2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-            recusandae itaque quidem quis dicta id maiores esse odio dolorem
-            porro.
+            Nos enfocamos en ofrecer soluciones que no solo mejoran la
+            eficiencia, sino que también generan resultados tangibles.
           </Text>
-          <Button as={RouterLink} to="/">
-            Get started
-          </Button>
-        </Stack>
-
-        <Stack
-          as="section"
-          align="center"
-          textAlign="center"
-          spacing={5}
-          maxW={["90%", "75%"]}
-          m="auto"
-        >
-          <Heading as="h3" size="xl" mb={10}>
-            Lorem ipsum dolor sit.
+          <Heading as="h4" fontSize="4xl">
+            Innovación constante
           </Heading>
           <Text fontSize="2xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            numquam hic placeat quos laboriosam sunt eum ducimus praesentium
-            magni enim?
+            Nos mantenemos al tanto de las últimas tendencias y tecnologías para
+            ofrecerte siempre lo mejor.
           </Text>
-          <Button as={RouterLink} to="/">
-            Get started
-          </Button>
+          <Heading as="h4" fontSize="4xl">
+            Relación a largo plazo
+          </Heading>
+          <Text fontSize="2xl">
+            Nos comprometemos a ser tu socio tecnológico, acompañándote en cada
+            paso de tu crecimiento.
+          </Text>
         </Stack>
       </Stack>
     </Stack>

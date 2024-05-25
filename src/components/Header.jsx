@@ -8,25 +8,27 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  Heading,
   HStack,
   IconButton,
+  Image,
   Link,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
+import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
+import logo from "../assets/logo.png";
+
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
     <HStack justify="space-between" gap={8} p={4}>
-      <Link to="/" as={RouterLink} color="white" _hover="">
-        <Heading size="md">
-          Olmond <br></br>Consulting
-        </Heading>
+      <Link to="/" as={RouterLink}>
+        <Image src={logo} alt="logo" boxSize={{ base: "40%", md: "55%" }} />
       </Link>
       <HStack
         gap={8}
@@ -60,8 +62,8 @@ export const Header = () => {
             variant="outline"
             size="lg"
             color="white"
-            bgGradient="linear(to-r, #014643, #014643)"
-            _hover={{ bgGradient: "linear(to-r, #014643,#014643)" }}
+            bgGradient="linear(to-r, #256a60, #256a60)"
+            _hover={{ bgGradient: "linear(to-r, #256a60,#256a60)" }}
             rightIcon={<FaLongArrowAltRight />}
           >
             Habla con nosotros
@@ -73,8 +75,14 @@ export const Header = () => {
         onClick={onOpen}
         icon={<HamburgerIcon size={20} />}
         display={{ base: "flex", lg: "none" }}
+        ref={btnRef}
       />
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
         <DrawerOverlay />
         <DrawerContent bg="gray.200">
           <DrawerCloseButton />
@@ -97,8 +105,8 @@ export const Header = () => {
                   variant="outline"
                   size="lg"
                   color="white"
-                  bgGradient="linear(to-r, #014643, #014643)"
-                  _hover={{ bgGradient: "linear(to-r, #014643,#014643)" }}
+                  bgGradient="linear(to-r, #256a60, #256a60)"
+                  _hover={{ bgGradient: "linear(to-r, #256a60,#256a60)" }}
                   rightIcon={<FaLongArrowAltRight />}
                 >
                   Habla con nosotros

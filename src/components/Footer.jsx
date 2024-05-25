@@ -1,15 +1,15 @@
-import { Heading, HStack, Icon, Link, Stack, Text } from "@chakra-ui/react";
+import { HStack, Icon, Image, Link, Stack, Text } from "@chakra-ui/react";
 import { FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
+
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
     <Stack py={8} color="white">
       <HStack w="full" justify="space-between" p={4}>
-        <Link to="/" as={RouterLink} color="white" _hover="">
-          <Heading size="md">
-            Olmond <br></br> Consulting
-          </Heading>
+        <Link to="/" as={RouterLink}>
+          <Image src={logo} alt="logo" boxSize={{ base: "40%", md: "27%" }} />
         </Link>
 
         <HStack justifyContent="center" spacing={6} my={4}>
