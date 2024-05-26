@@ -12,6 +12,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import juan_rossi from "../assets/juan_rossi.jpg";
+import patricio_rouan from "../assets/patricio_rouan.jpg";
+import pedro_spinozzi from "../assets/pedro_spinozzi.jpg";
+
 const Team = () => {
   return (
     <Stack
@@ -22,7 +26,7 @@ const Team = () => {
       justifyContent="center"
       my={20}
     >
-      <Heading as="h3" size="2xl" textAlign="center" mb={6}>
+      <Heading as="h3" size="2xl" textAlign="center" mb={20}>
         Nuestro Equipo
       </Heading>
       <HStack
@@ -34,19 +38,19 @@ const Team = () => {
           name="Patricio Rouan"
           role="Co-Founder"
           description="Líder en innovación y estrategia de tecnología."
-          image="../../members/patricio_rouan.jpg"
+          image={patricio_rouan}
         />
         <TeamMember
           name="Juan Manuel Rossi"
           role="Co-Founder"
           description="Experto en desarrollo tecnológico y sistemas de IA."
-          image="../../members/juan_rossi.jpg"
+          image={juan_rossi}
         />
         <TeamMember
           name="Pedro Spinozzi"
           role="Co-Founder"
+          image={pedro_spinozzi}
           description="Experto en desarrollo tecnológico y sistemas de IA."
-          image="../../members/pedro_spinozzi.jpg"
         />
       </HStack>
     </Stack>

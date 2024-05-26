@@ -21,15 +21,24 @@ const Services = () => {
         justifyContent="center"
         my={20}
       >
-        <Heading as="h3" size="2xl" textAlign="center" mb={8}>
+        <Heading as="h3" size="2xl" textAlign="center" mb={20}>
           Nuestros Servicios
         </Heading>
         {/* RPA */}
         <Stack>
           <VStack spacing={6}>
-            <Box w="100%" border="2px solid #777777" p={8} borderRadius="20px">
+            <Box
+              w="100%"
+              border="2px solid #777777"
+              p={8}
+              borderRadius="20px"
+              mb={10}
+              // bg="#777777"
+              bgGradient="linear(to-r, #256a60, #777777)"
+              _hover={{ bgGradient: "linear(to-r, #256a60, #777777)" }}
+            >
               <Heading size="xl" textAlign="center">
-                Automatización robótica de procesos (RPA)
+                Automatización Robótica de Procesos (RPA)
               </Heading>
             </Box>
             <ServiceDetail
@@ -68,14 +77,17 @@ const Services = () => {
           </VStack>
           <VStack
             my={10}
-            spacing={10}
+            spacing={{ base: 0, md: 20 }}
             p={{ base: 0, lg: 20 }}
             border="2px solid #777777"
             borderRadius="20px"
           >
+            <Heading>
+              Beneficios de la Automatización Robótica de Procesos (RPA)
+            </Heading>
             <SimpleGrid
               columns={{ base: 1, lg: 4 }}
-              p={{ base: 8, md: 0 }}
+              px={{ base: 8, md: 0 }}
               spacing={6}
             >
               <Box borderRadius={6}>
@@ -174,11 +186,12 @@ const Services = () => {
                   </Circle>
                 </Stack>
                 <Heading size="md" mb={4}>
-                  7. Fácil de programar y ejecutar
+                  7. Integración con sistemas existentes
                 </Heading>
                 <Text mt={2} fontSize="xl">
-                  No necesita ser un experto en programación, el sistema Drag &
-                  Drop es intuitivo y fácil de usar.
+                  La RPA puede integrarse fácilmente con las aplicaciones y
+                  sistemas que ya utiliza su empresa, sin necesidad de grandes
+                  modificaciones.
                 </Text>
               </Box>
               <Box borderRadius={6}>
@@ -198,7 +211,7 @@ const Services = () => {
           </VStack>
           <Heading color="#777777" mb={8}>
             ¿Listo para liberar el potencial de tu empresa y aumentar la
-            eficiencia con RPA? ¡Hablá con nosotros y descubrí cómo podemos
+            eficiencia con RPA? ¡Habla con nosotros y descubre cómo podemos
             ayudarte a implementar soluciones de automatización que transformen
             tu negocio!
           </Heading>
@@ -206,7 +219,15 @@ const Services = () => {
         {/* CHATBOT */}
         <Stack>
           <VStack maxW="8xl" spacing={4}>
-            <Box w="100%" border="2px solid #777777" p={8} borderRadius="20px">
+            <Box
+              w="100%"
+              border="2px solid #777777"
+              p={8}
+              borderRadius="20px"
+              my={10}
+              bgGradient="linear(to-r, #256a60, #777777)"
+              _hover={{ bgGradient: "linear(to-r, #256a60, #777777)" }}
+            >
               <Heading size="xl" textAlign="center">
                 Chatbots de IA
               </Heading>
@@ -234,14 +255,15 @@ const Services = () => {
           </VStack>
           <VStack
             my={10}
-            spacing={10}
+            spacing={{ base: 0, md: 20 }}
             p={{ base: 0, lg: 20 }}
             border="2px solid #777777"
             borderRadius="20px"
           >
+            <Heading>Beneficios de los Chatbots de IA</Heading>
             <SimpleGrid
               columns={{ base: 1, md: 2, lg: 4 }}
-              p={{ base: 8, md: 0 }}
+              px={{ base: 8, md: 0 }}
               spacing={6}
             >
               <Box borderRadius={6}>
@@ -372,18 +394,26 @@ const Services = () => {
           <Stack>
             <Heading color="#777777" mb={8}>
               ¿Listo para transformar la atención al cliente en tu empresa y
-              alcanzar nuevos niveles de eficiencia y satisfacción? ¡Hablá con
-              nosotros y descubrí cómo un Chatbot de IA puede revolucionar tu
+              alcanzar nuevos niveles de eficiencia y satisfacción? ¡Habla con
+              nosotros y descubre cómo un Chatbot de IA puede revolucionar tu
               negocio!
             </Heading>
           </Stack>
         </Stack>
         {/* DATA ANALYST */}
         <Stack>
-          <VStack maxW="8xl" spacing={4}>
-            <Box w="100%" border="2px solid #777777" p={8} borderRadius="20px">
+          <VStack spacing={6}>
+            <Box
+              w="100%"
+              border="2px solid #777777"
+              p={8}
+              borderRadius="20px"
+              my={10}
+              bgGradient="linear(to-r, #256a60, #777777)"
+              _hover={{ bgGradient: "linear(to-r, #256a60, #777777)" }}
+            >
               <Heading size="xl" textAlign="center">
-                Data analytics
+                Data Analytics
               </Heading>
             </Box>
             <ServiceDetail
@@ -396,7 +426,7 @@ const Services = () => {
             />
             <ServiceDetail
               title="¿Cómo funcionan los servicios de Data Analytics?"
-              description="Los servicios de Data Analytics funcionan recolectando datos de diversas fuentes, limpiándolos y analizando patrones y tendencias mediante algoritmos y herramientas especializadas. Los resultados se presentan en informes y visualizaciones claras, facilitando la comprensión y la toma de decisiones"
+              description="Los servicios de Data Analytics funcionan recolectando datos de diversas fuentes, limpiándolos y analizando patrones y tendencias mediante algoritmos y herramientas especializadas. Los resultados se presentan en informes y visualizaciones claras, facilitando la comprensión y la toma de decisiones."
             />
             <ServiceDetail
               title="¿Qué tipos de problemas puede resolver el análisis de datos?"
@@ -409,14 +439,15 @@ const Services = () => {
           </VStack>
           <VStack
             my={10}
-            spacing={10}
+            spacing={{ base: 0, md: 20 }}
             p={{ base: 0, lg: 20 }}
             border="2px solid #777777"
             borderRadius="20px"
           >
+            <Heading>Beneficios del Data Analytics</Heading>
             <SimpleGrid
-              columns={{ base: 1, md: 2, lg: 4 }}
-              p={{ base: 8, md: 0 }}
+              columns={{ base: 1, lg: 4 }}
+              px={{ base: 8, md: 0 }}
               spacing={6}
             >
               <Box borderRadius={6}>
@@ -479,7 +510,7 @@ const Services = () => {
               </Box>
             </SimpleGrid>
             <SimpleGrid
-              columns={{ base: 1, md: 2, lg: 4 }}
+              columns={{ base: 1, lg: 4 }}
               p={{ base: 8, md: 0 }}
               spacing={6}
             >
@@ -542,7 +573,7 @@ const Services = () => {
               </Box>
             </SimpleGrid>
           </VStack>
-          <Heading color="#777777">
+          <Heading color="#777777" mb={8}>
             ¿Listo para transformar tu empresa y tomar decisiones basadas en
             datos que impulsen tu éxito? ¡Habla con nosotros y descubre cómo el
             análisis de datos puede llevar tu negocio al siguiente nivel!
@@ -556,7 +587,9 @@ const Services = () => {
 // eslint-disable-next-line react/prop-types
 const ServiceDetail = ({ title, description }) => (
   <Box py={8} borderRadius="md" w="full">
-    <Heading size="lg">{title}</Heading>
+    <Heading size="lg" textAlign="center" mb={4}>
+      {title}
+    </Heading>
     <Text mt={2} fontSize="xl">
       {description}
     </Text>

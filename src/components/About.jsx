@@ -18,13 +18,12 @@ const About = () => {
       </Heading>
       <Text fontSize="2xl">
         En Olmond Consulting, transformamos tu empresa con soluciones de RPA,
-        Data Analytics y Chatbots de IA. Nuestra misión es empoderar a las
-        organizaciones, ofreciendo herramientas innovadoras y personalizadas que
-        impulsan su transformación digital. Nos comprometemos a ser tu socio
-        estratégico, guiándote en el cambiante paisaje tecnológico con
-        consultoría de vanguardia, desarrollo y capacitación en IA. ¡Mejora tu
-        competitividad y eficiencia operativa con Olmond Consulting, y convertí
-        la tecnología en tu ventaja!
+        Data Analytics y Chatbots de IA. Empoderamos a tu organización,
+        ofreciendo herramientas innovadoras que impulsan tu transformación
+        digital. Nos comprometemos a ser tu socio estratégico, guiándote en el
+        cambiante paisaje tecnológico con consultoría de vanguardia, desarrollo
+        y capacitación en IA. ¡Mejora tu competitividad y eficiencia operativa
+        con Olmond Consulting, y convierte la tecnología en tu ventaja!
       </Text>
 
       <Stack spacing={32}>

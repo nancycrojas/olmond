@@ -62,8 +62,8 @@ export const Header = () => {
             variant="outline"
             size="lg"
             color="white"
-            bgGradient="linear(to-r, #256a60, #256a60)"
-            _hover={{ bgGradient: "linear(to-r, #256a60,#256a60)" }}
+            bgGradient="linear(to-r, #1a3a35, #256a60)"
+            _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
             rightIcon={<FaLongArrowAltRight />}
           >
             Habla con nosotros
