@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const ContactForm = () => {
+const Contact = () => {
   return (
     <Container maxW="4xl">
       <Stack
@@ -46,4 +46,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;

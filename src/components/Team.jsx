@@ -26,33 +26,37 @@ const Team = () => {
       justifyContent="center"
       my={20}
     >
-      <Heading as="h3" size="2xl" textAlign="center" mb={20}>
-        Nuestro Equipo
-      </Heading>
-      <HStack
-        spacing={4}
-        justifyContent="center"
-        flexDirection={{ base: "column", lg: "row" }}
-      >
-        <TeamMember
-          name="Patricio Rouan"
-          role="Co-Founder"
-          description="Líder en innovación y estrategia de tecnología."
-          image={patricio_rouan}
-        />
-        <TeamMember
-          name="Juan Manuel Rossi"
-          role="Co-Founder"
-          description="Experto en desarrollo tecnológico y sistemas de IA."
-          image={juan_rossi}
-        />
-        <TeamMember
-          name="Pedro Spinozzi"
-          role="Co-Founder"
-          image={pedro_spinozzi}
-          description="Experto en desarrollo tecnológico y sistemas de IA."
-        />
-      </HStack>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <Heading as="h3" size="2xl" textAlign="center" mb={20}>
+          Nuestro Equipo
+        </Heading>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <HStack
+          spacing={4}
+          justifyContent="center"
+          flexDirection={{ base: "column", lg: "row" }}
+        >
+          <TeamMember
+            name="Patricio Rouan"
+            role="Co-Founder"
+            description="Líder en innovación y estrategia de tecnología."
+            image={patricio_rouan}
+          />
+          <TeamMember
+            name="Juan Manuel Rossi"
+            role="Co-Founder"
+            description="Experto en desarrollo tecnológico y sistemas de IA."
+            image={juan_rossi}
+          />
+          <TeamMember
+            name="Pedro Spinozzi"
+            role="Co-Founder"
+            image={pedro_spinozzi}
+            description="Experto en desarrollo tecnológico y sistemas de IA."
+          />
+        </HStack>
+      </div>
     </Stack>
   );
 };

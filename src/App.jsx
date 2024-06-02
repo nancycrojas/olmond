@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 
 import About from "@/components/About";
-import ContactForm from "@/components/ContactForm";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Home } from "@/components/Home";
@@ -25,7 +25,7 @@ function App() {
       <About />
       <Services />
       <Team />
-      <ContactForm />
+      <Contact />
       <Footer />
     </Container>
   );
