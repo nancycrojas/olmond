@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Stack } from "@chakra-ui/react";
 
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -19,14 +19,19 @@ function App() {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
-      <Header />
-      <Home />
-      <About />
-      <Services />
-      <Team />
-      <Contact />
-      <Footer />
+      <Stack maxW="7xl">
+        <Header />
+        <Home />
+        <About />
+        <Services />
+        <Team />
+        <Contact />
+        <Footer />
+      </Stack>
     </Container>
   );
 }

@@ -8,10 +8,11 @@ const About = () => {
       textAlign="center"
       alignItems="center"
       justifyContent="center"
-      spacing={32}
+      spacing={24}
       mb={8}
       maxW={["100%", "75%"]}
       m="auto"
+      mt={{ base: 10, lg: 0 }}
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading as="h3" size="2xl" textAlign="center">

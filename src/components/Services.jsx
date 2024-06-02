@@ -227,12 +227,12 @@ const Services = () => {
             </VStack>
           </div>
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Heading color="#777777" mb={8}>
+            <Text fontSize="4xl" fontWeight="bold" color="#777777" mb={8}>
               ¿Listo para liberar el potencial de tu empresa y aumentar la
               eficiencia con RPA? ¡Habla con nosotros y descubre cómo podemos
               ayudarte a implementar soluciones de automatización que
               transformen tu negocio!
-            </Heading>
+            </Text>
           </div>
         </Stack>
         {/* CHATBOT */}
@@ -429,12 +429,12 @@ const Services = () => {
             </VStack>
           </div>
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Heading color="#777777" mb={8}>
+            <Text fontSize="4xl" fontWeight="bold" color="#777777" mb={8}>
               ¿Listo para transformar la atención al cliente en tu empresa y
               alcanzar nuevos niveles de eficiencia y satisfacción? ¡Habla con
               nosotros y descubre cómo un Chatbot de IA puede revolucionar tu
               negocio!
-            </Heading>
+            </Text>
           </div>
         </Stack>
         {/* DATA ANALYST */}
@@ -629,11 +629,11 @@ const Services = () => {
             </VStack>
           </div>
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Heading color="#777777" mb={8}>
+            <Text fontSize="4xl" fontWeight="bold" color="#777777" mb={8}>
               ¿Listo para transformar tu empresa y tomar decisiones basadas en
               datos que impulsen tu éxito? ¡Habla con nosotros y descubre cómo
               el análisis de datos puede llevar tu negocio al siguiente nivel!
-            </Heading>
+            </Text>
           </div>
         </Stack>
       </Stack>

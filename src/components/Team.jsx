@@ -20,7 +20,7 @@ const Team = () => {
   return (
     <Stack
       id="team"
-      p={8}
+      py={8}
       color="white"
       alignItems="center"
       justifyContent="center"
