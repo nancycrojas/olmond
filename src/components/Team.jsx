@@ -16,7 +16,7 @@ import juan_rossi from "../assets/juan_rossi.jpg";
 import patricio_rouan from "../assets/patricio_rouan.jpg";
 import pedro_spinozzi from "../assets/pedro_spinozzi.jpg";
 
-const Team = () => {
+export const Team = () => {
   return (
     <Stack
       id="team"
@@ -87,5 +87,3 @@ const TeamMember = ({ name, role, description, image }) => (
     </CardBody>
   </Card>
 );
-
-export default Team;

@@ -10,7 +10,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const Contact = () => {
+import dalle from "../assets/dalle.webp";
+
+export const Contact = () => {
   return (
     <Container maxW="4xl">
       <Stack
@@ -24,26 +26,52 @@ const Contact = () => {
         <Heading textAlign="center" mb={6}>
           Habla con Nosotros
         </Heading>
-        <VStack as="form" spacing={4}>
+        <VStack
+          as="form"
+          action="https://formsubmit.co/patorouan@gmail.com"
+          method="POST"
+          spacing={4}
+          bgImage={`url(${dalle})`}
+          bgPosition="center"
+          bgRepeat="no-repeat"
+          bgSize="cover"
+        >
           <FormControl>
             <FormLabel>Nombre</FormLabel>
-            <Input placeholder="Nombre" type="text" bg="white" color="black" />
+            <Input
+              placeholder="Nombre"
+              type="text"
+              name="text"
+              bg="white"
+              color="black"
+            />
           </FormControl>
           <FormControl>
             <FormLabel>Email</FormLabel>
-            <Input placeholder="Email" type="email" bg="white" color="black" />
+            <Input
+              placeholder="Email"
+              type="email"
+              name="email"
+              bg="white"
+              color="black"
+            />
           </FormControl>
           <FormControl>
             <FormLabel>Mensaje</FormLabel>
-            <Textarea placeholder="Mensaje" bg="white" color="black" />
+            <Textarea
+              placeholder="Mensaje"
+              name="message"
+              bg="white"
+              color="black"
+            />
           </FormControl>
-          <Button bg="#256a60" color="white" px={8}>
+        </VStack>
+        <Stack justifyContent="center" alignItems="center">
+          <Button type="submit" bg="#256a60" color="white" mt={8} w={150}>
             Enviar
           </Button>
-        </VStack>
+        </Stack>
       </Stack>
     </Container>
   );
 };
-
-export default Contact;

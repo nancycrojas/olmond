@@ -1,4 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Button,
   Drawer,
@@ -12,6 +12,10 @@ import {
   IconButton,
   Image,
   Link,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -37,27 +41,37 @@ export const Header = () => {
         w="100%"
         display={{ base: "none", lg: "flex" }}
       >
-        <Link
-          href="#about"
-          fontWeight="semibold"
-          fontSize="xl"
-          color="white"
-          _hover=""
-        >
+        <Link fontWeight="semibold" fontSize="xl" color="white" _hover="">
           Quienes somos
         </Link>
-        <Link
-          href="#services"
-          fontWeight="semibold"
-          fontSize="xl"
-          color="white"
-          _hover=""
-        >
-          Servicios
-        </Link>
+        <Menu>
+          <MenuButton
+            as={Button}
+            fontWeight="semibold"
+            fontSize="xl"
+            color="white"
+            bg="transparent"
+            _hover={{ bg: "transparent" }}
+            _active={{ bg: "transparent" }}
+            rightIcon={<ChevronDownIcon />}
+          >
+            Servicios
+          </MenuButton>
+          <MenuList>
+            <MenuItem as={RouterLink} to="/rpa">
+              RPA
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/chat-bot">
+              ChatBot
+            </MenuItem>
+            <MenuItem as={RouterLink} to="/data-analyst">
+              Data Analyst
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </HStack>
       <Stack display={{ base: "none", lg: "flex" }}>
-        <Link href="#contact" _hover="">
+        <Link href="https://wa.me/541133872411" isExternal _hover="">
           <Button
             variant="outline"
             size="lg"
@@ -86,31 +100,35 @@ export const Header = () => {
         <DrawerOverlay />
         <DrawerContent bg="gray.200">
           <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerHeader>Servicios</DrawerHeader>
           <DrawerBody>
             <Stack gap={8} w="100%">
-              <Link href="#about" fontWeight="semibold" fontSize="xl" _hover="">
-                Quienes somos
-              </Link>
               <Link
-                href="#services"
+                as={RouterLink}
+                to="/rpa"
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
               >
-                Servicios
+                RPA
               </Link>
-              <Link href="#contact" _hover="">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  color="white"
-                  bgGradient="linear(to-r, #256a60, #256a60)"
-                  _hover={{ bgGradient: "linear(to-r, #256a60,#256a60)" }}
-                  rightIcon={<FaLongArrowAltRight />}
-                >
-                  Habla con nosotros
-                </Button>
+              <Link
+                as={RouterLink}
+                to="/chat-bot"
+                fontWeight="semibold"
+                fontSize="xl"
+                _hover=""
+              >
+                ChatBot
+              </Link>
+              <Link
+                as={RouterLink}
+                to="/data-analyst"
+                fontWeight="semibold"
+                fontSize="xl"
+                _hover=""
+              >
+                Data Analyst
               </Link>
             </Stack>
           </DrawerBody>

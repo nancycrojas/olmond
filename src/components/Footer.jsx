@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <Stack py={8} color="white">
       <HStack w="full" justify="space-between" p={4}>
@@ -32,5 +32,3 @@ const Footer = () => {
     </Stack>
   );
 };
-
-export default Footer;

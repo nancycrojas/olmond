@@ -3,6 +3,12 @@ import "animate.css";
 import { Button, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
+import { About } from "./About";
+import { Contact } from "./Contact";
+import { MoreAbout } from "./MoreAbout";
+import { Services } from "./Services";
+import { Team } from "./Team";
+
 export const Home = () => {
   return (
     <Stack
@@ -11,6 +17,8 @@ export const Home = () => {
       alignItems="center"
       justifyContent="center"
       gap={8}
+      textAlign="center"
+      mt={20}
     >
       <Heading
         w="70%"
@@ -18,15 +26,14 @@ export const Home = () => {
         lineHeight="inherit"
         mb={8}
       >
-        Únete a la revolución de la IA, el análisis de datos y la automatización
-        de procesos. Transforma tu negocio y alcanza nuevos niveles de
-        innovación y eficiencia.
+        Únete a la revolución de la IA. Transforma tu negocio y alcanza nuevos
+        niveles de innovación y eficiencia.
       </Heading>
       <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
         Descubre cómo la IA, el análisis de datos y la automatización pueden
         llevar tu negocio al siguiente nivel.
       </Text>
-      <Link href="/#contact" _hover="">
+      <Link href="https://wa.me/541133872411" isExternal _hover="">
         <Button
           className="animate__animated animate__slideInLeft"
           variant="outline"
@@ -39,6 +46,11 @@ export const Home = () => {
           Habla con nosotros
         </Button>
       </Link>
+      <About />
+      <Team />
+      <MoreAbout />
+      <Services />
+      <Contact />
     </Stack>
   );
 };

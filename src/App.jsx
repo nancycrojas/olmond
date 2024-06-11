@@ -1,35 +1,32 @@
 import { Container, Stack } from "@chakra-ui/react";
+import { Route, Routes } from "react-router-dom";
 
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Home } from "@/components/Home";
-import Services from "@/components/Services";
-import Team from "@/components/Team";
-
-import background from "./assets/background.jpg";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { ChatBot } from "@/pages/ChatBot";
+import { DataAnalyst } from "@/pages/DataAnalyst";
+import { Rpa } from "@/pages/Rpa";
 
 function App() {
   return (
     <Container
       maxW="full"
       bg="#060606"
-      bgImage={`url(${background})`}
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      bgSize="cover"
       display="flex"
       justifyContent="center"
       alignItems="center"
     >
       <Stack maxW="7xl">
         <Header />
-        <Home />
-        <About />
-        <Services />
-        <Team />
-        <Contact />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/rpa" element={<Rpa />} />
+          <Route path="/chat-bot" element={<ChatBot />} />
+          <Route path="/data-analyst" element={<DataAnalyst />} />
+        </Routes>
         <Footer />
       </Stack>
     </Container>
