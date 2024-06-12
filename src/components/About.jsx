@@ -23,7 +23,7 @@ export const About = () => {
           id="contact"
           p={16}
           color="white"
-          border="1px solid #256a60"
+          border="2px solid #256a60"
           borderColor={"muted"}
           borderRadius={10}
         >

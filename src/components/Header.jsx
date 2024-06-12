@@ -41,7 +41,14 @@ export const Header = () => {
         w="100%"
         display={{ base: "none", lg: "flex" }}
       >
-        <Link fontWeight="semibold" fontSize="xl" color="white" _hover="">
+        <Link
+          to="/about-us"
+          as={RouterLink}
+          fontWeight="semibold"
+          fontSize="xl"
+          color="white"
+          _hover=""
+        >
           Quienes somos
         </Link>
         <Menu>
@@ -100,15 +107,26 @@ export const Header = () => {
         <DrawerOverlay />
         <DrawerContent bg="gray.200">
           <DrawerCloseButton />
-          <DrawerHeader>Servicios</DrawerHeader>
+          <DrawerHeader>Menú</DrawerHeader>
           <DrawerBody>
             <Stack gap={8} w="100%">
+              <Link
+                as={RouterLink}
+                to="/about-us"
+                fontWeight="semibold"
+                fontSize="xl"
+                _hover=""
+                onClick={onClose}
+              >
+                Quienes somos
+              </Link>
               <Link
                 as={RouterLink}
                 to="/rpa"
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
+                onClick={onClose}
               >
                 RPA
               </Link>
@@ -118,6 +136,7 @@ export const Header = () => {
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
+                onClick={onClose}
               >
                 ChatBot
               </Link>
@@ -127,6 +146,7 @@ export const Header = () => {
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
+                onClick={onClose}
               >
                 Data Analyst
               </Link>
