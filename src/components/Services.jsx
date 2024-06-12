@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-export const ServicesCopy = () => {
+export const Services = () => {
   return (
     <Container maxW="1400px">
       <Stack color="white" alignItems="center" justifyContent="center" my={20}>
