@@ -20,17 +20,16 @@ export const MoreAbout = () => {
 
         <div data-aos="fade-right" data-aos-duration="1000">
           <Stack
-            id="contact"
             p={8}
             color="white"
             border="1px"
             borderColor={"muted"}
             borderRadius={10}
           >
-            <Heading as="h4" fontSize="4xl" mb={4}>
+            <Heading as="h4" fontSize="3xl" mb={4}>
               Enfoque estratégico
             </Heading>
-            <Text fontSize="2xl">
+            <Text fontSize={{ base: "xl", md: "2xl" }}>
               No solo implementamos tecnología, sino que te guiamos en tu camino
               hacia la transformación digital.
             </Text>
@@ -39,17 +38,16 @@ export const MoreAbout = () => {
 
         <div data-aos="fade-left" data-aos-duration="1000">
           <Stack
-            id="contact"
             p={8}
             color="white"
             border="1px"
             borderColor={"muted"}
             borderRadius={10}
           >
-            <Heading as="h4" fontSize="4xl" mb={4}>
+            <Heading as="h4" fontSize="3xl" mb={4}>
               Resultados medibles
             </Heading>
-            <Text fontSize="2xl">
+            <Text fontSize={{ base: "xl", md: "2xl" }}>
               Nos enfocamos en ofrecer soluciones que no solo mejoran la
               eficiencia, sino que también generan resultados tangibles.
             </Text>
@@ -58,17 +56,16 @@ export const MoreAbout = () => {
 
         <div data-aos="fade-right" data-aos-duration="1000">
           <Stack
-            id="contact"
             p={8}
             color="white"
             border="1px"
             borderColor={"muted"}
             borderRadius={10}
           >
-            <Heading as="h4" fontSize="4xl" mb={4}>
+            <Heading as="h4" fontSize="3xl" mb={4}>
               Innovación constante
             </Heading>
-            <Text fontSize="2xl">
+            <Text fontSize={{ base: "xl", md: "2xl" }}>
               Nos mantenemos al tanto de las últimas tendencias y tecnologías
               para ofrecerte siempre lo mejor.
             </Text>
@@ -77,17 +74,16 @@ export const MoreAbout = () => {
 
         <div data-aos="fade-left" data-aos-duration="1000">
           <Stack
-            id="contact"
             p={8}
             color="white"
             border="1px"
             borderColor={"muted"}
             borderRadius={10}
           >
-            <Heading as="h4" fontSize="4xl" mb={4}>
+            <Heading as="h4" fontSize="3xl" mb={4}>
               Relación a largo plazo
             </Heading>
-            <Text fontSize="2xl">
+            <Text fontSize={{ base: "xl", md: "2xl" }}>
               Nos comprometemos a ser tu socio tecnológico, acompañándote en
               cada paso de tu crecimiento.
             </Text>

@@ -16,7 +16,6 @@ export const Contact = () => {
   return (
     <Container maxW="4xl">
       <Stack
-        id="contact"
         p={8}
         color="white"
         border="1px"

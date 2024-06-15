@@ -19,16 +19,7 @@ export const ChatBot = () => {
   return (
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
-        <Box
-          w="100%"
-          p={8}
-          borderRadius="20px"
-          my={10}
-          bgGradient="linear(to-r, #256a60, #1a3a35)"
-          textAlign="center"
-        >
-          <Heading size="xl">Chatbots de IA</Heading>
-        </Box>
+        <Heading size="xl">Chatbots de IA</Heading>
         <div data-aos="fade-up" data-aos-duration="1000">
           <ServiceDetail
             title="¿Cómo puede ayudarte un Chatbot de IA conversacional?"

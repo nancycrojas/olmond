@@ -20,14 +20,13 @@ export const About = () => {
       </div>
       <div data-aos="fade-right" data-aos-duration="1000">
         <Stack
-          id="contact"
-          p={16}
+          p={{ base: 8, md: 16 }}
           color="white"
           border="2px solid #256a60"
           borderColor={"muted"}
           borderRadius={10}
         >
-          <Text fontSize="2xl">
+          <Text fontSize={{ base: "xl", md: "2xl" }}>
             En Olmond Consulting, transformamos tu empresa con soluciones de
             RPA, Data Analytics y Chatbots de IA. Empoderamos a tu organización,
             ofreciendo herramientas innovadoras que impulsan tu transformación

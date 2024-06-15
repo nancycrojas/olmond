@@ -19,16 +19,9 @@ export const Rpa = () => {
   return (
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
-        <Box
-          w="100%"
-          p={8}
-          borderRadius="20px"
-          mb={10}
-          bgGradient="linear(to-r, #256a60, #1a3a35)"
-          textAlign="center"
-        >
-          <Heading size="xl">Automatización Robótica de Procesos (RPA)</Heading>
-        </Box>
+        <Heading size="xl" mb={4}>
+          Automatización Robótica de Procesos (RPA)
+        </Heading>
         <div data-aos="fade-up" data-aos-duration="1000">
           <ServiceDetail
             title="¿Qué es la automatización robótica de procesos (RPA)?"
