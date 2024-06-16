@@ -25,7 +25,7 @@ export const Home = () => {
         lineHeight="inherit"
         mb={8}
       >
-        Únete a la revolución de la IA. Transforma tu negocio y alcanza nuevos
+        Súmate a la revolución de la IA. Transforma tu negocio y alcanza nuevos
         niveles de innovación y eficiencia.
       </Heading>
       <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
