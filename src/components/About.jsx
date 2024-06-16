@@ -22,9 +22,18 @@ export const About = () => {
         <Stack
           p={{ base: 8, md: 16 }}
           color="white"
-          border="2px solid #256a60"
+          sx={{
+            background: "hsla(0, 0%, 100%, 0.05)",
+            boxShadow:
+              "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)",
+            borderRadius: "10px",
+          }}
           borderColor={"muted"}
           borderRadius={10}
+          _hover={{
+            transform: "scale(1.05)",
+          }}
+          transition="all 0.3s"
         >
           <Text fontSize={{ base: "xl", md: "2xl" }}>
             En Olmond Consulting, transformamos tu empresa con soluciones de

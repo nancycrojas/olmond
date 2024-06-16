@@ -66,11 +66,16 @@ export const Services = () => {
             >
               <Box
                 color="#FFFFFF"
-                border="2px solid #FFFFFF"
                 padding={8}
                 w="320px"
                 h="400px"
                 borderRadius={8}
+                sx={{
+                  background: "hsla(0, 0%, 100%, 0.05)",
+                  boxShadow:
+                    "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)",
+                  borderRadius: "10px",
+                }}
                 _hover={{
                   borderColor: "#256a60",
                   transform: "scale(1.05)",
@@ -89,7 +94,6 @@ export const Services = () => {
                   as={Link}
                   to={link}
                   _hover={{ bg: "#256a60", color: "#FFFFFF" }}
-                  // transition="background-color 0.3s"
                 >
                   Más info
                 </Button>

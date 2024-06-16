@@ -27,8 +27,6 @@ export const Contact = () => {
         </Heading>
         <VStack
           as="form"
-          action="https://formsubmit.co/patorouan@gmail.com"
-          method="POST"
           spacing={4}
           bgImage={`url(${dalle})`}
           bgPosition="center"

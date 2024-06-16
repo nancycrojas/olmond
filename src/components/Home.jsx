@@ -4,7 +4,7 @@ import { Button, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 import { About } from "./About";
-import { MoreAbout } from "./MoreAbout";
+import { Carousel } from "./carousel/Carousel";
 import { Services } from "./Services";
 import { Team } from "./Team";
 
@@ -47,7 +47,7 @@ export const Home = () => {
       </Link>
       <About />
       <Team />
-      <MoreAbout />
+      <Carousel />
       <Services />
       {/* <Contact /> */}
     </Stack>

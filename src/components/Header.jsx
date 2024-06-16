@@ -32,7 +32,7 @@ export const Header = () => {
   return (
     <HStack justify="space-between" gap={8} p={4}>
       <Link to="/" as={RouterLink}>
-        <Image src={logo} alt="logo" boxSize={{ base: "40%", md: "55%" }} />
+        <Image src={logo} alt="logo" boxSize={{ base: "45%", md: "55%" }} />
       </Link>
       <HStack
         gap={8}

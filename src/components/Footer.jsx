@@ -9,7 +9,7 @@ export const Footer = () => {
     <Stack py={8} color="white">
       <HStack w="full" justify="space-between" p={4}>
         <Link to="/" as={RouterLink}>
-          <Image src={logo} alt="logo" boxSize={{ base: "40%", md: "27%" }} />
+          <Image src={logo} alt="logo" boxSize={{ base: "65%", md: "27%" }} />
         </Link>
 
         <HStack justifyContent="center" spacing={6} my={4}>

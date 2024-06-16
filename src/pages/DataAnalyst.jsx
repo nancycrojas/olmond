@@ -19,7 +19,9 @@ export const DataAnalyst = () => {
   return (
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
-        <Heading size="xl">Data Analytics</Heading>
+        <Heading size="xl" mb={4} textAlign="center">
+          Data Analytics
+        </Heading>
         <div data-aos="fade-up" data-aos-duration="1000">
           <ServiceDetail
             title="¿Qué es Data Analytics?"
@@ -57,8 +59,14 @@ export const DataAnalyst = () => {
             spacing={{ base: 0, md: 20 }}
             p={{ base: 0, lg: 20 }}
             borderRadius="20px"
-            bg="#1a3a35"
+            sx={{
+              background: "hsla(0, 0%, 100%, 0.05)",
+              boxShadow:
+                "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)", // Ajusta las sombras internas y externas
+              borderRadius: "10px",
+            }}
             textAlign="center"
+            pb={4}
           >
             <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
               Beneficios del Data Analytics
@@ -128,7 +136,7 @@ export const DataAnalyst = () => {
         </div>
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Text fontSize="4xl" fontWeight="bold" color="#777777" mb={8}>
+            <Text fontSize="4xl" fontWeight="bold" mb={8}>
               ¿Listo para transformar tu empresa y tomar decisiones basadas en
               datos que impulsen tu éxito?
             </Text>
@@ -151,7 +159,18 @@ export const DataAnalyst = () => {
 };
 
 const ServiceDetail = ({ title, description }) => (
-  <Box py={8} borderRadius="md" w="full">
+  <Box
+    py={8}
+    borderRadius="md"
+    w="full"
+    p={6}
+    sx={{
+      background: "hsla(0, 0%, 100%, 0.05)", // Aumenta la opacidad del fondo
+      boxShadow:
+        "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)", // Ajusta las sombras internas y externas
+      borderRadius: "10px",
+    }}
+  >
     <Heading size="lg" textAlign="center" mb={4}>
       {title}
     </Heading>
@@ -166,14 +185,19 @@ const BenefitCard = ({ icon: Icon, title, description }) => (
     borderRadius={6}
     p={6}
     textAlign="center"
-    bg="#256a60"
+    sx={{
+      background: "hsla(0, 0%, 100%, 0.05)", // Aumenta la opacidad del fondo
+      boxShadow:
+        "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)", // Ajusta las sombras internas y externas
+      borderRadius: "10px",
+    }}
     color="white"
     boxShadow="md"
     _hover={{ boxShadow: "xl" }}
   >
     <Stack mb={4} align="center">
-      <Circle size="50px" bg="white" color="#256a60">
-        <Icon size={40} />
+      <Circle size="50px" color="#256a60">
+        <Icon size={30} />
       </Circle>
     </Stack>
     <Heading size="md" mb={4}>

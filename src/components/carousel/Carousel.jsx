@@ -1,6 +1,19 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import "./carousel.css";
 
-export const MoreAbout = () => {
+import { Heading, Stack, Text } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+
+export const Carousel = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % 4);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Stack spacing={32} color="white">
       <Stack
@@ -9,22 +22,19 @@ export const MoreAbout = () => {
         textAlign="center"
         spacing={5}
         m="auto"
-        gap={20}
-        maxW="5xl"
       >
-        <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" mb={10}>
-            ¿Por qué nosotros?
-          </Heading>
-        </div>
-
-        <div data-aos="fade-right" data-aos-duration="1000">
+        <Heading as="h3" size="2xl" mb={10}>
+          ¿Por qué nosotros?
+        </Heading>
+        <Stack
+          className="carousel"
+          position="relative"
+          overflow="hidden"
+          maxH="400px"
+          minH="300px"
+        >
           <Stack
-            p={8}
-            color="white"
-            border="1px"
-            borderColor={"muted"}
-            borderRadius={10}
+            className={`carousel-item ${activeIndex === 0 ? "active" : ""}`}
           >
             <Heading as="h4" fontSize="3xl" mb={4}>
               Enfoque estratégico
@@ -34,15 +44,8 @@ export const MoreAbout = () => {
               hacia la transformación digital.
             </Text>
           </Stack>
-        </div>
-
-        <div data-aos="fade-left" data-aos-duration="1000">
           <Stack
-            p={8}
-            color="white"
-            border="1px"
-            borderColor={"muted"}
-            borderRadius={10}
+            className={`carousel-item ${activeIndex === 1 ? "active" : ""}`}
           >
             <Heading as="h4" fontSize="3xl" mb={4}>
               Resultados medibles
@@ -52,15 +55,8 @@ export const MoreAbout = () => {
               eficiencia, sino que también generan resultados tangibles.
             </Text>
           </Stack>
-        </div>
-
-        <div data-aos="fade-right" data-aos-duration="1000">
           <Stack
-            p={8}
-            color="white"
-            border="1px"
-            borderColor={"muted"}
-            borderRadius={10}
+            className={`carousel-item ${activeIndex === 2 ? "active" : ""}`}
           >
             <Heading as="h4" fontSize="3xl" mb={4}>
               Innovación constante
@@ -70,15 +66,8 @@ export const MoreAbout = () => {
               para ofrecerte siempre lo mejor.
             </Text>
           </Stack>
-        </div>
-
-        <div data-aos="fade-left" data-aos-duration="1000">
           <Stack
-            p={8}
-            color="white"
-            border="1px"
-            borderColor={"muted"}
-            borderRadius={10}
+            className={`carousel-item ${activeIndex === 3 ? "active" : ""}`}
           >
             <Heading as="h4" fontSize="3xl" mb={4}>
               Relación a largo plazo
@@ -88,6 +77,15 @@ export const MoreAbout = () => {
               cada paso de tu crecimiento.
             </Text>
           </Stack>
+        </Stack>
+        <div className="carousel-indicators">
+          {[0, 1, 2, 3].map((index) => (
+            <div
+              key={index}
+              className={activeIndex === index ? "active" : ""}
+              onClick={() => setActiveIndex(index)}
+            ></div>
+          ))}
         </div>
       </Stack>
     </Stack>
