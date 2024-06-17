@@ -127,6 +127,7 @@ export const ChatBot = () => {
             borderRadius="md"
             w="full"
             p={6}
+            textAlign="center"
             sx={{
               background: "hsla(0, 0%, 100%, 0.05)",
               boxShadow:
@@ -142,7 +143,7 @@ export const ChatBot = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <Heading size="lg" textAlign="center" mb={4}>
+            <Heading size="lg" mb={4}>
               {title}
             </Heading>
             <Text mt={2} fontSize="xl">
@@ -214,7 +215,7 @@ export const ChatBot = () => {
         </div>
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Text fontSize="4xl" fontWeight="bold" mb={8}>
+            <Text fontSize="3xl" fontWeight="bold" mb={8}>
               ¿Listo para transformar la atención al cliente en tu empresa y
               alcanzar nuevos niveles de eficiencia y satisfacción?
             </Text>

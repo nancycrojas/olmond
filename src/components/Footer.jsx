@@ -13,7 +13,10 @@ export const Footer = () => {
         </Link>
 
         <HStack justifyContent="center" spacing={6} my={4}>
-          <Link href="https://linkedin.com" isExternal>
+          <Link
+            href="https://www.linkedin.com/company/olmond-consulting/"
+            isExternal
+          >
             <Icon as={FaLinkedin} w={8} h={8} />
           </Link>
           <Link href="https://whatsapp.com" isExternal>

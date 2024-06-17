@@ -12,8 +12,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { GrLineChart, GrTools } from "react-icons/gr";
-import { MdSavings, MdSecurity, MdThumbUp, MdUpgrade } from "react-icons/md";
+import { GrLineChart } from "react-icons/gr";
+import {
+  MdIntegrationInstructions,
+  MdSavings,
+  MdSecurity,
+  MdThumbUp,
+  MdUpgrade,
+} from "react-icons/md";
 import { PiChartLineUp, PiRobotFill } from "react-icons/pi";
 
 const serviceDetail = [
@@ -80,7 +86,7 @@ const benefitCard = [
       "Los robots pueden gestionar solicitudes, procesar pagos, dar respuestas y atender peticiones o reclamos las 24 horas del día, los 365 días del año, sin interrupciones.",
   },
   {
-    icon: GrTools,
+    icon: MdIntegrationInstructions,
     title: "Integración con sistemas existentes",
     description:
       "La RPA puede integrarse fácilmente con las aplicaciones y sistemas que ya utiliza su empresa, sin necesidad de grandes modificaciones.",
@@ -116,6 +122,7 @@ export const Rpa = () => {
             borderRadius="md"
             w="full"
             p={6}
+            textAlign="center"
             sx={{
               background: "hsla(0, 0%, 100%, 0.05)",
               boxShadow:
@@ -131,7 +138,7 @@ export const Rpa = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <Heading size="lg" textAlign="center" mb={4}>
+            <Heading size="lg" mb={4}>
               {title}
             </Heading>
             <Text mt={2} fontSize="xl">
@@ -203,7 +210,7 @@ export const Rpa = () => {
         </div>
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Text fontSize="4xl" fontWeight="bold" mb={8}>
+            <Text fontSize="3xl" fontWeight="bold" mb={8}>
               ¿Listo para liberar el potencial de tu empresa y aumentar la
               eficiencia con RPA?
             </Text>

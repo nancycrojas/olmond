@@ -31,7 +31,7 @@ export const Carousel = () => {
           position="relative"
           overflow="hidden"
           maxH="400px"
-          minH="300px"
+          minH={{ base: "400px", md: "300px" }}
         >
           <Stack
             className={`carousel-item ${activeIndex === 0 ? "active" : ""}`}
