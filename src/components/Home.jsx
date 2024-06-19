@@ -32,7 +32,11 @@ export const Home = () => {
         Descubre cómo la IA, el análisis de datos y la automatización pueden
         llevar tu negocio al siguiente nivel.
       </Text>
-      <Link href="https://wa.me/541133872411" isExternal _hover="">
+      <Link
+        href="http://calendly.com/equipo-olmondconsulting"
+        isExternal
+        _hover=""
+      >
         <Button
           className="animate__animated animate__slideInLeft"
           variant="outline"

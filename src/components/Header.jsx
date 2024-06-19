@@ -64,21 +64,43 @@ export const Header = () => {
           >
             Servicios
           </MenuButton>
-          <MenuList>
-            <MenuItem as={RouterLink} to="/rpa">
+          <MenuList bg="gray" border="1px solid gray">
+            <MenuItem
+              bg="gray"
+              color="white"
+              as={RouterLink}
+              to="/rpa"
+              _hover={{ bg: "#777777" }}
+            >
               RPA
             </MenuItem>
-            <MenuItem as={RouterLink} to="/chat-bot">
+            <MenuItem
+              bg="gray"
+              color="white"
+              as={RouterLink}
+              to="/chat-bot"
+              _hover={{ bg: "#777777" }}
+            >
               ChatBot
             </MenuItem>
-            <MenuItem as={RouterLink} to="/data-analyst">
+            <MenuItem
+              bg="gray"
+              color="white"
+              as={RouterLink}
+              to="/data-analyst"
+              _hover={{ bg: "#777777" }}
+            >
               Data Analyst
             </MenuItem>
           </MenuList>
         </Menu>
       </HStack>
       <Stack display={{ base: "none", lg: "flex" }}>
-        <Link href="https://wa.me/541133872411" isExternal _hover="">
+        <Link
+          href="http://calendly.com/equipo-olmondconsulting"
+          isExternal
+          _hover=""
+        >
           <Button
             variant="outline"
             size="lg"

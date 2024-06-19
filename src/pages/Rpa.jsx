@@ -215,7 +215,7 @@ export const Rpa = () => {
               eficiencia con RPA?
             </Text>
           </div>
-          <Link href="https://wa.me/541133872411" isExternal>
+          <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
             <Button
               variant="outline"
               size="lg"
