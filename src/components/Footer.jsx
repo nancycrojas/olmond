@@ -19,10 +19,13 @@ export const Footer = () => {
           >
             <Icon as={FaLinkedin} w={8} h={8} />
           </Link>
-          <Link href="https://whatsapp.com" isExternal>
+          <Link
+            href="https://wa.me/541234567890?text=Hola,%20quiero%20consultar%20por%20sus%20servicios"
+            isExternal
+          >
             <Icon as={FaWhatsapp} w={8} h={8} />
           </Link>
-          <Link href="mailto:email@example.com">
+          <Link href="mailto:info@olmondconsulting.com">
             <Icon as={FaEnvelope} w={8} h={8} />
           </Link>
         </HStack>
