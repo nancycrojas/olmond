@@ -32,7 +32,11 @@ export const Header = () => {
   return (
     <HStack justify="space-between" gap={8} p={4}>
       <Link to="/" as={RouterLink}>
-        <Image src={logo} alt="logo" boxSize={{ base: "45%", md: "55%" }} />
+        <Image
+          src={logo}
+          alt="logo"
+          boxSize={{ base: "45%", md: "25%", lg: "55%" }}
+        />
       </Link>
       <HStack
         gap={8}
@@ -87,10 +91,10 @@ export const Header = () => {
               bg="gray"
               color="white"
               as={RouterLink}
-              to="/data-analyst"
+              to="/data-analytics"
               _hover={{ bg: "#777777" }}
             >
-              Data Analyst
+              Data Analytics
             </MenuItem>
           </MenuList>
         </Menu>
@@ -164,13 +168,13 @@ export const Header = () => {
               </Link>
               <Link
                 as={RouterLink}
-                to="/data-analyst"
+                to="/data-analytics"
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
                 onClick={onClose}
               >
-                Data Analyst
+                Data Analytics
               </Link>
             </Stack>
           </DrawerBody>

@@ -38,7 +38,7 @@ export const Services = () => {
       title: "Data Analytics",
       description:
         "Descubrí el poder de tus datos con nuestros servicios de Data Analytics. Tomá decisiones informadas, optimizá procesos y generá valor para tu negocio.",
-      link: "/data-analyst",
+      link: "/data-analytics",
     },
   ];
 

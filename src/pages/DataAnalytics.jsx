@@ -99,7 +99,7 @@ const benefitCard = [
   },
 ];
 
-export const DataAnalyst = () => {
+export const DataAnalytics = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {

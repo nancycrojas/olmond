@@ -7,7 +7,7 @@ import { Home } from "@/components/Home";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AboutUs } from "@/pages/AboutUs";
 import { ChatBot } from "@/pages/ChatBot";
-import { DataAnalyst } from "@/pages/DataAnalyst";
+import { DataAnalytics } from "@/pages/DataAnalytics";
 import { Rpa } from "@/pages/Rpa";
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/rpa" element={<Rpa />} />
           <Route path="/chat-bot" element={<ChatBot />} />
-          <Route path="/data-analyst" element={<DataAnalyst />} />
+          <Route path="/data-analytics" element={<DataAnalytics />} />
         </Routes>
         <Footer />
       </Stack>
