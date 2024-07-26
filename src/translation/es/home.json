@@ -1,0 +1,31 @@
+{
+  "title": "Súmate a la ",
+  "title_2": "revolución de la IA. ",
+  "title_3": "Transforma tu negocio y alcanza nuevos niveles de ",
+  "title_4": "innovación y eficiencia.",
+  "description": "Descubre cómo la IA, el análisis de datos y la automatización pueden llevar tu negocio al siguiente nivel.",
+  "talkToUs": "Habla con nosotros",
+  "services": "Servicios",
+  "whoWeAre": "Quienes somos",
+  "aboutUs": "Sobre Nosotros",
+  "aboutDescription": "En Olmond Consulting, transformamos tu empresa con soluciones de RPA, Data Analytics y Chatbots de IA. Empoderamos a tu organización, ofreciendo herramientas innovadoras que impulsan tu transformación digital. Nos comprometemos a ser tu socio estratégico, guiándote en el cambiante paisaje tecnológico con consultoría de vanguardia, desarrollo y capacitación en IA. ¡Mejora tu competitividad y eficiencia operativa con Olmond Consulting, y convierte la tecnología en tu ventaja!",
+  "whyUs": "¿Por qué nosotros?",
+  "features": {
+    "feature_1": {
+      "title": "Enfoque estratégico",
+      "description": "No solo implementamos tecnología, sino que te guiamos en tu camino hacia la transformación digital."
+    },
+    "feature_2": {
+      "title": "Resultados medibles",
+      "description": "Nos enfocamos en ofrecer soluciones que no solo mejoran la eficiencia, sino que también generan resultados tangibles."
+    },
+    "feature_3": {
+      "title": "Innovación constante",
+      "description": "Nos mantenemos al tanto de las últimas tendencias y tecnologías para ofrecerte siempre lo mejor."
+    },
+    "feature_4": {
+      "title": "Relación a largo plazo",
+      "description": "Nos comprometemos a ser tu socio tecnológico, acompañándote en cada paso de tu crecimiento."
+    }
+  }
+}

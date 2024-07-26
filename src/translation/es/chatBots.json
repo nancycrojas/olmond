@@ -1,0 +1,56 @@
+{
+  "helpYou": {
+    "title": "¿Cómo puede ayudarte un Chatbot de IA conversacional?",
+    "description": "Un Chatbot de IA conversacional puede ayudarte a brindar atención al cliente las 24 horas del día, los 7 días de la semana, respondiendo consultas comunes de manera rápida y precisa. Esto mejora la satisfacción del cliente y libera a tu equipo para enfocarse en tareas más complejas."
+  },
+  "benefit": {
+    "title": "¿Qué beneficios ofrece un Chatbot de IA en la atención al cliente?",
+    "description": "Un Chatbot de IA en la atención al cliente puede manejar grandes volúmenes de consultas de manera eficiente, reduciendo tiempos de espera y aumentando la rapidez de respuesta. Además, ayuda a mantener una atención consistente y personalizada, mejorando la experiencia del cliente."
+  },
+  "efficiency": {
+    "title": "¿Cómo puede un Chatbot de IA mejorar la eficiencia de tu equipo?",
+    "description": "Al automatizar las respuestas a preguntas frecuentes y tareas repetitivas, un Chatbot de IA permite que tu equipo se enfoque en resolver problemas más complejos y en tareas estratégicas. Esto no solo aumenta la productividad, sino que también mejora la moral del equipo al reducir la carga de trabajo rutinaria."
+  },
+  "queries": {
+    "title": "¿Qué tipos de consultas puede manejar un Chatbot de IA?",
+    "description": "Un Chatbot de IA puede manejar una amplia variedad de consultas, desde preguntas sobre productos y servicios hasta soporte técnico básico y gestión de pedidos. Su capacidad de aprendizaje continuo le permite adaptarse y mejorar con el tiempo, proporcionando respuestas cada vez más precisas."
+  },
+  "success": {
+    "title": "¿Cómo puedes medir el éxito de un Chatbot de IA en la atención al cliente?",
+    "description": "Puedes medir el éxito de un Chatbot de IA en la atención al cliente a través de métricas como la tasa de resolución de consultas, el tiempo de respuesta, la satisfacción del cliente y la reducción en la carga de trabajo del equipo humano. Estas métricas te permitirán ajustar y mejorar continuamente el desempeño del chatbot."
+  },
+  "benefits": "Beneficios de los Chatbots de IA",
+  "availability": {
+    "title": "Disponibilidad 24/7/365",
+    "description": "Los chatbots de IA están disponibles las 24 horas del día, los 7 días de la semana y los 365 días del año, proporcionando asistencia continua a los clientes."
+  },
+  "reduction": {
+    "title": "Reducción de costos",
+    "description": "Reducen costos operacionales al manejar consultas frecuentes y repetitivas sin la necesidad de intervención humana."
+  },
+  "response": {
+    "title": "Respuesta instantánea",
+    "description": "Proporcionan respuestas instantáneas a las consultas de los usuarios, mejorando la experiencia del cliente y reduciendo tiempos de espera."
+  },
+  "automation": {
+    "title": "Automatización de tareas",
+    "description": "Automatizan tareas repetitivas y administrativas, liberando al personal para enfocarse en actividades de mayor valor."
+  },
+  "scalability": {
+    "title": "Escalabilidad",
+    "description": "Pueden manejar múltiples consultas simultáneamente, escalando fácilmente según la demanda sin comprometer la calidad del servicio."
+  },
+  "personalization": {
+    "title": "Personalización",
+    "description": "Ofrecen experiencias personalizadas a los usuarios mediante el análisis de sus interacciones y comportamientos anteriores."
+  },
+  "satisfaction": {
+    "title": "Mejora de satisfacción",
+    "description": "Aumentan la satisfacción del cliente al proporcionar respuestas precisas y rápidas, resolviendo problemas de manera eficiente."
+  },
+  "collection": {
+    "title": "Recopilación de datos",
+    "description": "Recopilan y analizan datos de las interacciones con los usuarios, proporcionando insights valiosos para mejorar productos y servicios."
+  },
+  "question": "¿Listo para transformar la atención al cliente en tu empresa y alcanzar nuevos niveles de eficiencia y satisfacción?"
+}

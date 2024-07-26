@@ -1,0 +1,29 @@
+{
+  "ourTeam": "Our Team",
+  "members": {
+    "rouan": "Patricio Rouan is a professional with over fifteen years of experience in entrepreneurship and a deep passion for artificial intelligence, digital transformation, and technological innovation. He currently serves as Chief Operating Officer at the Argentine Society of Artificial Intelligence (SAIA). He also works as a tutor in the Postgraduate Program in Strategic Management of Artificial Intelligence and Business Automation at UCEMA.",
+    "rossi": "Juan Martin Rossi is passionate about science and technology. After completing high school, he continued his university studies in the city of Córdoba. He is a Data Scientist and is currently completing his studies in physics and artificial intelligence, fields that have allowed him to combine his passion for science and technology.",
+    "spinozzi": "Pedro Spinozzi holds a Bachelor's degree in Business Management and Technology from ITBA. He has experience in project management, sales, and growth. He was part of the Business Fellow program at Makers, third cohort in 2023."
+  },
+  "mission": "Mission",
+  "desc_mission": "The mission of Olmond Consulting is to empower organizations through artificial intelligence, data analytics, and RPA, offering innovative and customized solutions that drive their digital transformation. We are committed to being strategic partners to our clients, guiding them through the evolving technological landscape with cutting-edge consulting, development, and AI training, aiming to enhance their competitiveness and operational efficiency.",
+  "vision": "Vision",
+  "desc_vision": "Olmond Consulting aims to become the leading artificial intelligence consultancy in Latin America, recognized for its ability to anticipate and adapt to technological trends, promoting success and innovation in every organization it advises. We aspire to transform the business landscape by creating an ecosystem where AI technology is accessible, understandable, and maximally utilized by companies of all sizes and sectors.",
+  "values": "Values",
+  "innovation": {
+    "title": "Innovation",
+    "description": "We commit to the constant pursuit of creative and cutting-edge solutions."
+  },
+  "integrity": {
+    "title": "Integrity",
+    "description": "We act with honesty and transparency, ensuring strong and trustworthy relationships."
+  },
+  "collaboration": {
+    "title": "Collaboration",
+    "description": "We value teamwork, both with our clients and within our team and partners, to achieve common goals."
+  },
+  "adaptability": {
+    "title": "Adaptability",
+    "description": "We remain agile and flexible, ready to evolve in response to market changes and client needs."
+  }
+}

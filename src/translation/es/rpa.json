@@ -1,0 +1,56 @@
+{
+  "automation": {
+    "title": "¿Qué es la automatización robótica de procesos (RPA)?",
+    "description": "La automatización robótica de procesos (RPA) es una tecnología que emplea robots de software virtuales, conocidos como robots digitales o bots, para llevar a cabo tareas manuales que suelen ser repetitivas y consumen mucho tiempo."
+  },
+  "tasks": {
+    "title": "¿Qué tipos de tareas maneja la RPA?",
+    "description": "La RPA maneja tareas manuales y repetitivas, de gran volumen y que requieren el uso de múltiples sistemas, como la carga de datos y los flujos de trabajo de aprobación."
+  },
+  "work": {
+    "title": "¿Cómo funciona la RPA?",
+    "description": "La RPA se ejecuta en computadoras de escritorio o virtuales en las que los robots de software interactúan con aplicaciones internas, sitios web, portales de usuarios y otras apps, emulando acciones de los humanos mientras realizan la misma tarea."
+  },
+  "benefit": {
+    "title": "¿Qué industrias se benefician de la RPA?",
+    "description": "La RPA beneficia a todas las industrias, desde finanzas hasta recursos humanos y servicio al cliente, mejorando la eficiencia y reduciendo costos en diversas áreas."
+  },
+  "implemented": {
+    "title": "¿Cómo se implementa una estrategia de RPA?",
+    "description": "Una estrategia efectiva de RPA comienza con la evaluación de flujos de trabajo, identificando los mejores casos para la automatización y utilizando herramientas basadas en la nube para escalar y gestionar los bots."
+  },
+  "benefits": "Beneficios de la Automatización Robótica de Procesos (RPA)",
+  "fast": {
+    "title": "Es rápida y confiable",
+    "description": "Ejecución veloz y sin margen de error."
+  },
+  "employees": {
+    "title": "Mejora la valoración de sus empleados",
+    "description": "Sus empleados podrán dedicarse a tareas que los robots no realicen."
+  },
+  "report": {
+    "title": "Generación de informes",
+    "description": "Los bots pueden proporcionarle detalles completos de las operaciones."
+  },
+  "productivity": {
+    "title": "Incremento en la productividad",
+    "description": "Combinará el trabajo de sus empleados con una fuerza laboral digital."
+  },
+  "scalable": {
+    "title": "Altamente escalable",
+    "description": "Maneja procesos de cualquier escala sin retrasos."
+  },
+  "service": {
+    "title": "Excelente atención al cliente",
+    "description": "Los robots pueden gestionar solicitudes, procesar pagos, dar respuestas y atender peticiones o reclamos las 24 horas del día, los 365 días del año, sin interrupciones."
+  },
+  "systems": {
+    "title": "Integración con sistemas existentes",
+    "description": "La RPA puede integrarse fácilmente con las aplicaciones y sistemas que ya utiliza su empresa, sin necesidad de grandes modificaciones."
+  },
+  "investment": {
+    "title": "No requiere inversión en nuevo hardware",
+    "description": "Puede utilizar el equipo existente de su empresa."
+  },
+  "question": "¿Listo para liberar el potencial de tu empresa y aumentar la eficiencia con RPA?"
+}

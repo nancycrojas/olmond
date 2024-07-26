@@ -1,0 +1,56 @@
+{
+  "automation": {
+    "title": "What is Robotic Process Automation (RPA)?",
+    "description": "Robotic Process Automation (RPA) is a technology that employs virtual software robots, known as digital robots or bots, to perform manual tasks that are typically repetitive and time-consuming."
+  },
+  "tasks": {
+    "title": "What types of tasks does RPA handle?",
+    "description": "RPA handles manual and repetitive tasks, high-volume tasks, and tasks that require interaction with multiple systems, such as data entry and approval workflows."
+  },
+  "work": {
+    "title": "How does RPA work?",
+    "description": "RPA runs on desktop or virtual machines where software robots interact with internal applications, websites, user portals, and other apps, mimicking human actions while performing the same tasks."
+  },
+  "benefit": {
+    "title": "Which industries benefit from RPA?",
+    "description": "RPA benefits all industries, from finance to human resources and customer service, enhancing efficiency and reducing costs across various areas."
+  },
+  "implemented": {
+    "title": "How is an RPA strategy implemented?",
+    "description": "An effective RPA strategy begins with evaluating workflows, identifying optimal cases for automation, and utilizing cloud-based tools to scale and manage bots."
+  },
+  "benefits": "Benefits of Robotic Process Automation (RPA)",
+  "fast": {
+    "title": "It is fast and reliable",
+    "description": "Swift execution with no margin for error."
+  },
+  "employees": {
+    "title": "Improves employee satisfaction",
+    "description": "Employees can focus on tasks that robots do not perform."
+  },
+  "report": {
+    "title": "Report generation",
+    "description": "Bots can provide comprehensive details of operations."
+  },
+  "productivity": {
+    "title": "Increased productivity",
+    "description": "Combines your employees' work with a digital workforce."
+  },
+  "scalable": {
+    "title": "Highly scalable",
+    "description": "Handles processes of any scale without delays."
+  },
+  "service": {
+    "title": "Excellent customer service",
+    "description": "Robots can handle requests, process payments, provide answers, and address requests or complaints 24/7, 365 days a year without interruptions."
+  },
+  "systems": {
+    "title": "Integration with existing systems",
+    "description": "RPA can easily integrate with the applications and systems your company already uses, without the need for major modifications."
+  },
+  "investment": {
+    "title": "No need for investment in new hardware",
+    "description": "You can use your company's existing equipment."
+  },
+  "question": "Ready to unlock your company's potential and increase efficiency with RPA?"
+}
