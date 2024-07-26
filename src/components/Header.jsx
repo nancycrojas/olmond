@@ -75,7 +75,7 @@ export const Header = () => {
               RPA
             </MenuItem>
             <MenuItem as={RouterLink} to="/chat-bot">
-              ChatBot
+              ChatBots
             </MenuItem>
             <MenuItem as={RouterLink} to="/data-analytics">
               Data Analytics
@@ -131,7 +131,7 @@ export const Header = () => {
                 _hover=""
                 onClick={onClose}
               >
-                ChatBot
+                ChatBots
               </Link>
               <Link
                 as={RouterLink}
