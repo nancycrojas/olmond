@@ -1,6 +1,7 @@
 import "animate.css";
 
 import { Button, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 import { About } from "./About";
@@ -9,6 +10,8 @@ import { Services } from "./Services";
 import { Team } from "./Team";
 
 export const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <Stack
       minH="90vh"
@@ -25,12 +28,13 @@ export const Home = () => {
         lineHeight="inherit"
         mb={8}
       >
-        Súmate a la revolución de la IA. Transforma tu negocio y alcanza nuevos
-        niveles de innovación y eficiencia.
+        {t("home.title")}
+        <Text as="span">{t("home.title_2")}</Text>
+        <Text as="span">{t("home.title_3")}</Text>
+        <Text as="span">{t("home.title_4")}</Text>
       </Heading>
       <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
-        Descubre cómo la IA, el análisis de datos y la automatización pueden
-        llevar tu negocio al siguiente nivel.
+        {t("home.description")}
       </Text>
       <Link
         href="http://calendly.com/equipo-olmondconsulting"
@@ -46,7 +50,7 @@ export const Home = () => {
           _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
           rightIcon={<FaLongArrowAltRight />}
         >
-          Habla con nosotros
+          {t("home.talkToUs")}
         </Button>
       </Link>
       <About />

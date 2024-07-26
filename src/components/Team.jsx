@@ -12,6 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import juan_rossi from "../assets/juan_rossi.jpg";
 import patricio_rouan from "../assets/patricio_rouan.jpg";
@@ -22,26 +23,24 @@ const teamMember = [
     name: "Patricio Rouan",
     role: "Co-Founder",
     image: patricio_rouan,
-    description:
-      "Patricio Rouan es un profesional con más de una década y media de trayectoria en el mundo del emprendimiento y una profunda pasión por la inteligencia artificial, la transformación digital y la innovación tecnológica. Ejerce en la actualidad como Director de Operaciones en la Sociedad Argentina de Inteligencia Artificial (SAIA). Se desempeña también como tutor en el Posgrado en Gestión Estratégica de Inteligencia Artificial y Automatización Empresarial en UCEMA.",
+    description: "team.members.rouan",
   },
   {
     name: "Juan Manuel Rossi",
     role: "Co-Founder",
     image: juan_rossi,
-    description:
-      "Juan Martin Rossi es un apasionado de la ciencia y la tecnología. Al culminar la secundaria continuó sus estudios universitarios en la ciudad de Córdoba. Es Data Scientist y actualmente se encuentra finalizando sus estudios en la carrera de física y inteligencia artificial, estudiar estos campos le permitió combinar su pasión por la ciencia y la tecnología.",
+    description: "team.members.rossi",
   },
   {
     name: "Pedro Spinozzi",
     role: "Co-Founder",
     image: pedro_spinozzi,
-    description:
-      "Pedro Spinozzi es Licenciado en Gestión de Negocios y Tecnología del ITBA. Con experiencia en gestión de proyectos, ventas y crecimiento. Formó parte del programa Business Fellow de Makers del tercer cohort en 2023.",
+    description: "team.members.spinozzi",
   },
 ];
 
 export const Team = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -62,7 +61,7 @@ export const Team = () => {
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading as="h3" size="2xl" textAlign="center" mb={20}>
-          Nuestro Equipo
+          {t("team.ourTeam")}
         </Heading>
       </div>
       <div data-aos="fade-up" data-aos-duration="1000">
@@ -103,7 +102,7 @@ export const Team = () => {
                     aria-label="See menu"
                   />
                 </Flex>
-                <Text mt={6}> {description}</Text>
+                <Text mt={6}>{t(description)}</Text>
               </CardHeader>
               <CardBody></CardBody>
             </Card>

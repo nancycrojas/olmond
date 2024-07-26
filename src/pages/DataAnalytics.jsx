@@ -12,6 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { AiFillProduct } from "react-icons/ai";
 import { FaAsterisk } from "react-icons/fa";
 import { GiGearStickPattern, GiProcessor } from "react-icons/gi";
@@ -21,85 +22,72 @@ import { PiLineSegmentsFill } from "react-icons/pi";
 
 const serviceDetail = [
   {
-    title: "¿Qué es Data Analytics?",
-    description:
-      "Es un proceso que busca analizar datos crudos para extraer información útil que ayude a tomar decisiones informadas. Utiliza técnicas y herramientas avanzadas para transformar datos en conocimientos valiosos, impulsando el crecimiento y la eficiencia de tu negocio.",
+    title: "data.data.title",
+    description: "data.data.description",
   },
   {
-    title: "¿Qué beneficios ofrece el análisis de datos a tu empresa?",
-    description:
-      "El análisis de datos ofrece numerosos beneficios, como la identificación de tendencias del mercado, la mejora en la toma de decisiones, la optimización de operaciones y la personalización de la experiencia del cliente. Esto te permite adelantarte a la competencia y maximizar tus recursos.",
+    title: "data.benefit.title",
+    description: "data.benefit.description",
   },
   {
-    title: "¿Cómo funcionan los servicios de Data Analytics?",
-    description:
-      "Los servicios de Data Analytics funcionan recolectando datos de diversas fuentes, limpiándolos y analizando patrones y tendencias mediante algoritmos y herramientas especializadas. Los resultados se presentan en informes y visualizaciones claras, facilitando la comprensión y la toma de decisiones.",
+    title: "data.services.title",
+    description: "data.services.description",
   },
   {
-    title: "¿Qué tipos de problemas puede resolver el análisis de datos?",
-    description:
-      "El análisis de datos puede resolver una amplia gama de problemas, desde la optimización de la cadena de suministro y la mejora de la satisfacción del cliente, hasta la detección de fraudes y la identificación de nuevas oportunidades de negocio. Es una herramienta poderosa para abordar desafíos complejos.",
+    title: "data.solve.title",
+    description: "data.solve.description",
   },
   {
-    title:
-      "¿Cómo puedes medir el éxito de la toma de decisiones basadas en datos?",
-    description:
-      "Puedes medir el éxito de la toma de decisiones basadas en datos a través de indicadores clave de rendimiento (KPIs) como el aumento en las ventas, la mejora en la eficiencia operativa, la reducción de costos y la satisfacción del cliente. Estas métricas te ayudarán a evaluar y ajustar tus estrategias continuamente.",
+    title: "data.success.title",
+    description: "data.success.description",
   },
 ];
 
 const benefitCard = [
   {
     icon: MdAltRoute,
-    title: "Toma de decisiones informada",
-    description:
-      "El análisis de datos permite la toma de decisiones basadas en datos precisos en lugar de suposiciones, mejorando la eficacia empresarial.",
+    title: "data.decision.title",
+    description: "data.decision.description",
   },
   {
     icon: GiGearStickPattern,
-    title: "Identificación de patrones",
-    description:
-      "Ayuda a descubrir patrones y tendencias en grandes volúmenes de datos, proporcionando información valiosa para la estrategia.",
+    title: "data.patterns.title",
+    description: "data.patterns.description",
   },
   {
     icon: GiProcessor,
-    title: "Optimización de procesos",
-    description:
-      "La analítica de datos optimiza procesos, reduciendo costos y aumentando la eficiencia operativa.",
+    title: "data.process.title",
+    description: "data.process.description",
   },
   {
     icon: PiLineSegmentsFill,
-    title: "Segmentación de clientes",
-    description:
-      "Permite una segmentación precisa de clientes, mejorando las estrategias de marketing y aumentando la conversión.",
+    title: "data.segmentation.title",
+    description: "data.segmentation.description",
   },
   {
     icon: GrResources,
-    title: "Eficiencia en recursos",
-    description:
-      "Incrementa la eficiencia en la gestión de recursos y tiempo, permitiendo una mejor planificación y ejecución.",
+    title: "data.efficiency.title",
+    description: "data.efficiency.description",
   },
   {
     icon: AiFillProduct,
-    title: "Innovación de productos",
-    description:
-      "Proporciona insights que fomentan la innovación y el desarrollo de nuevos productos y servicios adaptados al mercado.",
+    title: "data.innovation.title",
+    description: "data.innovation.description",
   },
   {
     icon: FaAsterisk,
-    title: "Prevención de fraudes",
-    description:
-      "Utiliza análisis predictivo para detectar y prevenir fraudes, protegiendo los activos de la empresa.",
+    title: "data.prevention.title",
+    description: "data.prevention.description",
   },
   {
     icon: MdSentimentVerySatisfied,
-    title: "Mejora de satisfacción",
-    description:
-      "Mejora la satisfacción del cliente mediante la personalización de experiencias basadas en sus preferencias y comportamientos.",
+    title: "data.satisfaction.title",
+    description: "data.satisfaction.description",
   },
 ];
 
 export const DataAnalytics = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -140,10 +128,10 @@ export const DataAnalytics = () => {
             onMouseLeave={handleMouseLeave}
           >
             <Heading size="lg" mb={4}>
-              {title}
+              {t(title)}
             </Heading>
             <Text mt={2} fontSize="xl">
-              {description}
+              {t(description)}
             </Text>
           </Box>
         ))}
@@ -164,7 +152,7 @@ export const DataAnalytics = () => {
             pb={4}
           >
             <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
-              Beneficios del Data Analytics
+              {t("data.benefits")}
             </Heading>
             <SimpleGrid
               columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
@@ -198,10 +186,10 @@ export const DataAnalytics = () => {
                     </Circle>
                   </Stack>
                   <Heading size="md" mb={4}>
-                    {title}
+                    {t(title)}
                   </Heading>
                   <Text mt={2} fontSize="xl">
-                    {description}
+                    {t(description)}
                   </Text>
                 </Box>
               ))}
@@ -211,8 +199,7 @@ export const DataAnalytics = () => {
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
             <Text fontSize="3xl" fontWeight="bold" mb={8}>
-              ¿Listo para transformar tu empresa y tomar decisiones basadas en
-              datos que impulsen tu éxito?
+              {t("data.question")}
             </Text>
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
@@ -223,7 +210,7 @@ export const DataAnalytics = () => {
               bgGradient="linear(to-r, #1a3a35, #256a60)"
               _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
             >
-              ¡Habla con nosotros!
+              {t("talkToUs")}
             </Button>
           </Link>
         </Box>

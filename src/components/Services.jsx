@@ -8,10 +8,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const { t } = useTranslation();
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -23,21 +25,18 @@ export const Services = () => {
 
   const services = [
     {
-      title: "Automatización Robótica de Procesos (RPA)",
-      description:
-        "Automatizá tus procesos con RPA y optimizá la eficiencia de tu negocio. ¡Transformá tu futuro!",
+      title: "services.services.rpa.title",
+      description: "services.services.rpa.description",
       link: "/rpa",
     },
     {
-      title: "Chatbots de IA",
-      description:
-        "Implementá nuestros chatbots de IA para mejorar el servicio al cliente y aumentar la eficiencia de tu negocio. ¡Revolucioná la interacción!",
+      title: "services.services.chatBots.title",
+      description: "services.services.chatBots.description",
       link: "/chat-bot",
     },
     {
-      title: "Data Analytics",
-      description:
-        "Descubrí el poder de tus datos con nuestros servicios de Data Analytics. Tomá decisiones informadas, optimizá procesos y generá valor para tu negocio.",
+      title: "services.services.dataAnatytics.title",
+      description: "services.services.dataAnatytics.description",
       link: "/data-analytics",
     },
   ];
@@ -47,7 +46,7 @@ export const Services = () => {
       <Stack color="white" alignItems="center" justifyContent="center" my={20}>
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading as="h3" size="2xl" textAlign="center" mb={20}>
-            Nuestros Servicios
+            {t("services.ourServices")}
           </Heading>
         </div>
         <HStack
@@ -87,15 +86,15 @@ export const Services = () => {
                 }
               >
                 <Heading size="lg" mb={8}>
-                  {title}
+                  {t(title)}
                 </Heading>
-                <Text mb={8}>{description}</Text>
+                <Text mb={8}>{t(description)}</Text>
                 <Button
                   as={Link}
                   to={link}
                   _hover={{ bg: "#256a60", color: "#FFFFFF" }}
                 >
-                  Más info
+                  {t("moreInformation")}
                 </Button>
               </Box>
             </div>

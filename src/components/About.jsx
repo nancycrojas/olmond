@@ -1,6 +1,9 @@
 import { Heading, Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
+  const { t } = useTranslation();
+
   return (
     <Stack
       color="white"
@@ -15,7 +18,7 @@ export const About = () => {
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading as="h3" size="2xl" textAlign="center">
-          Sobre Nosotros
+          {t("home.aboutUs")}
         </Heading>
       </div>
       <div data-aos="fade-right" data-aos-duration="1000">
@@ -36,14 +39,7 @@ export const About = () => {
           transition="all 0.3s"
         >
           <Text fontSize={{ base: "xl", md: "2xl" }}>
-            En Olmond Consulting, transformamos tu empresa con soluciones de
-            RPA, Data Analytics y Chatbots de IA. Empoderamos a tu organización,
-            ofreciendo herramientas innovadoras que impulsan tu transformación
-            digital. Nos comprometemos a ser tu socio estratégico, guiándote en
-            el cambiante paisaje tecnológico con consultoría de vanguardia,
-            desarrollo y capacitación en IA. ¡Mejora tu competitividad y
-            eficiencia operativa con Olmond Consulting, y convierte la
-            tecnología en tu ventaja!
+            {t("home.aboutDescription")}
           </Text>
         </Stack>
       </div>

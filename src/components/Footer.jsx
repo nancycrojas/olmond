@@ -1,10 +1,13 @@
 import { HStack, Icon, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { Link as RouterLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <Stack py={8} color="white">
       <HStack w="full" justify="space-between" p={4}>
@@ -33,8 +36,8 @@ export const Footer = () => {
       </HStack>
 
       <Text fontSize="sm" alignSelf="center" textAlign="center" mb={2}>
-        Copyright © {new Date().getFullYear()} Olmond Consulting. Todos los
-        derechos reservados.
+        Copyright © {new Date().getFullYear()} Olmond Consulting.{" "}
+        {t("allRightsReserved")}
       </Text>
     </Stack>
   );

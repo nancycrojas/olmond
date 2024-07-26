@@ -1,10 +1,12 @@
 import { Heading, Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 import { About } from "../components/About";
 import { Team } from "../components/Team";
 import { values } from "../lib/constants";
 
 export const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <>
       <About />
@@ -20,7 +22,7 @@ export const AboutUs = () => {
       >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading as="h3" size="2xl" textAlign="center">
-            Misión
+            {t("team.mission")}
           </Heading>
         </div>
         <div data-aos="fade-right" data-aos-duration="1000">
@@ -41,14 +43,7 @@ export const AboutUs = () => {
             transition="all 0.3s"
           >
             <Text fontSize={{ base: "xl", md: "2xl" }}>
-              La misión de Olmond Consulting es empoderar a las organizaciones a
-              través de la inteligencia artificial, análisis de datos y RPA,
-              ofreciendo soluciones innovadoras y personalizadas que impulsen su
-              transformación digital. Nos comprometemos a ser socios
-              estratégicos de nuestros clientes, guiándolos en el cambiante
-              paisaje tecnológico mediante consultoría de vanguardia, desarrollo
-              y capacitación en IA, con el objetivo de mejorar su competitividad
-              y eficiencia operativa.
+              {t("team.desc_mission")}
             </Text>
           </Stack>
         </div>
@@ -65,7 +60,7 @@ export const AboutUs = () => {
       >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading as="h3" size="2xl" textAlign="center">
-            Visión
+            {t("team.vision")}
           </Heading>
         </div>
         <div data-aos="fade-right" data-aos-duration="1000">
@@ -86,14 +81,7 @@ export const AboutUs = () => {
             transition="all 0.3s"
           >
             <Text fontSize={{ base: "xl", md: "2xl" }}>
-              La visión de Olmond Consulting es convertirse en la consultora
-              líder en inteligencia artificial en Latinoamérica, destacada por
-              su capacidad para anticipar y adaptarse a las tendencias
-              tecnológicas, promoviendo el éxito y la innovación en cada
-              organización que asesora. Aspiramos a transformar el panorama
-              empresarial, creando un ecosistema donde la tecnología de IA sea
-              accesible, comprensible y aprovechada al máximo por empresas de
-              todos los tamaños y sectores.
+              {t("team.desc_vision")}
             </Text>
           </Stack>
         </div>
@@ -110,7 +98,7 @@ export const AboutUs = () => {
       >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading as="h3" size="2xl" textAlign="center">
-            Valores
+            {t("team.values")}
           </Heading>
         </div>
         <div data-aos="fade-right" data-aos-duration="1000">
@@ -133,10 +121,10 @@ export const AboutUs = () => {
             {values.map(({ title, description }, index) => (
               <Stack key={index}>
                 <Heading as="h4" size="lg" textAlign="center">
-                  {title}
+                  {t(title)}
                 </Heading>
                 <Text fontSize={{ base: "xl", md: "2xl" }} mb={8}>
-                  {description}
+                  {t(description)}
                 </Text>
               </Stack>
             ))}

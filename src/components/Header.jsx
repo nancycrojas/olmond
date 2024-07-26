@@ -20,17 +20,19 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
 import logo from "../assets/logo.png";
+import LangSelect from "./LangSelect";
 
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const { t } = useTranslation();
 
   return (
-    <HStack justify="space-between" gap={8} p={4}>
+    <HStack justify="space-between" p={4}>
       <Link to="/" as={RouterLink}>
         <Image
           src={logo}
@@ -53,7 +55,7 @@ export const Header = () => {
           color="white"
           _hover=""
         >
-          Quienes somos
+          {t("home.whoWeAre")}
         </Link>
         <Menu>
           <MenuButton
@@ -66,57 +68,22 @@ export const Header = () => {
             _active={{ bg: "transparent" }}
             rightIcon={<ChevronDownIcon />}
           >
-            Servicios
+            {t("home.services")}
           </MenuButton>
-          <MenuList bg="gray" border="1px solid gray">
-            <MenuItem
-              bg="gray"
-              color="white"
-              as={RouterLink}
-              to="/rpa"
-              _hover={{ bg: "#777777" }}
-            >
+          <MenuList>
+            <MenuItem as={RouterLink} to="/rpa">
               RPA
             </MenuItem>
-            <MenuItem
-              bg="gray"
-              color="white"
-              as={RouterLink}
-              to="/chat-bot"
-              _hover={{ bg: "#777777" }}
-            >
+            <MenuItem as={RouterLink} to="/chat-bot">
               ChatBot
             </MenuItem>
-            <MenuItem
-              bg="gray"
-              color="white"
-              as={RouterLink}
-              to="/data-analytics"
-              _hover={{ bg: "#777777" }}
-            >
+            <MenuItem as={RouterLink} to="/data-analytics">
               Data Analytics
             </MenuItem>
           </MenuList>
         </Menu>
       </HStack>
-      <Stack display={{ base: "none", lg: "flex" }}>
-        <Link
-          href="http://calendly.com/equipo-olmondconsulting"
-          isExternal
-          _hover=""
-        >
-          <Button
-            variant="outline"
-            size="lg"
-            color="white"
-            bgGradient="linear(to-r, #1a3a35, #256a60)"
-            _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
-            rightIcon={<FaLongArrowAltRight />}
-          >
-            Habla con nosotros
-          </Button>
-        </Link>
-      </Stack>
+      <LangSelect display={{ base: "none", lg: "flex" }} />
 
       <IconButton
         onClick={onOpen}
@@ -133,7 +100,7 @@ export const Header = () => {
         <DrawerOverlay />
         <DrawerContent bg="gray.200">
           <DrawerCloseButton />
-          <DrawerHeader>Menú</DrawerHeader>
+          <DrawerHeader>{t("menu")}</DrawerHeader>
           <DrawerBody>
             <Stack gap={8} w="100%">
               <Link
@@ -144,7 +111,7 @@ export const Header = () => {
                 _hover=""
                 onClick={onClose}
               >
-                Quienes somos
+                {t("home.whoWeAre")}
               </Link>
               <Link
                 as={RouterLink}
@@ -176,6 +143,7 @@ export const Header = () => {
               >
                 Data Analytics
               </Link>
+              <LangSelect display={{ base: "flex", lg: "none" }} />
             </Stack>
           </DrawerBody>
           <DrawerFooter></DrawerFooter>

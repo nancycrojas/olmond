@@ -12,6 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaStopwatch } from "react-icons/fa";
 import { GrMultiple } from "react-icons/gr";
 import { IoIosPerson } from "react-icons/io";
@@ -25,85 +26,72 @@ import { TbSettingsAutomation } from "react-icons/tb";
 
 const serviceDetail = [
   {
-    title: "¿Cómo puede ayudarte un Chatbot de IA conversacional?",
-    description:
-      "Un Chatbot de IA conversacional puede ayudarte a brindar atención al cliente las 24 horas del día, los 7 días de la semana, respondiendo consultas comunes de manera rápida y precisa. Esto mejora la satisfacción del cliente y libera a tu equipo para enfocarse en tareas más complejas.",
+    title: "chatBots.helpYou.title",
+    description: "chatBots.helpYou.description",
   },
   {
-    title: "¿Qué beneficios ofrece un Chatbot de IA en la atención al cliente?",
-    description:
-      "Un Chatbot de IA en la atención al cliente puede manejar grandes volúmenes de consultas de manera eficiente, reduciendo tiempos de espera y aumentando la rapidez de respuesta. Además, ayuda a mantener una atención consistente y personalizada, mejorando la experiencia del cliente.",
+    title: "chatBots.benefit.title",
+    description: "chatBots.benefit.description",
   },
   {
-    title: "¿Cómo puede un Chatbot de IA mejorar la eficiencia de tu equipo?",
-    description:
-      "Al automatizar las respuestas a preguntas frecuentes y tareas repetitivas, un Chatbot de IA permite que tu equipo se enfoque en resolver problemas más complejos y en tareas estratégicas. Esto no solo aumenta la productividad, sino que también mejora la moral del equipo al reducir la carga de trabajo rutinaria.",
+    title: "chatBots.efficiency.title",
+    description: "chatBots.efficiency.description",
   },
   {
-    title: "¿Qué tipos de consultas puede manejar un Chatbot de IA?",
-    description:
-      "Un Chatbot de IA puede manejar una amplia variedad de consultas, desde preguntas sobre productos y servicios hasta soporte técnico básico y gestión de pedidos. Su capacidad de aprendizaje continuo le permite adaptarse y mejorar con el tiempo, proporcionando respuestas cada vez más precisas.",
+    title: "chatBots.queries.title",
+    description: "chatBots.queries.description",
   },
   {
-    title:
-      "¿Cómo puedes medir el éxito de un Chatbot de IA en la atención al cliente?",
-    description:
-      "Puedes medir el éxito de un Chatbot de IA en la atención al cliente a través de métricas como la tasa de resolución de consultas, el tiempo de respuesta, la satisfacción del cliente y la reducción en la carga de trabajo del equipo humano. Estas métricas te permitirán ajustar y mejorar continuamente el desempeño del chatbot.",
+    title: "chatBots.success.title",
+    description: "chatBots.success.description",
   },
 ];
 
 const benefiCard = [
   {
     icon: MdEventAvailable,
-    title: "Disponibilidad 24/7/365",
-    description:
-      "Los chatbots de IA están disponibles las 24 horas del día, los 7 días de la semana y los 365 días del año, proporcionando asistencia continua a los clientes.",
+    title: "chatBots.availability.title",
+    description: "chatBots.availability.description",
   },
   {
     icon: MdSavings,
-    title: "Reducción de costos",
-    description:
-      "Reducen costos operacionales al manejar consultas frecuentes y repetitivas sin la necesidad de intervención humana.",
+    title: "chatBots.reduction.title",
+    description: "chatBots.reduction.description",
   },
   {
     icon: FaStopwatch,
-    title: "Respuesta instantánea",
-    description:
-      "Proporcionan respuestas instantáneas a las consultas de los usuarios, mejorando la experiencia del cliente y reduciendo tiempos de espera.",
+    title: "chatBots.response.title",
+    description: "chatBots.response.description",
   },
   {
     icon: TbSettingsAutomation,
-    title: "Automatización de tareas",
-    description:
-      "Automatizan tareas repetitivas y administrativas, liberando al personal para enfocarse en actividades de mayor valor.",
+    title: "chatBots.automation.title",
+    description: "chatBots.automation.description",
   },
   {
     icon: GrMultiple,
-    title: "Escalabilidad",
-    description:
-      "Pueden manejar múltiples consultas simultáneamente, escalando fácilmente según la demanda sin comprometer la calidad del servicio.",
+    title: "chatBots.scalability.title",
+    description: "chatBots.scalability.description",
   },
   {
     icon: IoIosPerson,
-    title: "Personalización",
-    description:
-      "Ofrecen experiencias personalizadas a los usuarios mediante el análisis de sus interacciones y comportamientos anteriores.",
+    title: "chatBots.personalization.title",
+    description: "chatBots.personalization.description",
   },
   {
     icon: MdSentimentVerySatisfied,
-    title: "Mejora de satisfacción",
-    description:
-      "Aumentan la satisfacción del cliente al proporcionar respuestas precisas y rápidas, resolviendo problemas de manera eficiente.",
+    title: "chatBots.satisfaction.title",
+    description: "chatBots.satisfaction.description",
   },
   {
     icon: MdDataset,
-    title: "Recopilación de datos",
-    description:
-      "Recopilan y analizan datos de las interacciones con los usuarios, proporcionando insights valiosos para mejorar productos y servicios.",
+    title: "chatBots.collection.title",
+    description: "chatBots.collection.description",
   },
 ];
 
 export const ChatBot = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -118,7 +106,7 @@ export const ChatBot = () => {
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
         <Heading size="xl" mb={4} textAlign="center">
-          Chatbots de IA
+          {t("services.services.chatBots.title")}
         </Heading>
         {serviceDetail.map(({ title, description }, index) => (
           <Box
@@ -144,10 +132,10 @@ export const ChatBot = () => {
             onMouseLeave={handleMouseLeave}
           >
             <Heading size="lg" mb={4}>
-              {title}
+              {t(title)}
             </Heading>
             <Text mt={2} fontSize="xl">
-              {description}
+              {t(description)}
             </Text>
           </Box>
         ))}
@@ -169,7 +157,7 @@ export const ChatBot = () => {
             pb={4}
           >
             <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
-              Beneficios de los Chatbots de IA
+              {t("chatBots.benefits")}
             </Heading>
             <SimpleGrid
               columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
@@ -203,10 +191,10 @@ export const ChatBot = () => {
                     </Circle>
                   </Stack>
                   <Heading size="md" mb={4}>
-                    {title}
+                    {t(title)}
                   </Heading>
                   <Text mt={2} fontSize="xl">
-                    {description}
+                    {t(description)}
                   </Text>
                 </Box>
               ))}
@@ -216,8 +204,7 @@ export const ChatBot = () => {
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
             <Text fontSize="3xl" fontWeight="bold" mb={8}>
-              ¿Listo para transformar la atención al cliente en tu empresa y
-              alcanzar nuevos niveles de eficiencia y satisfacción?
+              {t("chatBots.question")}
             </Text>
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
@@ -228,7 +215,7 @@ export const ChatBot = () => {
               bgGradient="linear(to-r, #1a3a35, #256a60)"
               _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
             >
-              ¡Habla con nosotros!
+              {t("talkToUs")}
             </Button>
           </Link>
         </Box>

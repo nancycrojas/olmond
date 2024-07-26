@@ -12,6 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { GrLineChart } from "react-icons/gr";
 import {
   MdIntegrationInstructions,
@@ -24,81 +25,72 @@ import { PiChartLineUp, PiRobotFill } from "react-icons/pi";
 
 const serviceDetail = [
   {
-    title: "¿Qué es la automatización robótica de procesos (RPA)?",
-    description:
-      " La automatización robótica de procesos (RPA) es una tecnología que emplea robots de software virtuales, conocidos como robots digitales o bots, para llevar a cabo tareas manuales que suelen ser repetitivas y consumen mucho tiempo.",
+    title: "rpa.automation.title",
+    description: "rpa.automation.description",
   },
   {
-    title: "¿Qué tipos de tareas maneja la RPA?",
-    description:
-      "La RPA maneja tareas manuales y repetitivas, de gran volumen y que requieren el uso de múltiples sistemas, como la carga de datos y los flujos de trabajo de aprobación.",
+    title: "rpa.tasks.title",
+    description: "rpa.tasks.description",
   },
   {
-    title: "¿Cómo funciona la RPA?",
-    description:
-      " La RPA se ejecuta en computadoras de escritorio o virtuales en las que los robots de software interactúan con aplicaciones internas, sitios web, portales de usuarios y otras apps, emulando acciones de los humanos mientras realizan la misma tarea.",
+    title: "rpa.work.title",
+    description: "rpa.work.description",
   },
   {
-    title: "¿Qué industrias se benefician de la RPA?",
-    description:
-      "La RPA beneficia a todas las industrias, desde finanzas hasta recursos humanos y servicio al cliente, mejorando la eficiencia y reduciendo costos en diversas áreas.",
+    title: "rpa.benefit.title",
+    description: "rpa.benefit.description",
   },
   {
-    title: " ¿Cómo se implementa una estrategia de RPA?",
-    description:
-      "Una estrategia efectiva de RPA comienza con la evaluación de flujos de trabajo, identificando los mejores casos para la automatización y utilizando herramientas basadas en la nube para escalar y gestionar los bots.",
+    title: "rpa.implemented.title",
+    description: "rpa.implemented.description",
   },
 ];
 
 const benefitCard = [
   {
     icon: MdSecurity,
-    title: "Es rápida y confiable",
-    description: "Ejecución veloz y sin margen de error",
+    title: "rpa.fast.title",
+    description: "rpa.fast.description",
   },
   {
     icon: MdThumbUp,
-    title: "Mejora la valoración de sus empleados",
-    description:
-      "Sus empleados podrán dedicarse a tareas que los robots no realicen",
+    title: "rpa.employees.title",
+    description: "rpa.employees.description",
   },
   {
     icon: GrLineChart,
-    title: "Generación de informes",
-    description:
-      "Los bots pueden proporcionarle detalles completos de las operaciones",
+    title: "rpa.report.title",
+    description: "rpa.report.description",
   },
   {
     icon: MdUpgrade,
-    title: "Incremento en la productividad",
-    description:
-      "Combinará el trabajo de sus empleados con una fuerza laboral digital",
+    title: "rpa.productivity.title",
+    description: "rpa.productivity.description",
   },
   {
     icon: PiChartLineUp,
-    title: "Altamente escalable",
-    description: "Maneja procesos de cualquier escala sin retrasos",
+    title: "rpa.scalable.title",
+    description: "rpa.scalable.description",
   },
   {
     icon: PiRobotFill,
-    title: "Excelente atención al cliente",
-    description:
-      "Los robots pueden gestionar solicitudes, procesar pagos, dar respuestas y atender peticiones o reclamos las 24 horas del día, los 365 días del año, sin interrupciones.",
+    title: "rpa.service.title",
+    description: "rpa.service.description",
   },
   {
     icon: MdIntegrationInstructions,
-    title: "Integración con sistemas existentes",
-    description:
-      "La RPA puede integrarse fácilmente con las aplicaciones y sistemas que ya utiliza su empresa, sin necesidad de grandes modificaciones.",
+    title: "rpa.systems.title",
+    description: "rpa.systems.description",
   },
   {
     icon: MdSavings,
-    title: "No requiere inversión en nuevo hardware",
-    description: "Puede utilizar el equipo existente de su empresa",
+    title: "rpa.investment.title",
+    description: "rpa.investment.description",
   },
 ];
 
 export const Rpa = () => {
+  const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
@@ -113,7 +105,7 @@ export const Rpa = () => {
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
         <Heading size="xl" mb={4} textAlign="center">
-          Automatización Robótica de Procesos (RPA)
+          {t("services.services.rpa.title")}
         </Heading>
         {serviceDetail.map(({ title, description }, index) => (
           <Box
@@ -139,10 +131,10 @@ export const Rpa = () => {
             onMouseLeave={handleMouseLeave}
           >
             <Heading size="lg" mb={4}>
-              {title}
+              {t(title)}
             </Heading>
             <Text mt={2} fontSize="xl">
-              {description}
+              {t(description)}
             </Text>
           </Box>
         ))}
@@ -164,7 +156,7 @@ export const Rpa = () => {
             pb={4}
           >
             <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
-              Beneficios de la Automatización Robótica de Procesos (RPA)
+              {t("rpa.benefits")}
             </Heading>
             <SimpleGrid
               columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
@@ -198,10 +190,10 @@ export const Rpa = () => {
                     </Circle>
                   </Stack>
                   <Heading size="md" mb={4}>
-                    {title}
+                    {t(title)}
                   </Heading>
                   <Text mt={2} fontSize="xl">
-                    {description}
+                    {t(description)}
                   </Text>
                 </Box>
               ))}
@@ -211,8 +203,7 @@ export const Rpa = () => {
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
             <Text fontSize="3xl" fontWeight="bold" mb={8}>
-              ¿Listo para liberar el potencial de tu empresa y aumentar la
-              eficiencia con RPA?
+              {t("rpa.question")}
             </Text>
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
@@ -223,7 +214,7 @@ export const Rpa = () => {
               bgGradient="linear(to-r, #1a3a35, #256a60)"
               _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
             >
-              ¡Habla con nosotros!
+              {t("talkToUs")}
             </Button>
           </Link>
         </Box>
