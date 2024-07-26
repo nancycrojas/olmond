@@ -1,5 +1,6 @@
 import "@fontsource/open-sans/400.css";
 import "@fontsource/raleway/400.css";
+import "./translation/config.js";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
