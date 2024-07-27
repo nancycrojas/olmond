@@ -31,6 +31,10 @@ export const Header = () => {
   const btnRef = React.useRef();
   const { t } = useTranslation();
 
+  // const handleDrawerClose = () => {
+  //   onClose();
+  // };
+
   return (
     <HStack justify="space-between" p={4}>
       <Link to="/" as={RouterLink}>
@@ -143,7 +147,10 @@ export const Header = () => {
               >
                 Data Analytics
               </Link>
-              <LangSelect display={{ base: "flex", lg: "none" }} />
+              <LangSelect
+                display={{ base: "flex", lg: "none" }}
+                // onLanguageChange={handleDrawerClose}
+              />
             </Stack>
           </DrawerBody>
           <DrawerFooter></DrawerFooter>

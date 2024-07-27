@@ -12,19 +12,21 @@ import { MdLanguage } from "react-icons/md";
 
 const langs = ["en", "es"];
 
-export default function LangSelect({ display }) {
+export default function LangSelect({
+  display,
+  // onLanguageChange
+}) {
   const { t, i18n } = useTranslation();
 
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
+    // if (onLanguageChange) {
+    //   onLanguageChange();
+    // }
   };
 
   return (
-    <HStack
-      // color={{ lg: "white", base: "black" }}
-      alignItems="center"
-      display={display}
-    >
+    <HStack alignItems="center" display={display}>
       <Menu>
         <MenuButton as={Button} leftIcon={<MdLanguage size={22} />}>
           {t(i18n.resolvedLanguage)}
