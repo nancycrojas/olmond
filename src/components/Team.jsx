@@ -66,7 +66,7 @@ export const Team = () => {
       </div>
       <div data-aos="fade-up" data-aos-duration="1000">
         <HStack
-          spacing={4}
+          spacing={6}
           justifyContent="center"
           flexDirection={{ base: "column", lg: "row" }}
         >
