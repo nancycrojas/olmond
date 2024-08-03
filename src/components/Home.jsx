@@ -13,46 +13,48 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <Stack
-      minH="90vh"
-      color="white"
-      alignItems="center"
-      justifyContent="center"
-      gap={8}
-      textAlign="center"
-      mt={20}
-    >
-      <Heading
-        w="70%"
-        fontSize={{ base: "30px", md: "40px" }}
-        lineHeight="inherit"
+    <Stack minH="90vh" gap={8} textAlign="center">
+      <Stack
+        color="white"
+        alignItems="center"
+        justifyContent="center"
         mb={8}
+        m="auto"
+        mt={10}
+        minH={{ base: "60vh", md: "70vh" }}
       >
-        {t("home.title")}
-        <Text as="span">{t("home.title_2")}</Text>
-        <Text as="span">{t("home.title_3")}</Text>
-        <Text as="span">{t("home.title_4")}</Text>
-      </Heading>
-      <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
-        {t("home.description")}
-      </Text>
-      <Link
-        href="http://calendly.com/equipo-olmondconsulting"
-        isExternal
-        _hover=""
-      >
-        <Button
-          className="animate__animated animate__slideInLeft"
-          variant="outline"
-          size="lg"
-          color="white"
-          bgGradient="linear(to-r, #1a3a35, #256a60)"
-          _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
-          rightIcon={<FaLongArrowAltRight />}
+        <Heading
+          w="70%"
+          fontSize={{ base: "30px", md: "40px" }}
+          lineHeight="inherit"
+          mb={8}
         >
-          {t("home.talkToUs")}
-        </Button>
-      </Link>
+          {t("home.title")}
+          <Text as="span">{t("home.title_2")}</Text>
+          <Text as="span">{t("home.title_3")}</Text>
+          <Text as="span">{t("home.title_4")}</Text>
+        </Heading>
+        <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
+          {t("home.description")}
+        </Text>
+        <Link
+          href="http://calendly.com/equipo-olmondconsulting"
+          isExternal
+          _hover=""
+        >
+          <Button
+            className="animate__animated animate__slideInLeft"
+            variant="outline"
+            size="lg"
+            color="white"
+            bgGradient="linear(to-r, #1a3a35, #256a60)"
+            _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
+            rightIcon={<FaLongArrowAltRight />}
+          >
+            {t("home.talkToUs")}
+          </Button>
+        </Link>
+      </Stack>
       <About />
       <Team />
       <Carousel />

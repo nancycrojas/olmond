@@ -1,13 +1,14 @@
 import { Container, Stack } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Home } from "@/components/Home";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { AppLayout } from "@/layouts/AppLayout";
+import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { AboutUs } from "@/pages/AboutUs";
 import { ChatBot } from "@/pages/ChatBot";
 import { DataAnalytics } from "@/pages/DataAnalytics";
+import { NotFound } from "@/pages/NotFound";
 import { Rpa } from "@/pages/Rpa";
 
 function App() {
@@ -20,16 +21,19 @@ function App() {
       alignItems="center"
     >
       <Stack maxW="7xl">
-        <Header />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/rpa" element={<Rpa />} />
-          <Route path="/chat-bot" element={<ChatBot />} />
-          <Route path="/data-analytics" element={<DataAnalytics />} />
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/rpa" element={<Rpa />} />
+            <Route path="/chat-bots" element={<ChatBot />} />
+            <Route path="/data-analytics" element={<DataAnalytics />} />
+          </Route>
+          <Route element={<NotFoundLayout />}>
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
-        <Footer />
       </Stack>
     </Container>
   );
