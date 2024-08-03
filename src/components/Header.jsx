@@ -78,7 +78,7 @@ export const Header = () => {
             <MenuItem as={RouterLink} to="/rpa">
               RPA
             </MenuItem>
-            <MenuItem as={RouterLink} to="/chat-bot">
+            <MenuItem as={RouterLink} to="/chat-bots">
               ChatBots
             </MenuItem>
             <MenuItem as={RouterLink} to="/data-analytics">
@@ -129,7 +129,7 @@ export const Header = () => {
               </Link>
               <Link
                 as={RouterLink}
-                to="/chat-bot"
+                to="/chat-bots"
                 fontWeight="semibold"
                 fontSize="xl"
                 _hover=""
