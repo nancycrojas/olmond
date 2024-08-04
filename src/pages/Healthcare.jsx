@@ -79,7 +79,7 @@ export const Healthcare = () => {
             transition="all 0.3s"
           >
             <Image src={healthcare_image} alt="healthacre_image" />
-            <Text fontSize={{ base: "xl", md: "2xl" }} mt={6}>
+            <Text fontSize={{ base: "lg", md: "2xl" }} mt={6}>
               {t("healthcare.description")}
             </Text>
             <Stack

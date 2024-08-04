@@ -38,7 +38,7 @@ export const About = () => {
           }}
           transition="all 0.3s"
         >
-          <Text fontSize={{ base: "xl", md: "2xl" }}>
+          <Text fontSize={{ base: "lg", md: "2xl" }}>
             {t("home.aboutDescription")}
           </Text>
         </Stack>
