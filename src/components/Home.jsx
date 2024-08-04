@@ -1,9 +1,10 @@
 import "animate.css";
 
-import { Button, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
+import { Healthcare } from "../pages/Healthcare";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
 import { Services } from "./Services";
@@ -41,6 +42,7 @@ export const Home = () => {
           href="http://calendly.com/equipo-olmondconsulting"
           isExternal
           _hover=""
+          // mt={6}
         >
           <Button
             className="animate__animated animate__slideInLeft"
@@ -48,10 +50,21 @@ export const Home = () => {
             size="lg"
             color="white"
             bgGradient="linear(to-r, #1a3a35, #256a60)"
-            _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
-            rightIcon={<FaLongArrowAltRight />}
+            _hover={{
+              "& svg": {
+                transform: "translateX(5px)",
+              },
+            }}
           >
-            {t("home.talkToUs")}
+            <Flex align="center">
+              {t("home.talkToUs")}
+              <FaLongArrowAltRight
+                style={{
+                  transition: "transform 0.3s ease-in-out",
+                  marginLeft: "10px",
+                }}
+              />
+            </Flex>
           </Button>
         </Link>
       </Stack>
@@ -59,6 +72,7 @@ export const Home = () => {
       <Team />
       <Carousel />
       <Services />
+      <Healthcare />
       {/* <Contact /> */}
     </Stack>
   );

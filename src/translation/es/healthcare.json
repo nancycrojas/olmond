@@ -1,0 +1,18 @@
+{
+  "title": "IA en atención médica",
+  "description": "En el vertiginoso mundo de la atención médica, la innovación es clave para ofrecer un servicio de calidad y eficiente. En Olmond Consulting, entendemos la importancia de adoptar tecnologías avanzadas que no solo mejoren la experiencia del paciente, sino que también optimicen los procesos internos. Introduzca nuestros agentes de inteligencia artificial y lleve su servicio de atención médica al siguiente nivel.",
+  "attention": {
+    "title": "Atención Personalizada y Eficiente",
+    "description": "Optimice la atención al paciente con agentes de IA que proporcionan respuestas inmediatas y precisas a consultas comunes, liberando tiempo para interacciones más significativas."
+  },
+  "automated": {
+    "title": "Asignación Automatizada de Turnos",
+    "description": "Elimine el desafío de la gestión manual de citas con nuestra IA avanzada, que asigna turnos de manera inteligente, maximizando la eficiencia operativa y reduciendo tiempos de espera."
+  },
+  "predictive": {
+    "title": "Mejora Continua con Análisis Predictivo",
+    "description": "Impulse decisiones informadas con análisis predictivos que identifican patrones y áreas de mejora en la atención al paciente, optimizando recursos y aumentando la satisfacción del cliente."
+  },
+  "contact": "¡Contacte hoy para una demostración personalizada y transforme el futuro de su atención médica!",
+  "advice": "Pide asesoramiento"
+}

@@ -84,6 +84,9 @@ export const Header = () => {
             <MenuItem as={RouterLink} to="/data-analytics">
               Data Analytics
             </MenuItem>
+            <MenuItem as={RouterLink} to="/healthcare">
+              {t("healthcare.title")}
+            </MenuItem>
           </MenuList>
         </Menu>
       </HStack>
@@ -146,6 +149,16 @@ export const Header = () => {
                 onClick={onClose}
               >
                 Data Analytics
+              </Link>
+              <Link
+                as={RouterLink}
+                to="/healthcare"
+                fontWeight="semibold"
+                fontSize="xl"
+                _hover=""
+                onClick={onClose}
+              >
+                {t("healthcare.title")}
               </Link>
               <LangSelect
                 display={{ base: "flex", lg: "none" }}

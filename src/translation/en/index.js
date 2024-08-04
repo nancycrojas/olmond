@@ -1,6 +1,7 @@
 import chatBots from "./chatBots.json";
 import common from "./common.json";
 import data from "./data.json";
+import healthcare from "./healthcare.json";
 import home from "./home.json";
 import rpa from "./rpa.json";
 import services from "./services.json";
@@ -14,6 +15,7 @@ const enTranslation = {
   rpa,
   chatBots,
   data,
+  healthcare,
 };
 
 export default enTranslation;
