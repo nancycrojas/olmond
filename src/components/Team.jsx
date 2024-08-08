@@ -26,7 +26,7 @@ const teamMember = [
     description: "team.members.rouan",
   },
   {
-    name: "Juan Manuel Rossi",
+    name: "Juan Martín Rossi",
     role: "Co-Founder",
     image: juan_rossi,
     description: "team.members.rossi",
