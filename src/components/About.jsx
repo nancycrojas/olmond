@@ -37,6 +37,7 @@ export const About = () => {
             transform: "scale(1.05)",
           }}
           transition="all 0.3s"
+          mx={{ base: 4, sm: 0 }}
         >
           <Text fontSize={{ base: "lg", md: "2xl" }}>
             {t("home.aboutDescription")}

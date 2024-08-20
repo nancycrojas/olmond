@@ -57,7 +57,7 @@ export const Healthcare = () => {
         mt={{ base: 10, lg: 10 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" textAlign="center">
+          <Heading as="h3" size="2xl" mx={8} textAlign="center">
             {t("healthcare.title")}
           </Heading>
         </div>
@@ -70,6 +70,7 @@ export const Healthcare = () => {
               boxShadow:
                 "inset 0 2px 6px rgba(199, 211, 234, 0.4), inset 0 24px 48px rgba(199, 211, 234, 0.2), 0 6px 12px rgba(0, 0, 0, 0.5)",
               borderRadius: "10px",
+              paddingX: "20px",
             }}
             borderColor={"muted"}
             borderRadius={10}
@@ -82,6 +83,7 @@ export const Healthcare = () => {
             <Text fontSize={{ base: "lg", md: "2xl" }} mt={6}>
               {t("healthcare.description")}
             </Text>
+
             <Stack
               color="white"
               alignItems="center"
