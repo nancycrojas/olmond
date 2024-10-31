@@ -14,29 +14,27 @@ import {
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import juan_rossi from "../assets/juan_rossi.jpg";
 import patricio_rouan from "../assets/patricio_rouan.jpg";
-import pedro_spinozzi from "../assets/pedro_spinozzi.jpg";
 
 const teamMember = [
   {
     name: "Patricio Rouan",
-    role: "Co-Founder",
+    // role: "Founder",
     image: patricio_rouan,
     description: "team.members.rouan",
   },
-  {
-    name: "Juan Manuel Rossi",
-    role: "Co-Founder",
-    image: juan_rossi,
-    description: "team.members.rossi",
-  },
-  {
-    name: "Pedro Spinozzi",
-    role: "Co-Founder",
-    image: pedro_spinozzi,
-    description: "team.members.spinozzi",
-  },
+  // {
+  //   name: "Juan Manuel Rossi",
+  //   role: "Co-Founder",
+  //   image: juan_rossi,
+  //   description: "team.members.rossi",
+  // },
+  // {
+  //   name: "Pedro Spinozzi",
+  //   role: "Co-Founder",
+  //   image: pedro_spinozzi,
+  //   description: "team.members.spinozzi",
+  // },
 ];
 
 export const Team = () => {
@@ -73,10 +71,11 @@ export const Team = () => {
           {teamMember.map(({ name, role, description, image }, index) => (
             <Card
               key={index}
-              minW="320px"
-              maxW="320px"
-              minH="450px"
-              maxH="450px"
+              // minW="950px"
+              // maxW="950px"
+              // minH="250px"
+              // maxH="250px"
+              maxW={["75%"]}
               _hover={{
                 transform: "scale(1.05)",
               }}

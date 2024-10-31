@@ -203,7 +203,11 @@ export const ChatBot = () => {
         </div>
         <Box textAlign="center">
           <div data-aos="zoom-in" data-aos-duration="1000">
-            <Text fontSize="3xl" fontWeight="bold" mb={8}>
+            <Text
+              fontSize={{ base: "2xl", md: "3xl" }}
+              fontWeight="bold"
+              mb={8}
+            >
               {t("chatBots.question")}
             </Text>
           </div>
