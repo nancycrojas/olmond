@@ -32,7 +32,7 @@ export const Services = () => {
     {
       title: "services.services.chatBots.title",
       description: "services.services.chatBots.description",
-      link: "/chat-bot",
+      link: "/chat-bots",
     },
     {
       title: "services.services.dataAnatytics.title",
