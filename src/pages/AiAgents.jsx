@@ -90,7 +90,7 @@ const benefiCard = [
   },
 ];
 
-export const ChatBot = () => {
+export const AiAgents = () => {
   const { t } = useTranslation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
