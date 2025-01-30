@@ -1,4 +1,4 @@
-import chatBots from "./chatBots.json";
+import aiAgents from "./aiAgents.json";
 import common from "./common.json";
 import data from "./data.json";
 import healthcare from "./healthcare.json";
@@ -13,7 +13,7 @@ const translation = {
   team,
   services,
   rpa,
-  chatBots,
+  aiAgents,
   data,
   healthcare,
 };

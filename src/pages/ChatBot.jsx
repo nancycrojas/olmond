@@ -26,67 +26,67 @@ import { TbSettingsAutomation } from "react-icons/tb";
 
 const serviceDetail = [
   {
-    title: "chatBots.helpYou.title",
-    description: "chatBots.helpYou.description",
+    title: "aiAgents.helpYou.title",
+    description: "aiAgents.helpYou.description",
   },
   {
-    title: "chatBots.benefit.title",
-    description: "chatBots.benefit.description",
+    title: "aiAgents.benefit.title",
+    description: "aiAgents.benefit.description",
   },
   {
-    title: "chatBots.efficiency.title",
-    description: "chatBots.efficiency.description",
+    title: "aiAgents.efficiency.title",
+    description: "aiAgents.efficiency.description",
   },
   {
-    title: "chatBots.queries.title",
-    description: "chatBots.queries.description",
+    title: "aiAgents.queries.title",
+    description: "aiAgents.queries.description",
   },
   {
-    title: "chatBots.success.title",
-    description: "chatBots.success.description",
+    title: "aiAgents.success.title",
+    description: "aiAgents.success.description",
   },
 ];
 
 const benefiCard = [
   {
     icon: MdEventAvailable,
-    title: "chatBots.availability.title",
-    description: "chatBots.availability.description",
+    title: "aiAgents.availability.title",
+    description: "aiAgents.availability.description",
   },
   {
     icon: MdSavings,
-    title: "chatBots.reduction.title",
-    description: "chatBots.reduction.description",
+    title: "aiAgents.reduction.title",
+    description: "aiAgents.reduction.description",
   },
   {
     icon: FaStopwatch,
-    title: "chatBots.response.title",
-    description: "chatBots.response.description",
+    title: "aiAgents.response.title",
+    description: "aiAgents.response.description",
   },
   {
     icon: TbSettingsAutomation,
-    title: "chatBots.automation.title",
-    description: "chatBots.automation.description",
+    title: "aiAgents.automation.title",
+    description: "aiAgents.automation.description",
   },
   {
     icon: GrMultiple,
-    title: "chatBots.scalability.title",
-    description: "chatBots.scalability.description",
+    title: "aiAgents.scalability.title",
+    description: "aiAgents.scalability.description",
   },
   {
     icon: IoIosPerson,
-    title: "chatBots.personalization.title",
-    description: "chatBots.personalization.description",
+    title: "aiAgents.personalization.title",
+    description: "aiAgents.personalization.description",
   },
   {
     icon: MdSentimentVerySatisfied,
-    title: "chatBots.satisfaction.title",
-    description: "chatBots.satisfaction.description",
+    title: "aiAgents.satisfaction.title",
+    description: "aiAgents.satisfaction.description",
   },
   {
     icon: MdDataset,
-    title: "chatBots.collection.title",
-    description: "chatBots.collection.description",
+    title: "aiAgents.collection.title",
+    description: "aiAgents.collection.description",
   },
 ];
 
@@ -157,7 +157,7 @@ export const ChatBot = () => {
             pb={4}
           >
             <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
-              {t("chatBots.benefits")}
+              {t("aiAgents.benefits")}
             </Heading>
             <SimpleGrid
               columns={{ base: 1, md: 2, lg: 2, xl: 4 }}
@@ -208,7 +208,7 @@ export const ChatBot = () => {
               fontWeight="bold"
               mb={8}
             >
-              {t("chatBots.question")}
+              {t("aiAgents.question")}
             </Text>
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>

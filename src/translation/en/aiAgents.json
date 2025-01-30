@@ -1,0 +1,56 @@
+{
+  "helpYou": {
+    "title": "How can an AI Agent help you?",
+    "description": "An AI Agent is your smart ally: it automates tasks, answers queries in seconds, and delivers valuable insights. Transform productivity and make faster, smarter decisions with 24/7 support!"
+  },
+  "benefit": {
+    "title": "What benefits does an AI Agent offer in sales?",
+    "description": "Boost your sales with an AI Agent: it identifies qualified leads, personalizes proposals, and closes deals faster. Increase revenue and build customer loyalty with intelligent, data-driven strategies!"
+  },
+  "efficiency": {
+    "title": "How can an AI Agent improve your team's efficiency?",
+    "description": "Free your team from repetitive tasks: an AI Agent manages processes, organizes information, and optimizes time. More focus on what matters, less stress, and greater productivity for everyone!"
+  },
+  "queries": {
+    "title": "How can an AI Agent improve different areas of your business?",
+    "description": "From marketing to operations, an AI Agent revolutionizes every area: it analyzes data, predicts trends, and suggests improvements. Turn your business into an efficient and competitive machine!"
+  },
+  "success": {
+    "title": "How can you measure the success of an AI Agent?",
+    "description": "Measure your AI Agent's success with clear metrics: increased sales, reduced costs, time saved, and customer satisfaction. Tangible results that take your business to the next level!"
+  },
+  "benefits": "Benefits of AI agents",
+  "availability": {
+    "title": "24/7/365 Availability",
+    "description": "AI agents are available 24/7/365, providing continuous assistance to customers."
+  },
+  "reduction": {
+    "title": "Cost Reduction",
+    "description": "They reduce operational costs by handling frequent and repetitive queries without the need for human intervention."
+  },
+  "response": {
+    "title": "Instant Response",
+    "description": "They provide instant responses to user queries, enhancing customer experience and reducing wait times."
+  },
+  "automation": {
+    "title": "Task Automation",
+    "description": "They automate repetitive and administrative tasks, freeing up staff to focus on higher-value activities."
+  },
+  "scalability": {
+    "title": "Scalability",
+    "description": "They can handle multiple queries simultaneously, easily scaling according to demand without compromising service quality."
+  },
+  "personalization": {
+    "title": "Personalization",
+    "description": "They offer personalized experiences to users by analyzing their interactions and previous behaviors."
+  },
+  "satisfaction": {
+    "title": "Improved Satisfaction",
+    "description": "They increase customer satisfaction by providing accurate and quick responses, efficiently resolving issues."
+  },
+  "collection": {
+    "title": "Data Collection",
+    "description": "They gather and analyze data from user interactions, providing valuable insights to improve products and services."
+  },
+  "question": "Ready to transform customer service in your company and achieve new levels of efficiency and satisfaction?"
+}

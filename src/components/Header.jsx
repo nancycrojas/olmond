@@ -135,7 +135,7 @@ export const Header = () => {
                 _hover=""
                 onClick={onClose}
               >
-                ChatBots
+                {t("services.services.aiAgents.title")}
               </Link>
               <Link
                 as={RouterLink}

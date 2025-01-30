@@ -1,0 +1,56 @@
+{
+  "helpYou": {
+    "title": "¿Cómo puede ayudarte un Agente de IA?",
+    "description": "Un Agente de IA es tu aliado inteligente: automatiza tareas, responde consultas en segundos y ofrece insights valiosos. ¡Transforma la productividad y toma decisiones más rápidas y acertadas con su apoyo 24/7!"
+  },
+  "benefit": {
+    "title": "¿Qué beneficios ofrece un Agente de IA en ventas?",
+    "description": "Potencia tus ventas con un Agente de IA: identifica leads calificados, personaliza propuestas y cierra tratos más rápido. ¡Aumenta tus ingresos y fideliza clientes con estrategias inteligentes y data-driven!"
+  },
+  "efficiency": {
+    "title": "¿Cómo puede un Agente de IA mejorar la eficiencia de tu equipo?",
+    "description": "Libera a tu equipo de tareas repetitivas: un Agente de IA gestiona procesos, organiza información y optimiza tiempos. ¡Más enfoque en lo importante, menos estrés y mayor productividad para todos!"
+  },
+  "queries": {
+    "title": "¿Qué puede un Agente de IA mejorar las diferentes áreas de tu negocio?",
+    "description": "Desde marketing hasta operaciones, un Agente de IA revoluciona cada área: analiza datos, predice tendencias y sugiere mejoras. ¡Convierte tu negocio en una máquina eficiente y competitiva!"
+  },
+  "success": {
+    "title": "¿Cómo puedes medir el éxito de un Agente de IA?",
+    "description": "Mide el éxito de tu Agente de IA con métricas claras: aumento de ventas, reducción de costos, tiempo ahorrado y satisfacción del cliente. ¡Resultados tangibles que impulsan tu negocio al siguiente nivel!"
+  },
+  "benefits": "Beneficios de los agentes de IA",
+  "availability": {
+    "title": "Disponibilidad 24/7/365",
+    "description": "Los agentes de IA están disponibles las 24 horas del día, los 7 días de la semana y los 365 días del año, proporcionando asistencia continua a los clientes."
+  },
+  "reduction": {
+    "title": "Reducción de costos",
+    "description": "Reducen costos operacionales al manejar consultas frecuentes y repetitivas sin la necesidad de intervención humana."
+  },
+  "response": {
+    "title": "Respuesta instantánea",
+    "description": "Proporcionan respuestas instantáneas a las consultas de los usuarios, mejorando la experiencia del cliente y reduciendo tiempos de espera."
+  },
+  "automation": {
+    "title": "Automatización de tareas",
+    "description": "Automatizan tareas repetitivas y administrativas, liberando al personal para enfocarse en actividades de mayor valor."
+  },
+  "scalability": {
+    "title": "Escalabilidad",
+    "description": "Pueden manejar múltiples consultas simultáneamente, escalando fácilmente según la demanda sin comprometer la calidad del servicio."
+  },
+  "personalization": {
+    "title": "Personalización",
+    "description": "Ofrecen experiencias personalizadas a los usuarios mediante el análisis de sus interacciones y comportamientos anteriores."
+  },
+  "satisfaction": {
+    "title": "Mejora de satisfacción",
+    "description": "Aumentan la satisfacción del cliente al proporcionar respuestas precisas y rápidas, resolviendo problemas de manera eficiente."
+  },
+  "collection": {
+    "title": "Recopilación de datos",
+    "description": "Recopilan y analizan datos de las interacciones con los usuarios, proporcionando insights valiosos para mejorar productos y servicios."
+  },
+  "question": "¿Listo para transformar la atención al cliente en tu empresa y alcanzar nuevos niveles de eficiencia y satisfacción?"
+}

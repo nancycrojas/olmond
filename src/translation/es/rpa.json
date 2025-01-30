@@ -1,23 +1,23 @@
 {
   "automation": {
     "title": "¿Qué es la automatización robótica de procesos (RPA)?",
-    "description": "La automatización robótica de procesos (RPA) es una tecnología que emplea robots de software virtuales, conocidos como robots digitales o bots, para llevar a cabo tareas manuales que suelen ser repetitivas y consumen mucho tiempo."
+    "description": "La RPA es tecnología que automatiza tareas repetitivas usando 'robots' software. Simplifica procesos, reduce errores y libera tiempo para que los equipos se enfoquen en actividades estratégicas. ¡Eficiencia inteligente al servicio de tu negocio!"
   },
   "tasks": {
     "title": "¿Qué tipos de tareas maneja la RPA?",
-    "description": "La RPA maneja tareas manuales y repetitivas, de gran volumen y que requieren el uso de múltiples sistemas, como la carga de datos y los flujos de trabajo de aprobación."
+    "description": "La RPA maneja tareas repetitivas: procesamiento de datos, gestión de facturas, atención al cliente y más. Ideal para procesos estructurados y reglas claras. ¡Automatiza lo rutinario y potencia la productividad de tu equipo!"
   },
   "work": {
     "title": "¿Cómo funciona la RPA?",
-    "description": "La RPA se ejecuta en computadoras de escritorio o virtuales en las que los robots de software interactúan con aplicaciones internas, sitios web, portales de usuarios y otras apps, emulando acciones de los humanos mientras realizan la misma tarea."
+    "description": "La RPA imita acciones humanas en sistemas digitales: ingresa datos, ejecuta transacciones y genera informes. Sin alterar sistemas existentes, trabaja 24/7. ¡Precisión y velocidad para optimizar tus operaciones al máximo!"
   },
   "benefit": {
     "title": "¿Qué industrias se benefician de la RPA?",
-    "description": "La RPA beneficia a todas las industrias, desde finanzas hasta recursos humanos y servicio al cliente, mejorando la eficiencia y reduciendo costos en diversas áreas."
+    "description": "Banca, salud, retail, logística y más. La RPA agiliza procesos, reduce costos y mejora la experiencia del cliente. ¡Transforma cualquier industria con soluciones automatizadas y escalables!"
   },
   "implemented": {
     "title": "¿Cómo se implementa una estrategia de RPA?",
-    "description": "Una estrategia efectiva de RPA comienza con la evaluación de flujos de trabajo, identificando los mejores casos para la automatización y utilizando herramientas basadas en la nube para escalar y gestionar los bots."
+    "description": "Identifica procesos repetitivos, elige la herramienta adecuada y capacita a tu equipo. Comienza con un piloto, mide resultados y escala gradualmente. ¡Maximiza el ROI con una implementación inteligente y estratégica!"
   },
   "benefits": "Beneficios de la Automatización Robótica de Procesos (RPA)",
   "fast": {
