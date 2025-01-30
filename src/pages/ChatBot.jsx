@@ -106,7 +106,7 @@ export const ChatBot = () => {
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
         <Heading size="xl" mb={4} textAlign="center">
-          {t("services.services.chatBots.title")}
+          {t("services.services.aiAgents.title")}
         </Heading>
         {serviceDetail.map(({ title, description }, index) => (
           <Box

@@ -8,7 +8,6 @@ import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { AboutUs } from "@/pages/AboutUs";
 import { ChatBot } from "@/pages/ChatBot";
 import { DataAnalytics } from "@/pages/DataAnalytics";
-import { Healthcare } from "@/pages/Healthcare";
 import { NotFound } from "@/pages/NotFound";
 import { Rpa } from "@/pages/Rpa";
 
@@ -28,9 +27,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/rpa" element={<Rpa />} />
-            <Route path="/chat-bots" element={<ChatBot />} />
+            <Route path="/ai-agents" element={<ChatBot />} />
             <Route path="/data-analytics" element={<DataAnalytics />} />
-            <Route path="/healthcare" element={<Healthcare />} />
           </Route>
           <Route element={<NotFoundLayout />}>
             <Route path="*" element={<NotFound />} />

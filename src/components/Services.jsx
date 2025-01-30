@@ -30,9 +30,9 @@ export const Services = () => {
       link: "/rpa",
     },
     {
-      title: "services.services.chatBots.title",
-      description: "services.services.chatBots.description",
-      link: "/chat-bots",
+      title: "services.services.aiAgents.title",
+      description: "services.services.aiAgents.description",
+      link: "/ai-agents",
     },
     {
       title: "services.services.dataAnatytics.title",

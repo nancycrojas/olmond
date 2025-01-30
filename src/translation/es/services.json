@@ -3,15 +3,15 @@
   "services": {
     "rpa": {
       "title": "Automatización Robótica de Procesos (RPA)",
-      "description": "Automatizá tus procesos con RPA y optimizá la eficiencia de tu negocio. ¡Transformá tu futuro!"
+      "description": "Automatiza tus procesos con RPA y optimizá la eficiencia de tu negocio. ¡Transformá tu futuro!"
     },
-    "chatBots": {
+    "aiAgents": {
       "title": "Agentes de IA",
-      "description": "Implementá nuestros Agentes de IA para mejorar tu prospección de clientes y aumentar la eficiencia de tu negocio. ¡Revoluciona la interacción!"
+      "description": "Implementa nuestros Agentes de IA para mejorar tu prospección de clientes y aumentar la eficiencia de tu negocio. ¡Revoluciona la interacción!"
     },
     "dataAnatytics": {
       "title": "Data Analytics",
-      "description": "Descubrí el poder de tus datos con nuestros servicios de Data Analytics. Tomá decisiones informadas, optimizá procesos y generá valor para tu negocio."
+      "description": "Descubre el poder de tus datos con nuestros servicios de Data Analytics. Tomá decisiones informadas, optimizá procesos y generá valor para tu negocio."
     }
   }
 }

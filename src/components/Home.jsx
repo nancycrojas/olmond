@@ -4,7 +4,6 @@ import { Button, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-import { Healthcare } from "../pages/Healthcare";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
 import { Services } from "./Services";
@@ -70,7 +69,7 @@ export const Home = () => {
       <Team />
       <Carousel />
       <Services />
-      <Healthcare />
+      {/* <Healthcare /> */}
       {/* <Contact /> */}
     </Stack>
   );
