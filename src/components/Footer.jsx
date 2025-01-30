@@ -32,7 +32,7 @@ export const Footer = () => {
           >
             <Icon as={FaWhatsapp} w={8} h={8} />
           </Link>
-          <Link href="mailto:info@olmondconsulting.com">
+          <Link href="mailto:contacto@olmondconsulting.com">
             <Icon as={FaEnvelope} w={8} h={8} />
           </Link>
         </HStack>

@@ -36,7 +36,7 @@ export const Home = () => {
           {t("home.description")}
         </Text>
         <Link
-          href="http://calendly.com/equipo-olmondconsulting"
+          href="https://calendly.com/contacto-olmondconsulting"
           isExternal
           _hover=""
           // mt={6}
