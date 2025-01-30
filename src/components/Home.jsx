@@ -30,8 +30,6 @@ export const Home = () => {
           lineHeight="inherit"
           mb={8}
         >
-          {t("home.title")}
-          <Text as="span">{t("home.title_2")}</Text>
           <Text as="span">{t("home.title_3")}</Text>
           <Text as="span">{t("home.title_4")}</Text>
         </Heading>
