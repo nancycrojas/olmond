@@ -40,7 +40,13 @@ export const About = () => {
           mx={{ base: 10, sm: 0 }}
         >
           <Text fontSize={{ base: "lg", md: "2xl" }}>
-            {t("home.aboutDescription")}
+            {t("home.aboutIntro")}
+          </Text>
+          <Text fontSize={{ base: "lg", md: "2xl" }}>
+            {t("home.aboutChallenge")}
+          </Text>
+          <Text fontSize={{ base: "lg", md: "2xl" }}>
+            {t("home.aboutCallToAction")}
           </Text>
         </Stack>
       </div>
