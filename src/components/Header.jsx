@@ -41,7 +41,7 @@ export const Header = () => {
         <Image
           src={logo}
           alt="logo"
-          boxSize={{ base: "45%", md: "25%", lg: "55%" }}
+          boxSize={{ base: "45%", md: "25%", lg: "40%" }}
         />
       </Link>
       <HStack
@@ -55,7 +55,7 @@ export const Header = () => {
           to="/about-us"
           as={RouterLink}
           fontWeight="semibold"
-          fontSize="xl"
+          fontSize="lg"
           color="white"
           _hover=""
         >
@@ -65,7 +65,7 @@ export const Header = () => {
           <MenuButton
             as={Button}
             fontWeight="semibold"
-            fontSize="xl"
+            fontSize="lg"
             color="white"
             bg="transparent"
             _hover={{ bg: "transparent" }}

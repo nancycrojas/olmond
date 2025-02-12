@@ -15,7 +15,7 @@ export const Footer = () => {
           <Image
             src={logo}
             alt="logo"
-            boxSize={{ base: "60%", md: "27%", lg: "24%" }}
+            boxSize={{ base: "60%", md: "27%", lg: "20%" }}
           />
         </Link>
 
