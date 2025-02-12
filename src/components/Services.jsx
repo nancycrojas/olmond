@@ -45,7 +45,7 @@ export const Services = () => {
     <Container maxW="1400px">
       <Stack color="white" alignItems="center" justifyContent="center" my={20}>
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" textAlign="center" mb={20}>
+          <Heading as="h3" size="xl" textAlign="center" mb={20}>
             {t("services.ourServices")}
           </Heading>
         </div>
@@ -67,7 +67,7 @@ export const Services = () => {
                 color="#FFFFFF"
                 padding={8}
                 w="320px"
-                h="400px"
+                h="380px"
                 borderRadius={8}
                 sx={{
                   background: "hsla(0, 0%, 100%, 0.05)",
@@ -85,7 +85,11 @@ export const Services = () => {
                   hoveredIndex === null || hoveredIndex === index ? 1 : 0.5
                 }
               >
-                <Heading size="lg" mb={8}>
+                <Heading
+                  // size="lg"
+                  fontSize="2xl"
+                  mb={8}
+                >
                   {t(title)}
                 </Heading>
                 <Text mb={8}>{t(description)}</Text>

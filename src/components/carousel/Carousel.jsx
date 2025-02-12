@@ -44,7 +44,7 @@ export const Carousel = () => {
         spacing={5}
         m="auto"
       >
-        <Heading as="h3" size="2xl" mb={10}>
+        <Heading as="h3" size="xl" mb={10}>
           {t("home.whyUs")}
         </Heading>
         <Stack

@@ -21,7 +21,7 @@ export const AboutUs = () => {
         m="auto"
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" textAlign="center">
+          <Heading as="h3" size="xl" textAlign="center">
             {t("team.mission")}
           </Heading>
         </div>
@@ -42,9 +42,7 @@ export const AboutUs = () => {
             }}
             transition="all 0.3s"
           >
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              {t("team.desc_mission")}
-            </Text>
+            <Text fontSize="lg">{t("team.desc_mission")}</Text>
           </Stack>
         </div>
       </Stack>
@@ -59,7 +57,7 @@ export const AboutUs = () => {
         mt={{ base: 16, lg: 16 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" textAlign="center">
+          <Heading as="h3" size="xl" textAlign="center">
             {t("team.vision")}
           </Heading>
         </div>
@@ -80,9 +78,7 @@ export const AboutUs = () => {
             }}
             transition="all 0.3s"
           >
-            <Text fontSize={{ base: "xl", md: "2xl" }}>
-              {t("team.desc_vision")}
-            </Text>
+            <Text fontSize="lg">{t("team.desc_vision")}</Text>
           </Stack>
         </div>
       </Stack>
@@ -97,7 +93,7 @@ export const AboutUs = () => {
         mt={{ base: 16, lg: 16 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="2xl" textAlign="center">
+          <Heading as="h3" size="xl" textAlign="center">
             {t("team.values")}
           </Heading>
         </div>
@@ -120,10 +116,10 @@ export const AboutUs = () => {
           >
             {values.map(({ title, description }, index) => (
               <Stack key={index}>
-                <Heading as="h4" size="lg" textAlign="center">
+                <Heading as="h4" size="md" textAlign="center">
                   {t(title)}
                 </Heading>
-                <Text fontSize={{ base: "xl", md: "2xl" }} mb={8}>
+                <Text fontSize="lg" mb={8}>
                   {t(description)}
                 </Text>
               </Stack>

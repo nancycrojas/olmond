@@ -130,10 +130,10 @@ export const Rpa = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
-            <Heading size="lg" mb={4}>
+            <Heading size="md" mb={4}>
               {t(title)}
             </Heading>
-            <Text mt={2} fontSize="xl">
+            <Text mt={2} fontSize="lg">
               {t(description)}
             </Text>
           </Box>
@@ -189,10 +189,10 @@ export const Rpa = () => {
                       <Icon size={30} />
                     </Circle>
                   </Stack>
-                  <Heading size="md" mb={4}>
+                  <Heading size="sm" mb={4}>
                     {t(title)}
                   </Heading>
-                  <Text mt={2} fontSize="xl">
+                  <Text mt={2} fontSize="md">
                     {t(description)}
                   </Text>
                 </Box>

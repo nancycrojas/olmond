@@ -17,7 +17,7 @@ export const About = () => {
       mt={{ base: 10, lg: 10 }}
     >
       <div data-aos="fade-up" data-aos-duration="1000">
-        <Heading as="h3" size="2xl" textAlign="center">
+        <Heading as="h3" size="xl" textAlign="center">
           {t("home.aboutUs")}
         </Heading>
       </div>
@@ -39,15 +39,9 @@ export const About = () => {
           transition="all 0.3s"
           mx={{ base: 10, sm: 0 }}
         >
-          <Text fontSize={{ base: "lg", md: "2xl" }}>
-            {t("home.aboutIntro")}
-          </Text>
-          <Text fontSize={{ base: "lg", md: "2xl" }}>
-            {t("home.aboutChallenge")}
-          </Text>
-          <Text fontSize={{ base: "lg", md: "2xl" }}>
-            {t("home.aboutCallToAction")}
-          </Text>
+          <Text fontSize="lg">{t("home.aboutIntro")}</Text>
+          <Text fontSize="lg">{t("home.aboutChallenge")}</Text>
+          <Text fontSize="lg">{t("home.aboutCallToAction")}</Text>
         </Stack>
       </div>
     </Stack>

@@ -58,7 +58,7 @@ export const Team = () => {
       my={20}
     >
       <div data-aos="fade-up" data-aos-duration="1000">
-        <Heading as="h3" size="2xl" textAlign="center" mb={20}>
+        <Heading as="h3" size="xl" textAlign="center" mb={20}>
           {t("team.ourTeam")}
         </Heading>
       </div>
