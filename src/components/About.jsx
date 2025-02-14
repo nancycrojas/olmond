@@ -17,7 +17,13 @@ export const About = () => {
       mt={{ base: 10, lg: 10 }}
     >
       <div data-aos="fade-up" data-aos-duration="1000">
-        <Heading as="h3" size="xl" textAlign="center">
+        <Heading
+          as="h3"
+          size="xl"
+          textAlign="center"
+          background="linear-gradient(to right, #113cff, #f42ea8)"
+          bgClip="text"
+        >
           {t("home.aboutUs")}
         </Heading>
       </div>

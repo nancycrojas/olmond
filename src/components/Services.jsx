@@ -51,7 +51,14 @@ export const Services = () => {
         textAlign="center"
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="xl" textAlign="center" mb={20}>
+          <Heading
+            as="h3"
+            size="xl"
+            textAlign="center"
+            mb={20}
+            background="linear-gradient(to right, #113cff, #f42ea8)"
+            bgClip="text"
+          >
             {t("services.ourServices")}
           </Heading>
         </div>
@@ -94,6 +101,8 @@ export const Services = () => {
                   // size="lg"
                   fontSize="2xl"
                   mb={8}
+                  background="linear-gradient(to right, #113cff, #f42ea8)"
+                  bgClip="text"
                 >
                   {t(title)}
                 </Heading>

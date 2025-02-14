@@ -44,7 +44,13 @@ export const Carousel = () => {
         spacing={5}
         m="auto"
       >
-        <Heading as="h3" size="xl" mb={10}>
+        <Heading
+          as="h3"
+          size="xl"
+          mb={10}
+          background="linear-gradient(to right, #113cff, #f42ea8)"
+          bgClip="text"
+        >
           {t("home.whyUs")}
         </Heading>
         <Stack

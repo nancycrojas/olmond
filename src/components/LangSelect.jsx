@@ -29,7 +29,7 @@ export default function LangSelect({
     <HStack alignItems="center" display={display}>
       <Menu>
         <MenuButton
-          rounded="2xl"
+          rounded="full"
           as={Button}
           leftIcon={<MdLanguage size={22} />}
           px={6}

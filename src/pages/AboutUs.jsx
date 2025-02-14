@@ -21,7 +21,13 @@ export const AboutUs = () => {
         m="auto"
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="xl" textAlign="center">
+          <Heading
+            as="h3"
+            size="xl"
+            textAlign="center"
+            background="linear-gradient(to right, #113cff, #f42ea8)"
+            bgClip="text"
+          >
             {t("team.mission")}
           </Heading>
         </div>
@@ -57,7 +63,13 @@ export const AboutUs = () => {
         mt={{ base: 16, lg: 16 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="xl" textAlign="center">
+          <Heading
+            as="h3"
+            size="xl"
+            textAlign="center"
+            background="linear-gradient(to right, #113cff, #f42ea8)"
+            bgClip="text"
+          >
             {t("team.vision")}
           </Heading>
         </div>
@@ -93,7 +105,13 @@ export const AboutUs = () => {
         mt={{ base: 16, lg: 16 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
-          <Heading as="h3" size="xl" textAlign="center">
+          <Heading
+            as="h3"
+            size="xl"
+            textAlign="center"
+            background="linear-gradient(to right, #113cff, #f42ea8)"
+            bgClip="text"
+          >
             {t("team.values")}
           </Heading>
         </div>

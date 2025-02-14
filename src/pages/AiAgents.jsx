@@ -105,7 +105,13 @@ export const AiAgents = () => {
   return (
     <Container maxW="1400px" py={10} color="#FFFFFF">
       <VStack spacing={6}>
-        <Heading size="xl" mb={4} textAlign="center">
+        <Heading
+          size="xl"
+          mb={4}
+          textAlign="center"
+          background="linear-gradient(to right, #113cff, #f42ea8)"
+          bgClip="text"
+        >
           {t("services.services.aiAgents.title")}
         </Heading>
         {serviceDetail.map(({ title, description }, index) => (
@@ -155,7 +161,12 @@ export const AiAgents = () => {
             textAlign="center"
             pb={4}
           >
-            <Heading p={{ base: 10, md: 10, lg: 0 }} mb={6}>
+            <Heading
+              p={{ base: 10, md: 10, lg: 0 }}
+              mb={6}
+              background="linear-gradient(to right, #113cff, #f42ea8)"
+              bgClip="text"
+            >
               {t("aiAgents.benefits")}
             </Heading>
             <SimpleGrid
@@ -211,7 +222,6 @@ export const AiAgents = () => {
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
             <Button
-              // variant="outline"
               size="lg"
               color="white"
               bgGradient="linear(to-r, #113cff, #f42ea8)"

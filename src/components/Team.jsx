@@ -59,8 +59,15 @@ export const Team = () => {
       textAlign="center"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
-        <Heading as="h3" size="xl" textAlign="center" mb={20}>
-          {t("team.ourTeam")}
+        <Heading
+          as="h3"
+          size="xl"
+          textAlign="center"
+          mb={20}
+          background="linear-gradient(to right, #113cff, #f42ea8)"
+          bgClip="text"
+        >
+          {t("team.founder")}
         </Heading>
       </div>
       <div data-aos="fade-up" data-aos-duration="1000">
