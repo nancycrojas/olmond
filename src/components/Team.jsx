@@ -56,6 +56,7 @@ export const Team = () => {
       alignItems="center"
       justifyContent="center"
       my={20}
+      textAlign="center"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading as="h3" size="xl" textAlign="center" mb={20}>

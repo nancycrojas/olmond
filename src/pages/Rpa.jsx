@@ -122,7 +122,6 @@ export const Rpa = () => {
               borderRadius: "10px",
             }}
             _hover={{
-              borderColor: "#256a60",
               zIndex: 1,
             }}
             transition="all 0.3s"
@@ -183,8 +182,7 @@ export const Rpa = () => {
                   <Stack mb={4} align="center">
                     <Circle
                       size="50px"
-                      color="#256a60"
-                      border="2px solid #256a60"
+                      bg="linear-gradient(to right, #7d3f98, #4e2673)"
                     >
                       <Icon size={30} />
                     </Circle>
@@ -208,11 +206,16 @@ export const Rpa = () => {
           </div>
           <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
             <Button
-              variant="outline"
+              // variant="outline"
               size="lg"
               color="white"
-              bgGradient="linear(to-r, #1a3a35, #256a60)"
-              _hover={{ bgGradient: "linear(to-r, #1a3a35, #256a60)" }}
+              bgGradient="linear(to-r, #113cff, #f42ea8)"
+              _hover={{
+                transform: "scale(1.05)",
+              }}
+              rounded="full"
+              fontSize="md"
+              px={8}
             >
               {t("talkToUs")}
             </Button>

@@ -28,7 +28,12 @@ export default function LangSelect({
   return (
     <HStack alignItems="center" display={display}>
       <Menu>
-        <MenuButton as={Button} leftIcon={<MdLanguage size={22} />} px={6}>
+        <MenuButton
+          rounded="2xl"
+          as={Button}
+          leftIcon={<MdLanguage size={22} />}
+          px={6}
+        >
           {t(i18n.resolvedLanguage)}
         </MenuButton>
         <MenuList>

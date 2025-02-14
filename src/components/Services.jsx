@@ -43,7 +43,13 @@ export const Services = () => {
 
   return (
     <Container maxW="1400px">
-      <Stack color="white" alignItems="center" justifyContent="center" my={20}>
+      <Stack
+        color="white"
+        alignItems="center"
+        justifyContent="center"
+        my={20}
+        textAlign="center"
+      >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading as="h3" size="xl" textAlign="center" mb={20}>
             {t("services.ourServices")}
@@ -76,7 +82,6 @@ export const Services = () => {
                   borderRadius: "10px",
                 }}
                 _hover={{
-                  borderColor: "#256a60",
                   transform: "scale(1.05)",
                   zIndex: 1,
                 }}
@@ -94,9 +99,17 @@ export const Services = () => {
                 </Heading>
                 <Text mb={8}>{t(description)}</Text>
                 <Button
+                  rounded="full"
+                  px={8}
                   as={Link}
                   to={link}
-                  _hover={{ bg: "#256a60", color: "#FFFFFF" }}
+                  color="white"
+                  bgGradient="linear(to-r, #113cff, #f42ea8 )"
+                  _hover={{
+                    // bg: "#113cff",
+                    // color: "#FFFFFF",
+                    transform: "scale(1.05)",
+                  }}
                 >
                   {t("moreInformation")}
                 </Button>

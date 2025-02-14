@@ -46,7 +46,8 @@
 }
 
 .carousel-indicators div.active {
-  background-color: #256a60;
+  /* background-color: #113cff; */
+  background-color: #8135d4;
 }
 
 @media (max-width: 620px) {

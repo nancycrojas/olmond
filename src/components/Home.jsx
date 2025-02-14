@@ -1,9 +1,18 @@
 import "animate.css";
 
-import { Button, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
+import image from "../assets/image.png";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
 import { Services } from "./Services";
@@ -13,64 +22,84 @@ export const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <Stack minH="90vh" gap={8} textAlign="center">
-      <Stack
-        color="white"
+    <Stack minH="90vh" gap={8} textAlign={{ base: "center", lg: "start" }}>
+      <Flex
         alignItems="center"
-        justifyContent="center"
-        mb={8}
+        justifyContent="space-between"
         m="auto"
         mt={10}
-        minH={{ base: "60vh", md: "70vh" }}
+        p={{ base: 0, lg: 10 }}
+        direction={{ base: "column", lg: "row" }}
       >
-        <Heading
-          w="70%"
-          fontSize={{ base: "30px", md: "40px" }}
-          lineHeight="inherit"
-          mb={8}
+        <Stack
+          spacing={4}
+          color="white"
+          alignItems={{ base: "center", lg: "start" }}
+          width="full"
+          maxWidth={{ base: "70%", lg: "50%" }}
         >
-          <Text as="span">{t("home.title_3")}</Text>
-          <Text as="span">{t("home.title_4")}</Text>
-        </Heading>
-        <Text w="70%" fontSize={{ base: "lg", md: "xl" }} mb={10}>
-          {t("home.description")}
-        </Text>
-        <Link
-          href="https://calendly.com/contacto-olmondconsulting"
-          isExternal
-          _hover=""
-          // mt={6}
-        >
-          <Button
-            className="animate__animated animate__slideInLeft"
-            variant="outline"
-            size="lg"
-            color="white"
-            bgGradient="linear(to-r, #1a3a35, #256a60)"
-            _hover={{
-              "& svg": {
-                transform: "translateX(5px)",
-              },
-            }}
+          <Heading
+            fontSize={{ base: "30px", md: "40px" }}
+            lineHeight="inherit"
+            mb={4}
           >
-            <Flex align="center">
-              {t("home.talkToUs")}
-              <FaLongArrowAltRight
-                style={{
-                  transition: "transform 0.3s ease-in-out",
-                  marginLeft: "10px",
-                }}
-              />
-            </Flex>
-          </Button>
-        </Link>
-      </Stack>
+            <Text
+              as="span"
+              background="linear-gradient(to right, #113cff, #f42ea8)"
+              bgClip="text"
+            >
+              {t("home.title_3")}
+            </Text>
+            <Text as="span" fontWeight="400">
+              {t("home.title_4")}
+            </Text>
+          </Heading>
+          <Text fontSize={{ base: "lg", md: "xl" }} mb={8}>
+            {t("home.description")}
+          </Text>
+          <Link
+            href="https://calendly.com/contacto-olmondconsulting"
+            isExternal
+            _hover=""
+          >
+            <Button
+              className="animate__animated animate__slideInLeft"
+              size="lg"
+              color="white"
+              bgGradient="linear(to-r, #113cff, #f42ea8)"
+              rounded="full"
+              fontSize="md"
+              px={8}
+              _hover={{
+                "& svg": {
+                  transform: "translateX(5px)",
+                },
+              }}
+              mb={6}
+            >
+              <Flex align="center">
+                {t("home.talkToUs")}
+                <FaLongArrowAltRight
+                  style={{
+                    transition: "transform 0.3s ease-in-out",
+                    marginLeft: "10px",
+                  }}
+                />
+              </Flex>
+            </Button>
+          </Link>
+        </Stack>
+        <Image
+          src={image}
+          boxSize={{ base: "300px", md: "400", lg: "450px" }}
+          objectFit="cover"
+          borderRadius="lg"
+        />
+      </Flex>
       <About />
       <Team />
       <Carousel />
       <Services />
-      {/* <Healthcare /> */}
-      {/* <Contact /> */}
     </Stack>
   );
 };

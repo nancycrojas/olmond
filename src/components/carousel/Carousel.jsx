@@ -52,7 +52,7 @@ export const Carousel = () => {
           position="relative"
           overflow="hidden"
           maxH="400px"
-          minH={{ base: "400px", md: "300px" }}
+          minH={{ base: "420px", md: "300px" }}
           minW={{ base: "300px", md: "600px" }}
         >
           {features.map(({ title, description }, index) => (
