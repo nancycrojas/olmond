@@ -15,6 +15,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import image from "../assets/image.png";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
+import { Impact } from "./Impact";
 import { Services } from "./Services";
 import { Team } from "./Team";
 
@@ -98,8 +99,9 @@ export const Home = () => {
       </Flex>
       <About />
       <Team />
-      <Carousel />
+      <Impact />
       <Services />
+      <Carousel />
     </Stack>
   );
 };
