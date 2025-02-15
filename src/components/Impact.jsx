@@ -15,8 +15,15 @@ export const Impact = () => {
       m="auto"
       mt={10}
       p={{ base: 0, lg: 10 }}
-      direction={{ base: "column", lg: "row" }}
+      direction={{ base: "column-reverse", lg: "row" }}
     >
+      <Image
+        src={image}
+        boxSize={{ base: "300px", md: "400", lg: "450px" }}
+        objectFit="cover"
+        borderRadius="lg"
+        mt={{ base: 4, lg: 0 }}
+      />
       <Stack
         spacing={4}
         color="white"
@@ -39,12 +46,6 @@ export const Impact = () => {
           {t("impact.transform")}
         </Text>
       </Stack>
-      <Image
-        src={image}
-        boxSize={{ base: "300px", md: "400", lg: "450px" }}
-        objectFit="cover"
-        borderRadius="lg"
-      />
     </Flex>
   );
 };

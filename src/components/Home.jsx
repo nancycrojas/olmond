@@ -17,6 +17,7 @@ import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
 import { Impact } from "./Impact";
 import { Services } from "./Services";
+import { Success } from "./Success";
 import { Team } from "./Team";
 
 export const Home = () => {
@@ -101,6 +102,7 @@ export const Home = () => {
       <Team />
       <Impact />
       <Services />
+      <Success />
       <Carousel />
     </Stack>
   );
