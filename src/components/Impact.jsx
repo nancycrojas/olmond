@@ -40,8 +40,11 @@ export const Impact = () => {
             {t("impact.title")}
           </Text>
         </Heading>
-        <Text fontSize="md">{t("impact.automation")}</Text>
-        <Text fontSize="md">{t("impact.moreover")}</Text>
+        <Text fontSize="md">{t("impact.team")}</Text>
+        <Text fontSize="md">{t("impact.replace")}</Text>
+        <Text fontSize="md">{t("impact.time")}</Text>
+        <Text fontSize="md">{t("impact.costly")}</Text>
+        <Text fontSize="md">{t("impact.decisions")}</Text>
         <Text fontSize="md" mb={4}>
           {t("impact.transform")}
         </Text>
