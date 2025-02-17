@@ -3,7 +3,7 @@ import "animate.css";
 import { Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
-import image from "../assets/woman-office.jpg";
+import image from "../assets/woman-office.jpeg";
 
 export const Impact = () => {
   const { t } = useTranslation();

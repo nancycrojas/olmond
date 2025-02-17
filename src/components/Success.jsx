@@ -27,9 +27,6 @@ export const Success = () => {
           pr={{ base: 0, lg: 12 }}
         >
           <Heading as="h3" size="lg">
-            <Text as="span" fontSize="2xl">
-              🚀
-            </Text>
             <Text
               as="span"
               background="linear-gradient(to right, #113cff, #f42ea8)"
