@@ -1,11 +1,9 @@
 /* eslint-disable react/prop-types */
 import {
   Box,
-  Button,
   Circle,
   Container,
   Heading,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -210,32 +208,6 @@ export const AiAgents = () => {
             </SimpleGrid>
           </Box>
         </div>
-        <Box textAlign="center">
-          <div data-aos="zoom-in" data-aos-duration="1000">
-            <Text
-              fontSize={{ base: "2xl", md: "3xl" }}
-              fontWeight="bold"
-              mb={8}
-            >
-              {t("aiAgents.question")}
-            </Text>
-          </div>
-          <Link href="http://calendly.com/equipo-olmondconsulting" isExternal>
-            <Button
-              size="lg"
-              color="white"
-              bgGradient="linear(to-r, #113cff, #f42ea8)"
-              _hover={{
-                transform: "scale(1.05)",
-              }}
-              rounded="full"
-              fontSize="md"
-              px={8}
-            >
-              {t("talkToUs")}
-            </Button>
-          </Link>
-        </Box>
       </VStack>
     </Container>
   );
