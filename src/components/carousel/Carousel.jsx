@@ -36,7 +36,7 @@ export const Carousel = () => {
   }, []);
 
   return (
-    <Stack spacing={32} color="white">
+    <Stack spacing={32} color="white" mb={4}>
       <Stack
         as="section"
         align="center"

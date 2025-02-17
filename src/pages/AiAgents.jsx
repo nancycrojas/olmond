@@ -22,6 +22,8 @@ import {
 } from "react-icons/md";
 import { TbSettingsAutomation } from "react-icons/tb";
 
+import { Contactus } from "../components/Contactus";
+
 const serviceDetail = [
   {
     title: "aiAgents.helpYou.title",
@@ -209,6 +211,7 @@ export const AiAgents = () => {
           </Box>
         </div>
       </VStack>
+      <Contactus />
     </Container>
   );
 };

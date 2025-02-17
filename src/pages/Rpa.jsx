@@ -21,6 +21,8 @@ import {
 } from "react-icons/md";
 import { PiChartLineUp, PiRobotFill } from "react-icons/pi";
 
+import { Contactus } from "../components/Contactus";
+
 const serviceDetail = [
   {
     title: "rpa.automation.title",
@@ -208,6 +210,7 @@ export const Rpa = () => {
           </Box>
         </div>
       </VStack>
+      <Contactus />
     </Container>
   );
 };

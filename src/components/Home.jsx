@@ -15,7 +15,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import image from "../assets/image.png";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
+import { Contactus } from "./Contactus";
 import { Impact } from "./Impact";
+// import { Integrations } from "./Integrations";
 import { Services } from "./Services";
 import { Success } from "./Success";
 import { Team } from "./Team";
@@ -104,6 +106,8 @@ export const Home = () => {
       <Services />
       <Success />
       <Carousel />
+      {/* <Integrations /> */}
+      <Contactus />
     </Stack>
   );
 };

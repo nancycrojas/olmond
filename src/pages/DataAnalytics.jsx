@@ -18,6 +18,8 @@ import { GrResources } from "react-icons/gr";
 import { MdAltRoute, MdSentimentVerySatisfied } from "react-icons/md";
 import { PiLineSegmentsFill } from "react-icons/pi";
 
+import { Contactus } from "../components/Contactus";
+
 const serviceDetail = [
   {
     title: "data.data.title",
@@ -204,6 +206,7 @@ export const DataAnalytics = () => {
           </Box>
         </div>
       </VStack>
+      <Contactus />
     </Container>
   );
 };
