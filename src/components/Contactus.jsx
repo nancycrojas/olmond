@@ -1,6 +1,9 @@
 import { Button, Heading, Link, VStack } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 export const Contactus = () => {
+  const { t } = useTranslation();
+
   return (
     <VStack
       p={{ base: 8, md: 14 }}
@@ -20,7 +23,7 @@ export const Contactus = () => {
       mb={4}
     >
       <Heading as="h3" size="lg" textAlign="center" mb={6}>
-        Contáctanos para una asesoría personalizada
+        {t("contactus")}
       </Heading>
 
       <Link href="https://tally.so/r/3yovMW" isExternal _hover="">
@@ -38,7 +41,7 @@ export const Contactus = () => {
             },
           }}
         >
-          Inicia tu consulta gratis
+          {t("freeConsultation")}
         </Button>
       </Link>
     </VStack>
