@@ -44,45 +44,51 @@ export const Carousel = () => {
         spacing={5}
         m="auto"
       >
-        <Heading
-          as="h3"
-          size="xl"
-          mb={10}
-          background="linear-gradient(to right, #113cff, #f42ea8)"
-          bgClip="text"
-        >
-          {t("home.whyUs")}
-        </Heading>
-        <Stack
-          className="carousel"
-          position="relative"
-          overflow="hidden"
-          maxH="400px"
-          minH={{ base: "420px", md: "300px" }}
-          minW={{ base: "300px", md: "600px" }}
-        >
-          {features.map(({ title, description }, index) => (
-            <Stack
-              className={`carousel-item ${
-                activeIndex === index ? "active" : ""
-              }`}
-              key={index}
-            >
-              <Heading as="h4" fontSize="3xl" mb={4}>
-                {t(title)}
-              </Heading>
-              <Text fontSize={{ base: "xl", md: "2xl" }}>{t(description)}</Text>
-            </Stack>
-          ))}
-        </Stack>
-        <div className="carousel-indicators">
-          {[0, 1, 2, 3].map((index) => (
-            <div
-              key={index}
-              className={activeIndex === index ? "active" : ""}
-              onClick={() => setActiveIndex(index)}
-            ></div>
-          ))}
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <Heading
+            as="h3"
+            size="xl"
+            mb={10}
+            background="linear-gradient(to right, #113cff, #f42ea8)"
+            bgClip="text"
+          >
+            {t("home.whyUs")}
+          </Heading>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <Stack
+            className="carousel"
+            position="relative"
+            overflow="hidden"
+            maxH="400px"
+            minH={{ base: "420px", md: "300px" }}
+            minW={{ base: "300px", md: "600px" }}
+          >
+            {features.map(({ title, description }, index) => (
+              <Stack
+                className={`carousel-item ${
+                  activeIndex === index ? "active" : ""
+                }`}
+                key={index}
+              >
+                <Heading as="h4" fontSize="3xl" mb={4}>
+                  {t(title)}
+                </Heading>
+                <Text fontSize={{ base: "xl", md: "2xl" }}>
+                  {t(description)}
+                </Text>
+              </Stack>
+            ))}
+          </Stack>
+          <div className="carousel-indicators">
+            {[0, 1, 2, 3].map((index) => (
+              <div
+                key={index}
+                className={activeIndex === index ? "active" : ""}
+                onClick={() => setActiveIndex(index)}
+              ></div>
+            ))}
+          </div>
         </div>
       </Stack>
     </Stack>
