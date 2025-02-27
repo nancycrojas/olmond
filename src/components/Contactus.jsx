@@ -21,6 +21,7 @@ export const Contactus = () => {
       }}
       transition="all 0.3s"
       mb={4}
+      mx={4}
     >
       <Heading as="h3" size="lg" textAlign="center" mb={6}>
         {t("contactus")}

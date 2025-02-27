@@ -1,0 +1,136 @@
+.swiper-integrations {
+  width: 100%;
+  align-items: center;
+  height: 22px;
+}
+
+.swiper-integrations .swiper-wrapper {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: calc(120px * 12);
+}
+
+.swiper-integrations .swiper-slide {
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-120px * 6));
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-integrations {
+    height: 50px;
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 577px) {
+  .swiper-integrations {
+    height: 50px;
+    max-width: 400px;
+  }
+}
+@media (min-width: 578px) and (max-width: 767px) {
+  .swiper-integrations {
+    height: 50px;
+    max-width: 500px;
+  }
+
+  .swiper-integrations .swiper-wrapper {
+    width: calc(100px * 12);
+  }
+
+  .swiper-integrations .swiper-slide {
+    width: 100px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100px * 6));
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .swiper-integrations {
+    height: 80px;
+    max-width: 650px;
+  }
+
+  .swiper-integrations .swiper-wrapper {
+    width: calc(140px * 12);
+  }
+
+  .swiper-integrations .swiper-slide {
+    width: 140px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-140px * 6));
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .swiper-integrations {
+    height: 130px;
+    max-width: 850px;
+  }
+
+  .swiper-integrations .swiper-wrapper {
+    width: calc(160px * 12);
+  }
+
+  .swiper-integrations .swiper-slide {
+    width: 160px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-160px * 6));
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-integrations {
+    height: 135px;
+    max-width: 1200px;
+  }
+
+  .swiper-integrations .swiper-wrapper {
+    width: calc(180px * 12);
+  }
+
+  .swiper-integrations .swiper-slide {
+    width: 180px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-180px * 6));
+    }
+  }
+}
