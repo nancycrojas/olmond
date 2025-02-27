@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <>
-      <HStack w="full" justify="space-between">
+      <HStack w="full" justify="space-between" color="white">
         <Link to="/" as={RouterLink}>
           <Image
             src={logo}
@@ -38,7 +38,13 @@ export const Footer = () => {
         </HStack>
       </HStack>
 
-      <Text fontSize="sm" alignSelf="center" textAlign="center" mb={2}>
+      <Text
+        fontSize="sm"
+        alignSelf="center"
+        textAlign="center"
+        mb={2}
+        color="white"
+      >
         Copyright © {new Date().getFullYear()} Olmond Consulting.{" "}
         {t("allRightsReserved")}
       </Text>
