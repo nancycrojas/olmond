@@ -1,9 +1,8 @@
-import { HStack, Icon, Image, Link, Text } from "@chakra-ui/react";
+import { HStack, Icon, Link, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { Link as RouterLink } from "react-router-dom";
 
-import logo from "../assets/logo.png";
+import { Logo } from "./Logo";
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -11,14 +10,7 @@ export const Footer = () => {
   return (
     <>
       <HStack w="full" justify="space-between" color="white">
-        <Link to="/" as={RouterLink}>
-          <Image
-            src={logo}
-            alt="logo"
-            boxSize={{ base: "60%", md: "27%", lg: "20%" }}
-          />
-        </Link>
-
+        <Logo />
         <HStack justifyContent="center" spacing={6} my={4}>
           <Link
             href="https://www.linkedin.com/company/olmond-consulting/"

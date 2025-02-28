@@ -33,13 +33,13 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 577px) {
+@media (min-width: 481px) and (max-width: 578px) {
   .swiper-integrations {
     height: 50px;
     max-width: 400px;
   }
 }
-@media (min-width: 578px) and (max-width: 767px) {
+@media (min-width: 578px) and (max-width: 768px) {
   .swiper-integrations {
     height: 50px;
     max-width: 500px;
@@ -63,7 +63,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .swiper-integrations {
     height: 80px;
     max-width: 650px;
@@ -87,7 +87,7 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .swiper-integrations {
     height: 130px;
     max-width: 850px;

@@ -10,7 +10,6 @@ import {
   DrawerOverlay,
   HStack,
   IconButton,
-  Image,
   Link,
   Menu,
   MenuButton,
@@ -23,8 +22,8 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink } from "react-router-dom";
 
-import logo from "../assets/logo.png";
 import LangSelect from "./LangSelect";
+import { Logo } from "./Logo";
 
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,19 +35,13 @@ export const Header = () => {
   // };
 
   return (
-    <HStack justify="space-between" p={4}>
-      <Link to="/" as={RouterLink}>
-        <Image
-          src={logo}
-          alt="logo"
-          boxSize={{ base: "45%", md: "25%", lg: "40%" }}
-        />
-      </Link>
+    <HStack justify="space-between" py={4}>
+      <Logo />
       <HStack
         gap={8}
         justifyContent="flex-end"
         mr={4}
-        w="100%"
+        w="70%"
         display={{ base: "none", lg: "flex" }}
       >
         <Link
