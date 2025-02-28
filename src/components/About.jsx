@@ -10,7 +10,7 @@ export const About = () => {
       textAlign="center"
       alignItems="center"
       justifyContent="center"
-      spacing={24}
+      spacing={{ base: 12, md: 24 }}
       mb={8}
       maxW={["100%", "75%"]}
       m="auto"

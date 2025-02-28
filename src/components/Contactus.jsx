@@ -20,7 +20,7 @@ export const Contactus = () => {
         transform: "scale(1.05)",
       }}
       transition="all 0.3s"
-      mb={4}
+      mb={20}
       mx={4}
     >
       <Heading as="h3" size="lg" textAlign="center" mb={6}>

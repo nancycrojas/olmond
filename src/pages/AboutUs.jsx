@@ -16,7 +16,7 @@ export const AboutUs = () => {
         textAlign="center"
         alignItems="center"
         justifyContent="center"
-        spacing={24}
+        spacing={{ base: 12, md: 24 }}
         maxW={["100%", "75%"]}
         m="auto"
       >
@@ -57,10 +57,10 @@ export const AboutUs = () => {
         textAlign="center"
         alignItems="center"
         justifyContent="center"
-        spacing={24}
+        spacing={{ base: 12, md: 24 }}
         maxW={["100%", "75%"]}
         m="auto"
-        mt={{ base: 16, lg: 16 }}
+        mt={{ base: 12, md: 16, lg: 20 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading
@@ -99,10 +99,10 @@ export const AboutUs = () => {
         textAlign="center"
         alignItems="center"
         justifyContent="center"
-        spacing={24}
+        spacing={{ base: 12, md: 24 }}
         maxW={["100%", "75%"]}
         m="auto"
-        mt={{ base: 16, lg: 16 }}
+        mt={{ base: 12, md: 16, lg: 20 }}
       >
         <div data-aos="fade-up" data-aos-duration="1000">
           <Heading
@@ -131,6 +131,7 @@ export const AboutUs = () => {
               transform: "scale(1.05)",
             }}
             transition="all 0.3s"
+            mb={20}
           >
             {values.map(({ title, description }, index) => (
               <Stack key={index}>

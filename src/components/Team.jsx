@@ -51,11 +51,10 @@ export const Team = () => {
 
   return (
     <Stack
-      py={8}
       color="white"
       alignItems="center"
       justifyContent="center"
-      my={20}
+      my={{ base: 12, md: 24 }}
       textAlign="center"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
@@ -63,7 +62,7 @@ export const Team = () => {
           as="h3"
           size="xl"
           textAlign="center"
-          mb={20}
+          mb={{ base: 12, md: 24 }}
           background="linear-gradient(to right, #113cff, #f42ea8)"
           bgClip="text"
         >
