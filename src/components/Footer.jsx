@@ -46,13 +46,13 @@ export const Footer = () => {
             href="mailto:contacto@olmondconsulting.com"
             _hover={{ color: "gray" }}
           >
-            Contacto
+            {t("contact")}
           </Link>
         </Text>
         <Text>|</Text>
         <Text as="li">
           <Link as={RouterLink} to="/about-us" _hover={{ color: "gray" }}>
-            Sobre nosotros
+            {t("home.aboutUs")}
           </Link>
         </Text>
         <Text>|</Text>
@@ -64,7 +64,7 @@ export const Footer = () => {
         <Text>|</Text>
         <Text as="li">
           <Link as={RouterLink} to="/ai-agents" _hover={{ color: "gray" }}>
-            Agentes de IA
+            {t("services.services.aiAgents.title")}
           </Link>
         </Text>
         <Text>|</Text>
