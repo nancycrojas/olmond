@@ -2,7 +2,6 @@
 import {
   Box,
   Circle,
-  Container,
   Heading,
   SimpleGrid,
   Stack,
@@ -99,7 +98,7 @@ export const DataAnalytics = () => {
   };
 
   return (
-    <Container maxW="1400px" py={10} color="#FFFFFF">
+    <Stack py={10} color="#FFFFFF">
       <VStack spacing={6}>
         <Heading
           size="xl"
@@ -207,6 +206,6 @@ export const DataAnalytics = () => {
         </div>
       </VStack>
       <Contactus />
-    </Container>
+    </Stack>
   );
 };

@@ -2,7 +2,6 @@
 import {
   Box,
   Circle,
-  Container,
   Heading,
   SimpleGrid,
   Stack,
@@ -103,7 +102,7 @@ export const AiAgents = () => {
   };
 
   return (
-    <Container maxW="1400px" py={10} color="#FFFFFF">
+    <Stack py={10} color="#FFFFFF">
       <VStack spacing={6}>
         <Heading
           size="xl"
@@ -212,6 +211,6 @@ export const AiAgents = () => {
         </div>
       </VStack>
       <Contactus />
-    </Container>
+    </Stack>
   );
 };
