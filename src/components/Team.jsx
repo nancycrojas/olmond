@@ -19,22 +19,9 @@ import patricio_rouan from "../assets/patricio_rouan.jpg";
 const teamMember = [
   {
     name: "Patricio Rouan",
-    // role: "Founder",
     image: patricio_rouan,
     description: "team.members.rouan",
   },
-  // {
-  //   name: "Juan Manuel Rossi",
-  //   role: "Co-Founder",
-  //   image: juan_rossi,
-  //   description: "team.members.rossi",
-  // },
-  // {
-  //   name: "Pedro Spinozzi",
-  //   role: "Co-Founder",
-  //   image: pedro_spinozzi,
-  //   description: "team.members.spinozzi",
-  // },
 ];
 
 export const Team = () => {
@@ -55,7 +42,6 @@ export const Team = () => {
       alignItems="center"
       justifyContent="center"
       my={{ base: 12, md: 24 }}
-      textAlign="center"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading
@@ -78,10 +64,6 @@ export const Team = () => {
           {teamMember.map(({ name, role, description, image }, index) => (
             <Card
               key={index}
-              // minW="950px"
-              // maxW="950px"
-              // minH="250px"
-              // maxH="250px"
               maxW={["75%"]}
               _hover={{
                 transform: "scale(1.05)",
@@ -108,7 +90,13 @@ export const Team = () => {
                     aria-label="See menu"
                   />
                 </Flex>
-                <Text mt={6}>{t(description)}</Text>
+                <Stack mt={6} spacing={2}>
+                  {t(description)
+                    .split("\n")
+                    .map((line, id) => (
+                      <Text key={id}>{line}</Text>
+                    ))}
+                </Stack>
               </CardHeader>
               <CardBody></CardBody>
             </Card>
