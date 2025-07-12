@@ -43,7 +43,7 @@ export const About = () => {
             transform: "scale(1.05)",
           }}
           transition="all 0.3s"
-          mx={{ base: 10, sm: 0 }}
+          mx={{ base: 4, sm: 0 }}
         >
           <Text fontSize="lg">{t("home.aboutIntro")}</Text>
           <Text fontSize="lg">{t("home.aboutChallenge")}</Text>

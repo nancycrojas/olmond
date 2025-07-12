@@ -29,7 +29,7 @@ export const Impact = () => {
         color="white"
         alignItems={{ base: "center", lg: "start" }}
         width="full"
-        maxWidth={{ base: "70%", lg: "50%" }}
+        maxWidth={{ base: "80%", lg: "50%" }}
       >
         <Heading fontSize={{ base: "30px", md: "36px" }} lineHeight="inherit">
           <Text

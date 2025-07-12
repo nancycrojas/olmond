@@ -42,6 +42,7 @@ export const Team = () => {
       alignItems="center"
       justifyContent="center"
       my={{ base: 12, md: 24 }}
+      textAlign="start"
     >
       <div data-aos="fade-up" data-aos-duration="1000">
         <Heading
@@ -64,7 +65,7 @@ export const Team = () => {
           {teamMember.map(({ name, role, description, image }, index) => (
             <Card
               key={index}
-              maxW={["75%"]}
+              maxW={{ base: "90%", sm: "75%" }}
               _hover={{
                 transform: "scale(1.05)",
               }}
