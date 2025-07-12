@@ -58,7 +58,7 @@ export const Success = () => {
         mb={8}
         color="white"
         alignItems={{ base: "center", lg: "start" }}
-        px={10}
+        px={{ base: 8, sm: 10 }}
       >
         {t("success.schedule")}
         <Link href="https://tally.so/r/3yovMW" color="#8135d4" isExternal>
