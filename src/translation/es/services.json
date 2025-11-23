@@ -1,17 +1,26 @@
 {
-  "ourServices": "Nuestros Servicios",
+  "ourServices": "Soluciones integrales en IA y automatización",
   "services": {
     "rpa": {
-      "title": "Automatización Robótica de Procesos (RPA)",
-      "description": "Automatiza tus procesos con RPA y optimizá la eficiencia de tu negocio. ¡Transformá tu futuro!"
+      "title": "Consultoría en IA",
+      "item_1": "Diagnóstico de procesos y oportunidades",
+      "item_2": "Diseño de roadmap de IA y automatización",
+      "item_3": "Acompañamiento en la ejecución",
+      "button_1": "Quiero consultoría 1:1"
     },
     "aiAgents": {
-      "title": "Agentes de IA",
-      "description": "Implementa nuestros Agentes de IA para mejorar tu prospección de clientes y aumentar la eficiencia de tu negocio. ¡Revoluciona la interacción!"
+      "title": "Workshops de IA",
+      "item_1": "Programas para equipos directivos y operativos",
+      "item_2": "Talleres prácticos para uso diario de IA",
+      "item_3": "Foco en aplicación práctica",
+      "button_2": "Quiero un workshop de IA"
     },
     "dataAnatytics": {
-      "title": "Data Analytics",
-      "description": "Descubre el poder de tus datos con nuestros servicios de Data Analytics. Tomá decisiones informadas, optimizá procesos y generá valor para tu negocio."
+      "title": "Desarrollos y automatización",
+      "item_1": "Flujos automatizados para tareas repetitivas",
+      "item_2": "Integración con sistemas y herramientas existentes",
+      "item_3": "Soporte en iteración y mejora continua",
+      "button_3": "Quiero un desarrollo"
     }
   }
 }

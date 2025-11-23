@@ -1,17 +1,26 @@
 {
-  "ourServices": "Our Services",
+  "ourServices": "Comprehensive AI & Automation Solutions",
   "services": {
     "rpa": {
-      "title": "Robotic Process Automation (RPA)",
-      "description": "Automate your processes with RPA and optimize your business efficiency. Transform your future!"
+      "title": "AI Consulting",
+      "item_1": "Process and opportunity assessment",
+      "item_2": "AI and automation roadmap design",
+      "item_3": "Support throughout the implementation",
+      "button_1": "I want 1:1 consulting"
     },
     "aiAgents": {
-      "title": "AI Agents",
-      "description": "Implement our AI Agents to improve your customer prospecting and increase your business efficiency. Revolutionize the interaction!"
+      "title": "AI Workshop",
+      "item_1": "Programs for executive and operational teams",
+      "item_2": "Hands-on workshops for daily AI usage",
+      "item_3": "Focus on practical application",
+      "button_2": "I want an AI workshop"
     },
     "dataAnatytics": {
-      "title": "Data Analytics",
-      "description": "Uncover the power of your data with our Data Analytics services. Make informed decisions, optimize processes, and generate value for your business."
+      "title": "Custom Development & Automation",
+      "item_1": "Automated workflows for repetitive tasks",
+      "item_2": "Integration with existing systems and tools",
+      "item_3": "Ongoing improvement and iteration support",
+      "button_3": "I want a development"
     }
   }
 }

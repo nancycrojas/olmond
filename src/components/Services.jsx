@@ -1,7 +1,6 @@
-import { Box, Button, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Stack } from "@chakra-ui/react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 export const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -18,18 +17,24 @@ export const Services = () => {
   const services = [
     {
       title: "services.services.rpa.title",
-      description: "services.services.rpa.description",
-      link: "/rpa",
+      item_1: "services.services.rpa.item_1",
+      item_2: "services.services.rpa.item_2",
+      item_3: "services.services.rpa.item_3",
+      button: "services.services.rpa.button_1",
     },
     {
       title: "services.services.aiAgents.title",
-      description: "services.services.aiAgents.description",
-      link: "/ai-agents",
+      item_1: "services.services.aiAgents.item_1",
+      item_2: "services.services.aiAgents.item_2",
+      item_3: "services.services.aiAgents.item_3",
+      button: "services.services.aiAgents.button_2",
     },
     {
       title: "services.services.dataAnatytics.title",
-      description: "services.services.dataAnatytics.description",
-      link: "/data-analytics",
+      item_1: "services.services.dataAnatytics.item_1",
+      item_2: "services.services.dataAnatytics.item_2",
+      item_3: "services.services.dataAnatytics.item_3",
+      button: "services.services.dataAnatytics.button_3",
     },
   ];
 
@@ -59,7 +64,7 @@ export const Services = () => {
         gap={6}
         flexDirection={{ base: "column", lg: "row" }}
       >
-        {services.map(({ title, description, link }, index) => (
+        {services.map(({ title, item_1, item_2, item_3, button }, index) => (
           <div
             key={index}
             data-aos="fade-up"
@@ -96,19 +101,25 @@ export const Services = () => {
               >
                 {t(title)}
               </Heading>
-              <Text mb={8}>{t(description)}</Text>
+              <Box as="ul" listStylePosition={{ lg: "inside" }}>
+                <li>{t(item_1)}</li>
+                <li>{t(item_2)}</li>
+                <li>{t(item_3)}</li>
+              </Box>
               <Button
+                as="a"
+                href="https://wa.me/541133872411?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20solicitar%20una%20reuni%C3%B3n%20para%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios"
+                target="_blank"
                 rounded="full"
                 px={8}
-                as={Link}
-                to={link}
                 color="white"
                 bgGradient="linear(to-r, #113cff, #f42ea8 )"
                 _hover={{
                   transform: "scale(1.05)",
                 }}
+                mt={8}
               >
-                {t("moreInformation")}
+                {t(button)}
               </Button>
             </Box>
           </div>
