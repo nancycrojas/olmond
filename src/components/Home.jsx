@@ -52,10 +52,10 @@ export const Home = () => {
               background="linear-gradient(to right, #113cff, #f42ea8)"
               bgClip="text"
             >
-              {t("home.title_3")}
+              {t("home.title_1")}
             </Text>
             <Text as="span" fontWeight="400">
-              {t("home.title_4")}
+              {t("home.title_2")}
             </Text>
           </Heading>
           <Text fontSize={{ base: "lg", md: "xl" }} mb={8}>
@@ -101,9 +101,9 @@ export const Home = () => {
         />
       </Flex>
       <About />
+      <Services />
       <Team />
       <Impact />
-      <Services />
       <Success />
       <Carousel />
       <Integrations />
