@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Button, Heading, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 export const About = () => {
@@ -45,9 +45,32 @@ export const About = () => {
           transition="all 0.3s"
           mx={{ base: 4, sm: 0 }}
         >
-          <Text fontSize="lg">{t("home.aboutIntro")}</Text>
+          <Text fontSize="lg" mb={6}>
+            {t("home.aboutIntro")}
+          </Text>
           <Text fontSize="lg">{t("home.aboutChallenge")}</Text>
-          <Text fontSize="lg">{t("home.aboutCallToAction")}</Text>
+          <Text fontSize="lg" mb={6}>
+            {t("home.aboutCallToAction")}
+          </Text>
+          <Button
+            as="a"
+            href="https://wa.me/541133872411?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20solicitar%20una%20reuni%C3%B3n%20para%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="lg"
+            rounded="full"
+            px={8}
+            fontSize="md"
+            mx="auto"
+            mt={4}
+            color="white"
+            bgGradient="linear(to-r, #113cff, #f42ea8)"
+            _hover={{
+              transform: "scale(1.05)",
+            }}
+          >
+            {t("freeConsultation")}
+          </Button>
         </Stack>
       </div>
     </Stack>
