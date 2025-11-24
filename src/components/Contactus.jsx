@@ -1,4 +1,4 @@
-import { Button, Heading, Link, VStack } from "@chakra-ui/react";
+import { Button, Heading, VStack } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 export const Contactus = () => {
@@ -27,24 +27,25 @@ export const Contactus = () => {
         {t("contactus")}
       </Heading>
 
-      <Link href="https://tally.so/r/3yovMW" isExternal _hover="">
-        <Button
-          className="animate__animated animate__slideInLeft"
-          size="lg"
-          color="white"
-          bgGradient="linear(to-r, #113cff, #f42ea8)"
-          rounded="full"
-          fontSize="md"
-          px={8}
-          _hover={{
-            "& svg": {
-              transform: "translateX(5px)",
-            },
-          }}
-        >
-          {t("freeConsultation")}
-        </Button>
-      </Link>
+      <Button
+        as="a"
+        href="https://wa.me/541133872411?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20solicitar%20una%20reuni%C3%B3n%20para%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios"
+        target="_blank"
+        rel="noopener noreferrer"
+        size="lg"
+        rounded="full"
+        px={8}
+        fontSize="md"
+        mx="auto"
+        mt={4}
+        color="white"
+        bgGradient="linear(to-r, #113cff, #f42ea8)"
+        _hover={{
+          transform: "scale(1.05)",
+        }}
+      >
+        {t("freeConsultation")}
+      </Button>
     </VStack>
   );
 };
