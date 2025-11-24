@@ -16,25 +16,25 @@ export const Services = () => {
 
   const services = [
     {
-      title: "services.services.rpa.title",
-      item_1: "services.services.rpa.item_1",
-      item_2: "services.services.rpa.item_2",
-      item_3: "services.services.rpa.item_3",
-      button: "services.services.rpa.button_1",
+      title: "services.services.consulting.title",
+      item_1: "services.services.consulting.item_1",
+      item_2: "services.services.consulting.item_2",
+      item_3: "services.services.consulting.item_3",
+      button: "services.services.consulting.button_1",
     },
     {
-      title: "services.services.aiAgents.title",
-      item_1: "services.services.aiAgents.item_1",
-      item_2: "services.services.aiAgents.item_2",
-      item_3: "services.services.aiAgents.item_3",
-      button: "services.services.aiAgents.button_2",
+      title: "services.services.workshop.title",
+      item_1: "services.services.workshop.item_1",
+      item_2: "services.services.workshop.item_2",
+      item_3: "services.services.workshop.item_3",
+      button: "services.services.workshop.button_2",
     },
     {
-      title: "services.services.dataAnatytics.title",
-      item_1: "services.services.dataAnatytics.item_1",
-      item_2: "services.services.dataAnatytics.item_2",
-      item_3: "services.services.dataAnatytics.item_3",
-      button: "services.services.dataAnatytics.button_3",
+      title: "services.services.automation.title",
+      item_1: "services.services.automation.item_1",
+      item_2: "services.services.automation.item_2",
+      item_3: "services.services.automation.item_3",
+      button: "services.services.automation.button_3",
     },
   ];
 

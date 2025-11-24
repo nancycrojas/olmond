@@ -1,21 +1,21 @@
 {
   "ourServices": "Soluciones integrales en IA y automatización",
   "services": {
-    "rpa": {
+    "consulting": {
       "title": "Consultoría en IA",
       "item_1": "Diagnóstico de procesos y oportunidades",
       "item_2": "Diseño de roadmap de IA y automatización",
       "item_3": "Acompañamiento en la ejecución",
       "button_1": "Quiero consultoría 1:1"
     },
-    "aiAgents": {
+    "workshop": {
       "title": "Workshops de IA",
       "item_1": "Programas para equipos directivos y operativos",
       "item_2": "Talleres prácticos para uso diario de IA",
       "item_3": "Foco en aplicación práctica",
       "button_2": "Quiero un workshop de IA"
     },
-    "dataAnatytics": {
+    "automation": {
       "title": "Desarrollos y automatización",
       "item_1": "Flujos automatizados para tareas repetitivas",
       "item_2": "Integración con sistemas y herramientas existentes",
