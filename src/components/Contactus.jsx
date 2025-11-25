@@ -44,7 +44,7 @@ export const Contactus = () => {
           transform: "scale(1.05)",
         }}
       >
-        {t("freeConsultation")}
+        {t("freeConsultationToday")}
       </Button>
     </VStack>
   );
