@@ -1,0 +1,18 @@
+{
+  "whats_holding_you_back": {
+    "title": "Lo que te frena",
+    "item_1": "No saber cómo implementar",
+    "item_2": "Temor a la complejidad tecnológica y al cambio",
+    "item_3": "Equipos con alta carga operativa",
+    "item_4": "Falta de conocimientos técnicos",
+    "button_1": "Analicemos estos desafíos"
+  },
+  "what_you_will_achieve": {
+    "title": "Lo que vas a lograr",
+    "item_1": "Procesos más ágiles",
+    "item_2": "Menos errores y menor riesgo operativo",
+    "item_3": "Mayor productividad por persona y por área",
+    "item_4": "Foco directivo en crecimiento y estrategia",
+    "button_2": "Quiero avanzar a ese nivel"
+  }
+}

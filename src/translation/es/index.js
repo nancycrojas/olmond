@@ -8,6 +8,7 @@ import rpa from "./rpa.json";
 import services from "./services.json";
 import success from "./success.json";
 import team from "./team.json";
+import whatStopsYou from "./whatStopsYou.json";
 
 const translation = {
   ...common,
@@ -20,6 +21,7 @@ const translation = {
   impact,
   success,
   faq,
+  whatStopsYou,
 };
 
 export default translation;
