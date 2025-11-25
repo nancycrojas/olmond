@@ -7,7 +7,7 @@ export const Contactus = () => {
   return (
     <VStack
       id="contact"
-      p={{ base: 8, md: 14 }}
+      p={{ base: 4, md: 14 }}
       color="white"
       sx={{
         background: "hsla(0, 0%, 100%, 0.05)",

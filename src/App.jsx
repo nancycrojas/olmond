@@ -5,7 +5,6 @@ import { Home } from "@/components/Home";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AppLayout } from "@/layouts/AppLayout";
 import { NotFoundLayout } from "@/layouts/NotFoundLayout";
-import { AboutUs } from "@/pages/AboutUs";
 import { AiAgents } from "@/pages/AiAgents";
 import { DataAnalytics } from "@/pages/DataAnalytics";
 import { NotFound } from "@/pages/NotFound";
@@ -25,7 +24,6 @@ function App() {
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<AboutUs />} />
             <Route path="/rpa" element={<Rpa />} />
             <Route path="/ai-agents" element={<AiAgents />} />
             <Route path="/data-analytics" element={<DataAnalytics />} />

@@ -1,7 +1,6 @@
-import { HStack, Icon, Link, Text } from "@chakra-ui/react";
+import { Flex, HStack, Icon, Link, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-import { Link as RouterLink } from "react-router-dom";
 
 import { Logo } from "./Logo";
 
@@ -10,9 +9,17 @@ export const Footer = () => {
 
   return (
     <>
-      <HStack w="full" justify="space-between" color="white">
+      <Flex
+        w="full"
+        justify="space-between"
+        align="center"
+        color="white"
+        direction={{ base: "column", md: "row" }}
+        gap={{ base: 4, md: 0 }}
+        my={4}
+      >
         <Logo />
-        <HStack justifyContent="center" spacing={6} my={4}>
+        <HStack spacing={6}>
           <Link
             href="https://www.linkedin.com/company/olmond-consulting/"
             isExternal
@@ -29,16 +36,14 @@ export const Footer = () => {
             <Icon as={FaEnvelope} w={8} h={8} />
           </Link>
         </HStack>
-      </HStack>
-
-      <HStack
+      </Flex>
+      {/* <HStack
         as="ul"
         justifyContent="center"
         spacing={3}
         my={4}
         listStyleType="none"
         color="white"
-        display="flex"
         flexWrap="wrap"
       >
         <Text as="li">
@@ -50,38 +55,8 @@ export const Footer = () => {
           </Link>
         </Text>
         <Text>|</Text>
-        <Text as="li">
-          <Link as={RouterLink} to="/about-us" _hover={{ color: "gray" }}>
-            {t("home.aboutUs")}
-          </Link>
-        </Text>
-        <Text>|</Text>
-        <Text as="li">
-          <Link as={RouterLink} to="/rpa" _hover={{ color: "gray" }}>
-            RPA
-          </Link>
-        </Text>
-        <Text>|</Text>
-        <Text as="li">
-          <Link as={RouterLink} to="/ai-agents" _hover={{ color: "gray" }}>
-            {t("services.services.aiAgents.title")}
-          </Link>
-        </Text>
-        <Text>|</Text>
-        <Text as="li">
-          <Link as={RouterLink} to="data-analytics" _hover={{ color: "gray" }}>
-            Data Analytics
-          </Link>
-        </Text>
-      </HStack>
-
-      <Text
-        fontSize="sm"
-        alignSelf="center"
-        textAlign="center"
-        mb={2}
-        color="white"
-      >
+      </HStack> */}
+      <Text fontSize="sm" textAlign="center" mb={2} color="white">
         Copyright © {new Date().getFullYear()} Olmond Consulting.{" "}
         {t("allRightsReserved")}
       </Text>
