@@ -1,0 +1,33 @@
+{
+  "faq": "Preguntas frecuentes",
+  "questions": {
+    "question_1": "¿Por dónde empiezo a aplicar IA en mi empresa?",
+    "question_2": "¿Necesito contar con equipos técnicos?",
+    "question_3": "¿Qué pasa con la seguridad de mis datos?",
+    "question_4": "¿Cuánto tiempo lleva ver resultados?",
+    "question_5": "¿Cuánto tiempo me demanda a mí o a mi equipo?",
+    "question_6": "¿Esto reemplaza a personas?",
+    "question_7": "¿Cómo sé que esto no va a interrumpir mis operaciones?",
+    "question_8": "¿Qué pasa si mi empresa es chica o no tiene procesos definidos?",
+    "question_9": "¿Cómo es el proceso de trabajo?",
+    "question_10": "¿Cómo empiezo?"
+  },
+  "answers": {
+    "answer_1": "Partimos del mayor punto de apalancamiento, con el que podamos generar mayor impacto, en menor tiempo y a menor coste.",
+    "answer_2": "No, nosotros nos encargamos de la implementación de principio a fin.",
+    "answer_3": "Nos adaptamos a las políticas de tu empresa para brindarte seguridad de nivel empresarial.",
+    "answer_4": "En la mayoría de los casos los primeros beneficios se ven dentro de las primeras semanas, porque empezamos por los procesos que generan mayor impacto inmediato en productividad y reducción de carga operativa.",
+    "answer_5": "Muy poco. Diseñamos implementaciones para que tu equipo no tenga que aprender herramientas nuevas ni asumir tareas adicionales. Nosotros nos encargamos del trabajo pesado.",
+    "answer_6": "No. La IA automatiza tareas repetitivas y de bajo valor, para que tu equipo pueda enfocarse en decisiones estratégicas, atención de calidad y crecimiento del negocio.",
+    "answer_7": "Trabajamos sobre tus herramientas actuales, sin frenar tu operación. Implementamos de manera gradual y segura para evitar cualquier impacto negativo en tus actividades diarias.",
+    "answer_8": "No hay problema. Justamente ahí es donde la IA genera mayor impacto: ordenando, estandarizando y automatizando tareas que hoy dependen de personas y tiempo.",
+    "answer_9": "Seguimos un método claro:",
+    "answer_9_a": "Auditoría de procesos",
+    "answer_9_b": "Identificación de oportunidades",
+    "answer_9_c": "Diseño de automatizaciones",
+    "answer_9_d": "Implementación",
+    "answer_9_e": "Medición de impacto",
+    "answer_9_f": "Ajustes continuos. Siempre con acompañamiento cercano.",
+    "answer_10": "Agendá una sesión estratégica para evaluar tus procesos actuales y confirmar si podemos ayudarte con una solución que genere verdadero impacto."
+  }
+}
