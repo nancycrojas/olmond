@@ -1,6 +1,5 @@
-import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
-  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -11,16 +10,11 @@ import {
   HStack,
   IconButton,
   Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Link as RouterLink } from "react-router-dom";
 
 import LangSelect from "./LangSelect";
 import { Logo } from "./Logo";
@@ -45,8 +39,7 @@ export const Header = () => {
         display={{ base: "none", lg: "flex" }}
       >
         <Link
-          to="/about-us"
-          as={RouterLink}
+          href="#about"
           fontWeight="semibold"
           fontSize="lg"
           color="white"
@@ -54,31 +47,24 @@ export const Header = () => {
         >
           {t("home.whoWeAre")}
         </Link>
-        <Menu>
-          <MenuButton
-            as={Button}
-            fontWeight="semibold"
-            fontSize="lg"
-            color="white"
-            bg="transparent"
-            _hover={{ bg: "transparent" }}
-            _active={{ bg: "transparent" }}
-            rightIcon={<ChevronDownIcon />}
-          >
-            {t("home.services")}
-          </MenuButton>
-          <MenuList>
-            <MenuItem as={RouterLink} to="/rpa">
-              RPA
-            </MenuItem>
-            <MenuItem as={RouterLink} to="/ai-agents">
-              {t("services.services.aiAgents.title")}
-            </MenuItem>
-            <MenuItem as={RouterLink} to="/data-analytics">
-              Data Analytics
-            </MenuItem>
-          </MenuList>
-        </Menu>
+        <Link
+          href="#services"
+          fontWeight="semibold"
+          fontSize="lg"
+          color="white"
+          _hover=""
+        >
+          {t("home.services")}
+        </Link>
+        <Link
+          href="#contact"
+          fontWeight="semibold"
+          fontSize="lg"
+          color="white"
+          _hover=""
+        >
+          {t("contact")}
+        </Link>
       </HStack>
       <LangSelect display={{ base: "none", lg: "flex" }} />
 
@@ -100,7 +86,7 @@ export const Header = () => {
           <DrawerHeader>{t("menu")}</DrawerHeader>
           <DrawerBody>
             <Stack gap={8} w="100%">
-              <Link
+              {/* <Link
                 as={RouterLink}
                 to="/about-us"
                 fontWeight="semibold"
@@ -139,7 +125,7 @@ export const Header = () => {
                 onClick={onClose}
               >
                 Data Analytics
-              </Link>
+              </Link> */}
               <LangSelect
                 display={{ base: "flex", lg: "none" }}
                 // onLanguageChange={handleDrawerClose}

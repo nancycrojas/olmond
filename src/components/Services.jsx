@@ -40,6 +40,7 @@ export const Services = () => {
 
   return (
     <Stack
+      id="services"
       color="white"
       alignItems="center"
       justifyContent="center"
