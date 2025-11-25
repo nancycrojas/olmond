@@ -1,0 +1,18 @@
+{
+  "whats_holding_you_back": {
+    "title": "What's holding you back",
+    "item_1": "Not knowing how to implement it",
+    "item_2": "Fear of technological complexity and change",
+    "item_3": "Teams with high operational load",
+    "item_4": "Lack of technical knowledge",
+    "button_1": "Let's analyze these challenges"
+  },
+  "what_you_will_achieve": {
+    "title": "What you will achieve",
+    "item_1": "More agile processes",
+    "item_2": "Fewer errors and lower operational risk",
+    "item_3": "Higher productivity per person and per area",
+    "item_4": "Leadership focus on growth and strategy",
+    "button_2": "I want to advance to that level"
+  }
+}

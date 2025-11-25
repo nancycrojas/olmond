@@ -1,0 +1,33 @@
+{
+  "faq": "Frecuently asked questions",
+  "questions": {
+    "question_1": "Where do I start applying AI in my company?",
+    "question_2": "Do I need to have technical teams?",
+    "question_3": "What about the security of my data?",
+    "question_4": "How long does it take to see results?",
+    "question_5": "How much time does this demand from me or my team?",
+    "question_6": "Does this replace people?",
+    "question_7": "How do I know this will not disrupt my operations?",
+    "question_8": "What if my company is small or doesn't have defined processes?",
+    "question_9": "What does the work process look like?",
+    "question_10": "How do I get started?"
+  },
+  "answers": {
+    "answer_1": "We start from the highest leverage point, where we can generate the greatest impact in less time and at lower cost.",
+    "answer_2": "No. We take care of the implementation from start to finish.",
+    "answer_3": "We adapt to your company's policies to provide enterprise-level security.",
+    "answer_4": "In most cases, the first benefits are seen within the first few weeks, because we start with the processes that generate the greatest immediate impact on productivity and reduction of operational workload.",
+    "answer_5": "Very little. We design implementations so that your team doesn't have to learn new tools or take on additional tasks. We take care of the heavy lifting.",
+    "answer_6": "No. AI automates repetitive, low-value tasks so your team can focus on strategic decisions, quality service, and business growth.",
+    "answer_7": "We work on top of your current tools without slowing down your operation. We implement gradually and safely to avoid any negative impact on your day-to-day activities.",
+    "answer_8": "No problem. That's precisely where AI generates the greatest impact: organizing, standardizing, and automating tasks that today depend on people and time.",
+    "answer_9": "We follow a clear method:",
+    "answer_9_a": "Process audit",
+    "answer_9_b": "Identification of opportunities",
+    "answer_9_c": "Design of automations",
+    "answer_9_d": "Implementation",
+    "answer_9_e": "Measurement of impact",
+    "answer_9_f": "Continuous adjustments. Always with close support.",
+    "answer_10": "Schedule a strategic session to assess your current processes and confirm whether we can help you with a solution that creates real impact."
+  }
+}

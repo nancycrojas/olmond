@@ -16,11 +16,13 @@ import image from "../assets/image.png";
 import { About } from "./About";
 import { Carousel } from "./carousel/Carousel";
 import { Contactus } from "./Contactus";
+import { FAQ } from "./FAQ";
 import { Impact } from "./Impact";
 import { Integrations } from "./Integrations";
 import { Services } from "./Services";
 import { Success } from "./Success";
 import { Team } from "./Team";
+import { WhatStopsYou } from "./WhatStopsYou";
 
 export const Home = () => {
   const { t } = useTranslation();
@@ -106,6 +108,8 @@ export const Home = () => {
       <Impact />
       <Success />
       <Carousel />
+      <WhatStopsYou />
+      <FAQ />
       <Integrations />
       <Contactus />
     </Stack>

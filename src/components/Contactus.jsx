@@ -6,6 +6,7 @@ export const Contactus = () => {
 
   return (
     <VStack
+      id="contact"
       p={{ base: 8, md: 14 }}
       color="white"
       sx={{
@@ -44,7 +45,7 @@ export const Contactus = () => {
           transform: "scale(1.05)",
         }}
       >
-        {t("freeConsultation")}
+        {t("freeConsultationToday")}
       </Button>
     </VStack>
   );

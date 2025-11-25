@@ -1,6 +1,6 @@
 import "animate.css";
 
-import { Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 import image from "../assets/woman-office.jpeg";
@@ -41,13 +41,30 @@ export const Impact = () => {
           </Text>
         </Heading>
         <Text fontSize="md">{t("impact.team")}</Text>
-        <Text fontSize="md">{t("impact.replace")}</Text>
+        <Text fontSize="md">{t("impact.analysis")}</Text>
         <Text fontSize="md">{t("impact.time")}</Text>
-        <Text fontSize="md">{t("impact.costly")}</Text>
-        <Text fontSize="md">{t("impact.decisions")}</Text>
-        <Text fontSize="md" mb={4}>
-          {t("impact.transform")}
-        </Text>
+        <Text fontSize="md">{t("impact.errors")}</Text>
+        <Text fontSize="md">{t("impact.scale")}</Text>
+        <Button
+          as="a"
+          href="https://wa.me/541133872411?text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20solicitar%20una%20reuni%C3%B3n%20para%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios"
+          target="_blank"
+          rel="noopener noreferrer"
+          size="lg"
+          rounded="full"
+          px={8}
+          fontSize="md"
+          mx="auto"
+          mt={4}
+          color="white"
+          bgGradient="linear(to-r, #113cff, #f42ea8)"
+          _hover={{
+            transform: "scale(1.05)",
+          }}
+          mb={6}
+        >
+          {t("impact.cta")}
+        </Button>
       </Stack>
     </Flex>
   );

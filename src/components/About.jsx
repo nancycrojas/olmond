@@ -6,6 +6,7 @@ export const About = () => {
 
   return (
     <Stack
+      id="about"
       color="white"
       textAlign="center"
       alignItems="center"
