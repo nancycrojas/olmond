@@ -5,10 +5,7 @@ import { Home } from "@/components/Home";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AppLayout } from "@/layouts/AppLayout";
 import { NotFoundLayout } from "@/layouts/NotFoundLayout";
-import { AiAgents } from "@/pages/AiAgents";
-import { DataAnalytics } from "@/pages/DataAnalytics";
 import { NotFound } from "@/pages/NotFound";
-import { Rpa } from "@/pages/Rpa";
 
 function App() {
   return (
@@ -24,9 +21,6 @@ function App() {
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/rpa" element={<Rpa />} />
-            <Route path="/ai-agents" element={<AiAgents />} />
-            <Route path="/data-analytics" element={<DataAnalytics />} />
           </Route>
           <Route element={<NotFoundLayout />}>
             <Route path="*" element={<NotFound />} />
