@@ -1,19 +1,23 @@
-import { Box, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { FaInstagram } from "react-icons/fa";
+
+import image from "../assets/logo_academy.jpg";
 
 export const AcademyFooter = () => {
   return (
     <Box bg="#2D3748" color="white" py={12} px={4}>
       <VStack spacing={6} maxW="7xl" mx="auto" textAlign="center">
-        <HStack align="center" spacing={3}>
-          <Box
-            bg="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-            p={3}
-            borderRadius="md"
-          >
-            <FaInstagram size={32} color="white" />
+        <HStack spacing={3}>
+          <Box p={2}>
+            <Image
+              src={image}
+              boxSize={"50px"}
+              objectFit="cover"
+              borderRadius="2xl"
+            />
           </Box>
-          <Text fontSize="2xl" fontWeight="bold">
+
+          <Text fontSize="2xl" fontWeight="bold" color="white">
             Olmond Academy
           </Text>
         </HStack>
