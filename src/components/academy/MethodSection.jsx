@@ -56,7 +56,7 @@ const steps = [
 ];
 
 export const MethodSection = () => {
-  const whatsappNumber = "5491234567890"; // Reemplaza con tu número
+  const whatsappNumber = "5491133872411";
   const whatsappMessage = encodeURIComponent(
     "Hola! Quiero acceder al método de Pack Olmond",
   );
@@ -66,7 +66,6 @@ export const MethodSection = () => {
     <Box bg="gray.50" py={{ base: 12, md: 20 }}>
       <Container maxW="6xl">
         <VStack spacing={{ base: 8, md: 12 }}>
-          {/* Badge superior */}
           <Badge
             bgGradient="linear(to-r, #667eea, #EC4899)"
             color="white"
@@ -80,7 +79,6 @@ export const MethodSection = () => {
             📋 El Método
           </Badge>
 
-          {/* Título */}
           <VStack spacing={4} textAlign="center">
             <Heading
               as="h2"
