@@ -1,7 +1,8 @@
-import { Box, HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Image, Link, Text, VStack } from "@chakra-ui/react";
 import { FaInstagram } from "react-icons/fa";
 
 import image from "../assets/logo_academy.jpg";
+const instagramURL = "https://instagram.com/olmond.academy";
 
 export const AcademyFooter = () => {
   return (
@@ -32,13 +33,19 @@ export const AcademyFooter = () => {
           Formación práctica de inteligencia artificial aplicada para
           profesionales que quieren resultados reales.
         </Text>
-
-        <Stack align="center" spacing={2}>
-          <FaInstagram size={24} />
-          <Text fontSize="md" fontWeight="medium">
-            @olmond.academy
-          </Text>
-        </Stack>
+        <Link
+          href={instagramURL}
+          isExternal
+          _hover={{ textDecoration: "none" }}
+          display={{ base: "none", sm: "flex" }}
+        >
+          <HStack align="center" spacing={2}>
+            <FaInstagram size={24} />
+            <Text fontSize="md" fontWeight="medium">
+              @olmond.academy
+            </Text>
+          </HStack>
+        </Link>
 
         <Box w="full" maxW="4xl" h="1px" bg="gray.600" />
 
