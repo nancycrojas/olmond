@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
+import { FAQSection } from "../components/academy/FAQSection";
 import { HeroSection } from "../components/academy/HeroSection";
 import { InstructorSection } from "../components/academy/InstructorSection";
 import { IsForYouSection } from "../components/academy/IsForYouSection";
@@ -28,6 +29,7 @@ export const Academy = () => {
       <MethodSection />
       <WhatsIncludedSection />
       <RealCasesSection />
+      <FAQSection />
     </Box>
   );
 };
