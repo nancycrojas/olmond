@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 
 import { HeroSection } from "../components/academy/HeroSection";
 import { InstructorSection } from "../components/academy/InstructorSection";
+import { ResultsSection } from "../components/academy/ResultsSection";
 import { WhatIsPackOlmond } from "../components/academy/WhatIsPackOlmond";
 
 export const Academy = () => {
@@ -18,6 +19,7 @@ export const Academy = () => {
       />
       <WhatIsPackOlmond />
       <InstructorSection />
+      <ResultsSection />
     </Box>
   );
 };
