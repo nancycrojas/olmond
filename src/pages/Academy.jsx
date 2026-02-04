@@ -3,8 +3,10 @@ import { Box } from "@chakra-ui/react";
 import { HeroSection } from "../components/academy/HeroSection";
 import { InstructorSection } from "../components/academy/InstructorSection";
 import { IsForYouSection } from "../components/academy/IsForYouSection";
+import { MethodSection } from "../components/academy/MethodSection";
 import { ResultsSection } from "../components/academy/ResultsSection";
 import { WhatIsPackOlmond } from "../components/academy/WhatIsPackOlmond";
+import { WhatsIncludedSection } from "../components/academy/WhatsIncludedSection";
 
 export const Academy = () => {
   return (
@@ -22,6 +24,8 @@ export const Academy = () => {
       <InstructorSection />
       <ResultsSection />
       <IsForYouSection />
+      <MethodSection />
+      <WhatsIncludedSection />
     </Box>
   );
 };
