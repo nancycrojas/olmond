@@ -4,13 +4,49 @@ import { FaInstagram } from "react-icons/fa";
 
 import image from "../assets/logo_academy.jpg";
 
+const INITIAL_TIME = {
+  days: 1,
+  hours: 21,
+  minutes: 38,
+  seconds: 0,
+};
+
 export const AcademyHeader = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        let { days, hours, minutes, seconds } = prev;
+
+        seconds--;
+
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+        }
+
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+        }
+
+        if (hours < 0) {
+          hours = 23;
+          days--;
+        }
+
+        // Si llega a 0, reiniciar
+        if (days < 0) {
+          return INITIAL_TIME;
+        }
+
+        return { days, hours, minutes, seconds };
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const whatsappNumber = "5491133872411"; // Reemplaza con tu número (incluye código de país sin +)
   const whatsappMessage = encodeURIComponent(
@@ -19,28 +55,6 @@ export const AcademyHeader = () => {
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const instagramURL = "https://instagram.com/olmond.academy";
-
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const endDate = new Date("2025-12-31T23:59:59"); // Cambiar según oferta
-      const now = new Date();
-      const difference = endDate - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <Box position="sticky" top={0} zIndex={1000}>
