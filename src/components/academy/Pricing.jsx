@@ -12,13 +12,15 @@ import {
 import { useEffect, useState } from "react";
 import { FaArrowRight, FaBolt, FaCheckCircle, FaClock } from "react-icons/fa";
 
+const INITIAL_TIME = {
+  days: 1,
+  hours: 21,
+  minutes: 38,
+  seconds: 0,
+};
+
 export const Pricing = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
 
   const whatsappNumber = "5491133872411";
   const whatsappMessage = encodeURIComponent(
@@ -27,23 +29,35 @@ export const Pricing = () => {
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   useEffect(() => {
-    const calculateTimeLeft = () => {
-      const endDate = new Date("2025-12-31T23:59:59");
-      const now = new Date();
-      const difference = endDate - now;
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        let { days, hours, minutes, seconds } = prev;
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      }
-    };
+        seconds--;
 
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+        }
+
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+        }
+
+        if (hours < 0) {
+          hours = 23;
+          days--;
+        }
+
+        // Si llega a 0, reiniciar
+        if (days < 0) {
+          return INITIAL_TIME;
+        }
+
+        return { days, hours, minutes, seconds };
+      });
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
