@@ -33,8 +33,8 @@ const benefits = [
   },
   {
     icon: FaChalkboardTeacher,
-    title: "Presentaciones profesionales en minutos",
-    description: "Creá slides impactantes en una fracción del tiempo habitual",
+    title: "Mejorar la calidad de tus resultados",
+    description: "Entregables más pulidos y profesionales con menos esfuerzo",
   },
   {
     icon: FaChalkboardTeacher,
