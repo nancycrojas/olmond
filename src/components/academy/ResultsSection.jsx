@@ -17,6 +17,7 @@ import {
   FaLink,
   FaRobot,
 } from "react-icons/fa";
+import { LuTrendingUp } from "react-icons/lu";
 
 const benefits = [
   {
@@ -32,7 +33,7 @@ const benefits = [
       "En tareas repetitivas: emails, documentos, resúmenes, análisis, reportes",
   },
   {
-    icon: FaChalkboardTeacher,
+    icon: LuTrendingUp,
     title: "Mejorar la calidad de tus resultados",
     description: "Entregables más pulidos y profesionales con menos esfuerzo",
   },
