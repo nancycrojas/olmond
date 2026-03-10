@@ -24,8 +24,8 @@ import { MdDiamond } from "react-icons/md";
 const includedItems = [
   {
     icon: FaVideo,
-    title: "8 Clases Grabadas",
-    description: "On demand, estudiá a tu ritmo",
+    title: "8 Clases",
+    description: "Avanzá paso a paso en la implementación de IA",
   },
   {
     icon: FaBook,
@@ -140,7 +140,7 @@ export const WhatsIncludedSection = () => {
               bgGradient="linear(to-r, #667eea, #764ba2)"
               bgClip="text"
             >
-              $500 USD
+              $708.000 ARS
             </Text>
           </HStack>
         </VStack>

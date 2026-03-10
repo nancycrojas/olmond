@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { FaArrowRight, FaBolt, FaCheckCircle, FaClock } from "react-icons/fa";
+import { FaArrowRight, FaCheckCircle, FaClock } from "react-icons/fa";
 
 const INITIAL_TIME = {
   days: 1,
@@ -24,7 +24,7 @@ export const Pricing = () => {
 
   const whatsappNumber = "5491133872411";
   const whatsappMessage = encodeURIComponent(
-    "Hola! Quiero acceder al Pack por solo $20 USD",
+    "Hola! Quiero acceder al Pack por solo $29.000 ARS",
   );
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -148,7 +148,7 @@ export const Pricing = () => {
                   color="gray.400"
                   textDecoration="line-through"
                 >
-                  $500 USD
+                  $708.000 ARS
                 </Text>
               </VStack>
 
@@ -163,10 +163,10 @@ export const Pricing = () => {
                     bgGradient="linear(to-r, #4318FF, #EC4899)"
                     bgClip="text"
                   >
-                    20
+                    29.000
                   </Text>
                   <Text fontSize="3xl" fontWeight="bold" color="gray.900">
-                    USD
+                    ARS
                   </Text>
                 </HStack>
               </VStack>
@@ -174,7 +174,7 @@ export const Pricing = () => {
               <HStack spacing={2} color="green.600">
                 <Icon as={FaCheckCircle} />
                 <Text fontSize="lg" fontWeight="semibold">
-                  Ahorras $480 USD (96% de descuento)
+                  Ahorras $679.000 ARS (96% de descuento)
                 </Text>
               </HStack>
 
@@ -205,10 +205,10 @@ export const Pricing = () => {
                 lineHeight="1.3"
               >
                 <Box as="span" display={{ base: "inline", md: "none" }}>
-                  SÍ! QUIERO EL PACK POR $20 USD
+                  SÍ! QUIERO EL PACK POR $29.000 ARS
                 </Box>
                 <Box as="span" display={{ base: "none", md: "inline" }}>
-                  SÍ! QUIERO ACCEDER AL PACK POR SOLO $20 USD
+                  SÍ! QUIERO ACCEDER AL PACK POR SOLO $29.000 ARS
                 </Box>
               </Button>
 
@@ -225,10 +225,10 @@ export const Pricing = () => {
                   </Text>
                 </HStack>
                 <HStack spacing={2}>
-                  <Icon as={FaBolt} color="yellow.500" />
-                  <Text fontSize="sm" color="gray.600" fontWeight="medium">
+                  {/* <Icon as={FaBolt} color="yellow.500" /> */}
+                  {/* <Text fontSize="sm" color="gray.600" fontWeight="medium">
                     Acceso inmediato
-                  </Text>
+                  </Text> */}
                 </HStack>
               </HStack>
             </VStack>
@@ -273,7 +273,7 @@ export const Pricing = () => {
               >
                 Cuando se acabe la oferta, el precio volverá a{" "}
                 <Text as="span" fontWeight="black">
-                  $500 USD
+                  $708.000 ARS
                 </Text>
               </Text>
             </VStack>
