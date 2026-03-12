@@ -11,6 +11,9 @@ import {
 } from "@chakra-ui/react";
 import {
   FaBook,
+  FaEnvelope,
+  FaFileInvoiceDollar,
+  FaGift,
   FaGlobe,
   FaHeadset,
   FaImage,
@@ -61,6 +64,19 @@ const includedItems = [
     icon: FaHeadset,
     title: "Soporte Online",
     description: "Acompañamiento durante el proceso",
+  },
+];
+
+const bonusItems = [
+  {
+    icon: FaEnvelope,
+    title: "Agente de IA para envío de Newsletter",
+    description: "Automatiza la creación y envío de newsletters",
+  },
+  {
+    icon: FaFileInvoiceDollar,
+    title: "Agente de IA para facturas",
+    description: "Gestiona y procesa facturas automáticamente",
   },
 ];
 
@@ -143,6 +159,47 @@ export const WhatsIncludedSection = () => {
               $708.000 ARS
             </Text>
           </HStack>
+          <Box
+            w="full"
+            bg="gradient-to-br from-purple-50 to-pink-50"
+            bgGradient="linear(to-br, purple.50, pink.50)"
+            p={{ base: 6, md: 8 }}
+            borderRadius="2xl"
+            border="2px"
+            borderColor="purple.200"
+            mt={8}
+          >
+            <VStack spacing={6}>
+              {/* Título Bonus */}
+              <HStack spacing={3}>
+                <Icon
+                  as={FaGift}
+                  color="purple.600"
+                  boxSize={{ base: 6, md: 8 }}
+                />
+                <Heading
+                  as="h3"
+                  fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
+                  fontWeight="black"
+                  bgGradient="linear(to-r, #667eea, #EC4899)"
+                  bgClip="text"
+                >
+                  Bonus:
+                </Heading>
+              </HStack>
+
+              {/* Grid de bonus */}
+              <SimpleGrid
+                columns={{ base: 1, md: 2 }}
+                spacing={{ base: 4, md: 6 }}
+                w="full"
+              >
+                {bonusItems.map((item, index) => (
+                  <BonusItem key={index} {...item} />
+                ))}
+              </SimpleGrid>
+            </VStack>
+          </Box>
         </VStack>
       </Container>
     </Box>
@@ -166,6 +223,49 @@ const IncludedItem = ({ icon, title, description }) => {
     >
       <Box
         bgGradient="linear(to-br, #667eea, #764ba2)"
+        p={3}
+        borderRadius="lg"
+        flexShrink={0}
+      >
+        <Icon as={icon} boxSize={5} color="white" />
+      </Box>
+
+      <VStack align="start" spacing={1}>
+        <Text
+          fontSize={{ base: "md", md: "lg" }}
+          fontWeight="bold"
+          color="gray.900"
+        >
+          {title}
+        </Text>
+        <Text fontSize={{ base: "sm", md: "md" }} color="gray.600">
+          {description}
+        </Text>
+      </VStack>
+    </HStack>
+  );
+};
+
+// eslint-disable-next-line react/prop-types
+const BonusItem = ({ icon, title, description }) => {
+  return (
+    <HStack
+      spacing={4}
+      bg="white"
+      p={{ base: 4, md: 5 }}
+      borderRadius="xl"
+      border="2px"
+      borderColor="purple.300"
+      _hover={{
+        borderColor: "pink.400",
+        transform: "translateY(-4px)",
+        boxShadow: "lg",
+      }}
+      transition="all 0.3s"
+      align="start"
+    >
+      <Box
+        bgGradient="linear(to-br, #EC4899, #F59E0B)"
         p={3}
         borderRadius="lg"
         flexShrink={0}

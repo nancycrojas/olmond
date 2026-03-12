@@ -42,7 +42,7 @@ export const AcademyFooter = () => {
           <HStack align="center" spacing={2}>
             <FaInstagram size={24} />
             <Text fontSize="md" fontWeight="medium">
-              @olmond.academy
+              olmond.academy
             </Text>
           </HStack>
         </Link>

@@ -129,7 +129,7 @@ export const AcademyHeader = () => {
               >
                 <FaInstagram size={18} />
                 <Text fontSize="sm" fontWeight="medium">
-                  @olmond.academy
+                  olmond.academy
                 </Text>
               </HStack>
             </Link>
