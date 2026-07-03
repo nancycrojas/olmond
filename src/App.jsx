@@ -7,7 +7,13 @@ import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { NotFound } from "@/pages/NotFound";
 
 import { AcademyLayout } from "./layouts/AcademyLayout";
+import { WorkshopLayout } from "./layouts/WorkshopLayout";
 import { Academy } from "./pages/Academy";
+//import { AcademyLogin } from "./pages/AcademyLogin";
+//import { CourseDetail } from "./pages/CourseDetail";
+//import { Courses } from "./pages/Courses";
+//import { Lesson } from "./pages/Lesson";
+import { Workshop } from "./pages/Workshop";
 
 function App() {
   return (
@@ -18,8 +24,22 @@ function App() {
           <Route path="/" element={<Home />} />
         </Route>
 
+        <Route element={<WorkshopLayout />}>
+          <Route
+            path="/propuesta-distribuidora-lagostena"
+            element={<Workshop />}
+          />
+        </Route>
+
         <Route element={<AcademyLayout />}>
           <Route path="/academy" element={<Academy />} />
+          {/* <Route path="/academy/courses" element={<Courses />} />
+          <Route path="/academy/course/:courseId" element={<CourseDetail />} />
+          <Route
+            path="/academy/course/:courseId/lesson/:lessonId"
+            element={<Lesson />}
+          />
+          <Route path="/academy/login" element={<AcademyLogin />} /> */}
         </Route>
 
         <Route element={<NotFoundLayout />}>
