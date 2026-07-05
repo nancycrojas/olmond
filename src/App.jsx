@@ -7,8 +7,10 @@ import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { NotFound } from "@/pages/NotFound";
 
 import { AcademyLayout } from "./layouts/AcademyLayout";
+import { DiagnosisLayout } from "./layouts/DiagnosisLayout";
 import { WorkshopLayout } from "./layouts/WorkshopLayout";
 import { Academy } from "./pages/Academy";
+import { Diagnosis } from "./pages/Diagnosis";
 //import { AcademyLogin } from "./pages/AcademyLogin";
 //import { CourseDetail } from "./pages/CourseDetail";
 //import { Courses } from "./pages/Courses";
@@ -29,6 +31,10 @@ function App() {
             path="/propuesta-distribuidora-lagostena"
             element={<Workshop />}
           />
+        </Route>
+
+        <Route element={<DiagnosisLayout />}>
+          <Route path="/diagnostico" element={<Diagnosis />} />
         </Route>
 
         <Route element={<AcademyLayout />}>
