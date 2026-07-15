@@ -40,8 +40,8 @@ export const HighlightRow = () => {
             _hover={{ bg: "gray.50" }}
           >
             <Flex
-              h={11}
-              w={11}
+              h={35}
+              w={35}
               flexShrink={0}
               align="center"
               justify="center"

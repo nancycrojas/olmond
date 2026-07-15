@@ -72,8 +72,8 @@ export const ObjectivesSection = () => {
           >
             <Flex
               display="inline-flex"
-              h={11}
-              w={11}
+              h={35}
+              w={35}
               mb={4}
               align="center"
               justify="center"

@@ -33,7 +33,7 @@ export const HeroSection = ({ companyName }) => {
       <Box position="absolute" inset={0} overflow="hidden">
         <Box
           as="img"
-          src="/lagostena-warehouse.webp"
+          src="/"
           alt={`Centro de distribución de ${companyName} utilizado como imagen principal de la propuesta de workshop de Inteligencia Artificial Aplicada.`}
           h="full"
           w="full"
