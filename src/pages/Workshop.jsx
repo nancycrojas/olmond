@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Box } from "@chakra-ui/react";
 
 import { AudienceSection } from "../components/workshop/AudienceSection";
@@ -16,23 +17,25 @@ import { Navbar } from "../components/workshop/Navbar";
 import { ObjectivesSection } from "../components/workshop/ObjectivesSection";
 import { ToolsSection } from "../components/workshop/ToolsSection";
 
-export const Workshop = () => {
+export const Workshop = ({ proposal }) => {
+  const companyName = proposal?.companyName ?? "la empresa";
+
   return (
     <Box bg="white" minH="100vh">
-      <Navbar />
-      <HeroSection />
+      <Navbar companyName={companyName} />
+      <HeroSection companyName={companyName} />
       <HighlightRow />
-      <IntroductionSection />
+      <IntroductionSection companyName={companyName} />
       <ObjectivesSection />
       <AudienceSection />
       <ModalitySection />
       <ContentsSection />
       <MethodologySection />
       <ToolsSection />
-      <ExpectedResultsSection />
+      <ExpectedResultsSection companyName={companyName} />
       <InvestmentSection />
-      <FAQSection />
-      <FinalCTASection />
+      <FAQSection companyName={companyName} />
+      <FinalCTASection companyName={companyName} />
       <Footer />
     </Box>
   );

@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
 
 import { GRADIENT_BRAND } from "../../lib/constants";
 import { SectionLabel } from "./SectionShell";
 
-export const IntroductionSection = () => {
+export const IntroductionSection = ({ companyName }) => {
   return (
     <Box as="section" id="introduccion" bg="white" py={24}>
       <Container maxW="4xl" px={6}>
@@ -37,15 +38,15 @@ export const IntroductionSection = () => {
             personas dediquen más tiempo a actividades de mayor valor.
           </Text>
           <Text>
-            Distribuidora Mayorista Lagostena cuenta con un importante volumen
-            de información generado por sus sistemas de gestión y herramientas
-            de análisis. En este contexto, incorporar Inteligencia Artificial de
-            manera ordenada permitirá potenciar el trabajo de sus equipos,
-            mejorar la gestión del conocimiento y acompañar el proceso de
-            transformación digital de la organización. Esta propuesta busca
-            brindar herramientas prácticas para que los colaboradores incorporen
-            la IA en sus tareas diarias de forma segura, responsable y alineada
-            con los objetivos de la empresa.
+            {companyName} cuenta con un importante volumen de información
+            generado por sus sistemas de gestión y herramientas de análisis. En
+            este contexto, incorporar Inteligencia Artificial de manera ordenada
+            permitirá potenciar el trabajo de sus equipos, mejorar la gestión
+            del conocimiento y acompañar el proceso de transformación digital de
+            la organización. Esta propuesta busca brindar herramientas prácticas
+            para que los colaboradores incorporen la IA en sus tareas diarias de
+            forma segura, responsable y alineada con los objetivos de la
+            empresa.
           </Text>
         </VStack>
       </Container>

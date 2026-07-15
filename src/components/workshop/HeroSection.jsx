@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Box,
   Container,
@@ -20,7 +21,7 @@ const slowZoom = keyframes`
 
 const MotionBox = motion(Box);
 
-export const HeroSection = () => {
+export const HeroSection = ({ companyName }) => {
   return (
     <Box
       as="section"
@@ -33,7 +34,7 @@ export const HeroSection = () => {
         <Box
           as="img"
           src="/lagostena-warehouse.webp"
-          alt="Centro de distribución de Distribuidora Mayorista Lagostena utilizado como imagen principal de la propuesta de workshop de Inteligencia Artificial Aplicada."
+          alt={`Centro de distribución de ${companyName} utilizado como imagen principal de la propuesta de workshop de Inteligencia Artificial Aplicada.`}
           h="full"
           w="full"
           objectFit="cover"
@@ -92,8 +93,7 @@ export const HeroSection = () => {
               letterSpacing="tight"
               color="white"
             >
-              Inteligencia Artificial Aplicada para la Distribuidora Mayorista
-              Lagostena
+              Inteligencia Artificial Aplicada para {companyName}
             </Heading>
             <Text
               mt={6}

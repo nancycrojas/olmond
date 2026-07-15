@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Box,
   Container,
@@ -19,7 +20,7 @@ const NAV_LINKS = [
   { href: "#inversion", label: "Inversión" },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ companyName }) => {
   return (
     <Box
       as="header"
@@ -48,7 +49,7 @@ export const Navbar = () => {
               <Icon as={LuSparkles} boxSize={4} />
             </Flex>
             <Text fontSize="sm" fontWeight="semibold" letterSpacing="tight">
-              Workshop IA · Lagostena
+              Workshop IA · {companyName}
             </Text>
           </HStack>
           <HStack spacing={7} display={{ base: "none", md: "flex" }}>

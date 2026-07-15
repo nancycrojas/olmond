@@ -6,6 +6,8 @@ import { AppLayout } from "@/layouts/AppLayout";
 import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { NotFound } from "@/pages/NotFound";
 
+import { workshopProposals } from "./data/workshopProposals";
+// import { ChatOlmond } from "./components/chat/ChatOlmond";
 import { AcademyLayout } from "./layouts/AcademyLayout";
 import { DiagnosisLayout } from "./layouts/DiagnosisLayout";
 import { WorkshopLayout } from "./layouts/WorkshopLayout";
@@ -23,14 +25,25 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                {/* <ChatOlmond /> */}
+              </>
+            }
+          />
         </Route>
 
         <Route element={<WorkshopLayout />}>
-          <Route
-            path="/propuesta-distribuidora-lagostena"
-            element={<Workshop />}
-          />
+          {workshopProposals.map((proposal) => (
+            <Route
+              key={proposal.id}
+              path={proposal.path}
+              element={<Workshop proposal={proposal} />}
+            />
+          ))}
         </Route>
 
         <Route element={<DiagnosisLayout />}>

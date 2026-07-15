@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { Box, Container, Heading, HStack, Text } from "@chakra-ui/react";
 import { LuArrowRight, LuMessageCircle } from "react-icons/lu";
 
 import { GRADIENT_BRAND } from "../../lib/constants";
 import { CTA } from "./CTA";
 
-export const FinalCTASection = () => {
+export const FinalCTASection = ({ companyName }) => {
   return (
     <Box as="section" position="relative" overflow="hidden" bg="white" py={24}>
       <Container maxW="6xl" px={6}>
@@ -56,8 +57,7 @@ export const FinalCTASection = () => {
               lineHeight="shorter"
               letterSpacing="tight"
             >
-              Inteligencia Artificial Aplicada para la Distribuidora Mayorista
-              Lagostena
+              Inteligencia Artificial Aplicada para {companyName}
             </Heading>
             <Text
               mt={5}

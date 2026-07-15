@@ -1,10 +1,6 @@
-import {
-  HStack,
-  //Icon,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
-// import { LuCircleCheck } from "react-icons/lu";
+/* eslint-disable react/prop-types */
+import { HStack, Icon, SimpleGrid, Text } from "@chakra-ui/react";
+import { TbCircleCheck } from "react-icons/tb";
 
 import { SectionShell } from "./SectionShell";
 
@@ -18,11 +14,11 @@ const RESULTS = [
   "adoptar la Inteligencia Artificial de manera segura y responsable",
 ];
 
-export const ExpectedResultsSection = () => {
+export const ExpectedResultsSection = ({ companyName }) => {
   return (
     <SectionShell
       eyebrow="Resultados esperados"
-      title="Al finalizar el workshop, Distribuidora Mayorista Lagostena contará con colaboradores capaces de:"
+      title={`Al finalizar el workshop, ${companyName} contará con colaboradores capaces de:`}
       muted
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
@@ -44,12 +40,12 @@ export const ExpectedResultsSection = () => {
               boxShadow: "xl",
             }}
           >
-            {/* <Icon
-              as={LuCircleCheck}
+            <Icon
+              as={TbCircleCheck}
               boxSize={6}
               flexShrink={0}
               color="brand.500"
-            /> */}
+            />
             <Text
               fontSize={{ base: "sm", md: "md" }}
               lineHeight="tall"
