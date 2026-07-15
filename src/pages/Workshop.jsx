@@ -19,13 +19,17 @@ import { ToolsSection } from "../components/workshop/ToolsSection";
 
 export const Workshop = ({ proposal }) => {
   const companyName = proposal?.companyName ?? "la empresa";
+  const showCompanyIntro = proposal?.showCompanyIntro ?? false;
 
   return (
     <Box bg="white" minH="100vh">
       <Navbar companyName={companyName} />
       <HeroSection companyName={companyName} />
       <HighlightRow />
-      <IntroductionSection companyName={companyName} />
+      <IntroductionSection
+        companyName={companyName}
+        showCompanyIntro={showCompanyIntro}
+      />
       <ObjectivesSection />
       <AudienceSection />
       <ModalitySection />
