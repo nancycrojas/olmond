@@ -20,6 +20,9 @@ import { ToolsSection } from "../components/workshop/ToolsSection";
 export const Workshop = ({ proposal }) => {
   const companyName = proposal?.companyName ?? "la empresa";
   const showCompanyIntro = proposal?.showCompanyIntro ?? false;
+  const recipients =
+    proposal?.recipients ??
+    "Administración, Compras, Comercial, Logística y Depósito, Capital Humano";
 
   return (
     <Box bg="white" minH="100vh">
@@ -37,7 +40,7 @@ export const Workshop = ({ proposal }) => {
       <MethodologySection />
       <ToolsSection />
       <ExpectedResultsSection companyName={companyName} />
-      <InvestmentSection />
+      <InvestmentSection recipients={recipients} />
       <FAQSection companyName={companyName} />
       <FinalCTASection companyName={companyName} />
       <Footer />

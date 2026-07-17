@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Box,
   Container,
@@ -13,18 +14,17 @@ import { GRADIENT_BRAND } from "../../lib/constants";
 import { CTA } from "./CTA";
 import { SectionLabel } from "./SectionShell";
 
-const DETAILS = [
-  { key: "Modalidad", value: "Virtual" },
-  { key: "Duración", value: "6 encuentros" },
-  { key: "Carga horaria total", value: "12 horas" },
-  {
-    key: "Destinatarios",
-    value:
-      "Administración, Compras, Comercial, Logística y Depósito, Capital Humano",
-  },
-];
+export const InvestmentSection = ({ recipients }) => {
+  const DETAILS = [
+    { key: "Modalidad", value: "Virtual" },
+    { key: "Duración", value: "6 encuentros" },
+    { key: "Carga horaria total", value: "12 horas" },
+    {
+      key: "Destinatarios",
+      value: recipients,
+    },
+  ];
 
-export const InvestmentSection = () => {
   return (
     <Box as="section" id="inversion" bg="white" py={24}>
       <Container maxW="5xl" px={6}>
