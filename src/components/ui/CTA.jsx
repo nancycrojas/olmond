@@ -22,6 +22,20 @@ const variants = {
     color: "brand.600",
     _hover: { bg: "brand.50" },
   },
+  light: {
+    bg: "transparent",
+    color: "white",
+    border: "2px solid",
+    borderColor: "whiteAlpha.300",
+    _hover: {
+      bg: "whiteAlpha.100",
+      borderColor: "whiteAlpha.500",
+      transform: "translateY(-2px)",
+    },
+    _active: {
+      bg: "whiteAlpha.200",
+    },
+  },
 };
 
 export function CTA({ variant = "primary", children, ...props }) {
@@ -32,6 +46,7 @@ export function CTA({ variant = "primary", children, ...props }) {
       py={7}
       fontFamily="heading"
       fontWeight="700"
+      fontSize={{ base: "sm", sm: "md" }}
       borderRadius="full"
       transition="all 0.2s ease"
       {...variants[variant]}
