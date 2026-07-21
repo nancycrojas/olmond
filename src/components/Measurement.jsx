@@ -156,7 +156,7 @@ function CriterionItem({ number, title, copy, isLast }) {
   );
 }
 
-export function Measurement() {
+export const Measurement = () => {
   return (
     <Box
       as="section"
@@ -323,4 +323,4 @@ export function Measurement() {
       </Container>
     </Box>
   );
-}
+};
