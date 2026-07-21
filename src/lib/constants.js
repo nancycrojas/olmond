@@ -23,7 +23,8 @@ export const GRADIENT_BRAND = "linear(to-r, #667eea, #764ba2)";
 export const GRADIENT_BRAND_BR = "linear(to-br, #667eea, #764ba2)";
 
 export const BRAND_GRADIENT =
-  "linear-gradient(135deg, #667eea 0%, #764ba2 100%)";
+  "linear-gradient(135deg, #667eea 0%, #764ba2 62%, #EC4899 120%)";
+
 export const BRAND_ACCENT = "#EC4899";
 // TODO: reemplazar por el número real de Olmond
 
@@ -191,4 +192,13 @@ export const FORM_FIELDS = [
       "Ya avanzamos, quiero escalar",
     ],
   },
+];
+
+export const DIAGNOSTICO_URL = "https://www.olmondconsulting.com/diagnostico";
+
+export const NAV_ITEMS = [
+  { label: "Impact Sprint", href: "#impact-sprint" },
+  { label: "Cómo trabajamos", href: "#como-trabajamos" },
+  { label: "Formación", href: "#academy" },
+  { label: "Nosotros", href: "#nosotros" },
 ];
