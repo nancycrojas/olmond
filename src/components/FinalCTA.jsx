@@ -153,7 +153,7 @@ export const FinalCTA = () => {
             gap={4}
             direction={{
               base: "column",
-              sm: "row",
+              md: "row",
             }}
             w={{
               base: "full",

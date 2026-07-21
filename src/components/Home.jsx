@@ -12,9 +12,10 @@ import { FinalCTA } from "./FinalCTA";
 import { Hero } from "./Hero";
 // import { Impact } from "./Impact";
 import { ImpactSprint } from "./ImpactSprint";
-import { Integrations } from "./Integrations";
+// import { Integrations } from "./Integrations";
 import { Measurement } from "./Measurement";
 import { Methodology } from "./Methodology";
+import { Newsletter } from "./Newsletter";
 import { Paths } from "./Paths";
 import { Problem } from "./Problem";
 // import { Services } from "./Services";
@@ -35,6 +36,7 @@ export const Home = () => {
       <AboutPatricio />
       <FAQS />
       <FinalCTA />
+      <Newsletter />
       {/* <About />
       <Services />
       <Team />
@@ -43,7 +45,7 @@ export const Home = () => {
       <Carousel />
       <WhatStopsYou />
       <FAQ /> */}
-      <Integrations />
+      {/* <Integrations /> */}
     </Stack>
   );
 };
