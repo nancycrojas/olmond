@@ -17,6 +17,7 @@ import { BRAND_GRADIENT } from "../lib/constants.js";
 
 export const Newsletter = () => {
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (event) => {
@@ -29,25 +30,27 @@ export const Newsletter = () => {
       return;
     }
 
+    let timeout;
     try {
       setStatus("loading");
+      const controller = new AbortController();
+      timeout = window.setTimeout(() => controller.abort(), 10000);
 
-      const response = await fetch(
-        import.meta.env.VITE_N8N_NEWSLETTER_WEBHOOK_URL,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: normalizedEmail,
-            consentimiento: true,
-            origen: "web_olmond",
-            formulario: "newsletter_home",
-            fecha_alta: new Date().toISOString(),
-          }),
+      const response = await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        signal: controller.signal,
+        body: JSON.stringify({
+          email: normalizedEmail,
+          consentimiento: true,
+          website,
+          origen: "web_olmond",
+          formulario: "newsletter_home",
+          fecha_alta: new Date().toISOString(),
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("No se pudo registrar la suscripción.");
@@ -62,10 +65,13 @@ export const Newsletter = () => {
       }
 
       setEmail("");
+      setWebsite("");
       setStatus("success");
     } catch (error) {
       console.error("Error de suscripción:", error);
       setStatus("error");
+    } finally {
+      if (timeout) window.clearTimeout(timeout);
     }
   };
 
@@ -200,10 +206,24 @@ export const Newsletter = () => {
             </Text>
 
             <Text mt={2} fontSize="sm" lineHeight="1.7" color="gray.600">
-              Se envía todos los lunes a las 9 am.
+              Se envía todos los lunes a las 9:00 (hora de Buenos Aires).
             </Text>
 
             <Box as="form" mt={6} onSubmit={handleSubmit}>
+              <Input
+                name="website"
+                value={website}
+                onChange={(event) => setWebsite(event.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                position="absolute"
+                left="-10000px"
+                w="1px"
+                h="1px"
+                opacity={0}
+              />
+
               <FormControl isRequired>
                 <FormLabel
                   htmlFor="newsletter-email"
@@ -263,7 +283,8 @@ export const Newsletter = () => {
               </FormControl>
 
               <Text mt={4} fontSize="xs" lineHeight="1.6" color="gray.500">
-                Podés cancelar la suscripción en cualquier momento.
+                Al suscribirte aceptás recibir la newsletter semanal de Olmond.
+                Podés darte de baja desde cualquier envío.
               </Text>
 
               {status === "success" && (
@@ -278,12 +299,6 @@ export const Newsletter = () => {
                 </Text>
               )}
 
-              {status === "configuration-error" && (
-                <Text mt={4} fontSize="sm" fontWeight="600" color="orange.600">
-                  El formulario todavía no está conectado al sistema de
-                  suscripciones.
-                </Text>
-              )}
             </Box>
           </Box>
         </Grid>
