@@ -86,6 +86,17 @@ export default async function handler(request, response) {
   const body = parseRequestBody(request.body);
   const email = normalizeEmail(body.email);
   const consentGiven = body.consentimiento === true || body.consentimiento === "true";
+  response.setHeader(
+    "X-Olmond-Newsletter-Debug",
+    [
+      typeof request.body,
+      Object.keys(body).sort().join(","),
+      isValidEmail(email) ? "email-ok" : "email-bad",
+      typeof body.consentimiento,
+      String(body.consentimiento ?? "missing"),
+      String(body.website ?? "") ? "honeypot" : "no-honeypot",
+    ].join("|").slice(0, 240),
+  );
   if (
     JSON.stringify(body).length > 4096 ||
     String(body.website ?? "").trim() ||
