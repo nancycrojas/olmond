@@ -1,5 +1,9 @@
 const WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 8;
+// The webhook URL is not a credential. Keep a server-side fallback so a
+// missing Vercel environment variable cannot silently disable signups.
+const DEFAULT_WEBHOOK_URL =
+  "https://olmond.app.n8n.cloud/webhook/olmond-newsletter-subscribe-v1";
 const attempts = new Map();
 
 function normalizeEmail(value) {
@@ -27,7 +31,9 @@ function isRateLimited(key, now = Date.now()) {
 }
 
 function safeWebhookUrl() {
-  const raw = String(globalThis.process?.env?.N8N_NEWSLETTER_WEBHOOK_URL ?? "").trim();
+  const raw = String(
+    globalThis.process?.env?.N8N_NEWSLETTER_WEBHOOK_URL ?? DEFAULT_WEBHOOK_URL,
+  ).trim();
   if (!raw) return null;
   try {
     const url = new URL(raw);
