@@ -19,12 +19,28 @@ import { useSearchParams } from "react-router-dom";
 
 const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
 const CARD_RENDER_VERSION = "2";
+const LINKEDIN_ASSETS = Object.freeze({
+  social_20260722_17634: {
+    url: "/social/linkedin/social_20260722_17634-hero-v1.png",
+    alt: "Equipo de una PyME revisando resultados operativos de un piloto de inteligencia artificial.",
+  },
+});
 
 function versionedPreviewUrl(value) {
   if (!value) return "";
   const url = new URL(value, window.location.origin);
   url.searchParams.set("v", CARD_RENDER_VERSION);
   return url.toString();
+}
+
+function withLinkedInAsset(content) {
+  const asset = LINKEDIN_ASSETS[content?.review_id];
+  if (!asset) return content;
+  return {
+    ...content,
+    linkedin_image_url: new URL(asset.url, window.location.origin).toString(),
+    linkedin_image_alt: asset.alt,
+  };
 }
 
 export function SocialReview() {
@@ -43,7 +59,7 @@ export function SocialReview() {
       .then(async (response) => {
         const result = await response.json();
         if (!response.ok || result.success !== true) throw new Error(result.message || "No pudimos abrir la revisión.");
-        if (alive) setDraft(result.content);
+        if (alive) setDraft(withLinkedInAsset(result.content));
       })
       .catch((reason) => alive && setError(reason.message))
       .finally(() => alive && setLoading(false));
@@ -78,7 +94,7 @@ export function SocialReview() {
       const result = await response.json();
       if (!response.ok || result.success !== true) throw new Error(result.message || "No pudimos guardar la revisión.");
       setMessage(result.message || (action === "approve" ? "Contenido aprobado y programado." : "Cambios guardados."));
-      if (result.content) setDraft(result.content);
+      if (result.content) setDraft(withLinkedInAsset(result.content));
     } catch (reason) {
       setError(reason.message);
     } finally {
@@ -101,6 +117,17 @@ export function SocialReview() {
           {intent === "approve" && <Alert status="info" bg="#151827" color="white" borderRadius="xl"><AlertIcon />Revisá la vista previa y confirmá con “Aprobar y programar”.</Alert>}
           {error && <Alert status="error" borderRadius="xl"><AlertIcon />{error}</Alert>}
           {message && <Alert status="success" borderRadius="xl"><AlertIcon />{message}</Alert>}
+
+          {draft.linkedin_image_url && (
+            <Box bg="#11131A" border="1px solid #272A36" borderRadius="2xl" overflow="hidden">
+              <Box p={{ base: 5, md: 6 }}>
+                <Text color="#EC4899" fontWeight="700" letterSpacing="0.14em" fontSize="xs">IMAGEN PRINCIPAL DE LINKEDIN</Text>
+                <Heading mt={2} fontFamily="Raleway" fontSize={{ base: "xl", md: "2xl" }}>Fotografía editorial para perfil y empresa</Heading>
+                <Text mt={2} color="#CBD5E0">Esta imagen se publicará en LinkedIn; las ocho placas se mantienen como carrusel para Instagram y Facebook.</Text>
+              </Box>
+              <Image src={draft.linkedin_image_url} alt={draft.linkedin_image_alt} w="100%" maxH="760px" objectFit="cover" objectPosition="center" />
+            </Box>
+          )}
 
           <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }} gap={5}>
             {draft.slides.map((slide, index) => (
