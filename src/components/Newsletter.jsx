@@ -289,7 +289,8 @@ export const Newsletter = () => {
 
               {status === "success" && (
                 <Text mt={4} fontSize="sm" fontWeight="600" color="green.600">
-                  Listo. Tu correo fue registrado correctamente.
+                  Gracias. Revisá tu correo y confirmá la suscripción para
+                  empezar a recibir la newsletter.
                 </Text>
               )}
 

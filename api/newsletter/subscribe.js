@@ -32,7 +32,10 @@ function isRateLimited(key, now = Date.now()) {
 
 function parseRequestBody(value) {
   if (value && typeof value === "object") return value;
-  if (typeof Buffer !== "undefined" && Buffer.isBuffer(value)) {
+  if (
+    typeof globalThis.Buffer !== "undefined" &&
+    globalThis.Buffer.isBuffer(value)
+  ) {
     return parseRequestBody(value.toString("utf8"));
   }
   if (typeof value !== "string") return {};
