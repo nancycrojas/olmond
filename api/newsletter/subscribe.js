@@ -67,7 +67,6 @@ function safeWebhookUrl() {
 export default async function handler(request, response) {
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("X-Content-Type-Options", "nosniff");
-  response.setHeader("X-Olmond-Newsletter-Version", "2026-07-22-parser-v2");
 
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
@@ -86,17 +85,6 @@ export default async function handler(request, response) {
   const body = parseRequestBody(request.body);
   const email = normalizeEmail(body.email);
   const consentGiven = body.consentimiento === true || body.consentimiento === "true";
-  response.setHeader(
-    "X-Olmond-Newsletter-Debug",
-    [
-      typeof request.body,
-      Object.keys(body).sort().join(","),
-      isValidEmail(email) ? "email-ok" : "email-bad",
-      typeof body.consentimiento,
-      String(body.consentimiento ?? "missing"),
-      String(body.website ?? "") ? "honeypot" : "no-honeypot",
-    ].join("|").slice(0, 240),
-  );
   if (
     JSON.stringify(body).length > 4096 ||
     String(body.website ?? "").trim() ||
@@ -127,11 +115,6 @@ export default async function handler(request, response) {
       redirect: "error",
     });
     const result = await upstream.json().catch(() => null);
-    response.setHeader("X-Olmond-Upstream-Status", String(upstream.status));
-    response.setHeader(
-      "X-Olmond-Upstream-Result",
-      JSON.stringify(result ?? {}).slice(0, 180),
-    );
     if (!upstream.ok || result?.success !== true) {
       return response.status(400).json({ success: false, message: "No pudimos registrar la suscripción." });
     }
