@@ -30,6 +30,17 @@ function isRateLimited(key, now = Date.now()) {
   return current.count > MAX_REQUESTS_PER_WINDOW;
 }
 
+function parseRequestBody(value) {
+  if (value && typeof value === "object") return value;
+  if (typeof value !== "string") return {};
+  try {
+    const parsed = JSON.parse(value);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
 function safeWebhookUrl() {
   const raw = String(
     globalThis.process?.env?.N8N_NEWSLETTER_WEBHOOK_URL ?? DEFAULT_WEBHOOK_URL,
@@ -68,7 +79,7 @@ export default async function handler(request, response) {
     return response.status(429).json({ success: false, message: "Esperá un momento antes de volver a intentar." });
   }
 
-  const body = request.body && typeof request.body === "object" ? request.body : {};
+  const body = parseRequestBody(request.body);
   const email = normalizeEmail(body.email);
   if (
     JSON.stringify(body).length > 4096 ||
@@ -111,4 +122,10 @@ export default async function handler(request, response) {
   }
 }
 
-export { isRateLimited, isValidEmail, normalizeEmail, safeWebhookUrl };
+export {
+  isRateLimited,
+  isValidEmail,
+  normalizeEmail,
+  parseRequestBody,
+  safeWebhookUrl,
+};
