@@ -64,6 +64,7 @@ function safeWebhookUrl() {
 export default async function handler(request, response) {
   response.setHeader("Cache-Control", "no-store");
   response.setHeader("X-Content-Type-Options", "nosniff");
+  response.setHeader("X-Olmond-Newsletter-Version", "2026-07-22-parser-v2");
 
   if (request.method !== "POST") {
     response.setHeader("Allow", "POST");
