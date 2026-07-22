@@ -18,6 +18,14 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
+const CARD_RENDER_VERSION = "2";
+
+function versionedPreviewUrl(value) {
+  if (!value) return "";
+  const url = new URL(value, window.location.origin);
+  url.searchParams.set("v", CARD_RENDER_VERSION);
+  return url.toString();
+}
 
 export function SocialReview() {
   const [params] = useSearchParams();
@@ -97,7 +105,7 @@ export function SocialReview() {
           <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }} gap={5}>
             {draft.slides.map((slide, index) => (
               <Box key={`${slide.index}-${index}`} bg="#11131A" border="1px solid #272A36" borderRadius="2xl" overflow="hidden">
-                <Image src={slide.preview_url} alt={slide.alt_text || `Placa ${index + 1}`} w="100%" loading="lazy" />
+                <Image src={versionedPreviewUrl(slide.preview_url)} alt={slide.alt_text || `Placa ${index + 1}`} w="100%" loading="lazy" />
                 <Stack p={5} spacing={4}>
                   <FormControl><FormLabel color="#CBD5E0">Antetítulo</FormLabel><Textarea value={slide.eyebrow || ""} onChange={(event) => updateSlide(index, "eyebrow", event.target.value)} /></FormControl>
                   <FormControl><FormLabel color="#CBD5E0">Título</FormLabel><Textarea value={slide.headline || ""} onChange={(event) => updateSlide(index, "headline", event.target.value)} minH="110px" /></FormControl>

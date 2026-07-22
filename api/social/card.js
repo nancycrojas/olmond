@@ -1,7 +1,7 @@
 import crypto from "node:crypto";
-import fs from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 
-import sharp from "sharp";
+import { Resvg } from "@resvg/resvg-js";
 
 const WIDTH = 1080;
 const HEIGHT = 1350;
@@ -86,21 +86,6 @@ function tspans(lines, x, y, lineHeight, className) {
   )).join("");
 }
 
-async function fontCss() {
-  try {
-    const [regular, bold] = await Promise.all([
-      fs.readFile(new URL("../../node_modules/@fontsource/raleway/files/raleway-latin-400-normal.woff2", import.meta.url)),
-      fs.readFile(new URL("../../node_modules/@fontsource/raleway/files/raleway-latin-700-normal.woff2", import.meta.url)),
-    ]);
-    return `
-      @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 400; src: url(data:font/woff2;base64,${regular.toString("base64")}) format('woff2'); }
-      @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 700; src: url(data:font/woff2;base64,${bold.toString("base64")}) format('woff2'); }
-    `;
-  } catch {
-    return "";
-  }
-}
-
 async function renderSvg(slide) {
   const isCover = slide.kind === "cover" || slide.index === 1;
   const isCta = slide.kind === "cta" || slide.index === slide.total;
@@ -133,8 +118,7 @@ async function renderSvg(slide) {
       </linearGradient>
       <filter id="blur"><feGaussianBlur stdDeviation="72"/></filter>
       <style>
-        ${await fontCss()}
-        text { font-family: 'Raleway', Arial, sans-serif; }
+        text { font-family: 'Open Sans', sans-serif; }
         .eyebrow { font-size: 24px; font-weight: 700; letter-spacing: 4px; fill: ${COLORS.magenta}; }
         .headline { font-size: ${headlineSize}px; font-weight: 700; fill: ${COLORS.white}; }
         .body { font-size: 37px; font-weight: 400; fill: ${COLORS.muted}; }
@@ -168,7 +152,17 @@ export default async function handler(request, response) {
     if (String(request.query?.h ?? "") !== digest) throw new Error("hash_invalid");
     const slide = decodePayload(payload);
     const svg = await renderSvg(slide);
-    const png = await sharp(globalThis.Buffer.from(svg)).png({ compressionLevel: 9, adaptiveFiltering: true }).toBuffer();
+    const png = new Resvg(svg, {
+      fitTo: { mode: "original" },
+      font: {
+        fontFiles: [
+          fileURLToPath(new URL("./fonts/OpenSans-Regular.ttf", import.meta.url)),
+          fileURLToPath(new URL("./fonts/OpenSans-Bold.ttf", import.meta.url)),
+        ],
+        loadSystemFonts: false,
+        defaultFontFamily: "Open Sans",
+      },
+    }).render().asPng();
     response.setHeader("Content-Type", "image/png");
     response.setHeader("Cache-Control", "public, max-age=31536000, immutable");
     response.setHeader("ETag", `"${digest}"`);
