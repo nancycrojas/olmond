@@ -127,6 +127,11 @@ export default async function handler(request, response) {
       redirect: "error",
     });
     const result = await upstream.json().catch(() => null);
+    response.setHeader("X-Olmond-Upstream-Status", String(upstream.status));
+    response.setHeader(
+      "X-Olmond-Upstream-Result",
+      JSON.stringify(result ?? {}).slice(0, 180),
+    );
     if (!upstream.ok || result?.success !== true) {
       return response.status(400).json({ success: false, message: "No pudimos registrar la suscripción." });
     }
