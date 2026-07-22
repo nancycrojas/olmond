@@ -32,6 +32,9 @@ function isRateLimited(key, now = Date.now()) {
 
 function parseRequestBody(value) {
   if (value && typeof value === "object") return value;
+  if (typeof Buffer !== "undefined" && Buffer.isBuffer(value)) {
+    return parseRequestBody(value.toString("utf8"));
+  }
   if (typeof value !== "string") return {};
   try {
     const parsed = JSON.parse(value);
@@ -82,11 +85,12 @@ export default async function handler(request, response) {
 
   const body = parseRequestBody(request.body);
   const email = normalizeEmail(body.email);
+  const consentGiven = body.consentimiento === true || body.consentimiento === "true";
   if (
     JSON.stringify(body).length > 4096 ||
     String(body.website ?? "").trim() ||
     !isValidEmail(email) ||
-    body.consentimiento !== true
+    !consentGiven
   ) {
     return response.status(400).json({ success: false, message: "No pudimos registrar la suscripción." });
   }
