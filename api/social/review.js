@@ -67,8 +67,11 @@ export default async function handler(request, response) {
     });
     const result = await upstream.json().catch(() => null);
     if (!upstream.ok || !result) {
-      return response.status(upstream.status >= 400 && upstream.status < 500 ? upstream.status : 502)
-        .json({ success: false, message: "No pudimos procesar la revisión." });
+      const status = upstream.status >= 400 && upstream.status < 500 ? upstream.status : 502;
+      const message =
+        (result && typeof result.message === "string" && result.message.trim()) ||
+        "No pudimos procesar la revisión.";
+      return response.status(status).json({ success: false, message });
     }
     return response.status(200).json(result);
   } catch {
