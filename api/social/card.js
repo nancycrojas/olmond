@@ -142,8 +142,8 @@ async function renderSvg(slide) {
 export default async function handler(request, response) {
   response.setHeader("X-Content-Type-Options", "nosniff");
   response.setHeader("Content-Security-Policy", "default-src 'none'");
-  if (request.method !== "GET") {
-    response.setHeader("Allow", "GET");
+  if (!["GET", "HEAD"].includes(request.method)) {
+    response.setHeader("Allow", "GET, HEAD");
     return response.status(405).end();
   }
   try {
@@ -151,6 +151,12 @@ export default async function handler(request, response) {
     const digest = crypto.createHash("sha256").update(payload).digest("hex").slice(0, 20);
     if (String(request.query?.h ?? "") !== digest) throw new Error("hash_invalid");
     const slide = decodePayload(payload);
+    response.setHeader("Content-Type", "image/png");
+    response.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    response.setHeader("ETag", `"${digest}"`);
+    if (request.method === "HEAD") {
+      return response.status(200).end();
+    }
     const svg = await renderSvg(slide);
     const png = new Resvg(svg, {
       fitTo: { mode: "original" },
@@ -163,9 +169,6 @@ export default async function handler(request, response) {
         defaultFontFamily: "Open Sans",
       },
     }).render().asPng();
-    response.setHeader("Content-Type", "image/png");
-    response.setHeader("Cache-Control", "public, max-age=31536000, immutable");
-    response.setHeader("ETag", `"${digest}"`);
     return response.status(200).send(png);
   } catch {
     response.setHeader("Cache-Control", "no-store");
