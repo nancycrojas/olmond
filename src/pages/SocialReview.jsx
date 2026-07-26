@@ -19,12 +19,6 @@ import { useSearchParams } from "react-router-dom";
 
 const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
 const CARD_RENDER_VERSION = "2";
-const LINKEDIN_ASSETS = Object.freeze({
-  social_20260722_17634: {
-    url: "/social/linkedin/social_20260722_17634-hero-v1.png",
-    alt: "Equipo de una PyME revisando resultados operativos de un piloto de inteligencia artificial.",
-  },
-});
 
 function versionedPreviewUrl(value) {
   if (!value) return "";
@@ -34,13 +28,7 @@ function versionedPreviewUrl(value) {
 }
 
 function withLinkedInAsset(content) {
-  const asset = LINKEDIN_ASSETS[content?.review_id];
-  if (!asset) return content;
-  return {
-    ...content,
-    linkedin_image_url: new URL(asset.url, window.location.origin).toString(),
-    linkedin_image_alt: asset.alt,
-  };
+  return content;
 }
 
 export function SocialReview() {
@@ -52,6 +40,7 @@ export function SocialReview() {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [rejectionReason, setRejectionReason] = useState("");
 
   useEffect(() => {
     let alive = true;
@@ -89,11 +78,20 @@ export function SocialReview() {
       const response = await fetch("/api/social/review", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token, action, content: draft }),
+        body: JSON.stringify({
+          token,
+          action,
+          content: draft,
+          rejection_reason: action === "reject" ? rejectionReason : "",
+        }),
       });
       const result = await response.json();
       if (!response.ok || result.success !== true) throw new Error(result.message || "No pudimos guardar la revisión.");
-      setMessage(result.message || (action === "approve" ? "Contenido aprobado y programado." : "Cambios guardados."));
+      setMessage(result.message || (
+        action === "approve" ? "Contenido aprobado y programado."
+          : action === "reject" ? "Contenido rechazado y motivo registrado."
+            : "Cambios guardados."
+      ));
       if (result.content) setDraft(withLinkedInAsset(result.content));
     } catch (reason) {
       setError(reason.message);
@@ -147,10 +145,21 @@ export function SocialReview() {
             <FormControl><FormLabel>Instagram</FormLabel><Textarea minH="220px" value={draft.instagram_copy} onChange={(event) => update("instagram_copy", event.target.value)} /></FormControl>
             <FormControl><FormLabel>Facebook</FormLabel><Textarea minH="220px" value={draft.facebook_copy} onChange={(event) => update("facebook_copy", event.target.value)} /></FormControl>
             <FormControl isInvalid={xCount > 280}><FormLabel>X · {xCount}/280</FormLabel><Textarea value={draft.x_copy} onChange={(event) => update("x_copy", event.target.value)} /></FormControl>
+            <FormControl>
+              <FormLabel>Motivo de rechazo / instrucciones de mejora</FormLabel>
+              <Textarea
+                minH="120px"
+                placeholder="Ej.: El enfoque está monótono. Rehacer con una noticia de los últimos 3 días y un ángulo más provocador para PyMEs."
+                value={rejectionReason}
+                onChange={(event) => setRejectionReason(event.target.value)}
+              />
+              <Text mt={2} color="#A0AEC0" fontSize="sm">Si rechazás, este motivo queda registrado para entrenamiento editorial y mejora continua.</Text>
+            </FormControl>
           </Stack>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing={4} position="sticky" bottom="16px" bg="rgba(8,8,11,.92)" backdropFilter="blur(12px)" borderRadius="2xl" p={4} border="1px solid #272A36">
             <Button isLoading={saving} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Guardar cambios</Button>
+            <Button isLoading={saving} isDisabled={rejectionReason.trim().length < 8 || Boolean(message)} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
             <Button isLoading={saving} isDisabled={xCount > 280 || Boolean(message)} onClick={() => submit("approve")} bg="#EC4899" color="white" _hover={{ bg: "#D93487" }}>Aprobar y programar</Button>
           </Stack>
         </Stack>
