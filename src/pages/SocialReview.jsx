@@ -18,7 +18,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
-const CARD_RENDER_VERSION = "2";
+const CARD_RENDER_VERSION = "3";
 
 function versionedPreviewUrl(value) {
   if (!value) return "";
