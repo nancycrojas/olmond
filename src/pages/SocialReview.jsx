@@ -18,7 +18,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
-const CARD_RENDER_VERSION = "3";
+const CARD_RENDER_VERSION = "4";
 
 function versionedPreviewUrl(value) {
   if (!value) return "";
@@ -149,7 +149,7 @@ export function SocialReview() {
               <FormLabel>Motivo de rechazo / instrucciones de mejora</FormLabel>
               <Textarea
                 minH="120px"
-                placeholder="Ej.: El enfoque está monótono. Rehacer con una noticia de los últimos 3 días y un ángulo más provocador para PyMEs."
+                placeholder="Ej.: El enfoque repite ideas recientes. Rehacer con una noticia de las últimas 72 horas, más datos, contexto y fuentes primarias; menos recomendaciones."
                 value={rejectionReason}
                 onChange={(event) => setRejectionReason(event.target.value)}
               />

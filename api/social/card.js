@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 import { Resvg } from "@resvg/resvg-js";
 
 const WIDTH = 1080;
-const HEIGHT = 1080;
+const HEIGHT = 1350;
 const MAX_PAYLOAD_LENGTH = 5000;
 const MAX_TEXT_LENGTH = 420;
 
@@ -89,18 +89,21 @@ function tspans(lines, x, y, lineHeight, className) {
 async function renderSvg(slide) {
   const isCover = slide.kind === "cover" || slide.index === 1;
   const isCta = slide.kind === "cta" || slide.index === slide.total;
-  const headlineLines = wrapText(slide.headline, isCover ? 24 : 28, isCover ? 4 : 3);
-  const bodyLines = wrapText(slide.body, 44, 4);
-  const headlineSize = isCover ? 66 : 58;
-  const headlineLineHeight = isCover ? 78 : 68;
-  const headlineY = isCover ? 330 : 280;
-  const bodyY = headlineY + headlineLines.length * headlineLineHeight + 54;
+  const contentCenter = WIDTH / 2;
+  const safeLeft = 180;
+  const safeRight = WIDTH - safeLeft;
+  const headlineLines = wrapText(slide.headline, isCover ? 22 : 27, isCover ? 4 : 3);
+  const bodyLines = wrapText(slide.body, 38, 5);
+  const headlineSize = isCover ? 62 : 54;
+  const headlineLineHeight = isCover ? 74 : 66;
+  const headlineY = isCover ? 380 : 330;
+  const bodyY = headlineY + headlineLines.length * headlineLineHeight + 66;
   const bulletY = bodyY;
   const bulletMarkup = slide.bullets.map((bullet, index) => {
-    const lines = wrapText(bullet, 42, 2);
-    const y = bulletY + index * 82;
-    return `<circle cx="124" cy="${y - 9}" r="7" fill="${COLORS.magenta}"/>`
-      + `<text>${tspans(lines, 154, y, 36, "bullet")}</text>`;
+    const lines = wrapText(bullet, 34, 2);
+    const y = bulletY + index * 96;
+    return `<circle cx="222" cy="${y - 10}" r="7" fill="${COLORS.magenta}"/>`
+      + `<text>${tspans(lines, 254, y, 38, "bullet")}</text>`;
   }).join("");
   const footer = `${String(slide.index).padStart(2, "0")} / ${String(slide.total).padStart(2, "0")}`;
   const accent = isCta ? COLORS.magenta : COLORS.purple;
@@ -126,16 +129,16 @@ async function renderSvg(slide) {
         .footer { font-size: 19px; font-weight: 700; letter-spacing: 3px; fill: ${COLORS.muted}; }
       </style>
     </defs>
-    <rect width="1080" height="1080" fill="url(#bg)"/>
-    <circle cx="940" cy="180" r="230" fill="${accent}" opacity="0.16" filter="url(#blur)"/>
-    <circle cx="100" cy="1010" r="170" fill="${COLORS.violet}" opacity="0.12" filter="url(#blur)"/>
-    <rect x="96" y="96" width="888" height="4" rx="2" fill="url(#accent)"/>
-    <text x="96" y="170" class="eyebrow">${escapeXml(slide.eyebrow.toUpperCase())}</text>
-    <text>${tspans(headlineLines, 96, headlineY, headlineLineHeight, "headline")}</text>
-    ${slide.bullets.length ? bulletMarkup : `<text>${tspans(bodyLines, 96, bodyY, 43, "body")}</text>`}
-    ${isCta ? `<rect x="96" y="880" width="360" height="6" rx="3" fill="${COLORS.magenta}"/>` : ""}
-    <text x="96" y="990" class="footer">OLMOND CONSULTING</text>
-    <text x="984" y="990" text-anchor="end" class="footer">${footer}</text>
+    <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#bg)"/>
+    <circle cx="930" cy="210" r="250" fill="${accent}" opacity="0.14" filter="url(#blur)"/>
+    <circle cx="130" cy="1190" r="190" fill="${COLORS.violet}" opacity="0.10" filter="url(#blur)"/>
+    <rect x="${safeLeft}" y="150" width="${safeRight - safeLeft}" height="4" rx="2" fill="url(#accent)"/>
+    <text x="${contentCenter}" y="235" text-anchor="middle" class="eyebrow">${escapeXml(slide.eyebrow.toUpperCase())}</text>
+    <text text-anchor="middle">${tspans(headlineLines, contentCenter, headlineY, headlineLineHeight, "headline")}</text>
+    ${slide.bullets.length ? bulletMarkup : `<text text-anchor="middle">${tspans(bodyLines, contentCenter, bodyY, 45, "body")}</text>`}
+    ${isCta ? `<rect x="360" y="1110" width="360" height="6" rx="3" fill="${COLORS.magenta}"/>` : ""}
+    <text x="${safeLeft}" y="1235" class="footer">OLMOND CONSULTING</text>
+    <text x="${safeRight}" y="1235" text-anchor="end" class="footer">${footer}</text>
   </svg>`;
 }
 
