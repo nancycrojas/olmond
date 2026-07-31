@@ -7,6 +7,8 @@ const WIDTH = 1080;
 const HEIGHT = 1350;
 const MAX_PAYLOAD_LENGTH = 5000;
 const MAX_TEXT_LENGTH = 420;
+const MAX_BACKGROUND_BYTES = 5 * 1024 * 1024;
+const BACKGROUND_URL_PATTERN = /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/linkedin\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/;
 
 const COLORS = Object.freeze({
   background: "#08080B",
@@ -32,7 +34,18 @@ function decodePayload(value) {
     throw new Error("payload_invalid");
   }
   const decoded = JSON.parse(globalThis.Buffer.from(value, "base64url").toString("utf8"));
-  const allowed = new Set(["eyebrow", "headline", "body", "bullets", "index", "total", "kind"]);
+  const allowed = new Set([
+    "eyebrow",
+    "headline",
+    "body",
+    "bullets",
+    "index",
+    "total",
+    "kind",
+    "visual_mode",
+    "background_url",
+    "background_focus",
+  ]);
   if (!decoded || typeof decoded !== "object" || Object.keys(decoded).some((key) => !allowed.has(key))) {
     throw new Error("schema_invalid");
   }
@@ -43,6 +56,11 @@ function decodePayload(value) {
   const bullets = Array.isArray(decoded.bullets)
     ? decoded.bullets.map((entry) => String(entry ?? "").trim()).filter(Boolean).slice(0, 4)
     : [];
+  const visualMode = decoded.visual_mode === "photo_cover" ? "photo_cover" : "editorial_cards";
+  const backgroundUrl = String(decoded.background_url ?? "").trim();
+  if (backgroundUrl && !BACKGROUND_URL_PATTERN.test(backgroundUrl)) {
+    throw new Error("background_url_invalid");
+  }
   const slide = {
     eyebrow: String(decoded.eyebrow ?? "OLMOND · INTELIGENCIA APLICADA").trim().slice(0, 90),
     headline: String(decoded.headline ?? "").trim(),
@@ -51,11 +69,33 @@ function decodePayload(value) {
     index: Math.max(1, Math.min(9, Number(decoded.index) || 1)),
     total: Math.max(1, Math.min(9, Number(decoded.total) || 8)),
     kind: ["cover", "content", "cta"].includes(decoded.kind) ? decoded.kind : "content",
+    visualMode,
+    backgroundUrl,
+    backgroundFocus: ["left", "center", "right"].includes(decoded.background_focus)
+      ? decoded.background_focus
+      : "center",
   };
   if (!slide.headline || (!slide.body && !slide.bullets.length && slide.kind !== "cta")) {
     throw new Error("content_missing");
   }
   return slide;
+}
+
+async function fetchBackgroundDataUri(url) {
+  if (!url) return "";
+  const result = await fetch(url, {
+    redirect: "error",
+    signal: AbortSignal.timeout(5000),
+    headers: { Accept: "image/png" },
+  });
+  if (!result.ok) throw new Error("background_fetch_failed");
+  const contentType = String(result.headers.get("content-type") ?? "").split(";")[0].trim();
+  if (contentType !== "image/png") throw new Error("background_type_invalid");
+  const bytes = new Uint8Array(await result.arrayBuffer());
+  if (!bytes.length || bytes.length > MAX_BACKGROUND_BYTES) {
+    throw new Error("background_size_invalid");
+  }
+  return `data:image/png;base64,${globalThis.Buffer.from(bytes).toString("base64")}`;
 }
 
 function wrapText(text, maxChars, maxLines) {
@@ -89,6 +129,13 @@ function tspans(lines, x, y, lineHeight, className) {
 async function renderSvg(slide) {
   const isCover = slide.kind === "cover" || slide.index === 1;
   const isCta = slide.kind === "cta" || slide.index === slide.total;
+  const usePhoto = isCover && slide.visualMode === "photo_cover" && slide.backgroundUrl;
+  const backgroundDataUri = usePhoto ? await fetchBackgroundDataUri(slide.backgroundUrl) : "";
+  const backgroundAlignment = {
+    left: "xMinYMid",
+    center: "xMidYMid",
+    right: "xMaxYMid",
+  }[slide.backgroundFocus];
   const contentCenter = WIDTH / 2;
   const safeLeft = 180;
   const safeRight = WIDTH - safeLeft;
@@ -119,6 +166,15 @@ async function renderSvg(slide) {
         <stop offset="0" stop-color="${COLORS.magenta}"/>
         <stop offset="1" stop-color="${COLORS.purple}"/>
       </linearGradient>
+      <linearGradient id="photoOverlay" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#05060B" stop-opacity="0.94"/>
+        <stop offset="0.58" stop-color="#080A12" stop-opacity="0.76"/>
+        <stop offset="1" stop-color="#10162A" stop-opacity="0.58"/>
+      </linearGradient>
+      <linearGradient id="photoBottomFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0.6" stop-color="#05060B" stop-opacity="0"/>
+        <stop offset="1" stop-color="#05060B" stop-opacity="0.9"/>
+      </linearGradient>
       <filter id="blur"><feGaussianBlur stdDeviation="72"/></filter>
       <style>
         text { font-family: 'Open Sans', sans-serif; }
@@ -130,8 +186,7 @@ async function renderSvg(slide) {
       </style>
     </defs>
     <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#bg)"/>
-    <circle cx="930" cy="210" r="250" fill="${accent}" opacity="0.14" filter="url(#blur)"/>
-    <circle cx="130" cy="1190" r="190" fill="${COLORS.violet}" opacity="0.10" filter="url(#blur)"/>
+    ${usePhoto ? `<image href="${backgroundDataUri}" x="0" y="0" width="${WIDTH}" height="${HEIGHT}" preserveAspectRatio="${backgroundAlignment} slice"/><rect width="${WIDTH}" height="${HEIGHT}" fill="url(#photoOverlay)"/><rect width="${WIDTH}" height="${HEIGHT}" fill="url(#photoBottomFade)"/>` : `<circle cx="930" cy="210" r="250" fill="${accent}" opacity="0.14" filter="url(#blur)"/><circle cx="130" cy="1190" r="190" fill="${COLORS.violet}" opacity="0.10" filter="url(#blur)"/>`}
     <rect x="${safeLeft}" y="150" width="${safeRight - safeLeft}" height="4" rx="2" fill="url(#accent)"/>
     <text x="${contentCenter}" y="235" text-anchor="middle" class="eyebrow">${escapeXml(slide.eyebrow.toUpperCase())}</text>
     <text text-anchor="middle">${tspans(headlineLines, contentCenter, headlineY, headlineLineHeight, "headline")}</text>
@@ -179,4 +234,4 @@ export default async function handler(request, response) {
   }
 }
 
-export { decodePayload, escapeXml, wrapText };
+export { decodePayload, escapeXml, fetchBackgroundDataUri, renderSvg, wrapText };
