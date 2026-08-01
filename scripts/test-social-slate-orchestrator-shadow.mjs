@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import process from "node:process";
 
 const workflowPath = process.argv[2];
 if (!workflowPath) throw new Error("Falta la ruta del orquestador shadow.");
@@ -14,11 +15,15 @@ for (const node of workflow.nodes.filter((candidate) => candidate.type === "n8n-
 }
 
 assert.equal(nodeBy("Planificar 3 espacios").disabled, true);
-assert.equal(nodeBy("Revisar solicitudes urgentes").disabled, true);
+assert.equal(nodeBy("Ingreso urgente por evento").type, "n8n-nodes-base.executeWorkflowTrigger");
+assert.equal(workflow.nodes.some((node) => node.name.includes("15 min")), false);
 assert.equal(nodeBy("Leer solicitudes del día").parameters.dataTableId.value, "BcACCpr24jrjxcOA");
 assert.equal(nodeBy("Leer revisiones del día").parameters.dataTableId.value, "TWcPR4pDfc876IaA");
 assert.equal(nodeBy("Reclamar solicitud").parameters.dataTableId.value, "BcACCpr24jrjxcOA");
 assert.equal(nodeBy("Ejecutar motor editorial shadow").parameters.options.waitForSubWorkflow, true);
+assert.equal(workflow.meta.urgentDispatch, "event-driven");
+assert.equal(workflow.meta.idleUrgentPollingExecutionsPerDay, 0);
+assert.equal(workflow.meta.maxDailyTopics, 3);
 
 const timezone = "America/Argentina/Buenos_Aires";
 const localDate = new Intl.DateTimeFormat("en-CA", {

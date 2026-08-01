@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import process from "node:process";
 
 const outputPath = process.argv[2];
 if (!outputPath) throw new Error("Falta la ruta de salida.");
@@ -64,13 +65,12 @@ const workflow = {
       disabled: true,
     },
     {
-      parameters: { rule: { interval: [{ field: "minutes", minutesInterval: 15 }] } },
+      parameters: { workflowInputs: { values: [] } },
       id: "9b67f366-bdc6-4e98-829d-53ed6c228c34",
-      name: "Revisar solicitudes urgentes · 15 min",
-      type: "n8n-nodes-base.scheduleTrigger",
-      typeVersion: 1.2,
-      position: [-1120, 220],
-      disabled: true,
+      name: "Ingreso urgente por evento",
+      type: "n8n-nodes-base.executeWorkflowTrigger",
+      typeVersion: 1.1,
+      position: [-650, 220],
     },
     {
       parameters: {},
@@ -102,15 +102,6 @@ const workflow = {
       type: "n8n-nodes-base.dataTable",
       typeVersion: 1.1,
       position: [-650, -220],
-      alwaysOutputData: true,
-    },
-    {
-      parameters: { operation: "get", dataTableId: requestTable, returnAll: true },
-      id: "e2f83bd1-0e78-44a1-8274-3cc4b2d5d9e3",
-      name: "Leer solicitudes urgentes",
-      type: "n8n-nodes-base.dataTable",
-      typeVersion: 1.1,
-      position: [-650, 220],
       alwaysOutputData: true,
     },
     {
@@ -185,8 +176,7 @@ const workflow = {
     "Prueba manual shadow": { main: [[{ node: "Leer revisiones del día", type: "main", index: 0 }]] },
     "Leer revisiones del día": { main: [[{ node: "Leer solicitudes del día", type: "main", index: 0 }]] },
     "Leer solicitudes del día": { main: [[{ node: "Construir agenda diaria de 3 temas", type: "main", index: 0 }]] },
-    "Revisar solicitudes urgentes · 15 min": { main: [[{ node: "Leer solicitudes urgentes", type: "main", index: 0 }]] },
-    "Leer solicitudes urgentes": { main: [[{ node: "Priorizar solicitudes urgentes", type: "main", index: 0 }]] },
+    "Ingreso urgente por evento": { main: [[{ node: "Priorizar solicitudes urgentes", type: "main", index: 0 }]] },
     "Construir agenda diaria de 3 temas": { main: [[{ node: "Reclamar solicitud de forma idempotente", type: "main", index: 0 }]] },
     "Priorizar solicitudes urgentes": { main: [[{ node: "Reclamar solicitud de forma idempotente", type: "main", index: 0 }]] },
     "Reclamar solicitud de forma idempotente": { main: [[{ node: "Restaurar contrato de solicitud", type: "main", index: 0 }]] },
@@ -208,6 +198,10 @@ const workflow = {
     childWorkflowId: "AAWGjrmZ4SvfkNCO",
     requestTableId: "BcACCpr24jrjxcOA",
     reviewTableId: "TWcPR4pDfc876IaA",
+    urgentDispatch: "event-driven",
+    idleUrgentPollingExecutionsPerDay: 0,
+    maxDailyTopics: 3,
+    maxUrgentTopicsPerEnvelope: 2,
   },
 };
 

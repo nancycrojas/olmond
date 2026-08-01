@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import crypto from "node:crypto";
 import fs from "node:fs";
+import process from "node:process";
 
 const workflowPath = process.argv[2];
 if (!workflowPath) throw new Error("Falta la ruta del workflow de ingreso.");
@@ -18,6 +19,12 @@ assert.equal(nodeBy("POST control editorial").parameters.path, "olmond-social-co
 assert.equal(nodeBy("Buscar autorización activa").parameters.dataTableId.value, "BcACCpr24jrjxcOA");
 assert.equal(nodeBy("Registrar sin duplicar").parameters.dataTableId.value, "BcACCpr24jrjxcOA");
 assert.equal(workflow.meta.storesRawAccessToken, false);
+assert.equal(workflow.meta.urgentDispatch, "event-driven");
+assert.equal(workflow.meta.urgentPollingExecutionsPerDay, 0);
+assert.equal(workflow.meta.maxTopicsPerEnvelope, 3);
+assert.equal(nodeBy("Enviar urgencias al orquestador shadow").parameters.mode, "once");
+assert.equal(nodeBy("Enviar urgencias al orquestador shadow").parameters.options.waitForSubWorkflow, false);
+assert.equal(nodeBy("Enviar urgencias al orquestador shadow").parameters.workflowId.value, workflow.meta.orchestratorWorkflowId);
 
 const normalize = nodeBy("Validar sobre y firma");
 assert.equal(normalize.parameters.jsCode.includes("token_hash:sha256(token)"), true);

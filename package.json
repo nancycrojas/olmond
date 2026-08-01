@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test:social-card": "node --test api/social/card.contract.test.mjs",
-    "test:social-control": "node --test api/social/control.contract.test.mjs"
+    "test:social-control": "node --test api/social/control.contract.test.mjs",
+    "test:social-release": "node scripts/test-social-release-contract.mjs"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

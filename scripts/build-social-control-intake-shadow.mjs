@@ -1,8 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
+import process from "node:process";
 
 const outputPath = process.argv[2];
 if (!outputPath) throw new Error("Falta la ruta de salida.");
+const orchestratorWorkflowId = process.argv[3] || "zOSHGXOdciLOSx7p";
 
 const requestTable = {
   __rl: true,
@@ -40,7 +42,7 @@ const expandCode = `const envelope=$input.first()?.json??{},now=new Date(),timez
 return envelope.topics.map((topic,index)=>{const scheduled=topic.scheduled_at?new Date(topic.scheduled_at):null,scheduledAt=envelope.mode==='urgent'?'':scheduled.toISOString(),publishDate=envelope.mode==='urgent'?new Intl.DateTimeFormat('en-CA',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit'}).format(now):scheduledAt.slice(0,10),slotKey=envelope.mode==='urgent'?('urgent_'+envelope.client_request_nonce.slice(0,12)+'_'+(index+1)):topic.slot_key,idempotencyKey=envelope.client_request_nonce+':'+(index+1)+':'+envelope.request_sha256.slice(0,16),requestId='request_'+envelope.client_request_nonce.replace(/-/g,'').slice(0,24)+'_'+(index+1);return {json:{kind:'CONTENT_REQUEST',request_id:requestId,idempotency_key:idempotencyKey,request_version:1,mode:envelope.mode,slot_key:slotKey,requested_topic:topic.requested_topic,editorial_instructions:topic.editorial_instructions,source_urls_json:JSON.stringify(topic.source_urls),publish_date:publishDate,scheduled_at:scheduledAt,priority:Math.max(0,Math.min(100,Number(topic.priority))),status:'REQUESTED',result_content_id:'',last_error:'',attempt_count:0,created_at:now.toISOString(),updated_at:now.toISOString(),requested_by:'patricio'}}});`;
 
 const workflow = {
-  name: "WF-MKT · Social Control Intake v1 — SHADOW",
+  name: "WF-MKT · Social Control Intake v2 — SHADOW",
   nodes: [
     {
       parameters: { httpMethod: "POST", path: "olmond-social-control-v1", responseMode: "responseNode", options: {} },
@@ -160,6 +162,34 @@ const workflow = {
       position: [1160, -100],
     },
     {
+      parameters: {
+        jsCode: `const persisted=$input.all().map(item=>item.json??{}),resolved=$("Resolver idempotencia").all().map(item=>item.json??{});return persisted.map((row,index)=>({json:{...row,duplicate:Boolean(resolved[index]?.duplicate)}})).filter(item=>String(item.json.mode??'')==='urgent'&&String(item.json.status??'')==='REQUESTED'&&!item.json.duplicate).slice(0,2);`,
+      },
+      id: "b2b243fa-35cd-4aa4-9ca3-a92411152322",
+      name: "Despachar solo urgencias nuevas",
+      type: "n8n-nodes-base.code",
+      typeVersion: 2,
+      position: [1160, 40],
+    },
+    {
+      parameters: {
+        workflowId: {
+          __rl: true,
+          mode: "id",
+          value: orchestratorWorkflowId,
+          cachedResultName: "WF-MKT · Social Slate Orchestrator v2 — SHADOW",
+        },
+        workflowInputs: { mappingMode: "autoMapInputData", value: null },
+        mode: "once",
+        options: { waitForSubWorkflow: false },
+      },
+      id: "9343c360-ec9e-49bd-8734-4110bcd823d8",
+      name: "Enviar urgencias al orquestador shadow",
+      type: "n8n-nodes-base.executeWorkflow",
+      typeVersion: 1.3,
+      position: [1400, 40],
+    },
+    {
       parameters: { respondWith: "json", responseBody: "={{ $json }}", options: { responseCode: "={{ $json.http_status }}", responseHeaders: { entries: [{ name: "Cache-Control", value: "no-store" }, { name: "X-Content-Type-Options", value: "nosniff" }] } } },
       id: "8c752090-6b87-4af3-a876-dc3e728d2d08",
       name: "Responder control editorial",
@@ -188,8 +218,12 @@ const workflow = {
     "Expandir temas inmutables": { main: [[{ node: "Buscar solicitud duplicada", type: "main", index: 0 }]] },
     "Buscar solicitud duplicada": { main: [[{ node: "Resolver idempotencia", type: "main", index: 0 }]] },
     "Resolver idempotencia": { main: [[{ node: "Registrar sin duplicar", type: "main", index: 0 }]] },
-    "Registrar sin duplicar": { main: [[{ node: "Preparar confirmación", type: "main", index: 0 }]] },
+    "Registrar sin duplicar": { main: [[
+      { node: "Preparar confirmación", type: "main", index: 0 },
+      { node: "Despachar solo urgencias nuevas", type: "main", index: 0 },
+    ]] },
     "Preparar confirmación": { main: [[{ node: "Responder control editorial", type: "main", index: 0 }]] },
+    "Despachar solo urgencias nuevas": { main: [[{ node: "Enviar urgencias al orquestador shadow", type: "main", index: 0 }]] },
     "Preparar rechazo seguro": { main: [[{ node: "Responder control editorial", type: "main", index: 0 }]] },
   },
   pinData: {},
@@ -206,6 +240,11 @@ const workflow = {
     requestTableId: "BcACCpr24jrjxcOA",
     storesRawAccessToken: false,
     productionPublishersRequiredState: "PAUSED",
+    urgentDispatch: "event-driven",
+    urgentPollingExecutionsPerDay: 0,
+    maxTopicsPerEnvelope: 3,
+    maxUrgentDispatchesPerEnvelope: 2,
+    orchestratorWorkflowId,
   },
 };
 
