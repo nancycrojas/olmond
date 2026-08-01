@@ -40,13 +40,29 @@ function editableFingerprint(content) {
     linkedin_image_url: String(content.linkedin_image_url ?? "").trim(),
     linkedin_image_alt: String(content.linkedin_image_alt ?? "").trim(),
     slides: Array.isArray(content.slides)
-      ? content.slides.map(({ eyebrow = "", headline = "", body = "", bullets = [], alt_text = "" }) => ({
+      ? content.slides.map(
+          ({
+            eyebrow = "",
+            headline = "",
+            body = "",
+            bullets = [],
+            alt_text = "",
+            visual_mode = "editorial_cards",
+            background_url = "",
+            background_focus = "center",
+          }) => ({
           eyebrow: String(eyebrow).trim(),
           headline: String(headline).trim(),
           body: String(body).trim(),
           bullets: Array.isArray(bullets) ? bullets.map((value) => String(value).trim()) : [],
           alt_text: String(alt_text).trim(),
-        }))
+          visual_mode: visual_mode === "photo_cover" ? "photo_cover" : "editorial_cards",
+          background_url: String(background_url).trim(),
+          background_focus: ["left", "center", "right"].includes(background_focus)
+            ? background_focus
+            : "center",
+        }),
+        )
       : [],
   });
 }
