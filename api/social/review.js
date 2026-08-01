@@ -53,6 +53,16 @@ export default async function handler(request, response) {
   if (!token || JSON.stringify(body).length > 40_000) {
     return response.status(400).json({ success: false, message: "Revisión inválida o vencida." });
   }
+  if (request.method === "POST") {
+    const expectedRevision = Number(body.expected_revision);
+    const expectedManifest = String(body.expected_manifest_sha256 ?? "").trim().toLowerCase();
+    if (!Number.isInteger(expectedRevision) || expectedRevision < 1 || !/^[a-f0-9]{64}$/.test(expectedManifest)) {
+      return response.status(400).json({
+        success: false,
+        message: "La revisión quedó desactualizada. Recargá la página antes de decidir.",
+      });
+    }
+  }
   const upstreamUrl = webhookUrl();
   if (request.method === "GET") upstreamUrl.searchParams.set("token", token);
   const controller = new AbortController();

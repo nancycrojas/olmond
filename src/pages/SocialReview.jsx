@@ -17,8 +17,39 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-const empty = { linkedin_copy: "", instagram_copy: "", facebook_copy: "", x_copy: "", slides: [] };
+const empty = {
+  review_id: "",
+  title: "",
+  revision: 0,
+  manifest_sha256: "",
+  linkedin_copy: "",
+  instagram_copy: "",
+  facebook_copy: "",
+  x_copy: "",
+  slides: [],
+};
 const CARD_RENDER_VERSION = "4";
+
+function editableFingerprint(content) {
+  return JSON.stringify({
+    title: String(content.title ?? "").trim(),
+    linkedin_copy: String(content.linkedin_copy ?? "").trim(),
+    instagram_copy: String(content.instagram_copy ?? "").trim(),
+    facebook_copy: String(content.facebook_copy ?? "").trim(),
+    x_copy: String(content.x_copy ?? "").trim(),
+    linkedin_image_url: String(content.linkedin_image_url ?? "").trim(),
+    linkedin_image_alt: String(content.linkedin_image_alt ?? "").trim(),
+    slides: Array.isArray(content.slides)
+      ? content.slides.map(({ eyebrow = "", headline = "", body = "", bullets = [], alt_text = "" }) => ({
+          eyebrow: String(eyebrow).trim(),
+          headline: String(headline).trim(),
+          body: String(body).trim(),
+          bullets: Array.isArray(bullets) ? bullets.map((value) => String(value).trim()) : [],
+          alt_text: String(alt_text).trim(),
+        }))
+      : [],
+  });
+}
 
 function versionedPreviewUrl(value) {
   if (!value) return "";
@@ -41,6 +72,14 @@ export function SocialReview() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [rejectionReason, setRejectionReason] = useState("");
+  const [loadedFingerprint, setLoadedFingerprint] = useState("");
+  const [terminal, setTerminal] = useState(false);
+
+  function applyServerContent(content) {
+    const next = withLinkedInAsset({ ...empty, ...content });
+    setDraft(next);
+    setLoadedFingerprint(editableFingerprint(next));
+  }
 
   useEffect(() => {
     let alive = true;
@@ -48,7 +87,7 @@ export function SocialReview() {
       .then(async (response) => {
         const result = await response.json();
         if (!response.ok || result.success !== true) throw new Error(result.message || "No pudimos abrir la revisión.");
-        if (alive) setDraft(withLinkedInAsset(result.content));
+        if (alive) applyServerContent(result.content);
       })
       .catch((reason) => alive && setError(reason.message))
       .finally(() => alive && setLoading(false));
@@ -56,6 +95,10 @@ export function SocialReview() {
   }, [token]);
 
   const xCount = useMemo(() => [...String(draft.x_copy ?? "")].length, [draft.x_copy]);
+  const hasUnsavedChanges = useMemo(
+    () => Boolean(loadedFingerprint) && editableFingerprint(draft) !== loadedFingerprint,
+    [draft, loadedFingerprint],
+  );
 
   function update(field, value) {
     setDraft((current) => ({ ...current, [field]: value }));
@@ -71,6 +114,10 @@ export function SocialReview() {
   }
 
   async function submit(action) {
+    if (action === "approve" && hasUnsavedChanges) {
+      setError("Hay cambios sin guardar. Guardalos, revisá la nueva vista previa y recién entonces aprobá.");
+      return;
+    }
     setSaving(true);
     setError("");
     setMessage("");
@@ -81,8 +128,10 @@ export function SocialReview() {
         body: JSON.stringify({
           token,
           action,
-          content: draft,
+          content: action === "save" ? draft : undefined,
           rejection_reason: action === "reject" ? rejectionReason : "",
+          expected_revision: Number(draft.revision),
+          expected_manifest_sha256: String(draft.manifest_sha256 ?? ""),
         }),
       });
       const result = await response.json();
@@ -92,7 +141,8 @@ export function SocialReview() {
           : action === "reject" ? "Contenido rechazado y motivo registrado."
             : "Cambios guardados."
       ));
-      if (result.content) setDraft(withLinkedInAsset(result.content));
+      if (result.content) applyServerContent(result.content);
+      if (action === "approve" || action === "reject") setTerminal(true);
     } catch (reason) {
       setError(reason.message);
     } finally {
@@ -113,6 +163,12 @@ export function SocialReview() {
           </Box>
 
           {intent === "approve" && <Alert status="info" bg="#151827" color="white" borderRadius="xl"><AlertIcon />Revisá la vista previa y confirmá con “Aprobar y programar”.</Alert>}
+          <Alert status={hasUnsavedChanges ? "warning" : "info"} bg="#151827" color="white" borderRadius="xl">
+            <AlertIcon />
+            {hasUnsavedChanges
+              ? "Hay cambios sin guardar. Guardar genera una nueva revisión y nuevas vistas previas; después hay que aprobar esa versión."
+              : `Revisión ${draft.revision || "—"} · versión verificada ${String(draft.manifest_sha256 || "").slice(0, 12) || "sin huella"}`}
+          </Alert>
           {error && <Alert status="error" borderRadius="xl"><AlertIcon />{error}</Alert>}
           {message && <Alert status="success" borderRadius="xl"><AlertIcon />{message}</Alert>}
 
@@ -141,6 +197,7 @@ export function SocialReview() {
           </Grid>
 
           <Stack spacing={5} bg="#11131A" border="1px solid #272A36" borderRadius="2xl" p={{ base: 5, md: 8 }}>
+            <FormControl><FormLabel>Título editorial</FormLabel><Textarea minH="100px" value={draft.title} onChange={(event) => update("title", event.target.value)} /></FormControl>
             <FormControl><FormLabel>LinkedIn · perfil y empresa</FormLabel><Textarea minH="260px" value={draft.linkedin_copy} onChange={(event) => update("linkedin_copy", event.target.value)} /></FormControl>
             <FormControl><FormLabel>Instagram</FormLabel><Textarea minH="220px" value={draft.instagram_copy} onChange={(event) => update("instagram_copy", event.target.value)} /></FormControl>
             <FormControl><FormLabel>Facebook</FormLabel><Textarea minH="220px" value={draft.facebook_copy} onChange={(event) => update("facebook_copy", event.target.value)} /></FormControl>
@@ -158,9 +215,9 @@ export function SocialReview() {
           </Stack>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing={4} position="sticky" bottom="16px" bg="rgba(8,8,11,.92)" backdropFilter="blur(12px)" borderRadius="2xl" p={4} border="1px solid #272A36">
-            <Button isLoading={saving} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Guardar cambios</Button>
-            <Button isLoading={saving} isDisabled={rejectionReason.trim().length < 8 || Boolean(message)} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
-            <Button isLoading={saving} isDisabled={xCount > 280 || Boolean(message)} onClick={() => submit("approve")} bg="#EC4899" color="white" _hover={{ bg: "#D93487" }}>Aprobar y programar</Button>
+            <Button isLoading={saving} isDisabled={terminal || !hasUnsavedChanges} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Guardar y generar nueva revisión</Button>
+            <Button isLoading={saving} isDisabled={terminal || rejectionReason.trim().length < 8} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
+            <Button isLoading={saving} isDisabled={terminal || hasUnsavedChanges || xCount > 280 || !draft.manifest_sha256} onClick={() => submit("approve")} bg="#EC4899" color="white" _hover={{ bg: "#D93487" }}>Aprobar esta revisión exacta</Button>
           </Stack>
         </Stack>
       </Container>
