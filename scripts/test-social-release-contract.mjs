@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { Buffer } from "node:buffer";
+import crypto from "node:crypto";
 
 import { runSocialCanary } from "./social-canary-simulator.mjs";
 import {
@@ -16,6 +18,11 @@ import {
 const source = "https://example.com/verified-source";
 const topics = ["singularidad", "seguridad", "modelos_abiertos"];
 const sha = (character) => character.repeat(64);
+const metaCardUrl = (key) => {
+  const payload = Buffer.from(JSON.stringify({ key }), "utf8").toString("base64url");
+  const digest = crypto.createHash("sha256").update(payload).digest("hex").slice(0, 20);
+  return `https://www.olmondconsulting.com/api/social/card?p=${payload}&h=${digest}&v=4`;
+};
 
 function releaseFixture(topic, index, revision = 2) {
   const contentId = `social_20260801_${topic}`;
@@ -27,7 +34,7 @@ function releaseFixture(topic, index, revision = 2) {
   };
   const assets = {
     meta_carousel: Array.from({ length: 8 }, (_, slide) => ({
-      url: `https://www.olmondconsulting.com/social/meta/${topic}-${slide + 1}.png`,
+      url: metaCardUrl(`${topic}-${slide + 1}`),
       width: 1080,
       height: 1350,
       safe_zone_pass: true,
@@ -77,7 +84,7 @@ assert.equal(dedupeDeliveries(allDeliveries, new Set([allDeliveries[0].delivery_
 
 const badAssets = {
   meta_carousel: Array.from({ length: 8 }, (_, slide) => ({
-    url: `https://www.olmondconsulting.com/social/meta/bad-${slide}.png`, width: 1080, height: 1350,
+    url: metaCardUrl(`bad-${slide}`), width: 1080, height: 1350,
     safe_zone_pass: slide !== 3, asset_sha256: sha("a"),
   })),
   linkedin_photorealistic_image: {
@@ -90,7 +97,7 @@ assert.throws(() => assertAssetPreflight(badAssets), /META_PREFLIGHT_FAILED/);
 const changedCopy = { instagram: "Cambio posterior", facebook: "Cambio posterior", linkedin: "Cambio", x: `Cambio ${source}` };
 const validAssets = {
   meta_carousel: Array.from({ length: 8 }, (_, slide) => ({
-    url: `https://www.olmondconsulting.com/social/meta/hash-${slide}.png`, width: 1080, height: 1350,
+    url: metaCardUrl(`hash-${slide}`), width: 1080, height: 1350,
     safe_zone_pass: true, asset_sha256: sha("c"),
   })),
   linkedin_photorealistic_image: {

@@ -52,10 +52,18 @@ const isHttpsUrl = (value) => {
 const isOlmondAsset = (value, folder) => {
   try {
     const url = new URL(value);
-    return url.protocol === "https:"
-      && ["olmondconsulting.com", "www.olmondconsulting.com"].includes(url.hostname)
-      && url.pathname.startsWith(`/social/${folder}/`)
-      && url.pathname.endsWith(".png");
+    const correctHost = url.protocol === "https:"
+      && ["olmondconsulting.com", "www.olmondconsulting.com"].includes(url.hostname);
+    if (!correctHost) return false;
+    if (folder === "meta" && url.pathname === "/api/social/card") {
+      const payload = url.searchParams.get("p") || "";
+      const digest = url.searchParams.get("h") || "";
+      return /^[A-Za-z0-9_-]+$/.test(payload)
+        && /^[a-f0-9]{20}$/.test(digest)
+        && url.searchParams.get("v") === "4"
+        && crypto.createHash("sha256").update(payload).digest("hex").slice(0, 20) === digest;
+    }
+    return url.pathname.startsWith(`/social/${folder}/`) && url.pathname.endsWith(".png");
   } catch {
     return false;
   }
