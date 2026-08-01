@@ -134,12 +134,16 @@ assert.equal(selectApprovedReserve({ reserves: [{ ...reserve, human_approved: fa
 assert.equal(selectApprovedReserve({ reserves: [reserve], at: "2026-08-01T12:00:00.000Z", usedReserveIds: new Set([reserve.reserve_id]) }), null);
 
 assertDailyBudget(
-  { topics: 3, ai_calls: 6, ai_tokens: 60_000, n8n_executions: 20 },
-  { max_topics: 3, max_ai_calls: 6, max_ai_tokens: 60_000, max_n8n_executions: 20 },
+  { topics: 3, ai_calls: 6, ai_tokens: 30_000, n8n_executions: 20 },
+  { max_topics: 3, max_ai_calls: 6, max_ai_tokens: 30_000, max_n8n_executions: 20 },
 );
 assert.throws(() => assertDailyBudget(
-  { topics: 3, ai_calls: 7, ai_tokens: 60_000, n8n_executions: 20 },
-  { max_topics: 3, max_ai_calls: 6, max_ai_tokens: 60_000, max_n8n_executions: 20 },
+  { topics: 3, ai_calls: 7, ai_tokens: 30_000, n8n_executions: 20 },
+  { max_topics: 3, max_ai_calls: 6, max_ai_tokens: 30_000, max_n8n_executions: 20 },
 ), /DAILY_BUDGET_EXCEEDED:ai_calls/);
+assert.throws(() => assertDailyBudget(
+  { topics: 3, ai_calls: 6, ai_tokens: 30_001, n8n_executions: 20 },
+  { max_topics: 3, max_ai_calls: 6, max_ai_tokens: 30_000, max_n8n_executions: 20 },
+), /DAILY_BUDGET_EXCEEDED:ai_tokens/);
 
 console.log("Contrato validado: 3 temas, 15 destinos, revisión inmutable, activos, cuentas, fallos, reserva y presupuesto.");
