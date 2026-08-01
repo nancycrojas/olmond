@@ -78,9 +78,9 @@ const words=linkedin.split(/\s+/).filter(Boolean).length;
 if(words<80||words>650)errors.push('linkedin_copy_words');
 const slides=Array.isArray(c.slides)?c.slides:[];
 if(slides.length!==8)errors.push('slides');
-const cleanSlides=slides.slice(0,8).map((s,index)=>{const headline=String(s.headline??'').trim(),body=String(s.body??'').trim(),eyebrow=String(s.eyebrow??'').trim();if(!headline||headline.length>54||body.length>150||eyebrow.length>32)errors.push('slide_'+(index+1));return {index:index+1,kind:index===0?'cover':index===7?'closing':'content',eyebrow,headline,body,bullets:Array.isArray(s.bullets)?s.bullets.map(v=>String(v).trim()).filter(Boolean).slice(0,4):[],alt_text:String(s.alt_text??('Carrusel Olmond, placa '+(index+1)+' de 8. '+headline)).slice(0,500)};});
+const cleanSlides=slides.slice(0,8).map((s,index)=>{const headline=String(s.headline??'').trim(),body=String(s.body??'').trim(),eyebrow=String(s.eyebrow??'').trim(),visualMode=index===0&&s.visual_mode==='photo_cover'?'photo_cover':'editorial_cards',backgroundUrl=visualMode==='photo_cover'?String(s.background_url??'').trim():'',backgroundFocus=['left','center','right'].includes(s.background_focus)?s.background_focus:'center';if(!headline||headline.length>54||body.length>150||eyebrow.length>32)errors.push('slide_'+(index+1));if(backgroundUrl&&!/^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/linkedin\/[A-Za-z0-9._\/-]+\.png(?:\?.*)?$/.test(backgroundUrl))errors.push('background_'+(index+1));return {index:index+1,kind:index===0?'cover':index===7?'closing':'content',eyebrow,headline,body,bullets:Array.isArray(s.bullets)?s.bullets.map(v=>String(v).trim()).filter(Boolean).slice(0,4):[],alt_text:String(s.alt_text??('Carrusel Olmond, placa '+(index+1)+' de 8. '+headline)).slice(0,500),visual_mode:visualMode,background_url:backgroundUrl,background_focus:backgroundFocus};});
 if(errors.length)return bad('Corregí estos campos antes de continuar: '+[...new Set(errors)].join(', '));
-const render=(slide)=>{const payload=base64url(JSON.stringify({eyebrow:slide.eyebrow,headline:slide.headline,body:slide.body,bullets:slide.bullets,index:slide.index,total:8,kind:slide.kind}));return 'https://www.olmondconsulting.com/api/social/card?p='+payload+'&h='+sha256(payload).slice(0,20)+'&v=4';};
+const render=(slide)=>{const payload=base64url(JSON.stringify({eyebrow:slide.eyebrow,headline:slide.headline,body:slide.body,bullets:slide.bullets,index:slide.index,total:8,kind:slide.kind,visual_mode:slide.visual_mode,background_url:slide.background_url,background_focus:slide.background_focus}));return 'https://www.olmondconsulting.com/api/social/card?p='+payload+'&h='+sha256(payload).slice(0,20)+'&v=4';};
 const media=cleanSlides.map(render),alts=cleanSlides.map(s=>s.alt_text),canonical={title,linkedin_image_url:linkedinImageUrl,linkedin_image_alt:linkedinImageAlt,linkedin,instagram,facebook,x,slides:cleanSlides},newHash=sha256(JSON.stringify(canonical)),changed=newHash!==String(row.input_sha256??''),revision=currentRevision+(changed?1:0),manifest=sha256(JSON.stringify({revision,input_sha256:newHash,title,linkedin_image_url:linkedinImageUrl,media,alts}));
 const saved={...row,title,linkedin_image_url:linkedinImageUrl,linkedin_image_alt:linkedinImageAlt,revision,status:'SAVED',linkedin_copy:linkedin,instagram_copy:instagram,facebook_copy:facebook,x_copy:x,slides_json:JSON.stringify(cleanSlides),media_urls_json:JSON.stringify(media),alt_text_json:JSON.stringify(alts),approval_status:'PENDING',input_sha256:newHash,manifest_sha256:manifest,updated_at:now,approved_at:'',last_error:'',original_linkedin_copy:row.original_linkedin_copy||row.linkedin_copy,original_facebook_copy:row.original_facebook_copy||row.facebook_copy,original_x_copy:row.original_x_copy||row.x_copy,original_slides_json:row.original_slides_json||row.slides_json,original_sha256:row.original_sha256||row.input_sha256,human_edit_count:Number(row.human_edit_count??0)+(changed?1:0)};
 return [{json:{...saved,success:true,message:changed?'Cambios guardados como una nueva revisión. Revisá las nuevas vistas previas antes de aprobar.':'No hubo cambios de contenido. La revisión verificable se mantiene.',http_status:200,action:'save',response_content:{review_id:saved.review_id,title:saved.title,status:'SAVED',revision:saved.revision,input_sha256:saved.input_sha256,manifest_sha256:saved.manifest_sha256,linkedin_copy:saved.linkedin_copy,instagram_copy:saved.instagram_copy,facebook_copy:saved.facebook_copy,x_copy:saved.x_copy,linkedin_image_url:saved.linkedin_image_url,linkedin_image_alt:saved.linkedin_image_alt,slides:cleanSlides.map((s,i)=>({...s,preview_url:media[i]}))}}}];`;
@@ -113,11 +113,15 @@ for (const [id, type] of Object.entries(extraColumns)) {
 
 const queueGuards = `const __approved=$("${versionNode.name}").first().json,__request=$("${nodeBy("Validar POST").name}").first().json;if(__approved.action!=='approve'||__approved.status!=='APPROVED'||__approved.approval_status!=='HUMAN_APPROVED'||__approved.manifest_sha256!==__request.expected_manifest_sha256||Number(__approved.revision)!==__request.expected_revision)throw new Error('APPROVAL_CONTRACT_MISMATCH: la cola no coincide con la revisión humana aprobada.');\n`;
 const metaQueue = nodeBy("Preparar cola Meta");
-metaQueue.parameters.jsCode = queueGuards + metaQueue.parameters.jsCode;
+if (!metaQueue.parameters.jsCode.includes("APPROVAL_CONTRACT_MISMATCH")) {
+  metaQueue.parameters.jsCode = queueGuards + metaQueue.parameters.jsCode;
+}
 const bufferQueue = nodeBy("Preparar colas Buffer");
-bufferQueue.parameters.jsCode = queueGuards + bufferQueue.parameters.jsCode;
+if (!bufferQueue.parameters.jsCode.includes("APPROVAL_CONTRACT_MISMATCH")) {
+  bufferQueue.parameters.jsCode = queueGuards + bufferQueue.parameters.jsCode;
+}
 
-workflow.name = "WF-MKT · Social Review & Approval v2 — exact revision contract";
+workflow.name = "WF-MKT · Social Review & Approval v3 — SHADOW";
 workflow.settings = { ...(workflow.settings ?? {}), executionOrder: "v1", timezone: "America/Argentina/Buenos_Aires" };
 workflow.meta = { ...(workflow.meta ?? {}), olmondContractVersion: "5.0.0", patchedAt: new Date().toISOString() };
 

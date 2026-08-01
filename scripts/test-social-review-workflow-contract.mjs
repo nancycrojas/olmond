@@ -34,6 +34,9 @@ const slides = Array.from({ length: 8 }, (_, index) => ({
   body: "Una explicación clara, prudente y útil para personas no técnicas.",
   bullets: [],
   alt_text: `Placa editorial ${index + 1}`,
+  visual_mode: index === 0 ? "photo_cover" : "editorial_cards",
+  background_url: index === 0 ? "https://www.olmondconsulting.com/social/linkedin/editorial-test.png" : "",
+  background_focus: "center",
 }));
 const longCopy = Array.from({ length: 100 }, (_, index) => `palabra${index}`).join(" ");
 const row = {
@@ -85,6 +88,12 @@ assert.equal(saved.title, content.title);
 assert.notEqual(saved.manifest_sha256, oldManifest);
 assert.equal(saved.response_content.revision, 2);
 assert.equal(saved.response_content.manifest_sha256, saved.manifest_sha256);
+const savedSlides = JSON.parse(saved.slides_json);
+assert.equal(savedSlides[0].visual_mode, "photo_cover");
+assert.equal(savedSlides[0].background_url, slides[0].background_url);
+assert.equal(savedSlides[1].visual_mode, "editorial_cards");
+const savedCoverPayload = new URL(JSON.parse(saved.media_urls_json)[0]).searchParams.get("p");
+assert.equal(JSON.parse(Buffer.from(savedCoverPayload, "base64url").toString("utf8")).visual_mode, "photo_cover");
 
 const staleApprovalRequest = run("Validar POST", {
   body: { token, action: "approve", expected_revision: 1, expected_manifest_sha256: oldManifest },
