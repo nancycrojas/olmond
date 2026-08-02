@@ -108,6 +108,23 @@ test("accepts a human-edited plate up to 220 characters without shrinking typogr
   assert.match(svg, /\.body \{ font-size: 40px;/);
 });
 
+test("keeps long human-edited copy complete when vertical space is available", async () => {
+  const body = "La iniciativa fue difundida públicamente y recibió cobertura periodística. Sin embargo, el alcance institucional de las adhesiones todavía depende de evidencia adicional que pueda verificarse de manera independiente.";
+  const slide = decodePayload(payload({
+    headline: "Cierre informativo",
+    body,
+    bullets: [],
+    index: 8,
+    total: 8,
+    kind: "closing",
+    layout_version: 5,
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.doesNotMatch(svg, /â€¦|\u2026|\.\.\./u);
+  assert.match(svg, /manera independiente\./u);
+});
+
 test("rejects text density above the human-edit ceiling in layout version 5", () => {
   assert.throws(
     () => decodePayload(payload({

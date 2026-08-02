@@ -169,11 +169,18 @@ async function renderSvg(slide) {
     isReadableV5 ? (isCover ? 19 : 23) : (isCover ? 22 : 27),
     isCover ? 4 : 3,
   );
-  const bodyLines = wrapText(slide.body, isReadableV5 ? 31 : 38, isReadableV5 ? 7 : 5);
   const headlineSize = isReadableV5 ? (isCover ? 72 : 64) : (isCover ? 62 : 54);
   const headlineLineHeight = isReadableV5 ? (isCover ? 88 : 78) : (isCover ? 74 : 66);
   const headlineY = isReadableV5 ? (isCover ? 360 : 315) : (isCover ? 380 : 330);
   const bodyY = headlineY + headlineLines.length * headlineLineHeight + (isReadableV5 ? 60 : 66);
+  const bodyLineHeight = isReadableV5 ? 45 : 38;
+  const bodyBottomLimit = isReadableV5 ? 1110 : 1050;
+  const availableBodyLines = Math.max(3, Math.floor((bodyBottomLimit - bodyY) / bodyLineHeight) + 1);
+  const bodyLines = wrapText(
+    slide.body,
+    isReadableV5 ? 31 : 38,
+    isReadableV5 ? availableBodyLines : Math.min(5, availableBodyLines),
+  );
   const bulletY = bodyY;
   const bulletMarkup = slide.bullets.map((bullet, index) => {
     const lines = wrapText(bullet, isReadableV5 ? 27 : 34, 2);
@@ -219,7 +226,7 @@ async function renderSvg(slide) {
     <rect x="${safeLeft}" y="150" width="${safeRight - safeLeft}" height="4" rx="2" fill="url(#accent)"/>
     <text x="${contentCenter}" y="235" text-anchor="middle" class="eyebrow">${escapeXml(slide.eyebrow.toUpperCase())}</text>
     <text text-anchor="middle">${tspans(headlineLines, contentCenter, headlineY, headlineLineHeight, "headline")}</text>
-    ${slide.bullets.length ? bulletMarkup : `<text text-anchor="middle">${tspans(bodyLines, contentCenter, bodyY, 45, "body")}</text>`}
+    ${slide.bullets.length ? bulletMarkup : `<text text-anchor="middle">${tspans(bodyLines, contentCenter, bodyY, bodyLineHeight, "body")}</text>`}
     ${isCta ? `<rect x="360" y="1110" width="360" height="6" rx="3" fill="${COLORS.magenta}"/>` : ""}
     <text x="${safeLeft}" y="1235" class="footer">OLMOND CONSULTING</text>
     <text x="${safeRight}" y="1235" text-anchor="end" class="footer">${footer}</text>
