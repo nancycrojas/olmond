@@ -14,8 +14,9 @@ import { motion } from "framer-motion";
 import { LuCheck } from "react-icons/lu";
 
 import { CTA } from "../components/ui/CTA.jsx";
+import { EvaluationCTA } from "../components/ui/EvaluationCTA.jsx";
 import { SectionLabel } from "../components/ui/SectionShell.jsx";
-import { BRAND_GRADIENT, DIAGNOSTICO_URL } from "../lib/constants.js";
+import { BRAND_GRADIENT } from "../lib/constants.js";
 
 const MotionBox = motion(Box);
 
@@ -75,7 +76,7 @@ function ProcessVisual() {
           </HStack>
 
           <Text
-            fontSize={{ base: "9px", md: "10px" }}
+            fontSize={{ base: "10px", md: "10px" }}
             fontWeight="600"
             color="whiteAlpha.600"
           >
@@ -443,7 +444,7 @@ export const Hero = () => {
             <Text
               mt={{ base: 6, md: 7 }}
               maxW="570px"
-              fontSize={{ base: "md", md: "17px" }}
+              fontSize={{ base: "lg", md: "17px" }}
               lineHeight="1.75"
               color="whiteAlpha.700"
             >
@@ -468,7 +469,7 @@ export const Hero = () => {
               </Flex>
 
               <Text
-                fontSize={{ base: "xs", md: "sm" }}
+                fontSize={{ base: "sm", md: "sm" }}
                 lineHeight="1.5"
                 fontWeight="700"
                 color="whiteAlpha.900"
@@ -478,14 +479,7 @@ export const Hero = () => {
             </HStack>
 
             <Flex mt={{ base: 7, md: 8 }} gap={3} wrap="wrap" align="center">
-              <CTA
-                as="a"
-                href={DIAGNOSTICO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Evaluar un proceso &nbsp; ↗
-              </CTA>
+              <EvaluationCTA>Evaluar un proceso &nbsp; ↗</EvaluationCTA>
 
               <CTA as="a" href="#impact-sprint" variant="light">
                 Conocer Impact Sprint
@@ -494,11 +488,11 @@ export const Hero = () => {
 
             <Text
               mt={3.5}
-              fontSize="11px"
+              fontSize="12px"
               lineHeight="1.5"
               color="whiteAlpha.400"
             >
-              Doce preguntas. Resultado inmediato.
+              Cinco preguntas. Resultado inmediato.
             </Text>
           </MotionBox>
 

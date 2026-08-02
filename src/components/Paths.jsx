@@ -212,7 +212,7 @@ export const Paths = () => {
               </Heading>
 
               <Text mt={5} fontSize="md" lineHeight="1.75" color="gray.600">
-                Doce preguntas iniciales antes de agendar una reunión.
+                Cinco preguntas iniciales antes de agendar una reunión.
               </Text>
 
               <Stack mt={8} spacing={3}>
