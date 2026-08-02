@@ -13,6 +13,7 @@ import { DiagnosisLayout } from "./layouts/DiagnosisLayout";
 import { WorkshopLayout } from "./layouts/WorkshopLayout";
 import { Academy } from "./pages/Academy";
 import { Diagnosis } from "./pages/Diagnosis";
+import { SocialReview } from "./pages/SocialReview";
 //import { AcademyLogin } from "./pages/AcademyLogin";
 //import { CourseDetail } from "./pages/CourseDetail";
 //import { Courses } from "./pages/Courses";
@@ -49,6 +50,8 @@ function App() {
         <Route element={<DiagnosisLayout />}>
           <Route path="/diagnostico" element={<Diagnosis />} />
         </Route>
+
+        <Route path="/revision-contenido" element={<SocialReview />} />
 
         <Route element={<AcademyLayout />}>
           <Route path="/academy" element={<Academy />} />
