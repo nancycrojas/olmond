@@ -202,3 +202,6 @@ export const NAV_ITEMS = [
   { label: "Formación", href: "#academy" },
   { label: "Nosotros", href: "#nosotros" },
 ];
+
+export const AGENDA_URL =
+  "https://cal.com/patricio-rouan-5wdiwl/analisis-inicial";
