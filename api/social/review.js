@@ -1,5 +1,5 @@
 const DEFAULT_WEBHOOK_URL =
-  "https://olmond.app.n8n.cloud/webhook/olmond-social-review-v1";
+  "https://olmond.app.n8n.cloud/webhook/olmond-social-review-v2";
 const WINDOW_MS = 60_000;
 const MAX_REQUESTS_PER_WINDOW = 20;
 const attempts = new Map();
