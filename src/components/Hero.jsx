@@ -76,7 +76,7 @@ function ProcessVisual() {
           </HStack>
 
           <Text
-            fontSize={{ base: "10px", md: "10px" }}
+            fontSize={{ base: "16px", md: "10px" }}
             fontWeight="600"
             color="whiteAlpha.600"
           >
@@ -92,7 +92,7 @@ function ProcessVisual() {
           py={1}
           borderRadius="full"
           textTransform="none"
-          fontSize="10px"
+          fontSize="16px"
           fontWeight="700"
           bg="rgba(14, 95, 74, 0.2)"
           color="#78E4BD"
@@ -119,7 +119,7 @@ function ProcessVisual() {
           border="1px solid"
           borderColor="rgba(255,255,255,0.08)"
         >
-          <Text fontSize="10px" color="whiteAlpha.500" fontWeight="500">
+          <Text fontSize="14px" color="whiteAlpha.500" fontWeight="500">
             Indicador principal
           </Text>
 
@@ -149,7 +149,7 @@ function ProcessVisual() {
             />
           </Box>
 
-          <Text mt={3} fontSize="9px" color="whiteAlpha.400">
+          <Text mt={3} fontSize="14px" color="whiteAlpha.400">
             Línea de base definida antes de implementar
           </Text>
         </Box>
@@ -201,7 +201,7 @@ function ProcessVisual() {
 
                   <Box>
                     <Text
-                      fontSize="9px"
+                      fontSize="14px"
                       color="whiteAlpha.400"
                       lineHeight="1.2"
                     >
@@ -210,7 +210,7 @@ function ProcessVisual() {
 
                     <Text
                       mt={0.5}
-                      fontSize={{ base: "xs", md: "sm" }}
+                      fontSize={{ base: "md", md: "sm" }}
                       lineHeight="1.2"
                       fontWeight="700"
                       color="whiteAlpha.900"
@@ -260,10 +260,10 @@ function ProcessVisual() {
             </Flex>
 
             <Box>
-              <Text fontSize="10px" fontWeight="700">
+              <Text fontSize="16px" fontWeight="700">
                 Control humano
               </Text>
-              <Text mt={0.5} fontSize="9px" color="whiteAlpha.400">
+              <Text mt={0.5} fontSize="14px" color="whiteAlpha.400">
                 Excepciones y aprobación
               </Text>
             </Box>
@@ -291,10 +291,10 @@ function ProcessVisual() {
             </Flex>
 
             <Box>
-              <Text fontSize="10px" fontWeight="700">
+              <Text fontSize="16px" fontWeight="700">
                 Evidencia
               </Text>
-              <Text mt={0.5} fontSize="9px" color="whiteAlpha.400">
+              <Text mt={0.5} fontSize="14px" color="whiteAlpha.400">
                 Antes y después
               </Text>
             </Box>
