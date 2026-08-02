@@ -3,15 +3,20 @@ import { Outlet } from "react-router-dom";
 
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { EvaluationModalProvider } from "../context/EvaluationModalContext.jsx";
 
 export const AppLayout = () => {
   return (
-    <Flex flexDirection="column" minHeight="100vh">
-      <Box as="main" flex="1">
+    <EvaluationModalProvider>
+      <Flex flexDirection="column" minHeight="100vh">
         <Header />
-        <Outlet />
+
+        <Box as="main" flex="1">
+          <Outlet />
+        </Box>
+
         <Footer />
-      </Box>
-    </Flex>
+      </Flex>
+    </EvaluationModalProvider>
   );
 };
