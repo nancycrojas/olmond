@@ -57,7 +57,7 @@ const row = {
   linkedin_image_url: "https://www.olmondconsulting.com/social/linkedin/editorial-test.png",
   linkedin_image_alt: "Equipo profesional analizando información en una oficina.",
   slides_json: JSON.stringify(slides),
-  media_urls_json: JSON.stringify(Array.from({ length: 8 }, (_, index) => `https://www.olmondconsulting.com/api/social/card?p=${index}&v=5`)),
+  media_urls_json: JSON.stringify(Array.from({ length: 8 }, (_, index) => `https://www.olmondconsulting.com/api/social/card?p=${index}&v=6`)),
   alt_text_json: JSON.stringify(slides.map((slide) => slide.alt_text)),
   source_urls_json: JSON.stringify(["https://example.com/source"]),
   created_at: "2026-07-31T00:00:00.000Z",
@@ -89,9 +89,9 @@ const savedMedia = JSON.parse(saved.media_urls_json);
 assert.equal(savedMedia.length, 8);
 for (const url of savedMedia) {
   const parsed = new URL(url);
-  assert.equal(parsed.searchParams.get("v"), "5");
+  assert.equal(parsed.searchParams.get("v"), "6");
   const cardPayload = JSON.parse(Buffer.from(parsed.searchParams.get("p"), "base64url").toString("utf8"));
-  assert.equal(cardPayload.layout_version, 5);
+  assert.equal(cardPayload.layout_version, 6);
 }
 
 const staleApprovalRequest = run("Validar POST", {
