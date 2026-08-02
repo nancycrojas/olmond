@@ -7,7 +7,7 @@ const WIDTH = 1080;
 const HEIGHT = 1350;
 const MAX_PAYLOAD_LENGTH = 5000;
 const MAX_TEXT_LENGTH = 420;
-const READABLE_LAYOUT_VERSION = 5;
+const READABLE_LAYOUT_VERSION = 6;
 const READABLE_HEADLINE_LENGTH = 58;
 const READABLE_BODY_LENGTH = 220;
 const READABLE_BULLET_LENGTH = 80;
@@ -62,10 +62,11 @@ function decodePayload(value) {
   const bullets = Array.isArray(decoded.bullets)
     ? decoded.bullets.map((entry) => String(entry ?? "").trim()).filter(Boolean).slice(0, 4)
     : [];
-  const layoutVersion = Number(decoded.layout_version) === READABLE_LAYOUT_VERSION
-    ? READABLE_LAYOUT_VERSION
+  const requestedLayoutVersion = Number(decoded.layout_version);
+  const layoutVersion = [5, READABLE_LAYOUT_VERSION].includes(requestedLayoutVersion)
+    ? requestedLayoutVersion
     : 4;
-  if (layoutVersion === READABLE_LAYOUT_VERSION) {
+  if (layoutVersion >= 5) {
     if (String(decoded.eyebrow ?? "").trim().length > READABLE_EYEBROW_LENGTH) {
       throw new Error("eyebrow_too_long");
     }
@@ -160,33 +161,34 @@ async function renderSvg(slide) {
     center: "xMidYMid",
     right: "xMaxYMid",
   }[slide.backgroundFocus];
-  const isReadableV5 = slide.layoutVersion === READABLE_LAYOUT_VERSION;
+  const isReadable = slide.layoutVersion >= 5;
+  const isReadableV6 = slide.layoutVersion === READABLE_LAYOUT_VERSION;
   const contentCenter = WIDTH / 2;
-  const safeLeft = isReadableV5 ? 190 : 180;
+  const safeLeft = isReadable ? 190 : 180;
   const safeRight = WIDTH - safeLeft;
   const headlineLines = wrapText(
     slide.headline,
-    isReadableV5 ? (isCover ? 19 : 23) : (isCover ? 22 : 27),
-    isCover ? 4 : 3,
+    isReadableV6 ? (isCover ? 18 : 21) : isReadable ? (isCover ? 19 : 23) : (isCover ? 22 : 27),
+    isReadableV6 ? 4 : isCover ? 4 : 3,
   );
-  const headlineSize = isReadableV5 ? (isCover ? 72 : 64) : (isCover ? 62 : 54);
-  const headlineLineHeight = isReadableV5 ? (isCover ? 88 : 78) : (isCover ? 74 : 66);
-  const headlineY = isReadableV5 ? (isCover ? 360 : 315) : (isCover ? 380 : 330);
-  const bodyY = headlineY + headlineLines.length * headlineLineHeight + (isReadableV5 ? 60 : 66);
-  const bodyLineHeight = isReadableV5 ? 45 : 38;
-  const bodyBottomLimit = isReadableV5 ? 1110 : 1050;
+  const headlineSize = isReadable ? (isCover ? 72 : 64) : (isCover ? 62 : 54);
+  const headlineLineHeight = isReadable ? (isCover ? 88 : 78) : (isCover ? 74 : 66);
+  const headlineY = isReadable ? (isCover ? 350 : 300) : (isCover ? 380 : 330);
+  const bodyY = headlineY + headlineLines.length * headlineLineHeight + (isReadable ? 54 : 66);
+  const bodyLineHeight = isReadableV6 ? 60 : isReadable ? 45 : 38;
+  const bodyBottomLimit = isReadable ? 1110 : 1050;
   const availableBodyLines = Math.max(3, Math.floor((bodyBottomLimit - bodyY) / bodyLineHeight) + 1);
   const bodyLines = wrapText(
     slide.body,
-    isReadableV5 ? 31 : 38,
-    isReadableV5 ? availableBodyLines : Math.min(5, availableBodyLines),
+    isReadableV6 ? 25 : isReadable ? 31 : 38,
+    isReadable ? availableBodyLines : Math.min(5, availableBodyLines),
   );
   const bulletY = bodyY;
   const bulletMarkup = slide.bullets.map((bullet, index) => {
-    const lines = wrapText(bullet, isReadableV5 ? 27 : 34, 2);
-    const y = bulletY + index * (isReadableV5 ? 112 : 96);
+    const lines = wrapText(bullet, isReadableV6 ? 23 : isReadable ? 27 : 34, 2);
+    const y = bulletY + index * (isReadableV6 ? 130 : isReadable ? 112 : 96);
     return `<circle cx="${safeLeft + 30}" cy="${y - 10}" r="7" fill="${COLORS.magenta}"/>`
-      + `<text>${tspans(lines, safeLeft + 64, y, isReadableV5 ? 48 : 38, "bullet")}</text>`;
+      + `<text>${tspans(lines, safeLeft + 64, y, isReadableV6 ? 58 : isReadable ? 48 : 38, "bullet")}</text>`;
   }).join("");
   const footer = `${String(slide.index).padStart(2, "0")} / ${String(slide.total).padStart(2, "0")}`;
   const accent = isCta ? COLORS.magenta : COLORS.purple;
@@ -214,10 +216,10 @@ async function renderSvg(slide) {
       <filter id="blur"><feGaussianBlur stdDeviation="72"/></filter>
       <style>
         text { font-family: 'Open Sans', sans-serif; }
-        .eyebrow { font-size: ${isReadableV5 ? 24 : 22}px; font-weight: 700; letter-spacing: 4px; fill: ${COLORS.magenta}; }
+        .eyebrow { font-size: ${isReadableV6 ? 26 : isReadable ? 24 : 22}px; font-weight: 700; letter-spacing: 4px; fill: ${COLORS.magenta}; }
         .headline { font-size: ${headlineSize}px; font-weight: 700; fill: ${COLORS.white}; }
-        .body { font-size: ${isReadableV5 ? 40 : 31}px; font-weight: 400; fill: ${COLORS.muted}; }
-        .bullet { font-size: ${isReadableV5 ? 38 : 29}px; font-weight: 400; fill: ${COLORS.white}; }
+        .body { font-size: ${isReadableV6 ? 52 : isReadable ? 40 : 31}px; font-weight: 400; fill: ${COLORS.muted}; }
+        .bullet { font-size: ${isReadableV6 ? 48 : isReadable ? 38 : 29}px; font-weight: 400; fill: ${COLORS.white}; }
         .footer { font-size: 19px; font-weight: 700; letter-spacing: 3px; fill: ${COLORS.muted}; }
       </style>
     </defs>

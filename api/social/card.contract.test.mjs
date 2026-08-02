@@ -139,6 +139,38 @@ test("rejects text density above the human-edit ceiling in layout version 5", ()
   );
 });
 
+test("uses extra-large mobile-readable typography in layout version 6", async () => {
+  const slide = decodePayload(payload({
+    headline: "Una portada legible en el teléfono",
+    body: "Una declaración completa debe poder leerse sin ampliar la imagen.",
+    index: 1,
+    total: 8,
+    kind: "cover",
+    layout_version: 6,
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.equal(slide.layoutVersion, 6);
+  assert.match(svg, /\.headline \{ font-size: 72px;/);
+  assert.match(svg, /\.body \{ font-size: 52px;/);
+  assert.match(svg, /x="190" y="150"/);
+});
+
+test("keeps a long layout version 6 headline complete", async () => {
+  const slide = decodePayload(payload({
+    headline: "Implicancias prácticas para pruebas y mantenimiento",
+    body: "Las instrucciones completas deben seguir visibles.",
+    index: 7,
+    total: 8,
+    kind: "content",
+    layout_version: 6,
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.doesNotMatch(svg, /…|\.\.\./u);
+  assert.match(svg, /mantenimiento/u);
+});
+
 test("keeps version 4 payloads backward compatible", async () => {
   const slide = decodePayload(payload({
     headline: "Una portada editorial",
