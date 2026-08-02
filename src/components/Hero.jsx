@@ -469,7 +469,7 @@ export const Hero = () => {
               </Flex>
 
               <Text
-                fontSize={{ base: "sm", md: "sm" }}
+                fontSize={{ base: "md", md: "sm" }}
                 lineHeight="1.5"
                 fontWeight="700"
                 color="whiteAlpha.900"
@@ -488,7 +488,7 @@ export const Hero = () => {
 
             <Text
               mt={3.5}
-              fontSize="12px"
+              fontSize="16px"
               lineHeight="1.5"
               color="whiteAlpha.400"
             >

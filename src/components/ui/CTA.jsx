@@ -46,7 +46,7 @@ export function CTA({ variant = "primary", children, ...props }) {
       py={7}
       fontFamily="heading"
       fontWeight="700"
-      fontSize={{ base: "sm", sm: "md" }}
+      fontSize={{ base: "md", sm: "md" }}
       borderRadius="full"
       transition="all 0.2s ease"
       {...variants[variant]}
