@@ -75,3 +75,63 @@ test("never places the photo on an inner slide", async () => {
   assert.doesNotMatch(svg, /data:image\/png;base64,/);
   assert.doesNotMatch(svg, /fill="url\(#photoOverlay\)"/);
 });
+
+test("uses larger mobile-readable typography in layout version 5", async () => {
+  const slide = decodePayload(payload({
+    headline: "Una portada legible en el teléfono",
+    body: "Menos texto por placa permite una lectura cómoda sin ampliar la imagen.",
+    index: 1,
+    total: 8,
+    kind: "cover",
+    layout_version: 5,
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.equal(slide.layoutVersion, 5);
+  assert.match(svg, /\.headline \{ font-size: 72px;/);
+  assert.match(svg, /\.body \{ font-size: 40px;/);
+  assert.match(svg, /x="190" y="150"/);
+});
+
+test("accepts a human-edited plate up to 220 characters without shrinking typography", async () => {
+  const slide = decodePayload(payload({
+    headline: "Una portada editorial",
+    body: "x".repeat(220),
+    index: 1,
+    total: 8,
+    kind: "cover",
+    layout_version: 5,
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.equal(slide.body.length, 220);
+  assert.match(svg, /\.body \{ font-size: 40px;/);
+});
+
+test("rejects text density above the human-edit ceiling in layout version 5", () => {
+  assert.throws(
+    () => decodePayload(payload({
+      headline: "Una portada editorial",
+      body: "x".repeat(221),
+      index: 1,
+      total: 8,
+      kind: "cover",
+      layout_version: 5,
+    })),
+    /body_too_long/,
+  );
+});
+
+test("keeps version 4 payloads backward compatible", async () => {
+  const slide = decodePayload(payload({
+    headline: "Una portada editorial",
+    body: "x".repeat(180),
+    index: 1,
+    total: 8,
+    kind: "cover",
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.equal(slide.layoutVersion, 4);
+  assert.match(svg, /\.body \{ font-size: 31px;/);
+});
