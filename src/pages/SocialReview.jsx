@@ -21,6 +21,8 @@ const empty = {
   review_id: "",
   title: "",
   revision: 0,
+  status: "",
+  approval_status: "",
   manifest_sha256: "",
   linkedin_copy: "",
   instagram_copy: "",
@@ -28,7 +30,7 @@ const empty = {
   x_copy: "",
   slides: [],
 };
-const CARD_RENDER_VERSION = "4";
+const CARD_RENDER_VERSION = "5";
 
 function editableFingerprint(content) {
   return JSON.stringify({
@@ -115,6 +117,10 @@ export function SocialReview() {
     () => Boolean(loadedFingerprint) && editableFingerprint(draft) !== loadedFingerprint,
     [draft, loadedFingerprint],
   );
+  const isApproved = String(draft.approval_status ?? "").toUpperCase() === "HUMAN_APPROVED"
+    || String(draft.status ?? "").toUpperCase() === "APPROVED";
+  const isRejected = String(draft.approval_status ?? "").toUpperCase() === "HUMAN_REJECTED"
+    || String(draft.status ?? "").toUpperCase() === "REJECTED";
 
   function update(field, value) {
     setDraft((current) => ({ ...current, [field]: value }));
@@ -155,10 +161,11 @@ export function SocialReview() {
       setMessage(result.message || (
         action === "approve" ? "Contenido aprobado y programado."
           : action === "reject" ? "Contenido rechazado y motivo registrado."
-            : "Cambios guardados."
+            : "Cambios guardados. La pieza todavía no está aprobada. Revisá las nuevas vistas previas y completá el paso 2."
       ));
       if (result.content) applyServerContent(result.content);
       if (action === "approve" || action === "reject") setTerminal(true);
+      if (action === "save") window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (reason) {
       setError(reason.message);
     } finally {
@@ -179,14 +186,23 @@ export function SocialReview() {
           </Box>
 
           {intent === "approve" && <Alert status="info" bg="#151827" color="white" borderRadius="xl"><AlertIcon />Revisá la vista previa y confirmá con “Aprobar y programar”.</Alert>}
-          <Alert status={hasUnsavedChanges ? "warning" : "info"} bg="#151827" color="white" borderRadius="xl">
+          <Alert
+            status={hasUnsavedChanges || (!isApproved && !isRejected) ? "warning" : isApproved ? "success" : "error"}
+            bg="#151827"
+            color="white"
+            borderRadius="xl"
+          >
             <AlertIcon />
             {hasUnsavedChanges
-              ? "Hay cambios sin guardar. Guardar genera una nueva revisión y nuevas vistas previas; después hay que aprobar esa versión."
-              : `Revisión ${draft.revision || "—"} · versión verificada ${String(draft.manifest_sha256 || "").slice(0, 12) || "sin huella"}`}
+              ? "Paso 1 pendiente: hay cambios sin guardar. Guardarlos genera una nueva revisión y nuevas vistas previas. Todavía no publica."
+              : isApproved
+                ? `Aprobada y programada · revisión ${draft.revision || "—"} · versión ${String(draft.manifest_sha256 || "").slice(0, 12)}`
+                : isRejected
+                  ? `Rechazada · revisión ${draft.revision || "—"}`
+                  : `Paso 2 pendiente: la revisión ${draft.revision || "—"} está guardada, pero NO aprobada. Revisá las vistas previas y elegí “Aprobar y programar”.`}
           </Alert>
           {error && <Alert status="error" borderRadius="xl"><AlertIcon />{error}</Alert>}
-          {message && <Alert status="success" borderRadius="xl"><AlertIcon />{message}</Alert>}
+          {message && <Alert status={isApproved ? "success" : "warning"} borderRadius="xl"><AlertIcon />{message}</Alert>}
 
           {draft.linkedin_image_url && (
             <Box bg="#11131A" border="1px solid #272A36" borderRadius="2xl" overflow="hidden">
@@ -231,9 +247,19 @@ export function SocialReview() {
           </Stack>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing={4} position="sticky" bottom="16px" bg="rgba(8,8,11,.92)" backdropFilter="blur(12px)" borderRadius="2xl" p={4} border="1px solid #272A36">
-            <Button isLoading={saving} isDisabled={terminal || !hasUnsavedChanges} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Guardar y generar nueva revisión</Button>
+            <Button isLoading={saving} isDisabled={terminal || !hasUnsavedChanges} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Paso 1: guardar y regenerar vistas</Button>
             <Button isLoading={saving} isDisabled={terminal || rejectionReason.trim().length < 8} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
-            <Button isLoading={saving} isDisabled={terminal || hasUnsavedChanges || xCount > 280 || !draft.manifest_sha256} onClick={() => submit("approve")} bg="#EC4899" color="white" _hover={{ bg: "#D93487" }}>Aprobar esta revisión exacta</Button>
+            <Button
+              isLoading={saving}
+              isDisabled={terminal || isApproved || isRejected || hasUnsavedChanges || xCount > 280 || !draft.manifest_sha256}
+              onClick={() => submit("approve")}
+              bg="#EC4899"
+              color="white"
+              boxShadow={!hasUnsavedChanges && !isApproved && !isRejected ? "0 0 0 3px rgba(236,72,153,.28)" : "none"}
+              _hover={{ bg: "#D93487" }}
+            >
+              Paso 2: aprobar y programar
+            </Button>
           </Stack>
         </Stack>
       </Container>
