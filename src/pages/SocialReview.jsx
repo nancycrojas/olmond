@@ -136,6 +136,10 @@ export function SocialReview() {
   }
 
   async function submit(action) {
+    if (action === "reject" && rejectionReason.trim().length < 8) {
+      setError("Escribí un motivo de al menos 8 caracteres para rechazar la pieza.");
+      return;
+    }
     if (action === "approve" && hasUnsavedChanges) {
       setError("Hay cambios sin guardar. Guardalos, revisá la nueva vista previa y recién entonces aprobá.");
       return;
@@ -243,12 +247,17 @@ export function SocialReview() {
                 onChange={(event) => setRejectionReason(event.target.value)}
               />
               <Text mt={2} color="#A0AEC0" fontSize="sm">Si rechazás, este motivo queda registrado para entrenamiento editorial y mejora continua.</Text>
+              <Text mt={1} color={rejectionReason.trim().length > 0 && rejectionReason.trim().length < 8 ? "#FEB2B2" : "#A0AEC0"} fontSize="sm">
+                {rejectionReason.trim().length < 8
+                  ? `Faltan ${8 - rejectionReason.trim().length} caracteres para habilitar el rechazo.`
+                  : "Motivo listo para registrar."}
+              </Text>
             </FormControl>
           </Stack>
 
           <Stack direction={{ base: "column", sm: "row" }} spacing={4} position="sticky" bottom="16px" bg="rgba(8,8,11,.92)" backdropFilter="blur(12px)" borderRadius="2xl" p={4} border="1px solid #272A36">
             <Button isLoading={saving} isDisabled={terminal || !hasUnsavedChanges} onClick={() => submit("save")} variant="outline" borderColor="#CBD5E0" color="white" _hover={{ bg: "#1B1E2A" }}>Paso 1: guardar y regenerar vistas</Button>
-            <Button isLoading={saving} isDisabled={terminal || rejectionReason.trim().length < 8} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
+            <Button isLoading={saving} isDisabled={terminal} onClick={() => submit("reject")} variant="outline" borderColor="#F56565" color="#FEB2B2" _hover={{ bg: "#2A171A" }}>Rechazar con motivo</Button>
             <Button
               isLoading={saving}
               isDisabled={terminal || isApproved || isRejected || hasUnsavedChanges || xCount > 280 || !draft.manifest_sha256}
