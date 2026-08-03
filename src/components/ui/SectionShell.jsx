@@ -10,6 +10,7 @@ export function SectionLabel({ children }) {
       fontWeight="600"
       color="brand.accent"
       mb={3}
+      textAlign="center"
     >
       {children}
     </Text>

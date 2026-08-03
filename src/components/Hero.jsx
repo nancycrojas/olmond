@@ -382,14 +382,7 @@ export const Hero = () => {
         pt={{ base: 16, md: 20, lg: 16 }}
         pb={{ base: 10, lg: 8 }}
       >
-        <Grid
-          templateColumns={{
-            base: "1fr",
-            lg: "minmax(0, 1.08fr) minmax(390px, 0.92fr)",
-          }}
-          gap={{ base: 14, lg: 20 }}
-          alignItems="center"
-        >
+        <Grid templateColumns="1fr" justifyItems="center" alignItems="center">
           {/* Contenido */}
           <MotionBox
             initial={{ opacity: 0, y: 24 }}
@@ -403,7 +396,8 @@ export const Hero = () => {
             <Heading
               as="h1"
               mt={5}
-              maxW="660px"
+              mx="auto"
+              maxW="800px"
               fontSize={{
                 base: "42px",
                 sm: "50px",
@@ -413,13 +407,10 @@ export const Hero = () => {
               lineHeight={{ base: "1.02", lg: "0.99" }}
               letterSpacing="-0.055em"
               fontWeight="700"
+              textAlign="center"
             >
               <Box as="span" display={{ base: "inline", md: "block" }}>
-                Inteligencia artificial{" "}
-              </Box>
-
-              <Box as="span" display={{ base: "inline", md: "block" }}>
-                aplicada a la{" "}
+                Inteligencia artificial aplicada a{" "}
               </Box>
 
               <Box
@@ -428,25 +419,18 @@ export const Hero = () => {
                 bgImage={BRAND_GRADIENT}
                 bgClip="text"
               >
-                operación de su{" "}
-              </Box>
-
-              <Box
-                as="span"
-                display={{ base: "inline", md: "block" }}
-                bgImage={BRAND_GRADIENT}
-                bgClip="text"
-              >
-                empresa
+                la operación de su empresa
               </Box>
             </Heading>
 
             <Text
               mt={{ base: 6, md: 7 }}
-              maxW="570px"
+              mx="auto"
+              maxW="620px"
               fontSize={{ base: "lg", md: "17px" }}
               lineHeight="1.75"
               color="whiteAlpha.700"
+              textAlign="center"
             >
               Olmond Consulting diagnostica, diseña e implementa
               automatizaciones en procesos concretos. Antes de construir,
@@ -454,7 +438,7 @@ export const Hero = () => {
               operar la solución.
             </Text>
 
-            <HStack mt={5} spacing={3} align="center">
+            <HStack mt={5} spacing={3} justify="center" align="center">
               <Flex
                 flexShrink={0}
                 w="16px"
@@ -478,7 +462,13 @@ export const Hero = () => {
               </Text>
             </HStack>
 
-            <Flex mt={{ base: 7, md: 8 }} gap={3} wrap="wrap" align="center">
+            <Flex
+              mt={{ base: 7, md: 8 }}
+              gap={3}
+              wrap="wrap"
+              align="center"
+              justify="center"
+            >
               <EvaluationCTA>Evaluar un proceso &nbsp; ↗</EvaluationCTA>
 
               <CTA as="a" href="#impact-sprint" variant="light">
@@ -491,25 +481,10 @@ export const Hero = () => {
               fontSize="16px"
               lineHeight="1.5"
               color="whiteAlpha.400"
+              textAlign="center"
             >
               Cinco preguntas. Resultado inmediato.
             </Text>
-          </MotionBox>
-
-          {/* Visual del proceso */}
-          <MotionBox
-            w="full"
-            maxW={{ base: "520px", lg: "430px" }}
-            justifySelf={{ base: "start", lg: "end" }}
-            initial={{ opacity: 0, x: 28 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.7,
-              delay: 0.15,
-              ease: "easeOut",
-            }}
-          >
-            <ProcessVisual />
           </MotionBox>
         </Grid>
       </Container>
