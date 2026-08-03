@@ -7,6 +7,11 @@ const WIDTH = 1080;
 const HEIGHT = 1350;
 const MAX_PAYLOAD_LENGTH = 5000;
 const MAX_TEXT_LENGTH = 420;
+const READABLE_LAYOUT_VERSION = 6;
+const READABLE_HEADLINE_LENGTH = 58;
+const READABLE_BODY_LENGTH = 220;
+const READABLE_BULLET_LENGTH = 80;
+const READABLE_EYEBROW_LENGTH = 36;
 const MAX_BACKGROUND_BYTES = 5 * 1024 * 1024;
 const BACKGROUND_URL_PATTERN = /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/linkedin\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/;
 
@@ -45,6 +50,7 @@ function decodePayload(value) {
     "visual_mode",
     "background_url",
     "background_focus",
+    "layout_version",
   ]);
   if (!decoded || typeof decoded !== "object" || Object.keys(decoded).some((key) => !allowed.has(key))) {
     throw new Error("schema_invalid");
@@ -56,6 +62,24 @@ function decodePayload(value) {
   const bullets = Array.isArray(decoded.bullets)
     ? decoded.bullets.map((entry) => String(entry ?? "").trim()).filter(Boolean).slice(0, 4)
     : [];
+  const requestedLayoutVersion = Number(decoded.layout_version);
+  const layoutVersion = [5, READABLE_LAYOUT_VERSION].includes(requestedLayoutVersion)
+    ? requestedLayoutVersion
+    : 4;
+  if (layoutVersion >= 5) {
+    if (String(decoded.eyebrow ?? "").trim().length > READABLE_EYEBROW_LENGTH) {
+      throw new Error("eyebrow_too_long");
+    }
+    if (String(decoded.headline ?? "").trim().length > READABLE_HEADLINE_LENGTH) {
+      throw new Error("headline_too_long");
+    }
+    if (String(decoded.body ?? "").trim().length > READABLE_BODY_LENGTH) {
+      throw new Error("body_too_long");
+    }
+    if (bullets.length > 3 || bullets.some((entry) => entry.length > READABLE_BULLET_LENGTH)) {
+      throw new Error("bullets_too_long");
+    }
+  }
   const visualMode = decoded.visual_mode === "photo_cover" ? "photo_cover" : "editorial_cards";
   const backgroundUrl = String(decoded.background_url ?? "").trim();
   if (backgroundUrl && !BACKGROUND_URL_PATTERN.test(backgroundUrl)) {
@@ -74,6 +98,7 @@ function decodePayload(value) {
     backgroundFocus: ["left", "center", "right"].includes(decoded.background_focus)
       ? decoded.background_focus
       : "center",
+    layoutVersion,
   };
   if (!slide.headline || (!slide.body && !slide.bullets.length && slide.kind !== "cta")) {
     throw new Error("content_missing");
@@ -136,21 +161,34 @@ async function renderSvg(slide) {
     center: "xMidYMid",
     right: "xMaxYMid",
   }[slide.backgroundFocus];
+  const isReadable = slide.layoutVersion >= 5;
+  const isReadableV6 = slide.layoutVersion === READABLE_LAYOUT_VERSION;
   const contentCenter = WIDTH / 2;
-  const safeLeft = 180;
+  const safeLeft = isReadable ? 190 : 180;
   const safeRight = WIDTH - safeLeft;
-  const headlineLines = wrapText(slide.headline, isCover ? 22 : 27, isCover ? 4 : 3);
-  const bodyLines = wrapText(slide.body, 38, 5);
-  const headlineSize = isCover ? 62 : 54;
-  const headlineLineHeight = isCover ? 74 : 66;
-  const headlineY = isCover ? 380 : 330;
-  const bodyY = headlineY + headlineLines.length * headlineLineHeight + 66;
+  const headlineLines = wrapText(
+    slide.headline,
+    isReadableV6 ? (isCover ? 18 : 21) : isReadable ? (isCover ? 19 : 23) : (isCover ? 22 : 27),
+    isReadableV6 ? 4 : isCover ? 4 : 3,
+  );
+  const headlineSize = isReadable ? (isCover ? 72 : 64) : (isCover ? 62 : 54);
+  const headlineLineHeight = isReadable ? (isCover ? 88 : 78) : (isCover ? 74 : 66);
+  const headlineY = isReadable ? (isCover ? 350 : 300) : (isCover ? 380 : 330);
+  const bodyY = headlineY + headlineLines.length * headlineLineHeight + (isReadable ? 54 : 66);
+  const bodyLineHeight = isReadableV6 ? 60 : isReadable ? 45 : 38;
+  const bodyBottomLimit = isReadable ? 1110 : 1050;
+  const availableBodyLines = Math.max(3, Math.floor((bodyBottomLimit - bodyY) / bodyLineHeight) + 1);
+  const bodyLines = wrapText(
+    slide.body,
+    isReadableV6 ? 25 : isReadable ? 31 : 38,
+    isReadable ? availableBodyLines : Math.min(5, availableBodyLines),
+  );
   const bulletY = bodyY;
   const bulletMarkup = slide.bullets.map((bullet, index) => {
-    const lines = wrapText(bullet, 34, 2);
-    const y = bulletY + index * 96;
-    return `<circle cx="222" cy="${y - 10}" r="7" fill="${COLORS.magenta}"/>`
-      + `<text>${tspans(lines, 254, y, 38, "bullet")}</text>`;
+    const lines = wrapText(bullet, isReadableV6 ? 23 : isReadable ? 27 : 34, 2);
+    const y = bulletY + index * (isReadableV6 ? 130 : isReadable ? 112 : 96);
+    return `<circle cx="${safeLeft + 30}" cy="${y - 10}" r="7" fill="${COLORS.magenta}"/>`
+      + `<text>${tspans(lines, safeLeft + 64, y, isReadableV6 ? 58 : isReadable ? 48 : 38, "bullet")}</text>`;
   }).join("");
   const footer = `${String(slide.index).padStart(2, "0")} / ${String(slide.total).padStart(2, "0")}`;
   const accent = isCta ? COLORS.magenta : COLORS.purple;
@@ -178,10 +216,10 @@ async function renderSvg(slide) {
       <filter id="blur"><feGaussianBlur stdDeviation="72"/></filter>
       <style>
         text { font-family: 'Open Sans', sans-serif; }
-        .eyebrow { font-size: 22px; font-weight: 700; letter-spacing: 4px; fill: ${COLORS.magenta}; }
+        .eyebrow { font-size: ${isReadableV6 ? 26 : isReadable ? 24 : 22}px; font-weight: 700; letter-spacing: 4px; fill: ${COLORS.magenta}; }
         .headline { font-size: ${headlineSize}px; font-weight: 700; fill: ${COLORS.white}; }
-        .body { font-size: 31px; font-weight: 400; fill: ${COLORS.muted}; }
-        .bullet { font-size: 29px; font-weight: 400; fill: ${COLORS.white}; }
+        .body { font-size: ${isReadableV6 ? 52 : isReadable ? 40 : 31}px; font-weight: 400; fill: ${COLORS.muted}; }
+        .bullet { font-size: ${isReadableV6 ? 48 : isReadable ? 38 : 29}px; font-weight: 400; fill: ${COLORS.white}; }
         .footer { font-size: 19px; font-weight: 700; letter-spacing: 3px; fill: ${COLORS.muted}; }
       </style>
     </defs>
@@ -190,7 +228,7 @@ async function renderSvg(slide) {
     <rect x="${safeLeft}" y="150" width="${safeRight - safeLeft}" height="4" rx="2" fill="url(#accent)"/>
     <text x="${contentCenter}" y="235" text-anchor="middle" class="eyebrow">${escapeXml(slide.eyebrow.toUpperCase())}</text>
     <text text-anchor="middle">${tspans(headlineLines, contentCenter, headlineY, headlineLineHeight, "headline")}</text>
-    ${slide.bullets.length ? bulletMarkup : `<text text-anchor="middle">${tspans(bodyLines, contentCenter, bodyY, 45, "body")}</text>`}
+    ${slide.bullets.length ? bulletMarkup : `<text text-anchor="middle">${tspans(bodyLines, contentCenter, bodyY, bodyLineHeight, "body")}</text>`}
     ${isCta ? `<rect x="360" y="1110" width="360" height="6" rx="3" fill="${COLORS.magenta}"/>` : ""}
     <text x="${safeLeft}" y="1235" class="footer">OLMOND CONSULTING</text>
     <text x="${safeRight}" y="1235" text-anchor="end" class="footer">${footer}</text>
