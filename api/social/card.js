@@ -13,7 +13,7 @@ const READABLE_BODY_LENGTH = 220;
 const READABLE_BULLET_LENGTH = 80;
 const READABLE_EYEBROW_LENGTH = 36;
 const MAX_BACKGROUND_BYTES = 5 * 1024 * 1024;
-const BACKGROUND_URL_PATTERN = /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/linkedin\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/;
+const BACKGROUND_URL_PATTERN = /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/(?:linkedin|meta)\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/;
 
 const COLORS = Object.freeze({
   background: "#08080B",
