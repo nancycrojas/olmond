@@ -95,7 +95,7 @@ export const Problem = () => {
           mt={{ base: 7, md: 9 }}
           maxW="1050px"
           fontSize={{
-            base: "md",
+            base: "lg",
             md: "lg",
           }}
           lineHeight="1.8"
@@ -212,7 +212,7 @@ export const Problem = () => {
                 <Text
                   mt={4}
                   fontSize={{
-                    base: "md",
+                    base: "lg",
                     lg: "17px",
                   }}
                   lineHeight="1.65"
