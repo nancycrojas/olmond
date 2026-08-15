@@ -9,7 +9,7 @@ import { FinalCTASection } from "../components/workshop/FinalCTASection";
 import { Footer } from "../components/workshop/Footer";
 import { HeroSection } from "../components/workshop/HeroSection";
 import { HighlightRow } from "../components/workshop/HighlightRow";
-import { IntroductionSection } from "../components/workshop/IntroductionSection";
+// import { IntroductionSection } from "../components/workshop/IntroductionSection";
 import { InvestmentSection } from "../components/workshop/InvestmentSection";
 import { MethodologySection } from "../components/workshop/MethodologySection";
 import { ModalitySection } from "../components/workshop/ModalitySection";
@@ -38,10 +38,10 @@ export const Workshop = ({ proposal }) => {
 
       <HighlightRow />
 
-      <IntroductionSection
+      {/* <IntroductionSection
         companyName={companyName}
         introParagraph={copy.introParagraph}
-      />
+      /> */}
 
       <ObjectivesSection />
       <AudienceSection />
