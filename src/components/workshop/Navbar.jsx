@@ -35,8 +35,13 @@ export const Navbar = ({ navbarTitle }) => {
       borderColor="whiteAlpha.200"
     >
       <Container maxW="7xl" px={6} py={4}>
-        <Flex align="center" justify="space-between">
-          <HStack spacing={2} color="white">
+        <Flex
+          align="center"
+          justify="space-between"
+          gap={2}
+          wrap={{ base: "wrap", md: "nowrap" }}
+        >
+          <HStack spacing={2} color="white" flex="1" minW={0}>
             <Flex
               h={8}
               w={8}
@@ -68,7 +73,8 @@ export const Navbar = ({ navbarTitle }) => {
           <CTA
             variant="ghost"
             size="sm"
-            px={4}
+            flexShrink={0}
+            px={{ base: 2, md: 4 }}
             py={2}
             fontSize="xs"
             leftIcon={<LuMessageCircle />}
