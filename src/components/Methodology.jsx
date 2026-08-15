@@ -210,7 +210,7 @@ export const Methodology = () => {
                     border="1px solid"
                     borderColor={isActive ? "whiteAlpha.400" : "gray.300"}
                     color={isActive ? "white" : "gray.600"}
-                    fontSize="11px"
+                    fontSize={{ base: "12px", md: "11px" }}
                     fontWeight="700"
                   >
                     {stage.number}
@@ -218,7 +218,7 @@ export const Methodology = () => {
 
                   <Box>
                     <Text
-                      fontSize={{ base: "sm", md: "md" }}
+                      fontSize={{ base: "lg", md: "md" }}
                       fontWeight="700"
                       lineHeight="1.3"
                     >
@@ -227,7 +227,7 @@ export const Methodology = () => {
 
                     <Text
                       mt={1}
-                      fontSize="xs"
+                      fontSize="md"
                       color={isActive ? "whiteAlpha.700" : "gray.500"}
                     >
                       {stage.summary}
@@ -268,7 +268,10 @@ export const Methodology = () => {
                 py={1.5}
                 borderRadius="full"
                 textTransform="none"
-                fontSize="10px"
+                fontSize={{
+                  base: "12px",
+                  md: "10px",
+                }}
                 fontWeight="600"
                 bg="#ECFBF1"
                 color="#26764A"
@@ -294,7 +297,7 @@ export const Methodology = () => {
             <Text
               mt={5}
               maxW="700px"
-              fontSize={{ base: "md", md: "17px" }}
+              fontSize={{ base: "lg", md: "17px" }}
               lineHeight="1.7"
               color="gray.600"
             >
@@ -319,7 +322,7 @@ export const Methodology = () => {
                   </Flex>
 
                   <Text
-                    fontSize={{ base: "sm", md: "md" }}
+                    fontSize={{ base: "md", md: "md" }}
                     fontWeight="600"
                     color="#202330"
                   >
@@ -353,7 +356,11 @@ export const Methodology = () => {
                 Principio
               </Text>
 
-              <Text fontSize="sm" fontWeight="700" color="#202330">
+              <Text
+                fontSize={{ base: "md", md: "sm" }}
+                fontWeight="700"
+                color="#202330"
+              >
                 {active.principle}
               </Text>
             </Flex>
