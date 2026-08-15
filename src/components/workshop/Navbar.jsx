@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { href: "#inversion", label: "Inversión" },
 ];
 
-export const Navbar = ({ companyName }) => {
+export const Navbar = ({ navbarTitle }) => {
   return (
     <Box
       as="header"
@@ -49,7 +49,7 @@ export const Navbar = ({ companyName }) => {
               <Icon as={LuSparkles} boxSize={4} />
             </Flex>
             <Text fontSize="sm" fontWeight="semibold" letterSpacing="tight">
-              Workshop IA · {companyName}
+              {navbarTitle}
             </Text>
           </HStack>
           <HStack spacing={7} display={{ base: "none", md: "flex" }}>

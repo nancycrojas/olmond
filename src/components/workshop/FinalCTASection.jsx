@@ -5,7 +5,7 @@ import { LuArrowRight, LuMessageCircle } from "react-icons/lu";
 import { GRADIENT_BRAND } from "../../lib/constants";
 import { CTA } from "./CTA";
 
-export const FinalCTASection = ({ companyName }) => {
+export const FinalCTASection = ({ finalCtaTitle }) => {
   return (
     <Box as="section" position="relative" overflow="hidden" bg="white" py={24}>
       <Container maxW="6xl" px={6}>
@@ -57,7 +57,7 @@ export const FinalCTASection = ({ companyName }) => {
               lineHeight="shorter"
               letterSpacing="tight"
             >
-              Inteligencia Artificial Aplicada para {companyName}
+              {finalCtaTitle}
             </Heading>
             <Text
               mt={5}

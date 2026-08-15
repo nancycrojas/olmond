@@ -21,7 +21,7 @@ const slowZoom = keyframes`
 
 const MotionBox = motion(Box);
 
-export const HeroSection = ({ companyName }) => {
+export const HeroSection = ({ heroTitle }) => {
   return (
     <Box
       as="section"
@@ -34,7 +34,7 @@ export const HeroSection = ({ companyName }) => {
         <Box
           as="img"
           src="/"
-          alt={`Centro de distribución de ${companyName} utilizado como imagen principal de la propuesta de workshop de Inteligencia Artificial Aplicada.`}
+          alt={`Centro de distribución de ${heroTitle} utilizado como imagen principal de la propuesta de workshop de Inteligencia Artificial Aplicada.`}
           h="full"
           w="full"
           objectFit="cover"
@@ -93,7 +93,7 @@ export const HeroSection = ({ companyName }) => {
               letterSpacing="tight"
               color="white"
             >
-              Inteligencia Artificial Aplicada para {companyName}
+              {heroTitle}
             </Heading>
             <Text
               mt={6}

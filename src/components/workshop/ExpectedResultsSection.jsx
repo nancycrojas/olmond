@@ -14,11 +14,11 @@ const RESULTS = [
   "adoptar la Inteligencia Artificial de manera segura y responsable",
 ];
 
-export const ExpectedResultsSection = ({ companyName }) => {
+export const ExpectedResultsSection = ({ expectedResultsIntro }) => {
   return (
     <SectionShell
       eyebrow="Resultados esperados"
-      title={`Al finalizar el workshop, ${companyName} contará con colaboradores capaces de:`}
+      title={expectedResultsIntro}
       muted
     >
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>

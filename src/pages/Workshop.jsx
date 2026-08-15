@@ -18,31 +18,52 @@ import { ObjectivesSection } from "../components/workshop/ObjectivesSection";
 import { ToolsSection } from "../components/workshop/ToolsSection";
 
 export const Workshop = ({ proposal }) => {
-  const companyName = proposal?.companyName ?? "la empresa";
-  const showCompanyIntro = proposal?.showCompanyIntro ?? false;
+  const companyName = proposal?.companyName ?? "la organización";
   const recipients =
     proposal?.recipients ??
-    "Administración, Compras, Comercial, Logística y Depósito, Capital Humano";
+    "Equipos de trabajo, áreas operativas, administrativas y de gestión";
+
+  const copy = proposal?.copy ?? {};
+  const navbarTitle =
+    proposal?.copy?.navbarTitle ??
+    `Workshop IA · ${proposal?.companyName ?? "la organización"}`;
+  const heroTitle =
+    proposal?.copy?.heroTitle ??
+    `Inteligencia Artificial Aplicada para ${companyName}`;
 
   return (
     <Box bg="white" minH="100vh">
-      <Navbar companyName={companyName} />
-      <HeroSection companyName={companyName} />
+      <Navbar navbarTitle={navbarTitle} />
+      <HeroSection companyName={companyName} heroTitle={heroTitle} />
+
       <HighlightRow />
+
       <IntroductionSection
         companyName={companyName}
-        showCompanyIntro={showCompanyIntro}
+        introParagraph={copy.introParagraph}
       />
+
       <ObjectivesSection />
       <AudienceSection />
       <ModalitySection />
       <ContentsSection />
       <MethodologySection />
       <ToolsSection />
-      <ExpectedResultsSection companyName={companyName} />
+
+      <ExpectedResultsSection
+        companyName={companyName}
+        expectedResultsIntro={copy.expectedResultsIntro}
+      />
+
       <InvestmentSection recipients={recipients} />
+
       <FAQSection companyName={companyName} />
-      <FinalCTASection companyName={companyName} />
+
+      <FinalCTASection
+        companyName={companyName}
+        finalCtaTitle={copy.finalCtaTitle}
+      />
+
       <Footer />
     </Box>
   );
