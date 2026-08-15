@@ -102,12 +102,9 @@ export const HeroSection = ({ heroTitle }) => {
               lineHeight="tall"
               color="whiteAlpha.800"
             >
-              La Inteligencia Artificial está transformando la forma en que las
-              organizaciones trabajan, toman decisiones y gestionan sus
-              procesos. Más allá de la tecnología, representa una oportunidad
-              para aumentar la productividad, optimizar tareas repetitivas y
-              permitir que las personas dediquen más tiempo a actividades de
-              mayor valor.
+              La IA puede ayudar con tareas repetitivas, mejorar la toma de
+              decisiones y agilizar procesos para que las personas aporten más
+              valor mientras crecen profesionalmente.
             </Text>
             <HStack mt={8} spacing={3} flexWrap="wrap">
               <CTA variant="primary" rightIcon={<LuArrowRight />}>

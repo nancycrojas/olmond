@@ -22,7 +22,7 @@ const CONTENTS = [
   },
   {
     title: "Automatización de procesos",
-    body: "Se presentará cómo la Inteligencia Artificial puede integrarse con herramientas de automatización para reducir tareas repetitivas y optimizar procesos internos, analizando qué tipo de soluciones resultan más adecuadas según cada necesidad.",
+    body: "Se presentarán los fundamentos de la automatización con IA y sus principales aplicaciones, mediante ejemplos prácticos que ayuden a identificar tareas repetitivas y oportunidades de mejora.",
   },
   {
     title: "Buenas prácticas y uso responsable",
