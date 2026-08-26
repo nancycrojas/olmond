@@ -24,7 +24,7 @@ export const Pricing = () => {
 
   const whatsappNumber = "5491133872411";
   const whatsappMessage = encodeURIComponent(
-    "Hola! Quiero acceder al Pack por solo $29.000 ARS",
+    "Hola! Quiero acceder al Pack por solo USD 390",
   );
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -148,7 +148,7 @@ export const Pricing = () => {
                   color="gray.400"
                   textDecoration="line-through"
                 >
-                  $708.000 ARS
+                  USD 580
                 </Text>
               </VStack>
 
@@ -157,16 +157,16 @@ export const Pricing = () => {
                   Tu inversión hoy:
                 </Text>
                 <HStack spacing={2} align="baseline">
+                  <Text fontSize="3xl" fontWeight="bold" color="gray.900">
+                    USD
+                  </Text>
                   <Text
                     fontSize={{ base: "5xl", md: "6xl" }}
                     fontWeight="black"
                     bgGradient="linear(to-r, #4318FF, #EC4899)"
                     bgClip="text"
                   >
-                    29.000
-                  </Text>
-                  <Text fontSize="3xl" fontWeight="bold" color="gray.900">
-                    ARS
+                    390
                   </Text>
                 </HStack>
               </VStack>
@@ -174,7 +174,7 @@ export const Pricing = () => {
               <HStack spacing={2} color="green.600">
                 <Icon as={FaCheckCircle} />
                 <Text fontSize="lg" fontWeight="semibold">
-                  Ahorras $679.000 ARS (96% de descuento)
+                  Ahorras USD 190 (32.8% de descuento)
                 </Text>
               </HStack>
 
@@ -205,10 +205,10 @@ export const Pricing = () => {
                 lineHeight="1.3"
               >
                 <Box as="span" display={{ base: "inline", md: "none" }}>
-                  SÍ! QUIERO EL PACK POR $29.000 ARS
+                  SÍ! QUIERO EL PACK POR USD 390
                 </Box>
                 <Box as="span" display={{ base: "none", md: "inline" }}>
-                  SÍ! QUIERO ACCEDER AL PACK POR SOLO $29.000 ARS
+                  SÍ! QUIERO ACCEDER AL PACK POR SOLO USD 390
                 </Box>
               </Button>
 
@@ -273,7 +273,7 @@ export const Pricing = () => {
               >
                 Cuando se acabe la oferta, el precio volverá a{" "}
                 <Text as="span" fontWeight="black">
-                  $708.000 ARS
+                  USD 580
                 </Text>
               </Text>
             </VStack>

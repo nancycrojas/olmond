@@ -156,7 +156,7 @@ export const WhatsIncludedSection = () => {
               bgGradient="linear(to-r, #667eea, #764ba2)"
               bgClip="text"
             >
-              $708.000 ARS
+              USD 580
             </Text>
           </HStack>
           <Box
