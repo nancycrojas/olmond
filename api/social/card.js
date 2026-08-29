@@ -13,7 +13,12 @@ const READABLE_BODY_LENGTH = 220;
 const READABLE_BULLET_LENGTH = 80;
 const READABLE_EYEBROW_LENGTH = 36;
 const MAX_BACKGROUND_BYTES = 5 * 1024 * 1024;
-const BACKGROUND_URL_PATTERN = /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/(?:linkedin|meta)\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/;
+const BACKGROUND_URL_PATTERNS = Object.freeze([
+  /^https:\/\/(?:www\.)?olmondconsulting\.com\/social\/(?:linkedin|meta)\/[A-Za-z0-9._/-]+\.png(?:\?[A-Za-z0-9._=&-]+)?$/,
+  /^https:\/\/lh3\.googleusercontent\.com\/d\/[A-Za-z0-9_-]+(?:=w\d+)?$/,
+  /^https:\/\/images\.unsplash\.com\/photo-[A-Za-z0-9_-]+(?:\?[A-Za-z0-9._~=&?%-]+)?$/,
+]);
+const BACKGROUND_CONTENT_TYPES = new Set(["image/png", "image/jpeg"]);
 
 const COLORS = Object.freeze({
   background: "#08080B",
@@ -82,7 +87,7 @@ function decodePayload(value) {
   }
   const visualMode = decoded.visual_mode === "photo_cover" ? "photo_cover" : "editorial_cards";
   const backgroundUrl = String(decoded.background_url ?? "").trim();
-  if (backgroundUrl && !BACKGROUND_URL_PATTERN.test(backgroundUrl)) {
+  if (backgroundUrl && !BACKGROUND_URL_PATTERNS.some((pattern) => pattern.test(backgroundUrl))) {
     throw new Error("background_url_invalid");
   }
   const slide = {
@@ -111,16 +116,16 @@ async function fetchBackgroundDataUri(url) {
   const result = await fetch(url, {
     redirect: "error",
     signal: AbortSignal.timeout(5000),
-    headers: { Accept: "image/png" },
+    headers: { Accept: "image/png, image/jpeg;q=0.9" },
   });
   if (!result.ok) throw new Error("background_fetch_failed");
   const contentType = String(result.headers.get("content-type") ?? "").split(";")[0].trim();
-  if (contentType !== "image/png") throw new Error("background_type_invalid");
+  if (!BACKGROUND_CONTENT_TYPES.has(contentType)) throw new Error("background_type_invalid");
   const bytes = new Uint8Array(await result.arrayBuffer());
   if (!bytes.length || bytes.length > MAX_BACKGROUND_BYTES) {
     throw new Error("background_size_invalid");
   }
-  return `data:image/png;base64,${globalThis.Buffer.from(bytes).toString("base64")}`;
+  return `data:${contentType};base64,${globalThis.Buffer.from(bytes).toString("base64")}`;
 }
 
 function wrapText(text, maxChars, maxLines) {

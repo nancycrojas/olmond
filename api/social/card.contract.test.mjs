@@ -21,7 +21,7 @@ test("keeps the clean editorial layout as the default", () => {
   assert.equal(slide.backgroundUrl, "");
 });
 
-test("accepts only Olmond-hosted PNG backgrounds", () => {
+test("rejects arbitrary external backgrounds", () => {
   assert.throws(
     () => decodePayload(payload({
       headline: "Una portada editorial",
@@ -31,6 +31,55 @@ test("accepts only Olmond-hosted PNG backgrounds", () => {
     })),
     /background_url_invalid/,
   );
+});
+
+test("accepts the generated Google Drive image contract used by n8n", () => {
+  const slide = decodePayload(payload({
+    headline: "Una portada editorial",
+    body: "Información verificada y explicada con claridad.",
+    visual_mode: "photo_cover",
+    background_url: "https://lh3.googleusercontent.com/d/12ZrTnBG0iDTM1nV8sbv18Rsrlw4RWIT-=w1600",
+  }));
+
+  assert.equal(slide.visualMode, "photo_cover");
+  assert.equal(slide.backgroundUrl, "https://lh3.googleusercontent.com/d/12ZrTnBG0iDTM1nV8sbv18Rsrlw4RWIT-=w1600");
+});
+
+test("rejects Google Drive lookalikes outside the exact image host and path", () => {
+  assert.throws(
+    () => decodePayload(payload({
+      headline: "Una portada editorial",
+      body: "Información verificada y explicada con claridad.",
+      visual_mode: "photo_cover",
+      background_url: "https://lh3.googleusercontent.com.evil.example/d/image=w1600",
+    })),
+    /background_url_invalid/,
+  );
+});
+
+test("renders a constrained Unsplash JPEG background accepted by n8n", async (context) => {
+  const originalFetch = globalThis.fetch;
+  context.after(() => {
+    globalThis.fetch = originalFetch;
+  });
+  globalThis.fetch = async () => new Response(
+    new Uint8Array([255, 216, 255, 217]),
+    { status: 200, headers: { "content-type": "image/jpeg" } },
+  );
+
+  const slide = decodePayload(payload({
+    headline: "Una portada con escena editorial",
+    body: "La imagen aporta contexto sin competir con la lectura.",
+    index: 1,
+    total: 8,
+    kind: "cover",
+    visual_mode: "photo_cover",
+    background_url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
+  }));
+  const svg = await renderSvg(slide);
+
+  assert.match(svg, /data:image\/jpeg;base64,/);
+  assert.match(svg, /fill="url\(#photoOverlay\)"/);
 });
 
 test("embeds a darkened photo only on a photo-led cover", async (context) => {
