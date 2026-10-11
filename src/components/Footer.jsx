@@ -1,170 +1,218 @@
-/* eslint-disable react/prop-types */
-import { Box, Container, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  HStack,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
+import { FaLinkedinIn } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 
-import { Brand } from "../components/ui/Brand.jsx";
+import logo from "../assets/logo-olmond.png";
 
-const serviceLinks = [
+const footerLinks = [
   {
-    label: "Impact Sprint",
-    href: "#impact-sprint",
+    label: "Consultoría",
+    href: "#que-hacemos",
   },
   {
-    label: "Academy",
-    href: "#academy",
+    label: "Workshops",
+    href: "#que-hacemos",
   },
   {
-    label: "Método",
-    href: "#como-trabajamos",
+    label: "Desarrollos",
+    href: "#que-hacemos",
+  },
+  {
+    label: "Diagnóstico",
+    href: "#diagnostico",
   },
 ];
-
-const informationLinks = [
-  {
-    label: "Preguntas frecuentes",
-    href: "#preguntas-frecuentes",
-  },
-];
-
-function FooterColumn({ title, children }) {
-  return (
-    <Stack spacing={5}>
-      <Text
-        fontSize="sm"
-        fontWeight="700"
-        color="white"
-        letterSpacing="-0.01em"
-      >
-        {title}
-      </Text>
-
-      <Stack spacing={3.5}>{children}</Stack>
-    </Stack>
-  );
-}
-
-function FooterLink({ children, ...props }) {
-  return (
-    <Link
-      width="fit-content"
-      fontSize="sm"
-      lineHeight="1.5"
-      color="whiteAlpha.600"
-      transition="color 0.2s ease, transform 0.2s ease"
-      _hover={{
-        color: "white",
-        textDecoration: "none",
-        transform: "translateX(2px)",
-      }}
-      {...props}
-    >
-      {children}
-    </Link>
-  );
-}
 
 export const Footer = () => {
   return (
-    <Box
-      as="footer"
-      position="relative"
-      overflow="hidden"
-      bg="#10121B"
-      color="white"
-    >
-      {/* Iluminación sutil */}
-      <Box
-        position="absolute"
-        top="-220px"
-        left="-180px"
-        w="500px"
-        h="500px"
-        borderRadius="full"
-        bg="rgba(94, 105, 202, 0.08)"
-        filter="blur(130px)"
-        pointerEvents="none"
-      />
-
+    <Box as="footer" position="relative" bg="#101220" color="white">
       <Container
         maxW="6xl"
-        position="relative"
-        pt={{
-          base: 14,
-          md: 16,
-        }}
-        pb={{
-          base: 7,
-          md: 8,
+        py={{
+          base: 10,
+          md: 12,
+          lg: 14,
         }}
       >
-        <Grid
-          templateColumns={{
-            base: "1fr",
-            sm: "repeat(2, minmax(0, 1fr))",
-            lg: "1.35fr 0.8fr 0.8fr 0.9fr",
+        {/* Parte superior */}
+        <Flex
+          align={{
+            base: "flex-start",
+            md: "center",
+          }}
+          justify="space-between"
+          direction={{
+            base: "column",
+            md: "row",
           }}
           gap={{
-            base: 10,
-            md: 12,
-            lg: 16,
+            base: 9,
+            md: 8,
           }}
-          alignItems="start"
         >
-          {/* Marca */}
-          <Box>
-            <Brand />
+          {/* Logo */}
+          <Link
+            href="#inicio"
+            aria-label="Olmond Consulting, inicio"
+            display="inline-flex"
+            alignItems="center"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
+            <Image
+              src={logo}
+              alt="Olmond Consulting"
+              h={{
+                base: "56px",
+                md: "64px",
+              }}
+              w="auto"
+              maxW={{
+                base: "250px",
+                md: "300px",
+              }}
+              objectFit="contain"
+              objectPosition="left center"
+            />
+          </Link>
 
-            <Text
-              mt={6}
-              maxW="300px"
-              fontSize="sm"
-              lineHeight="1.7"
-              color="whiteAlpha.600"
-            >
-              Inteligencia artificial aplicada a procesos operativos de PyMEs.
-            </Text>
-          </Box>
-
-          {/* Servicios */}
-          <FooterColumn title="Servicios">
-            {serviceLinks.map((item) => (
-              <FooterLink key={item.href} href={item.href}>
+          {/* Navegación */}
+          <Flex
+            as="nav"
+            aria-label="Navegación del pie"
+            align={{
+              base: "flex-start",
+              md: "center",
+            }}
+            direction={{
+              base: "column",
+              sm: "row",
+            }}
+            wrap="wrap"
+            gap={{
+              base: 4,
+              sm: 6,
+              lg: 8,
+            }}
+          >
+            {footerLinks.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                fontFamily="heading"
+                fontSize={{
+                  base: "15px",
+                  md: "16px",
+                }}
+                fontWeight="600"
+                color="whiteAlpha.800"
+                transition="color 0.2s ease"
+                _hover={{
+                  color: "white",
+                  textDecoration: "none",
+                }}
+              >
                 {item.label}
-              </FooterLink>
+              </Link>
             ))}
-          </FooterColumn>
+          </Flex>
+        </Flex>
 
-          {/* Información */}
-          <FooterColumn title="Información">
-            {informationLinks.map((item) => (
-              <FooterLink key={item.href} href={item.href}>
-                {item.label}
-              </FooterLink>
-            ))}
-          </FooterColumn>
-
-          {/* Contacto */}
-          <FooterColumn title="Contacto">
-            <FooterLink href="mailto:contacto@olmondconsulting.com">
-              hola@olmondconsulting.com
-            </FooterLink>
-          </FooterColumn>
-        </Grid>
-
-        {/* Pie inferior */}
+        {/* Línea */}
         <Box
           mt={{
-            base: 12,
-            md: 16,
+            base: 9,
+            md: 10,
           }}
-          pt={6}
           borderTop="1px solid"
           borderColor="whiteAlpha.100"
+        />
+
+        {/* Parte inferior */}
+        <Flex
+          mt={6}
+          align={{
+            base: "flex-start",
+            sm: "center",
+          }}
+          justify="space-between"
+          direction={{
+            base: "column",
+            sm: "row",
+          }}
+          gap={5}
         >
-          <Text fontSize="xs" lineHeight="1.6" color="whiteAlpha.400">
+          <Text
+            fontSize={{
+              base: "13px",
+              md: "14px",
+            }}
+            color="whiteAlpha.600"
+          >
             Copyright © {new Date().getFullYear()} Olmond Consulting. Todos los
             derechos reservados.
           </Text>
-        </Box>
+
+          {/* Redes y contacto */}
+          <HStack spacing={3}>
+            <Link
+              href="https://www.linkedin.com/company/olmond-consulting"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Olmond Consulting en LinkedIn"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              w="40px"
+              h="40px"
+              borderRadius="full"
+              border="1px solid"
+              borderColor="whiteAlpha.200"
+              color="whiteAlpha.700"
+              transition="all 0.2s ease"
+              _hover={{
+                color: "white",
+                borderColor: "whiteAlpha.400",
+                bg: "whiteAlpha.100",
+                transform: "translateY(-2px)",
+              }}
+            >
+              <FaLinkedinIn size={18} />
+            </Link>
+
+            <Link
+              href="mailto:hola@olmondconsulting.com"
+              aria-label="Enviar email a Olmond Consulting"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              w="40px"
+              h="40px"
+              borderRadius="full"
+              border="1px solid"
+              borderColor="whiteAlpha.200"
+              color="whiteAlpha.700"
+              transition="all 0.2s ease"
+              _hover={{
+                color: "white",
+                borderColor: "whiteAlpha.400",
+                bg: "whiteAlpha.100",
+                transform: "translateY(-2px)",
+              }}
+            >
+              <LuMail size={18} />
+            </Link>
+          </HStack>
+        </Flex>
       </Container>
     </Box>
   );
