@@ -23,7 +23,8 @@ export const GRADIENT_BRAND = "linear(to-r, #667eea, #764ba2)";
 export const GRADIENT_BRAND_BR = "linear(to-br, #667eea, #764ba2)";
 
 export const BRAND_GRADIENT =
-  "linear-gradient(135deg, #667eea 0%, #764ba2 62%, #EC4899 120%)";
+  //"linear-gradient(135deg, #667eea 0%, #764ba2 62%, #EC4899 120%)";
+  "linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%)";
 
 export const BRAND_ACCENT = "#EC4899";
 // TODO: reemplazar por el número real de Olmond

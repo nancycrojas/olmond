@@ -8,6 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 import { CTA } from "../components/ui/CTA.jsx";
 import { EvaluationCTA } from "../components/ui/EvaluationCTA.jsx";
@@ -17,6 +18,14 @@ import { BRAND_GRADIENT } from "../lib/constants.js";
 const MotionBox = motion(Box);
 
 export const Hero = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8;
+    }
+  }, []);
+
   return (
     <Box
       as="section"
@@ -28,33 +37,49 @@ export const Hero = () => {
       color="white"
       scrollMarginTop="72px"
     >
-      {/* Fondo principal */}
+      {/* Video de fondo */}
+      <Box
+        as="video"
+        ref={videoRef}
+        position="absolute"
+        inset={0}
+        w="100%"
+        h="100%"
+        objectFit="cover"
+        objectPosition="center"
+        //autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        pointerEvents="none"
+        zIndex={0}
+      >
+        <source src="/videos/olmond-hero.mp4" type="video/mp4" />
+      </Box>
+      {/* Overlay para mantener contraste */}
       <Box
         position="absolute"
         inset={0}
+        zIndex={1}
         bgImage={`
           radial-gradient(
-            circle at 12% 22%,
-            rgba(89, 103, 196, 0.18) 0%,
-            transparent 34%
+          circle at 12% 22%,
+          rgba(89, 103, 196, 0.22) 0%,
+          transparent 34%
           ),
           radial-gradient(
-            circle at 42% 88%,
-            rgba(211, 73, 169, 0.10) 0%,
-            transparent 30%
-          ),
-          radial-gradient(
-            circle at 96% 5%,
-            rgba(77, 86, 171, 0.14) 0%,
-            transparent 28%
+          circle at 42% 88%,
+          rgba(211, 73, 169, 0.12) 0%,
+          transparent 30%
           ),
           linear-gradient(
-            115deg,
-            #20243a 0%,
-            #181927 43%,
-            #11131d 100%
+          115deg,
+          rgba(24, 27, 45, 0.88) 0%,
+          rgba(20, 21, 34, 0.82) 45%,
+          rgba(13, 15, 24, 0.88) 100%
           )
-        `}
+          `}
       />
 
       {/* Halo superior derecho */}
@@ -68,6 +93,7 @@ export const Hero = () => {
         bg="rgba(90, 102, 205, 0.16)"
         filter="blur(140px)"
         pointerEvents="none"
+        zIndex={1}
       />
 
       {/* Halo inferior */}
@@ -81,11 +107,13 @@ export const Hero = () => {
         bg="rgba(211, 71, 164, 0.10)"
         filter="blur(150px)"
         pointerEvents="none"
+        zIndex={1}
       />
 
       <Container
         maxW="6xl"
         position="relative"
+        zIndex={2}
         minH={{ lg: "calc(100vh - 72px)" }}
         display="flex"
         flexDirection="column"
@@ -96,12 +124,13 @@ export const Hero = () => {
         <Grid templateColumns="1fr" justifyItems="center" alignItems="center">
           {/* Contenido */}
           <MotionBox
+            w="full"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
           >
             <SectionLabel light>
-              Consultoría e implementación de IA para PyMEs
+              Consultoría, capacitaciones y desarrollos de IA para PyMEs
             </SectionLabel>
 
             <Heading
@@ -121,7 +150,11 @@ export const Hero = () => {
               textAlign="center"
             >
               <Box as="span" display={{ base: "inline", md: "block" }}>
-                Inteligencia artificial aplicada a{" "}
+                Tu equipo pierde{" "}
+              </Box>
+
+              <Box as="span" display={{ base: "inline", md: "block" }}>
+                horas en tareas{" "}
               </Box>
 
               <Box
@@ -130,7 +163,7 @@ export const Hero = () => {
                 bgImage={BRAND_GRADIENT}
                 bgClip="text"
               >
-                la operación de su empresa
+                que la IA ya puede hacer
               </Box>
             </Heading>
 
@@ -143,10 +176,8 @@ export const Hero = () => {
               color="whiteAlpha.700"
               textAlign="center"
             >
-              Olmond Consulting diagnostica, diseña e implementa
-              automatizaciones en procesos concretos. Antes de construir,
-              acordamos cómo medir el resultado y preparamos a su equipo para
-              operar la solución.
+              Te ayudamos a decidir por dónde empezar, a implementarlo y a que
+              tu equipo lo use.
             </Text>
 
             <HStack mt={5} spacing={3} justify="center" align="center">
@@ -169,7 +200,7 @@ export const Hero = () => {
                 fontWeight="700"
                 color="whiteAlpha.900"
               >
-                No empezamos por una herramienta. Empezamos por un proceso.
+                Empezamos por un proceso, no por una herramienta.
               </Text>
             </HStack>
 
@@ -180,10 +211,10 @@ export const Hero = () => {
               align="center"
               justify="center"
             >
-              <EvaluationCTA>Evaluar un proceso &nbsp; ↗</EvaluationCTA>
+              <EvaluationCTA>Hacer el diagnóstico gratis ↗</EvaluationCTA>
 
               <CTA as="a" href="#impact-sprint" variant="light">
-                Conocer Impact Sprint
+                Hablar con un asesor
               </CTA>
             </Flex>
 
@@ -194,8 +225,50 @@ export const Hero = () => {
               color="whiteAlpha.400"
               textAlign="center"
             >
-              Cinco preguntas. Resultado inmediato.
+              Resultado inmediato. Sin compromiso.
             </Text>
+
+            <Box
+              mt={{ base: 12, md: 16 }}
+              pt={{ base: 7, md: 8 }}
+              borderTop="1px solid"
+              borderColor="whiteAlpha.200"
+              w="full"
+            >
+              <Flex
+                align={{ base: "flex-start", md: "center" }}
+                justify="center"
+                direction={{ base: "column", md: "row" }}
+                gap={{
+                  base: 3,
+                  md: 8,
+                  lg: 12,
+                }}
+                wrap="wrap"
+                color="whiteAlpha.600"
+                fontSize={{
+                  base: "15px",
+                  md: "17px",
+                }}
+                lineHeight="1.5"
+              >
+                <Text>
+                  <Box as="span" color="white" fontWeight="700">
+                    Patricio Rouan,
+                  </Box>{" "}
+                  fundador
+                </Text>
+
+                <Text>Asesor Principal de SAIA</Text>
+
+                <Text>
+                  Docente de IA aplicada en{" "}
+                  <Box as="span" color="white" fontWeight="500">
+                    UTN, UBA, UNSAM y UCEMA
+                  </Box>
+                </Text>
+              </Flex>
+            </Box>
           </MotionBox>
         </Grid>
       </Container>
