@@ -47,7 +47,7 @@ export const Hero = () => {
         h="100%"
         objectFit="cover"
         objectPosition="center"
-        //autoPlay
+        autoPlay
         muted
         loop
         playsInline
