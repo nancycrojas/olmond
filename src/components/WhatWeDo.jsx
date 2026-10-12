@@ -89,7 +89,6 @@ function ServiceColumn({
     >
       {/* Ícono */}
       <Flex
-        id="que-hacemos"
         w="64px"
         h="64px"
         align="center"
@@ -307,23 +306,42 @@ export const WhatWeDo = () => {
         </Grid>
 
         {/* Servicios */}
-        <Grid
-          //id="que-hacemos"
+        <Box
           mt={{
             base: 12,
             md: 16,
           }}
-          templateColumns={{
-            base: "1fr",
-            md: "repeat(3, minmax(0, 1fr))",
-          }}
-          borderTop="1px solid"
-          borderColor="#E1E3EC"
+          position="relative"
         >
-          {services.map((service, index) => (
-            <ServiceColumn key={service.title} {...service} index={index} />
-          ))}
-        </Grid>
+          {/* Punto exacto al que navega el header */}
+          <Box
+            id="que-hacemos"
+            position="absolute"
+            top={0}
+            left={0}
+            w="1px"
+            h="1px"
+            scrollMarginTop={{
+              base: "80px",
+              lg: "104px",
+            }}
+            pointerEvents="none"
+            aria-hidden="true"
+          />
+
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              md: "repeat(3, minmax(0, 1fr))",
+            }}
+            borderTop="1px solid"
+            borderColor="#E1E3EC"
+          >
+            {services.map((service, index) => (
+              <ServiceColumn key={service.title} {...service} index={index} />
+            ))}
+          </Grid>
+        </Box>
       </Container>
     </Box>
   );

@@ -14,16 +14,12 @@ import logo from "../assets/logo-olmond.png";
 
 const footerLinks = [
   {
-    label: "Consultoría",
+    label: "Servicios",
     href: "#que-hacemos",
   },
   {
-    label: "Workshops",
-    href: "#que-hacemos",
-  },
-  {
-    label: "Desarrollos",
-    href: "#que-hacemos",
+    label: "Nosotros",
+    href: "#por-que-olmond",
   },
   {
     label: "Diagnóstico",

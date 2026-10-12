@@ -16,16 +16,12 @@ import { BRAND_GRADIENT } from "../lib/constants.js";
 
 const headerLinks = [
   {
-    label: "Consultoría",
+    label: "Servicios",
     href: "#que-hacemos",
   },
   {
-    label: "Workshops",
-    href: "#que-hacemos",
-  },
-  {
-    label: "Desarrollos",
-    href: "#que-hacemos",
+    label: "Nosotros",
+    href: "#por-que-olmond",
   },
 ];
 
