@@ -66,6 +66,8 @@ function ServiceColumn({
 }) {
   return (
     <Flex
+      role="group"
+      position="relative"
       direction="column"
       h="full"
       px={{
@@ -86,6 +88,11 @@ function ServiceColumn({
         md: "none",
       }}
       borderColor="#E1E3EC"
+      transition="all 0.3s ease"
+      _hover={{
+        bg: "#FAF9FF",
+        boxShadow: "0 18px 55px rgba(91, 65, 177, 0.08)",
+      }}
     >
       {/* Ícono */}
       <Flex
@@ -97,6 +104,11 @@ function ServiceColumn({
         bgImage={BRAND_GRADIENT}
         color="white"
         boxShadow="0 12px 28px rgba(104, 72, 196, 0.18)"
+        transition="all 0.3s ease"
+        _groupHover={{
+          transform: "translateY(-4px) scale(1.04)",
+          boxShadow: "0 18px 38px rgba(104, 72, 196, 0.28)",
+        }}
       >
         <Icon size={29} strokeWidth={1.8} />
       </Flex>
@@ -210,6 +222,10 @@ function ServiceColumn({
           borderBottom="2px solid"
           borderColor="rgba(89,65,177,0.28)"
           transition="all 0.2s ease"
+          _groupHover={{
+            color: "#7B4BC5",
+            borderColor: "#7B4BC5",
+          }}
           _hover={{
             color: "#7B4BC5",
             borderColor: "#7B4BC5",

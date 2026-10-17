@@ -137,7 +137,8 @@ export const Header = () => {
 
             {/* Diagnóstico destacado */}
             <Link
-              href="#diagnostico"
+              href="https://www.olmondconsulting.com/diagnostico"
+              isExternal
               display="inline-flex"
               alignItems="center"
               justifyContent="center"

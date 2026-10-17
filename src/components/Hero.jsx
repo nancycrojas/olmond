@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 import { CTA } from "../components/ui/CTA.jsx";
-import { EvaluationCTA } from "../components/ui/EvaluationCTA.jsx";
 import { SectionLabel } from "../components/ui/SectionShell.jsx";
 import { BRAND_GRADIENT } from "../lib/constants.js";
 
@@ -193,7 +192,6 @@ export const Hero = () => {
               >
                 <Box w="6px" h="6px" borderRadius="full" bg="#E253A8" />
               </Flex>
-
               <Text
                 fontSize={{ base: "md", md: "sm" }}
                 lineHeight="1.5"
@@ -211,10 +209,13 @@ export const Hero = () => {
               align="center"
               justify="center"
             >
-              <EvaluationCTA>Hacer el diagnóstico gratis ↗</EvaluationCTA>
-
-              <CTA as="a" href="#impact-sprint" variant="light">
-                Hablar con un asesor
+              <CTA
+                as="a"
+                href="https://wa.me/5491133872411?text=Hola%2C%20vi%20la%20web%20de%20Olmond%20Consulting%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20c%C3%B3mo%20aplicar%20IA%20en%20mi%20empresa."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hablar con un asesor ↗
               </CTA>
             </Flex>
 
@@ -225,7 +226,7 @@ export const Hero = () => {
               color="whiteAlpha.400"
               textAlign="center"
             >
-              Resultado inmediato. Sin compromiso.
+              Contanos qué necesitás y evaluamos cómo podemos ayudarte.
             </Text>
 
             <Box
