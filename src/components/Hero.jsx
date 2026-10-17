@@ -168,8 +168,7 @@ export const Hero = () => {
               color="whiteAlpha.700"
               textAlign="center"
             >
-              Te ayudamos a decidir por dónde empezar, a implementarlo y a que
-              tu equipo lo use.
+              Te guiamos paso a paso para que la IA funcione en tu negocio
             </Text>
 
             <Text
@@ -212,7 +211,7 @@ export const Hero = () => {
 
                 <Box as="span">Empezamos</Box>
               </Box>{" "}
-              por un proceso, no por una herramienta.
+              por un proceso, no por una herramienta
             </Text>
 
             <Flex
@@ -242,7 +241,7 @@ export const Hero = () => {
               color="whiteAlpha.400"
               textAlign="center"
             >
-              Contanos qué necesitás y evaluamos cómo podemos ayudarte.
+              Contanos qué necesitás y evaluamos cómo podemos ayudarte
             </Text>
 
             <Box

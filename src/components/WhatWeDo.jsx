@@ -5,6 +5,8 @@ import {
   Flex,
   Grid,
   Heading,
+  List,
+  ListItem,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -229,7 +231,10 @@ export const WhatWeDo = () => {
             base: 8,
             lg: 16,
           }}
-          alignItems="end"
+          alignItems={{
+            base: "start",
+            lg: "center",
+          }}
         >
           <Stack spacing={0}>
             <Text
@@ -261,24 +266,79 @@ export const WhatWeDo = () => {
               fontWeight="500"
               color="#171827"
             >
-              Elegí por dónde empezar: decidir, capacitar o construir.
+              Elegí por dónde empezar
             </Heading>
           </Stack>
 
-          <Text
+          <List
             mx={{ base: "auto", lg: 0 }}
             maxW="600px"
+            w="full"
             pb={{ lg: 2 }}
+            spacing={{ base: 3, md: 4 }}
             fontSize={{
-              base: "18px",
-              md: "20px",
+              base: "17px",
+              md: "19px",
+              lg: "18px",
             }}
-            lineHeight="1.7"
+            lineHeight="1.55"
             color="#666A86"
+            textAlign="left"
           >
-            Consultoría para decidir, capacitaciones para que tu equipo aprenda
-            y desarrollos para ponerlo en marcha. Podés empezar por cualquiera.
-          </Text>
+            <ListItem display="flex" alignItems="flex-start" gap={4}>
+              <Box
+                flexShrink={0}
+                w="7px"
+                h="7px"
+                mt="11px"
+                borderRadius="full"
+                bg="#777777"
+              />
+
+              <Text>
+                <Box as="span" fontWeight="700" color="#55576A">
+                  Consultoría
+                </Box>{" "}
+                para definir dónde y cómo aplicar IA.
+              </Text>
+            </ListItem>
+
+            <ListItem display="flex" alignItems="flex-start" gap={4}>
+              <Box
+                flexShrink={0}
+                w="7px"
+                h="7px"
+                mt="11px"
+                borderRadius="full"
+                bg="#777777"
+              />
+
+              <Text>
+                <Box as="span" fontWeight="700" color="#55576A">
+                  Capacitaciones
+                </Box>{" "}
+                para que tu equipo aprenda a usarla.
+              </Text>
+            </ListItem>
+
+            <ListItem display="flex" alignItems="flex-start" gap={4}>
+              <Box
+                flexShrink={0}
+                w="7px"
+                h="7px"
+                mt="11px"
+                borderRadius="full"
+                bg="#777777"
+              />
+
+              <Text>
+                <Box as="span" fontWeight="700" color="#55576A">
+                  Desarrollos a medida
+                </Box>{" "}
+                para llevarla a la práctica.
+              </Text>
+            </ListItem>
+          </List>
         </Grid>
 
         {/* Servicios */}
