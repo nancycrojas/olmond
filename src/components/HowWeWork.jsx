@@ -8,35 +8,35 @@ const steps = [
     number: "1",
     title: "Diagnóstico",
     description:
-      "Entendemos tu proceso y medimos el punto de partida: tiempo, volumen y errores.",
-    deliverable: "El punto de partida, medido.",
+      "Analizamos tu proceso y medimos tiempos, volumen de trabajo y errores para identificar oportunidades de mejora.",
+    deliverable: "Diagnóstico del proceso e indicadores iniciales.",
   },
   {
     number: "2",
-    title: "Plan",
+    title: "Planificación",
     description:
-      "Definimos objetivos, plazos y qué se va a medir para decir que funcionó.",
-    deliverable: "Objetivos y plazos por escrito.",
+      "Definimos el alcance, los objetivos, los plazos y los indicadores para evaluar los resultados.",
+    deliverable: "Plan de trabajo con objetivos, plazos y criterios de éxito.",
   },
   {
     number: "3",
     title: "Implementación",
     description:
-      "Desarrollamos la solución y capacitamos a tu equipo para usarla.",
-    deliverable: "Solución funcionando y equipo capacitado.",
+      "Desarrollamos, probamos y ponemos la solución en producción. Capacitamos a tu equipo para utilizarla.",
+    deliverable: "Solución en producción y equipo capacitado.",
   },
   {
     number: "4",
-    title: "Resultados",
+    title: "Evaluación de resultados",
     description:
-      "Comparamos contra el punto de partida y dejamos todo documentado.",
-    deliverable: "Comparación de resultados y documentación.",
+      "Medimos el impacto de la solución frente al diagnóstico inicial e identificamos ajustes y mejoras.",
+    deliverable: "Informe de resultados y documentación de la solución.",
   },
 ];
 
-function ProcessStep({ number, title, description, deliverable }) {
+const ProcessStep = ({ number, title, description, deliverable }) => {
   return (
-    <Box>
+    <Box w="full" minW={0} textAlign="center">
       {/* Línea superior */}
       <Box position="relative" h="1px" bg="whiteAlpha.200" mb={7}>
         <Box
@@ -53,30 +53,25 @@ function ProcessStep({ number, title, description, deliverable }) {
       </Box>
 
       {/* Número */}
-      {/* <Text
+      <Text
         fontSize={{
           base: "54px",
           md: "64px",
         }}
         lineHeight="1"
         fontWeight="300"
-        color="#706DE8"
-      >
-        {number}
-      </Text> */}
-      <Text
-        fontSize={{ base: "54px", md: "64px" }}
-        lineHeight="1"
-        fontWeight="300"
         bgImage={BRAND_GRADIENT}
         bgClip="text"
+        textAlign="center"
       >
         {number}
       </Text>
+
       {/* Título */}
       <Heading
         as="h3"
         mt={8}
+        mx="auto"
         fontSize={{
           base: "25px",
           md: "27px",
@@ -85,6 +80,7 @@ function ProcessStep({ number, title, description, deliverable }) {
         letterSpacing="-0.035em"
         fontWeight="600"
         color="white"
+        textAlign="center"
       >
         {title}
       </Heading>
@@ -92,23 +88,30 @@ function ProcessStep({ number, title, description, deliverable }) {
       {/* Descripción */}
       <Text
         mt={5}
+        mx="auto"
         minH={{ md: "115px" }}
-        maxW="300px"
+        maxW="340px"
         fontSize={{
           base: "16px",
           md: "17px",
         }}
         lineHeight="1.7"
         color="whiteAlpha.600"
+        textAlign="center"
       >
         {description}
       </Text>
 
       {/* Separador */}
-      <Box mt={6} borderTop="1px dashed" borderColor="whiteAlpha.200" />
+      <Box
+        mt={6}
+        w="full"
+        borderTop="1px dashed"
+        borderColor="whiteAlpha.200"
+      />
 
       {/* Entregable */}
-      <Box mt={6}>
+      <Box mt={6} textAlign="center">
         <Text
           fontSize="12px"
           fontWeight="800"
@@ -121,20 +124,22 @@ function ProcessStep({ number, title, description, deliverable }) {
 
         <Text
           mt={3}
-          maxW="300px"
+          mx="auto"
+          maxW="340px"
           fontSize={{
             base: "15px",
             md: "16px",
           }}
           lineHeight="1.6"
           color="whiteAlpha.800"
+          textAlign="center"
         >
           {deliverable}
         </Text>
       </Box>
     </Box>
   );
-}
+};
 
 export const HowWeWork = () => {
   return (
