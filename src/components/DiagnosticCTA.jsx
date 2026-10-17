@@ -106,6 +106,7 @@ export const DiagnosticCTA = () => {
                 base: 6,
                 md: 7,
               }}
+              mx={{ base: "auto", lg: 0 }}
               maxW="600px"
               fontSize={{
                 base: "44px",
@@ -128,6 +129,7 @@ export const DiagnosticCTA = () => {
             </Heading>
 
             <Text
+              mx={{ base: "auto", lg: 0 }}
               mt={{
                 base: 6,
                 md: 7,

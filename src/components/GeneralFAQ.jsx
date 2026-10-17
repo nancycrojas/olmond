@@ -98,6 +98,7 @@ export const GeneralFAQ = () => {
                 base: 6,
                 md: 7,
               }}
+              mx={{ base: "auto", lg: 0 }}
               maxW="520px"
               fontSize={{
                 base: "40px",

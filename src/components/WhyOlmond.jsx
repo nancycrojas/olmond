@@ -150,6 +150,7 @@ export const WhyOlmond = () => {
                 base: 6,
                 md: 7,
               }}
+              mx={{ base: "auto", lg: 0 }}
               maxW="680px"
               fontSize={{
                 base: "40px",
@@ -167,6 +168,7 @@ export const WhyOlmond = () => {
           </Box>
 
           <Text
+            mx={{ base: "auto", lg: 0 }}
             maxW="550px"
             pb={{ lg: 2 }}
             fontSize={{

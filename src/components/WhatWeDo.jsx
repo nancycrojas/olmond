@@ -293,6 +293,7 @@ export const WhatWeDo = () => {
             <Heading
               as="h2"
               mt={7}
+              mx={{ base: "auto", lg: 0 }}
               maxW="720px"
               fontSize={{
                 base: "40px",
@@ -310,6 +311,7 @@ export const WhatWeDo = () => {
           </Stack>
 
           <Text
+            mx={{ base: "auto", lg: 0 }}
             maxW="600px"
             pb={{ lg: 2 }}
             fontSize={{
