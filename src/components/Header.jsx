@@ -231,7 +231,8 @@ export const Header = () => {
             ))}
 
             <Link
-              href="#diagnostico"
+              href="https://www.olmondconsulting.com/diagnostico"
+              isExternal
               onClick={menu.onClose}
               display="flex"
               alignItems="center"
