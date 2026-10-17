@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -179,28 +171,48 @@ export const Hero = () => {
               tu equipo lo use.
             </Text>
 
-            <HStack mt={5} spacing={3} justify="center" align="center">
-              <Flex
-                flexShrink={0}
-                w="16px"
-                h="16px"
-                borderRadius="full"
-                align="center"
-                justify="center"
-                bg="rgba(223, 76, 165, 0.14)"
-                boxShadow="0 0 16px rgba(223,76,165,0.2)"
+            <Text
+              mt={5}
+              mx="auto"
+              px={{ base: 3, sm: 0 }}
+              fontSize={{ base: "md", md: "sm" }}
+              lineHeight="1.5"
+              fontWeight="700"
+              color="whiteAlpha.900"
+              textAlign="center"
+            >
+              <Box
+                as="span"
+                display="inline-flex"
+                alignItems="center"
+                gap="8px"
+                whiteSpace="nowrap"
+                verticalAlign="middle"
               >
-                <Box w="6px" h="6px" borderRadius="full" bg="#E253A8" />
-              </Flex>
-              <Text
-                fontSize={{ base: "md", md: "sm" }}
-                lineHeight="1.5"
-                fontWeight="700"
-                color="whiteAlpha.900"
-              >
-                Empezamos por un proceso, no por una herramienta.
-              </Text>
-            </HStack>
+                <Flex
+                  as="span"
+                  flexShrink={0}
+                  w="16px"
+                  h="16px"
+                  borderRadius="full"
+                  align="center"
+                  justify="center"
+                  bg="rgba(223, 76, 165, 0.14)"
+                  boxShadow="0 0 16px rgba(223,76,165,0.2)"
+                >
+                  <Box
+                    as="span"
+                    w="6px"
+                    h="6px"
+                    borderRadius="full"
+                    bg="#E253A8"
+                  />
+                </Flex>
+
+                <Box as="span">Empezamos</Box>
+              </Box>{" "}
+              por un proceso, no por una herramienta.
+            </Text>
 
             <Flex
               mt={{ base: 7, md: 8 }}

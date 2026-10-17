@@ -189,6 +189,7 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
             <Heading
               as="h2"
               mt={{ base: 6, md: 7 }}
+              mx={{ base: "auto", lg: 0 }}
               maxW="760px"
               fontSize={{
                 base: "36px",
@@ -204,6 +205,7 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
             </Heading>
 
             <Text
+              mx={{ base: "auto", lg: 0 }}
               mt={{ base: 6, md: 8 }}
               maxW="800px"
               fontSize={{ base: "lg", md: "20px" }}
