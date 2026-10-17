@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { CTA } from "../components/ui/CTA.jsx";
 import { SectionLabel } from "../components/ui/SectionShell.jsx";
@@ -227,7 +228,10 @@ export const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Hablar con un asesor ↗
+                <Flex align="center" justify="center" gap={2.5}>
+                  <Text as="span">Hablar con un asesor</Text>
+                  <Box as={FaWhatsapp} boxSize="22px" flexShrink={0} />
+                </Flex>
               </CTA>
             </Flex>
 

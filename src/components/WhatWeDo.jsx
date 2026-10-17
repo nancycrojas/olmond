@@ -5,10 +5,10 @@ import {
   Flex,
   Grid,
   Heading,
-  Link,
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { FaWhatsapp } from "react-icons/fa";
 import { LuCode2, LuGitBranch, LuMonitor } from "react-icons/lu";
 
 import { BRAND_GRADIENT } from "../lib/constants.js";
@@ -24,8 +24,6 @@ const services = [
       "Un diagnóstico, una lista priorizada de oportunidades y una hoja de ruta con objetivos medibles.",
     convenient:
       "Querés empezar con criterio y evitar inversiones que no rinden.",
-    cta: "Hablar con un asesor",
-    href: "mailto:contacto@olmondconsulting.com?subject=Consulta%20sobre%20consultoría%20de%20IA",
   },
   {
     icon: LuMonitor,
@@ -36,8 +34,6 @@ const services = [
     receives:
       "Casos resueltos con tu propia información, buenas prácticas y reglas de uso para toda la empresa.",
     convenient: "Tu equipo ya usa IA, pero cada persona lo hace a su manera.",
-    cta: "Solicitar propuesta de workshop",
-    href: "mailto:contacto@olmondconsulting.com?subject=Consulta%20sobre%20capacitaciones%20de%20IA",
   },
   {
     icon: LuCode2,
@@ -48,8 +44,6 @@ const services = [
     receives:
       "La solución funcionando, documentada y probada, y tu equipo preparado para operarla.",
     convenient: "Ya sabés qué proceso querés mejorar.",
-    cta: "Consultar por un desarrollo",
-    href: "mailto:contacto@olmondconsulting.com?subject=Consulta%20sobre%20desarrollo%20de%20IA",
   },
 ];
 
@@ -60,8 +54,6 @@ function ServiceColumn({
   description,
   receives,
   convenient,
-  cta,
-  href,
   index,
 }) {
   return (
@@ -206,43 +198,6 @@ function ServiceColumn({
           {convenient}
         </Text>
       </Box>
-
-      {/* CTA siempre abajo */}
-      <Box mt="auto" pt={9}>
-        <Link
-          href={href}
-          display="inline-flex"
-          alignItems="center"
-          gap={2}
-          pb={2}
-          fontSize={{
-            base: "16px",
-            md: "17px",
-          }}
-          lineHeight="1.3"
-          fontWeight="700"
-          color="#5941B1"
-          borderBottom="2px solid"
-          borderColor="rgba(89,65,177,0.28)"
-          transition="all 0.2s ease"
-          _groupHover={{
-            color: "#7B4BC5",
-            borderColor: "#7B4BC5",
-          }}
-          _hover={{
-            color: "#7B4BC5",
-            borderColor: "#7B4BC5",
-            textDecoration: "none",
-            transform: "translateY(-2px)",
-          }}
-        >
-          {cta}
-
-          <Box as="span" fontSize="18px" lineHeight="1" aria-hidden="true">
-            ↗
-          </Box>
-        </Link>
-      </Box>
     </Flex>
   );
 }
@@ -362,6 +317,63 @@ export const WhatWeDo = () => {
               <ServiceColumn key={service.title} {...service} index={index} />
             ))}
           </Grid>
+          <Flex
+            mt={{ base: 10, md: 12 }}
+            direction="column"
+            align="center"
+            justify="center"
+            textAlign="center"
+          >
+            <Text
+              mb={4}
+              fontSize={{
+                base: "15px",
+                md: "17px",
+              }}
+              lineHeight="1.6"
+              fontWeight="700"
+              color="#4F5268"
+            >
+              Contanos qué necesitás y te ayudamos a dar el próximo paso.
+            </Text>
+
+            <Flex
+              as="a"
+              href="https://wa.me/5491133872411?text=Hola%2C%20vi%20la%20web%20de%20Olmond%20Consulting%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20c%C3%B3mo%20aplicar%20IA%20en%20mi%20empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              align="center"
+              justify="center"
+              gap={2.5}
+              minW={{
+                base: "280px",
+                sm: "320px",
+              }}
+              minH="52px"
+              px={8}
+              borderRadius="full"
+              bgImage={BRAND_GRADIENT}
+              color="white"
+              fontSize={{
+                base: "16px",
+                md: "17px",
+              }}
+              fontWeight="700"
+              textDecoration="none"
+              boxShadow="0 12px 30px rgba(103, 78, 210, 0.18)"
+              transition="all 0.25s ease"
+              _hover={{
+                textDecoration: "none",
+                color: "white",
+                transform: "translateY(-2px)",
+                boxShadow: "0 16px 36px rgba(103, 78, 210, 0.26)",
+              }}
+            >
+              <Text as="span">Hablar con un asesor</Text>
+
+              <Box as={FaWhatsapp} boxSize="21px" flexShrink={0} />
+            </Flex>
+          </Flex>
         </Box>
       </Container>
     </Box>
