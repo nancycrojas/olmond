@@ -68,6 +68,7 @@ function ServiceColumn({
     <Flex
       role="group"
       position="relative"
+      zIndex={1}
       direction="column"
       h="full"
       px={{
@@ -88,10 +89,12 @@ function ServiceColumn({
         md: "none",
       }}
       borderColor="#E1E3EC"
-      transition="all 0.3s ease"
+      transition="all 0.3s cubic-bezier(0.22, 1, 0.36, 1)"
+      transformOrigin="center"
       _hover={{
-        bg: "#FAF9FF",
-        boxShadow: "0 18px 55px rgba(91, 65, 177, 0.08)",
+        bg: "#F1EDFF",
+        zIndex: 2,
+        boxShadow: "0 22px 60px rgba(91, 65, 177, 0.16)",
       }}
     >
       {/* Ícono */}

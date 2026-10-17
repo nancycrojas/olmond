@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Heading, Stack, Text } from "@chakra-ui/react";
 
 import { CTA } from "../components/ui/CTA.jsx";
-import { EvaluationCTA } from "../components/ui/EvaluationCTA.jsx";
 import { BRAND_GRADIENT } from "../lib/constants.js";
 
 export const DiagnosticCTA = () => {
@@ -160,7 +159,11 @@ export const DiagnosticCTA = () => {
               lg: "auto",
             }}
           >
-            <EvaluationCTA
+            <CTA
+              as="a"
+              href="/diagnostico"
+              target="_blank"
+              rel="noopener noreferrer"
               w="full"
               minH="68px"
               fontSize={{
@@ -169,20 +172,6 @@ export const DiagnosticCTA = () => {
               }}
             >
               Hacer el diagnóstico gratis &nbsp; ↗
-            </EvaluationCTA>
-
-            <CTA
-              as="a"
-              href="mailto:contacto@olmondconsulting.com?subject=Quiero%20hablar%20con%20un%20asesor"
-              variant="light"
-              w="full"
-              minH="68px"
-              fontSize={{
-                base: "md",
-                md: "18px",
-              }}
-            >
-              Hablar con un asesor
             </CTA>
 
             <Text
