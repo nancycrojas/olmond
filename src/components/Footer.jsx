@@ -2,13 +2,14 @@ import {
   Box,
   Container,
   Flex,
-  HStack,
+  Grid,
   Image,
   Link,
+  Stack,
   Text,
 } from "@chakra-ui/react";
 import { FaLinkedinIn } from "react-icons/fa";
-import { LuMail } from "react-icons/lu";
+import { LuArrowUp, LuMail } from "react-icons/lu";
 
 import logo from "../assets/logo-olmond.png";
 
@@ -18,124 +19,298 @@ const footerLinks = [
     href: "#que-hacemos",
   },
   {
-    label: "Nosotros",
-    href: "#por-que-olmond",
+    label: "Cómo trabajamos",
+    href: "#como-trabajamos",
   },
   {
-    label: "Diagnóstico",
-    href: "#diagnostico",
+    label: "Nosotros",
+    href: "#nosotros",
   },
 ];
 
 export const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Box as="footer" position="relative" bg="#101220" color="white">
+    <Box
+      as="footer"
+      position="relative"
+      overflow="hidden"
+      bg="#0E101D"
+      color="white"
+    >
+      {/* Fondo sutil */}
+      <Box
+        position="absolute"
+        inset={0}
+        pointerEvents="none"
+        bgImage={`
+          radial-gradient(
+            circle at 12% 30%,
+            rgba(83, 91, 190, 0.08) 0%,
+            transparent 34%
+          ),
+          radial-gradient(
+            circle at 85% 100%,
+            rgba(109, 68, 185, 0.05) 0%,
+            transparent 32%
+          )
+        `}
+      />
+
       <Container
         maxW="6xl"
+        position="relative"
         py={{
-          base: 10,
-          md: 12,
-          lg: 14,
+          base: 12,
+          md: 14,
+          lg: 16,
         }}
       >
-        {/* Parte superior */}
-        <Flex
-          align={{
-            base: "flex-start",
-            md: "center",
-          }}
-          justify="space-between"
-          direction={{
-            base: "column",
-            md: "row",
+        {/* =========================
+            PARTE SUPERIOR
+        ========================== */}
+        <Grid
+          templateColumns={{
+            base: "1fr",
+            md: "1.25fr 0.75fr",
+            lg: "1.4fr 1fr",
           }}
           gap={{
-            base: 9,
-            md: 8,
+            base: 12,
+            md: 12,
+            lg: 20,
           }}
+          alignItems="center"
         >
-          {/* Logo */}
-          <Link
-            href="#inicio"
-            aria-label="Olmond Consulting, inicio"
-            display="inline-flex"
-            alignItems="center"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <Image
-              src={logo}
-              alt="Olmond Consulting"
-              h={{
-                base: "56px",
-                md: "64px",
+          {/* Marca */}
+          <Box>
+            <Link
+              href="#inicio"
+              aria-label="Olmond Consulting, inicio"
+              display="inline-flex"
+              alignItems="center"
+              _hover={{
+                textDecoration: "none",
               }}
-              w="auto"
-              maxW={{
-                base: "250px",
-                md: "300px",
-              }}
-              objectFit="contain"
-              objectPosition="left center"
-            />
-          </Link>
+            >
+              <Image
+                src={logo}
+                alt="Olmond Consulting"
+                h={{
+                  base: "62px",
+                  md: "70px",
+                  lg: "76px",
+                }}
+                w="auto"
+                maxW={{
+                  base: "260px",
+                  md: "300px",
+                }}
+                objectFit="contain"
+                objectPosition="left center"
+              />
+            </Link>
 
-          {/* Navegación */}
-          <Flex
-            as="nav"
-            aria-label="Navegación del pie"
-            align={{
-              base: "flex-start",
-              md: "center",
+            <Text
+              mt={4}
+              maxW="440px"
+              fontSize={{
+                base: "15px",
+                md: "16px",
+              }}
+              lineHeight="1.6"
+              color="whiteAlpha.600"
+            >
+              Consultoría, capacitación y desarrollo en IA.
+            </Text>
+          </Box>
+
+          {/* Navegación + contacto */}
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              sm: "1fr 1fr",
             }}
-            direction={{
-              base: "column",
-              sm: "row",
-            }}
-            wrap="wrap"
             gap={{
-              base: 4,
-              sm: 6,
-              lg: 8,
+              base: 10,
+              sm: 0,
             }}
+            alignItems="start"
           >
-            {footerLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                fontFamily="heading"
+            {/* Explorá */}
+            <Stack
+              spacing={4}
+              pr={{
+                sm: 8,
+                lg: 12,
+              }}
+            >
+              <Text
                 fontSize={{
-                  base: "15px",
-                  md: "16px",
+                  base: "16px",
+                  md: "17px",
                 }}
-                fontWeight="600"
-                color="whiteAlpha.800"
-                transition="color 0.2s ease"
-                _hover={{
-                  color: "white",
-                  textDecoration: "none",
-                }}
+                fontWeight="700"
+                color="white"
               >
-                {item.label}
-              </Link>
-            ))}
-          </Flex>
-        </Flex>
+                Explorá
+              </Text>
 
-        {/* Línea */}
+              <Stack spacing={2.5}>
+                {footerLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    width="fit-content"
+                    fontSize={{
+                      base: "15px",
+                      md: "16px",
+                    }}
+                    lineHeight="1.5"
+                    color="whiteAlpha.600"
+                    transition="all 0.2s ease"
+                    _hover={{
+                      color: "white",
+                      textDecoration: "none",
+                      transform: "translateX(3px)",
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </Stack>
+            </Stack>
+
+            {/* Conectemos */}
+            <Stack
+              spacing={4}
+              pl={{
+                base: 0,
+                sm: 8,
+                lg: 12,
+              }}
+              borderLeft={{
+                base: "none",
+                sm: "1px solid",
+              }}
+              borderColor="whiteAlpha.100"
+              minH={{
+                sm: "140px",
+              }}
+            >
+              <Text
+                fontSize={{
+                  base: "16px",
+                  md: "17px",
+                }}
+                fontWeight="700"
+                color="white"
+              >
+                Conectemos
+              </Text>
+
+              <Stack spacing={4}>
+                {/* LinkedIn */}
+                <Link
+                  href="https://www.linkedin.com/company/olmond-consulting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  display="flex"
+                  alignItems="center"
+                  gap={4}
+                  width="fit-content"
+                  color="whiteAlpha.600"
+                  transition="all 0.2s ease"
+                  _hover={{
+                    color: "white",
+                    textDecoration: "none",
+                    transform: "translateX(3px)",
+                  }}
+                >
+                  <Flex
+                    w="28px"
+                    h="28px"
+                    align="center"
+                    justify="center"
+                    flexShrink={0}
+                    color="whiteAlpha.800"
+                  >
+                    <FaLinkedinIn size={23} />
+                  </Flex>
+
+                  <Text
+                    fontSize={{
+                      base: "15px",
+                      md: "16px",
+                    }}
+                  >
+                    LinkedIn
+                  </Text>
+                </Link>
+
+                {/* Email */}
+                <Link
+                  href="mailto:hola@olmondconsulting.com"
+                  display="flex"
+                  alignItems="center"
+                  gap={4}
+                  width="fit-content"
+                  color="whiteAlpha.600"
+                  transition="all 0.2s ease"
+                  _hover={{
+                    color: "white",
+                    textDecoration: "none",
+                    transform: "translateX(3px)",
+                  }}
+                >
+                  <Flex
+                    w="28px"
+                    h="28px"
+                    align="center"
+                    justify="center"
+                    flexShrink={0}
+                    color="whiteAlpha.800"
+                  >
+                    <LuMail size={24} strokeWidth={1.7} />
+                  </Flex>
+
+                  <Text
+                    fontSize={{
+                      base: "15px",
+                      md: "16px",
+                    }}
+                  >
+                    Escribinos
+                  </Text>
+                </Link>
+              </Stack>
+            </Stack>
+          </Grid>
+        </Grid>
+
+        {/* =========================
+            DIVISOR
+        ========================== */}
         <Box
           mt={{
-            base: 9,
-            md: 10,
+            base: 12,
+            md: 14,
           }}
           borderTop="1px solid"
           borderColor="whiteAlpha.100"
         />
 
-        {/* Parte inferior */}
+        {/* =========================
+            PARTE INFERIOR
+        ========================== */}
         <Flex
-          mt={6}
+          mt={7}
           align={{
             base: "flex-start",
             sm: "center",
@@ -145,69 +320,50 @@ export const Footer = () => {
             base: "column",
             sm: "row",
           }}
-          gap={5}
+          gap={6}
         >
           <Text
             fontSize={{
               base: "13px",
               md: "14px",
             }}
-            color="whiteAlpha.600"
+            lineHeight="1.6"
+            color="whiteAlpha.500"
           >
-            Copyright © {new Date().getFullYear()} Olmond Consulting. Todos los
-            derechos reservados.
+            © {new Date().getFullYear()} Olmond Consulting. Todos los derechos
+            reservados.
           </Text>
 
-          {/* Redes y contacto */}
-          <HStack spacing={3}>
-            <Link
-              href="https://www.linkedin.com/company/olmond-consulting"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Olmond Consulting en LinkedIn"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              w="40px"
-              h="40px"
-              borderRadius="full"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              color="whiteAlpha.700"
-              transition="all 0.2s ease"
-              _hover={{
-                color: "white",
-                borderColor: "whiteAlpha.400",
-                bg: "whiteAlpha.100",
-                transform: "translateY(-2px)",
+          {/* Volver arriba */}
+          <Flex
+            as="button"
+            type="button"
+            onClick={scrollToTop}
+            align="center"
+            gap={3}
+            p={0}
+            bg="transparent"
+            border="none"
+            color="whiteAlpha.500"
+            cursor="pointer"
+            fontFamily="inherit"
+            transition="all 0.2s ease"
+            _hover={{
+              color: "white",
+              transform: "translateY(-2px)",
+            }}
+          >
+            <Text
+              fontSize={{
+                base: "13px",
+                md: "14px",
               }}
             >
-              <FaLinkedinIn size={18} />
-            </Link>
+              Volver arriba
+            </Text>
 
-            <Link
-              href="mailto:hola@olmondconsulting.com"
-              aria-label="Enviar email a Olmond Consulting"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              w="40px"
-              h="40px"
-              borderRadius="full"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              color="whiteAlpha.700"
-              transition="all 0.2s ease"
-              _hover={{
-                color: "white",
-                borderColor: "whiteAlpha.400",
-                bg: "whiteAlpha.100",
-                transform: "translateY(-2px)",
-              }}
-            >
-              <LuMail size={18} />
-            </Link>
-          </HStack>
+            <LuArrowUp size={20} strokeWidth={1.6} />
+          </Flex>
         </Flex>
       </Container>
     </Box>
