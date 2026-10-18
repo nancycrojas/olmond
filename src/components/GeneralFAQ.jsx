@@ -14,29 +14,30 @@ import { LuMinus, LuPlus } from "react-icons/lu";
 
 const faqs = [
   {
+    question:
+      "¿Por dónde empiezo si todavía no sé cómo aplicar IA en mi empresa?",
+    answer:
+      "Te ayudamos a identificar qué conviene mejorar y qué necesitás para avanzar: una consultoría para definir prioridades, una capacitación para preparar a tu equipo o un desarrollo para resolver un proceso concreto. Podés empezar con nuestro diagnóstico gratuito para tener una primera orientación.",
+  },
+  {
     question: "¿Necesito conocimientos técnicos?",
     answer:
-      "No. Vos conocés tu negocio y nosotros lo traducimos a lo técnico, sin jerga.",
+      "No. Vos y tu equipo conocen el negocio; nosotros aportamos el conocimiento técnico y te explicamos las opciones con claridad. Las capacitaciones y las soluciones se adaptan a las tareas reales de quienes van a usarlas.",
   },
   {
-    question: "¿Cuánto cuesta?",
+    question: "¿Cuánto cuesta trabajar con Olmond?",
     answer:
-      "Depende del alcance. Antes de empezar te enviamos una propuesta por escrito con alcance y plazos.",
+      "La inversión depende del servicio, el alcance y la complejidad del trabajo. Antes de empezar, recibís una propuesta por escrito con el precio, los entregables y los plazos, para que sepas qué estás contratando y puedas decidir con información clara.",
   },
   {
-    question: "¿Cuánto tiempo requiere de mi equipo?",
+    question: "¿Cuánto tiempo tiene que dedicar mi equipo?",
     answer:
-      "Una persona responsable participa en el diagnóstico, las validaciones y las pruebas. La dedicación se acuerda antes de arrancar.",
+      "La participación depende del servicio. En una implementación, necesitamos una persona de referencia que conozca el proceso y participe en las validaciones y pruebas. Acordamos la dedicación y los momentos de trabajo antes de empezar.",
   },
   {
-    question: "¿Qué pasa con mis datos?",
+    question: "¿Pueden trabajar con las herramientas que ya usamos?",
     answer:
-      "Definimos qué datos se usan, dónde quedan y quién accede, antes de tocar nada.",
-  },
-  {
-    question: "¿Y si mi proceso no califica?",
-    answer:
-      "Te lo decimos y te sugerimos qué ordenar primero. No te proponemos algo que no va a funcionar.",
+      "Buscamos aprovechar las herramientas que ya usa tu equipo. Antes de definir el desarrollo, revisamos qué sistemas pueden conectarse con la solución y qué ajustes harían falta. Las posibilidades dependen de cada herramienta y de lo que necesite el proyecto.",
   },
 ];
 
