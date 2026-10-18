@@ -267,6 +267,7 @@ export const Hero = () => {
                   md: "17px",
                 }}
                 lineHeight="1.5"
+                textAlign="left"
               >
                 <Text>
                   <Box as="span" color="white" fontWeight="700">
