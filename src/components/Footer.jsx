@@ -103,9 +103,9 @@ export const Footer = () => {
                 src={logo}
                 alt="Olmond Consulting"
                 h={{
-                  base: "62px",
-                  md: "70px",
-                  lg: "76px",
+                  base: "52px",
+                  md: "58px",
+                  lg: "68px",
                 }}
                 w="auto"
                 maxW={{
