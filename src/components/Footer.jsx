@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuArrowUp, LuMail } from "react-icons/lu";
 
 import logo from "../assets/logo-olmond.png";
@@ -251,6 +251,44 @@ export const Footer = () => {
                     }}
                   >
                     LinkedIn
+                  </Text>
+                </Link>
+
+                {/* Instagram */}
+                <Link
+                  href="https://www.instagram.com/olmondconsulting/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  display="flex"
+                  alignItems="center"
+                  gap={4}
+                  width="fit-content"
+                  color="whiteAlpha.600"
+                  transition="all 0.2s ease"
+                  _hover={{
+                    color: "white",
+                    textDecoration: "none",
+                    transform: "translateX(3px)",
+                  }}
+                >
+                  <Flex
+                    w="28px"
+                    h="28px"
+                    align="center"
+                    justify="center"
+                    flexShrink={0}
+                    color="whiteAlpha.800"
+                  >
+                    <FaInstagram size={23} />
+                  </Flex>
+
+                  <Text
+                    fontSize={{
+                      base: "15px",
+                      md: "16px",
+                    }}
+                  >
+                    Instagram
                   </Text>
                 </Link>
 
