@@ -1,0 +1,30 @@
+const diagnosticScored = $('Calcular Puntaje y Nivel').item.json;
+const diagnosticSavedRow = $('Guardar Lead en CRM').item.json;
+const diagnosticGmailReceipt = $input.item.json;
+const diagnosticRowId = diagnosticSavedRow?.id;
+if (!(Number.isSafeInteger(diagnosticRowId) && diagnosticRowId > 0)
+  && !(typeof diagnosticRowId === 'string' && /^[1-9][0-9]*$/.test(diagnosticRowId))) {
+  throw new Error('CRM_RECEIPT_MISSING');
+}
+let diagnosticSavedNotes;
+try {
+  diagnosticSavedNotes = JSON.parse(diagnosticSavedRow.notas);
+} catch {
+  throw new Error('CRM_RECEIPT_MISMATCH');
+}
+if (diagnosticSavedRow.email !== diagnosticScored.email || diagnosticSavedNotes.submission_id !== diagnosticScored.submission_id) {
+  throw new Error('CRM_RECEIPT_MISMATCH');
+}
+if (typeof diagnosticGmailReceipt?.id !== 'string' || !/^[A-Za-z0-9_-]{1,256}$/.test(diagnosticGmailReceipt.id) || diagnosticGmailReceipt.error) {
+  throw new Error('GMAIL_RECEIPT_MISSING');
+}
+return {
+  json: {
+    ok: true,
+    crm_saved: true,
+    email_status: 'sent',
+    submission_id: diagnosticScored.submission_id,
+    crm_row_id: String(diagnosticRowId),
+    email_message_id: diagnosticGmailReceipt.id,
+  },
+};

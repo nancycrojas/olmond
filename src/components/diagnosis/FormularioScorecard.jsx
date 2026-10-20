@@ -2,7 +2,9 @@ import {
   Alert,
   AlertIcon,
   Box,
+  Checkbox,
   FormControl,
+  FormErrorMessage,
   FormLabel,
   Heading,
   Input,
@@ -12,10 +14,15 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { LuMailCheck } from "react-icons/lu";
 
-import { FORM_FIELDS, N8N_WEBHOOK_URL } from "../../lib/constants.js";
+import { FORM_FIELDS } from "../../lib/constants.js";
+import {
+  createDiagnosisSubmission,
+  getDiagnosisErrors,
+  submitDiagnosis,
+} from "../../lib/diagnosis-submission.js";
 import { CTA } from "../ui/CTA.jsx";
 import { SectionLabel } from "../ui/SectionShell.jsx";
 
@@ -27,8 +34,12 @@ const REQUIRED_LABELS = FORM_FIELDS.filter((f) => f.required).map(
 
 export function FormularioScorecard() {
   const [values, setValues] = useState({});
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
   const [touchedSubmit, setTouchedSubmit] = useState(false);
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const submission = useRef(null);
+  const sending = useRef(false);
+  const errors = getDiagnosisErrors(values);
 
   const answeredRequired = useMemo(
     () =>
@@ -47,20 +58,24 @@ export function FormularioScorecard() {
     setValues((v) => ({ ...v, [label]: e.target.value }));
 
   const handleSubmit = async () => {
+    if (sending.current || status === "pending") return;
     setTouchedSubmit(true);
-    if (missing.length > 0) return;
+    if (Object.keys(errors).length > 0) return;
+    try {
+      submission.current = createDiagnosisSubmission(values, {
+        marketingConsent,
+      });
+    } catch {
+      setStatus("error");
+      return;
+    }
+    sending.current = true;
     setStatus("sending");
     try {
-      const res = await fetch(N8N_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      setStatus("success");
-    } catch (err) {
-      console.error("Error enviando diagnóstico:", err);
-      setStatus("error");
+      const result = await submitDiagnosis(submission.current);
+      setStatus(result.status);
+    } finally {
+      sending.current = false;
     }
   };
 
@@ -83,13 +98,11 @@ export function FormularioScorecard() {
             mb={6}
           />
           <Heading as="h2" size="lg" fontWeight="800" mb={4}>
-            ¡Listo! Tu diagnóstico ya está viajando a tu correo
+            Guardamos tus respuestas y enviamos tu diagnóstico
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={6}>
-            Revisá también las pestañas Promociones o Spam. Un dato mientras
-            llega: el 80% de las pymes que completan este diagnóstico tienen al
-            menos una tarea que les consume más de 5 horas semanales y se puede
-            automatizar en menos de un mes.
+            El servicio de correo confirmó el envío. Revisá tu bandeja de
+            entrada y también las pestañas Promociones o Spam.
           </Text>
           <Text fontSize="lg" fontWeight="600">
             ¿Querés saber cuál es la tuya? Respondé el correo del resultado con
@@ -137,15 +150,13 @@ export function FormularioScorecard() {
 
         <Stack spacing={6}>
           {FORM_FIELDS.map((field) => {
-            const isInvalid =
-              touchedSubmit &&
-              field.required &&
-              (values[field.label] ?? "") === "";
+            const isInvalid = touchedSubmit && Boolean(errors[field.label]);
             return (
               <FormControl
                 key={field.label}
                 isRequired={field.required}
                 isInvalid={isInvalid}
+                isDisabled={status === "sending" || status === "pending"}
               >
                 <FormLabel fontWeight="600">{field.label}</FormLabel>
                 {field.type === "select" ? (
@@ -172,6 +183,9 @@ export function FormularioScorecard() {
                     focusBorderColor="brand.500"
                   />
                 )}
+                {isInvalid ? (
+                  <FormErrorMessage>{errors[field.label]}</FormErrorMessage>
+                ) : null}
               </FormControl>
             );
           })}
@@ -187,21 +201,42 @@ export function FormularioScorecard() {
           {status === "error" ? (
             <Alert status="error" borderRadius="xl">
               <AlertIcon />
-              No pudimos enviar tus respuestas. Revisá tu conexión y probá de
-              nuevo — tus respuestas siguen cargadas.
+              No pudimos preparar el envío. Tus respuestas siguen cargadas.
             </Alert>
           ) : null}
+
+          {status === "pending" ? (
+            <Alert status="warning" borderRadius="xl">
+              <AlertIcon />
+              <Box>
+                No pudimos confirmar el guardado y el envío del correo. Para
+                evitar duplicados, no vuelvas a enviarlo. Contactanos e indicá
+                esta referencia: {submission.current?.submission_id}.
+              </Box>
+            </Alert>
+          ) : null}
+
+          <Checkbox
+            isChecked={marketingConsent}
+            isDisabled={status === "sending" || status === "pending"}
+            onChange={(event) => setMarketingConsent(event.target.checked)}
+          >
+            Quiero recibir contenido y propuestas comerciales de Olmond. Puedo
+            darme de baja cuando quiera.
+          </Checkbox>
 
           <CTA
             onClick={handleSubmit}
             isLoading={status === "sending"}
+            isDisabled={status === "pending"}
             loadingText="Enviando..."
           >
             Ver mi diagnóstico
           </CTA>
           <Text fontSize="sm" color="gray.500">
-            Tus datos se usan solo para enviarte el resultado y contenido
-            relacionado. Sin spam, desuscripción con un click.
+            Guardamos tus respuestas para preparar tu diagnóstico y atender tu
+            consulta. El envío del resultado no requiere aceptar comunicaciones
+            comerciales.
           </Text>
         </Stack>
       </Box>
