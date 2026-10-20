@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test:social-card": "node --test api/social/card.contract.test.mjs"
+    "test:social-card": "node --test api/social/card.contract.test.mjs",
+    "test:diagnostico": "node src/lib/diagnosis-submission.test.mjs",
+    "test:diagnostico:n8n": "node scripts/n8n-diagnostico/patch-workflow.test.mjs"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

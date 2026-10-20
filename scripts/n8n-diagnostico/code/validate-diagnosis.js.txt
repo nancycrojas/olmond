@@ -1,0 +1,65 @@
+const diagnosticInput = $input.item.json;
+if (!diagnosticInput || typeof diagnosticInput !== 'object' || Array.isArray(diagnosticInput)) {
+  throw new Error('PAYLOAD_INVALIDO');
+}
+if (JSON.stringify(diagnosticInput).length > 16000) {
+  throw new Error('PAYLOAD_DEMASIADO_GRANDE');
+}
+const diagnosticMetadataKeys = ['submission_id', 'source', 'consentimiento_marketing', '__diagnostico_web', 'submittedAt', 'formMode'];
+const diagnosticKnownKeys = new Set([...diagnosticFields.map((field) => field.label), ...diagnosticMetadataKeys]);
+for (const diagnosticKey of Object.keys(diagnosticInput)) {
+  if (!diagnosticKnownKeys.has(diagnosticKey)) throw new Error('CAMPO_DESCONOCIDO');
+}
+const diagnosticExactAnswers = {};
+const validatedDiagnosticAnswers = {};
+for (const diagnosticField of diagnosticFields) {
+  const diagnosticAnswer = diagnosticInput[diagnosticField.label];
+  if (diagnosticAnswer === undefined) {
+    if (diagnosticField.required) throw new Error('CAMPO_REQUERIDO');
+    continue;
+  }
+  if (typeof diagnosticAnswer !== 'string') throw new Error('TIPO_INVALIDO');
+  if (diagnosticAnswer.length > diagnosticField.maxLength) throw new Error('CAMPO_DEMASIADO_LARGO');
+  if (/[\u0000-\u001f\u007f]/.test(diagnosticAnswer)) throw new Error('CARACTERES_INVALIDOS');
+  const diagnosticTrimmed = diagnosticAnswer.trim();
+  if (diagnosticField.required && !diagnosticTrimmed) throw new Error('CAMPO_REQUERIDO');
+  if (diagnosticField.options && diagnosticTrimmed && !diagnosticField.options.includes(diagnosticTrimmed)) {
+    throw new Error('OPCION_INVALIDA');
+  }
+  if (diagnosticField.type === 'email' && (
+    diagnosticTrimmed.length > 254
+    || !/^[A-Za-z0-9.!#$%&'*+\/=?^_`{|}~-]+@[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?)+$/.test(diagnosticTrimmed)
+    || diagnosticTrimmed.startsWith('.')
+    || diagnosticTrimmed.includes('..')
+    || diagnosticTrimmed.includes('.@')
+  )) throw new Error('EMAIL_INVALIDO');
+  diagnosticExactAnswers[diagnosticField.label] = diagnosticAnswer;
+  validatedDiagnosticAnswers[diagnosticField.label] = diagnosticTrimmed;
+}
+if (Object.hasOwn(diagnosticInput, 'consentimiento_marketing') && typeof diagnosticInput.consentimiento_marketing !== 'boolean') {
+  throw new Error('CONSENTIMIENTO_INVALIDO');
+}
+const diagnosticMarketingConsent = diagnosticInput.consentimiento_marketing === true;
+const diagnosticWebsiteSource = 'https://www.olmondconsulting.com/diagnostico';
+if (Object.hasOwn(diagnosticInput, 'source') && diagnosticInput.source !== diagnosticWebsiteSource) {
+  throw new Error('ORIGEN_INVALIDO');
+}
+const diagnosticSource = diagnosticInput.__diagnostico_web === true ? diagnosticWebsiteSource : 'n8n:diagnostico-ia';
+const diagnosticExecutionId = typeof $execution !== 'undefined' ? String($execution.id ?? '') : '';
+const diagnosticSubmissionId = Object.hasOwn(diagnosticInput, 'submission_id')
+  ? diagnosticInput.submission_id
+  : `diagnostico-n8n-${diagnosticExecutionId}`;
+if (typeof diagnosticSubmissionId !== 'string' || !/^[A-Za-z0-9][A-Za-z0-9_-]{7,127}$/.test(diagnosticSubmissionId) || !diagnosticExecutionId) {
+  throw new Error('SUBMISSION_ID_INVALIDO');
+}
+const diagnosticNotes = JSON.stringify({
+  schema_version: 'olmond-diagnostico-crm-v1',
+  submission_id: diagnosticSubmissionId,
+  source: diagnosticSource,
+  consentimiento_marketing: diagnosticMarketingConsent,
+  recibido_en: new Date().toISOString(),
+  respuestas: diagnosticExactAnswers,
+});
+const diagnosticEscapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+}[character]));
