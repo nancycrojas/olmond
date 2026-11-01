@@ -7,6 +7,7 @@ import { DiagnosticCTA } from "./DiagnosticCTA";
 import { GeneralFAQ } from "./GeneralFAQ";
 import { Hero } from "./Hero";
 import { HowWeWork } from "./HowWeWork";
+import { OpenAIPartnerNetwork } from "./OpenAIPartnerNetwork";
 import { WhatWeDo } from "./WhatWeDo";
 import { WhyOlmond } from "./WhyOlmond";
 //import { AcademySection } from "./AcademySection";
@@ -17,6 +18,7 @@ export const Home = () => {
   return (
     <Stack minH="90vh" gap={8} textAlign={{ base: "center", lg: "start" }}>
       <Hero />
+      <OpenAIPartnerNetwork />
       <WhatWeDo />
       <HowWeWork />
       <AboutPatricio />
