@@ -40,6 +40,6 @@ Aplicar el parche sobre la base indicada en una rama, instalar con Yarn, ejecuta
 
 Para revertir una vez integrado: `git revert <commit-de-integracion>` y desplegar de nuevo; alternativamente restaurar el deployment previo desde Vercel. La reversión no requiere cambios de base de datos.
 
-## Actualización Argentina y Latinoamérica
+## Actualización de cobertura
 
 Integrado origin/master c282e7b conservando OpenAIPartnerNetwork. Restaurado el texto original de Quién está detrás y conservado el enlace al perfil. Portada, páginas estáticas y metadatos indican Argentina y Latinoamérica hispanohablante. Organization declara Buenos Aires, AR, sin inventar domicilio; Organization y Service declaran areaServed. Build, verificación GEO de 11 URLs y 14 pruebas social-card aprobadas. Publicación pendiente: GitHub create_branch devuelve 403 Resource not accessible by integration. Esta actualización no completa todavía la auditoría ampliada de 38 consultas ni su medición externa.
