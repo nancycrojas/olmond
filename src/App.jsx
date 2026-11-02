@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
 import { Home } from "@/components/Home";
+import { RouteMetadata } from "@/components/RouteMetadata";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AppLayout } from "@/layouts/AppLayout";
 import { NotFoundLayout } from "@/layouts/NotFoundLayout";
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <RouteMetadata />
       <Routes>
         <Route element={<AppLayout />}>
           <Route
