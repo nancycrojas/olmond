@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
+import { resourcePages } from '../src/data/resourcePages.js';
 
 const origin = 'https://www.olmondconsulting.com';
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
@@ -62,6 +63,21 @@ for (const [route, html] of documents) {
   }
 }
 const home = await readFile('dist/index.html', 'utf8');
+const footerOf = html => html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0]
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '')
+  .replace(/ class="[^"]*"/g, '');
+for (const page of resourcePages) {
+  const html = documents.get(page.path);
+  assert.equal(footerOf(html), footerOf(home), `Shared home footer: ${page.path}`);
+  assert(!/<video\b/.test(html), `No home video on resource: ${page.path}`);
+  assert(!/href="(?:https:\/\/www\.olmondconsulting\.com)?\/diagnostico/.test(html), `No diagnostic CTA: ${page.path}`);
+  assert(!/href="\/equipo\/patricio-rouan\.html"/.test(html), `No founder link: ${page.path}`);
+  const header = html.match(/<header\b[\s\S]*?<\/header>/)?.[0];
+  assert(header?.includes(`href="${page.back}"`) && !/<nav\b/.test(header), `Back navigation: ${page.path}`);
+  const visible = html.replace(/<(style|script)\b[^>]*>[\s\S]*?<\/\1>/g, '').replace(/<[^>]*>/g, '');
+  if (page.kind !== 'profile') assert(!/Buenos Aires|Argentina|Latinoamérica|diagnóstico gratuito|Otros recursos/.test(visible), `Resource copy: ${page.path}`);
+}
+assert(!/href="\/equipo\/patricio-rouan\.html"/.test(home), 'Removed founder link on home');
 assert(!home.includes('hispanohablante'));
 assert(!home.includes('Olmond Academy'));
 assert(home.includes('/guias/como-empezar-con-ia.html'));
