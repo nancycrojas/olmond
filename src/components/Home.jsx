@@ -5,6 +5,7 @@ import { Box, Stack } from "@chakra-ui/react";
 import { AboutPatricio } from "./AboutPatricio";
 import { DiagnosticCTA } from "./DiagnosticCTA";
 import { GeneralFAQ } from "./GeneralFAQ";
+import { GeoLinks } from "./GeoLinks";
 import { Hero } from "./Hero";
 import { HowWeWork } from "./HowWeWork";
 import { OpenAIPartnerNetwork } from "./OpenAIPartnerNetwork";
@@ -27,6 +28,7 @@ export const Home = () => {
       <WhyOlmond />
       <GeneralFAQ />
       <DiagnosticCTA />
+      <GeoLinks />
 
       {/*
       <AcademySection />
