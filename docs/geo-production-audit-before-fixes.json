@@ -1,0 +1,3726 @@
+{
+  "checked_at_utc": "2026-11-02T03:03:49.446547+00:00",
+  "origin": "https://www.olmondconsulting.com",
+  "pass": false,
+  "sitemap": {
+    "url": "https://www.olmondconsulting.com/sitemap.xml",
+    "user_agent": "OAI-SearchBot",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://www.olmondconsulting.com/sitemap.xml",
+    "redirects": [],
+    "bytes": 1096,
+    "sha256": "70b554512fa355dc5b8f0d247f01f129925acc6661aa7a3297b6500664c7cc22",
+    "headers": {
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-type": "application/xml",
+      "etag": "\"7c4978e5fd2912a344a2d006725e62c8\"",
+      "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+      "x-vercel-cache": "HIT"
+    }
+  },
+  "robots": {
+    "url": "https://www.olmondconsulting.com/robots.txt",
+    "user_agent": "OAI-SearchBot",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://www.olmondconsulting.com/robots.txt",
+    "redirects": [],
+    "bytes": 79,
+    "sha256": "c57f3402d44a40a755306891becdb260f45ea4eb2182c543a47688d712a8042e",
+    "headers": {
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-type": "text/plain; charset=utf-8",
+      "etag": "\"654762cc9a86b29c4a0860884c1d116f\"",
+      "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+      "x-vercel-cache": "HIT"
+    }
+  },
+  "robots_allowed": {
+    "OAI-SearchBot": true,
+    "ChatGPT-User": true,
+    "Googlebot": true,
+    "bingbot": true,
+    "Claude-SearchBot": true,
+    "Claude-User": true,
+    "PerplexityBot": true
+  },
+  "pages": [
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "ChatGPT-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "Googlebot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "bingbot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "Claude-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "Claude-User",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 127548,
+      "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        ".css-1d7k0d2{display:inline;}@media screen and (min-width: 48em){.css-1d7k0d2{display:block;}}Tu equipo pierde horas en tareas .css-5ll01j{display:inline;background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:transparent;-webkit-background-clip:text;background-clip:text;}@media screen and (min-width: 48em){.css-5ll01j{display:block;}}que la IA ya puede hacer"
+      ],
+      "description": [
+        "Consultoría, capacitación y automatización con IA para PyMEs de Argentina y Latinoamérica hispanohablante. Conozca cómo empezar con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Diagnóstico de IA para PyMEs | Olmond Consulting"
+      ],
+      "h1": [
+        "¿Qué tan lista está tu pyme para la .css-dxgqkq{background-image:linear-gradient(90deg, #5E7CFF 0%, #7257EA 30%, #8A48D4 58%, #B13DBE 78%, #E445A7 100%);color:var(--chakra-colors-transparent);-webkit-background-clip:text;background-clip:text;}inteligencia artificial?"
+      ],
+      "description": [
+        "Evalúe por dónde empezar con inteligencia artificial en su empresa. Acceda al diagnóstico gratuito de Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/diagnostico"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Olmond Academy | Formación en inteligencia artificial"
+      ],
+      "h1": [
+        "Cómo Profesionales No Técnicos Aumentan Entre Un .css-wojmw7{background-image:linear-gradient(to right, #4318FF, #EC4899);color:transparent;-webkit-background-clip:text;background-clip:text;}20% y 50% Su Productividad y Eficiencia Con Inteligencia Artificial"
+      ],
+      "description": [
+        "Conozca la propuesta de formación en inteligencia artificial de Olmond Academy."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/academy"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Workshop de IA aplicada para empresas | Olmond"
+      ],
+      "h1": [
+        "Inteligencia Artificial Aplicada para Empresas"
+      ],
+      "description": [
+        "Conozca la propuesta de workshop de inteligencia artificial aplicada para equipos y organizaciones."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/propuesta-de-workshop"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 8298,
+      "sha256": "81a906406d24fcdedc66868b9d48de1426e26cbf4f02e1a6e8dec2a8616dc120",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica | Olmond"
+      ],
+      "h1": [
+        "Consultoría IA para PyMEs en Argentina y Latinoamérica"
+      ],
+      "description": [
+        "Consultoría de IA para priorizar oportunidades, definir un proyecto y preparar a su equipo en Argentina y Latinoamérica hispanohablante."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Automatización y desarrollo de agentes de IA para empresas | Olmond"
+      ],
+      "h1": [
+        "Automatización y desarrollo de agentes de IA para empresas"
+      ],
+      "description": [
+        "Automatización de procesos, agentes y chatbots con IA para PyMEs de Argentina y Latinoamérica. Evalúe integraciones, entregables y supervisión."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 8109,
+      "sha256": "e303185e92dfc789e7a705842c3da044c45b7ceca8c8437fa1f924bd100f00ac",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Consultoría y automatización con n8n en Argentina y LATAM | Olmond"
+      ],
+      "h1": [
+        "Consultoría y automatización con n8n en Argentina y LATAM"
+      ],
+      "description": [
+        "Implementación, revisión de flujos y capacitación en n8n para empresas. Evalúe conexiones, pruebas y mantenimiento con Olmond Consulting."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 8186,
+      "sha256": "2ece7b069e9e0d8f6c4fb98d6ef92409d163377297c38c0250b78152948102b7",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Capacitación en IA y ChatGPT para empresas | Olmond"
+      ],
+      "h1": [
+        "Capacitación en IA y ChatGPT para empresas"
+      ],
+      "description": [
+        "Workshops de IA y ChatGPT para equipos de Argentina y Latinoamérica. Formación aplicada a tareas reales, revisión de resultados y uso responsable."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Service"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 7668,
+      "sha256": "a31f93e72cb74c3d5c7d933badf4b31974b3d79d7b145e6c46ced51ac309b21c",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo empezar con IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo empezar con IA en una PyME"
+      ],
+      "description": [
+        "Una guía para elegir un primer proceso, registrar la situación inicial y evaluar un piloto de IA en su empresa con criterios verificables."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 7906,
+      "sha256": "03ef6e0aed4288bd7f668fdab1ec5a271a48d98f38175354ffc22197b08cd5cd",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cuánto cuesta implementar IA en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cuánto cuesta implementar IA en una PyME"
+      ],
+      "description": [
+        "Conozca los factores de costo de un proyecto de IA. Compare inversión inicial, licencias, consumo y mantenimiento antes de definir el alcance."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 7767,
+      "sha256": "5a31e6ea12ca1c53483e65e26771b1653808cd5fd941935b4317ddc35e4ed06b",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Cómo automatizar tareas repetitivas en una PyME | Olmond"
+      ],
+      "h1": [
+        "Cómo automatizar tareas repetitivas en una PyME"
+      ],
+      "description": [
+        "Aprenda a seleccionar tareas repetitivas, elegir reglas o IA y verificar una automatización antes de ampliar su uso en la empresa."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebSite",
+        "WebPage",
+        "BreadcrumbList",
+        "Article"
+      ],
+      "errors": [],
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "PerplexityBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 6689,
+      "sha256": "f47ddaf0c2fb3ceadf362530ab8942954d89e6630401e05a89b78c93e06efed9",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "title": [
+        "Patricio Rouan | Consultor y docente de IA | Olmond Consulting"
+      ],
+      "h1": [
+        "Patricio Rouan | Consultor y docente de IA"
+      ],
+      "description": [
+        "Conocé a Patricio Rouan, fundador de Olmond Consulting, consultor y docente en inteligencia artificial aplicada a empresas."
+      ],
+      "canonical": [
+        "https://www.olmondconsulting.com/equipo/patricio-rouan.html"
+      ],
+      "schema_types": [
+        "Organization",
+        "Person",
+        "WebPage"
+      ],
+      "errors": [],
+      "pass": true
+    }
+  ],
+  "aliases": [
+    {
+      "url": "https://www.olmondconsulting.com/servicios/agentes-ia-empresas.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [
+        {
+          "status": 308,
+          "from": "https://www.olmondconsulting.com/servicios/agentes-ia-empresas.html",
+          "to": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+        }
+      ],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/chatbot-ia-whatsapp.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [
+        {
+          "status": 308,
+          "from": "https://www.olmondconsulting.com/servicios/chatbot-ia-whatsapp.html",
+          "to": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html"
+        }
+      ],
+      "bytes": 8992,
+      "sha256": "f58369a90e95485167323c89b91f6fcea505b566e8b94018efc749b7e598ec90",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "pass": true
+    },
+    {
+      "url": "https://www.olmondconsulting.com/consultoria",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/consultoria",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "175b2db72feb3a2f674f01db3171f30ad2cc1567b9a4e33c2d4c4c9a7cfca586",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/desarrollos",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/desarrollos",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "cb3209fc73f68c4f15f81fa8fd49cb7be0aa91f56fcd0c60dd2aebce19586af4",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/workshops",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/workshops",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "a732b57dd83b2ff68933afabe0d150b70e3efb67949652498294742e5a3e6768",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/automatizacion-n8n",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/automatizacion-n8n",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "0cccdc6475ab8dcc110e28b0124981c2c19a38518d3055f4bf0d83962b6ff097",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/patricio-rouan",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/patricio-rouan",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "9ed05446d93e99e6c357af466031a4ddb215ba020ec2675380211bec65a73ec3",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-usar-ia-en-mi-pyme",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/guias/como-usar-ia-en-mi-pyme",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "5f41e6bd971ee25d4a29b09cc6fd39397cb7f1eebe3f8eba80f029415a385c7a",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia-en-una-pyme",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia-en-una-pyme",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "a80e61c0bd1df194a6315a7275b6a5651c585c0eaae885162a0a96558f665ab1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-automatizar-tareas-repetitivas",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/guias/como-automatizar-tareas-repetitivas",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "12f093ea249f73e5b266a59d237f22f6fc32ae381d85c2b1a7debef9fb997b2a",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      },
+      "expected_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "pass": false
+    }
+  ],
+  "missing_route": {
+    "url": "https://www.olmondconsulting.com/ruta-inexistente-audit-20261101",
+    "user_agent": "OAI-SearchBot",
+    "method": "GET",
+    "status": 404,
+    "final_url": "https://www.olmondconsulting.com/ruta-inexistente-audit-20261101",
+    "redirects": [],
+    "bytes": 79,
+    "sha256": "d7b6159c846d4611b2bf0bff1c19d3b28b220d979f7d9572ab58864fa9476762",
+    "headers": {
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-type": "text/plain; charset=utf-8"
+    }
+  },
+  "apex": {
+    "url": "https://olmondconsulting.com/",
+    "user_agent": "OAI-SearchBot",
+    "method": "GET",
+    "status": 200,
+    "final_url": "https://www.olmondconsulting.com/",
+    "redirects": [
+      {
+        "status": 308,
+        "from": "https://olmondconsulting.com/",
+        "to": "https://www.olmondconsulting.com/"
+      }
+    ],
+    "bytes": 127548,
+    "sha256": "11693313d324a787c1baa162feff0d6d1b9a06aad28ebdacfd5d2857e25eb13d",
+    "headers": {
+      "cache-control": "public, max-age=0, must-revalidate",
+      "content-type": "text/html; charset=utf-8",
+      "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+      "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+      "x-vercel-cache": "HIT"
+    }
+  },
+  "trailing_slashes": [
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico/",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico/",
+      "redirects": [],
+      "bytes": 71824,
+      "sha256": "b279417cb9e334fae4b40455b965ff95ffc821d930e13669631e2e5a2d9bfb12",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy/",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy/",
+      "redirects": [],
+      "bytes": 173782,
+      "sha256": "45e663006d17d10a14a987d81629c75eeb85ea1d0fe18e7e9e2d5b9c7f36cd14",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "pass": false
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop/",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop/",
+      "redirects": [],
+      "bytes": 108567,
+      "sha256": "fc886ce0c08bff3a22cb8f6ab0f2c129666ef8dae42b65ea766af5700cf2acd1",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      },
+      "pass": false
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://www.olmondconsulting.com/llms.txt",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 404,
+      "final_url": "https://www.olmondconsulting.com/llms.txt",
+      "redirects": [],
+      "bytes": 79,
+      "sha256": "09eb7039767812e61a87d56875f627f7a2bdd7257367a4f45d5d2085ef1b983a",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain; charset=utf-8"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/logo.png",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/logo.png",
+      "redirects": [],
+      "bytes": 933576,
+      "sha256": "f97a814e2075a03a0e9ce0b0bc810da2aed66815ee97bd1929db7c5dbae1b56a",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "image/png",
+        "etag": "\"80d7c34d0a94866bd2c13d4f36cff57b\"",
+        "last-modified": "Mon, 02 Nov 2026 03:03:09 GMT",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/geo/olmond.css",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/geo/olmond.css",
+      "redirects": [],
+      "bytes": 1145,
+      "sha256": "5f3bee25ac678a8eb326d47b7f14d920b84e8a9615132a488bedc4a627f96ab0",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/css; charset=utf-8",
+        "etag": "\"aefe724f31e086b32184c46bb499d511\"",
+        "last-modified": "Mon, 02 Nov 2026 03:03:13 GMT",
+        "x-vercel-cache": "MISS"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/geo/eventos.js",
+      "user_agent": "OAI-SearchBot",
+      "method": "GET",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/geo/eventos.js",
+      "redirects": [],
+      "bytes": 455,
+      "sha256": "5fbef92348f5b3b92c3404def89ab8dadaed0ee0f8d480b7dc0c7857f499c6cb",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "application/javascript; charset=utf-8",
+        "etag": "\"1801334ca49fab3f4edccefadc6bf240\"",
+        "last-modified": "Mon, 02 Nov 2026 03:03:16 GMT",
+        "x-vercel-cache": "MISS"
+      }
+    }
+  ],
+  "head_requests": [
+    {
+      "url": "https://www.olmondconsulting.com/",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"9b9192ebcb73acb41b074d9f7c333ba7\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:26 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/diagnostico",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/diagnostico",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"124a6899a9c50c3114dce5d15c6a1c4c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/academy",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/academy",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"760852367add07f736b72c658d830b9c\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/propuesta-de-workshop",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"5e41a6756851ef531b34364be3b5b6b8\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fa75ed20ed6e199391b1c48d4361d457\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:45 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-ia.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"7504fe3770e2b88e9481c91aa7f715d5\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/automatizacion-n8n.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"4b8c1857313d28992d6166c1176454ba\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"cea72c29a177af60089644eb8191f87d\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/como-empezar-con-ia.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"ece2cea1cd591163e6b592891724eb32\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"83fe8d7e4f228a81885821c16f5ee604\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:49 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"1d988c355363bc5ddf638d52704502ca\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    },
+    {
+      "url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "user_agent": "OAI-SearchBot",
+      "method": "HEAD",
+      "status": 200,
+      "final_url": "https://www.olmondconsulting.com/equipo/patricio-rouan.html",
+      "redirects": [],
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "headers": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "etag": "\"fc1625ca3a13d7d0a218110ea8013467\"",
+        "last-modified": "Mon, 02 Nov 2026 01:47:53 GMT",
+        "x-vercel-cache": "HIT"
+      }
+    }
+  ],
+  "limits": "HTTP checks use declared User-Agent strings, not authenticated bot IPs. No indexation or AI citation claim."
+}
