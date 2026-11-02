@@ -17,11 +17,11 @@ import { BRAND_GRADIENT } from "../lib/constants.js";
 const headerLinks = [
   {
     label: "Servicios",
-    href: "#que-hacemos",
+    href: "/#que-hacemos",
   },
   {
     label: "Nosotros",
-    href: "#por-que-olmond",
+    href: "/#nosotros",
   },
 ];
 
@@ -86,7 +86,7 @@ export const Header = () => {
         >
           {/* Logo */}
           <Link
-            href="#inicio"
+            href="/"
             aria-label="Olmond Consulting, inicio"
             display="flex"
             alignItems="center"
