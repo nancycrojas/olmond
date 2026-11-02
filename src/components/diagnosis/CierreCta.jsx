@@ -36,9 +36,9 @@ export function CierreCta() {
         </Heading>
         <Text fontSize="lg" mt={5} color="whiteAlpha.800" maxW="2xl" mx="auto">
           Las tareas repetitivas que hoy se hacen a mano consumen horas, margen
-          y foco de tu equipo. La buena noticia: no hace falta una gran
+          y foco de su equipo. La buena noticia: no hace falta una gran
           inversión para empezar a recuperarlos. Hace falta saber por dónde
-          empezar. Ese es el propósito de este diagnóstico: darte un punto de
+          empezar. Ese es el propósito de este diagnóstico: darle un punto de
           partida claro, en 3 minutos y sin costo.
         </Text>
         <Box mt={8}>
