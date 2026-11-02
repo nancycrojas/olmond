@@ -29,9 +29,9 @@ const faqs = [
       "Con pocas horas por semana ya ves impacto, porque aplicás lo que aprendés directamente sobre tus tareas reales. No es teoría, es práctica inmediata.",
   },
   {
-    question: "¿El 20%–50% de productividad es realista?",
+    question: "¿Cómo se evalúan los resultados?",
     answer:
-      "Es un rango alcanzable cuando lo aplicás en procesos concretos (documentos, presentaciones, comunicación, organización y automatización liviana). Depende de tu punto de partida y constancia.",
+      "Se compara el tiempo, la calidad y la cantidad de correcciones de una tarea antes y después de aplicar lo aprendido. El resultado depende del proceso, del punto de partida y de la práctica; no se garantiza un porcentaje de mejora.",
   },
   {
     question: "¿Por qué el precio es tan bajo?",
