@@ -252,7 +252,7 @@ export const WhatWeDo = () => {
 
             <Heading
               as="h2"
-              mt={7}
+              mt={{ base: 6, md: 7 }}
               mx={{ base: "auto", lg: 0 }}
               maxW="720px"
               fontSize={{
