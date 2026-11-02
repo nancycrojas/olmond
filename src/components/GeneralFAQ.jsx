@@ -11,10 +11,13 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { LuMinus, LuPlus } from "react-icons/lu";
+import { useLocation } from "react-router-dom";
 
 const faqs = [
   {
+    id: "faq-empezar",
     question:
       "¿Por dónde empiezo si todavía no sé cómo aplicar IA en mi empresa?",
     answer:
@@ -22,22 +25,26 @@ const faqs = [
     guide: { href: "/guias/como-empezar-con-ia.html", label: "Cómo elegir el primer proyecto" },
   },
   {
+    id: "faq-conocimientos",
     question: "¿Necesito conocimientos técnicos?",
     answer:
       "No. Vos y tu equipo conocen el negocio; nosotros aportamos el conocimiento técnico y te explicamos las opciones con claridad. Las capacitaciones y las soluciones se adaptan a las tareas reales de quienes van a usarlas.",
   },
   {
+    id: "faq-costos",
     question: "¿Cuánto cuesta trabajar con Olmond?",
     answer:
       "La inversión depende del servicio, el alcance y la complejidad del trabajo. Antes de empezar, recibís una propuesta por escrito con el precio, los entregables y los plazos, para que sepas qué estás contratando y puedas decidir con información clara.",
     guide: { href: "/guias/cuanto-cuesta-implementar-ia.html", label: "Qué tener en cuenta al evaluar costos" },
   },
   {
+    id: "faq-dedicacion",
     question: "¿Cuánto tiempo tiene que dedicar mi equipo?",
     answer:
       "La participación depende del servicio. En una implementación, necesitamos una persona de referencia que conozca el proceso y participe en las validaciones y pruebas. Acordamos la dedicación y los momentos de trabajo antes de empezar.",
   },
   {
+    id: "faq-herramientas",
     question: "¿Pueden trabajar con las herramientas que ya usamos?",
     answer:
       "Buscamos aprovechar las herramientas que ya usa tu equipo. Antes de definir el desarrollo, revisamos qué sistemas pueden conectarse con la solución y qué ajustes harían falta. Las posibilidades dependen de cada herramienta y de lo que necesite el proyecto.",
@@ -46,6 +53,21 @@ const faqs = [
 ];
 
 export const GeneralFAQ = () => {
+  const { hash } = useLocation();
+  const [expanded, setExpanded] = useState(-1);
+
+  useEffect(() => {
+    const index = faqs.findIndex(faq => `#${faq.id}` === hash);
+    if (index === -1) return;
+    setExpanded(index);
+    const frame = requestAnimationFrame(() => {
+      const question = document.getElementById(faqs[index].id);
+      question?.scrollIntoView({ block: "start" });
+      question?.querySelector("button")?.focus({ preventScroll: true });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [hash]);
+
   return (
     <Box
       as="section"
@@ -121,17 +143,18 @@ export const GeneralFAQ = () => {
           </Box>
 
           {/* Acordeón */}
-          <Accordion allowToggle borderTop="1px solid" borderColor="#E1E3EC">
-            {faqs.map(({ question, answer, guide }) => (
+          <Accordion allowToggle index={expanded} onChange={setExpanded} borderTop="1px solid" borderColor="#E1E3EC">
+            {faqs.map(({ id, question, answer, guide }) => (
               <AccordionItem
-                key={question}
+                key={id}
+                id={id}
                 border="none"
                 borderBottom="1px solid"
                 borderColor="#E1E3EC"
               >
                 {({ isExpanded }) => (
                   <>
-                    <h3>
+                    <Box as="h3" id={id} scrollMarginTop={{ base: "100px", lg: "128px" }}>
                       <AccordionButton
                         px={0}
                         py={{
@@ -149,7 +172,8 @@ export const GeneralFAQ = () => {
                           bg: "transparent",
                         }}
                         _focusVisible={{
-                          boxShadow: "none",
+                          outline: "2px solid #805AD5",
+                          outlineOffset: "4px",
                         }}
                       >
                         <Text
@@ -168,7 +192,7 @@ export const GeneralFAQ = () => {
 
                         <FlexIcon isExpanded={isExpanded} />
                       </AccordionButton>
-                    </h3>
+                    </Box>
 
                     <AccordionPanel
                       px={0}

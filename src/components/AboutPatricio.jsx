@@ -282,8 +282,6 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
               tu equipo para usarlas.
             </Text>
 
-            <Text mt={4}><Box as="a" href="/equipo/patricio-rouan.html" color="primary.default" textDecoration="underline">Conocer la trayectoria de Patricio Rouan</Box></Text>
-
             {/* Credenciales */}
             <Stack
               mt={{

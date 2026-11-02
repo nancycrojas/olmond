@@ -94,7 +94,9 @@ class RoutingTests(unittest.TestCase):
     def test_aliases_do_not_loop(self):
         for source, rule in self.redirects.items():
             self.assertNotIn(rule['destination'], self.redirects, source)
-            self.assertTrue((ROOT / 'public' / rule['destination'].lstrip('/')).is_file(), source)
+            # Resource documents now come from React prerendering, not public/.
+            self.assertTrue((ROOT / 'dist' / rule['destination'].lstrip('/')).is_file(),
+                            f'{source}: run npm run build before the routing checks')
 
     def test_existing_app_routes_preserved(self):
         expected = {'/diagnostico', '/academy', '/revision-contenido', '/propuesta-distribuidora-lagostena',

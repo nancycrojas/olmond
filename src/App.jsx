@@ -7,6 +7,7 @@ import { AppLayout } from "@/layouts/AppLayout";
 import { NotFoundLayout } from "@/layouts/NotFoundLayout";
 import { NotFound } from "@/pages/NotFound";
 
+import { resourcePages } from "./data/resourcePages";
 import { workshopProposals } from "./data/workshopProposals";
 // import { ChatOlmond } from "./components/chat/ChatOlmond";
 import { AcademyLayout } from "./layouts/AcademyLayout";
@@ -14,6 +15,7 @@ import { DiagnosisLayout } from "./layouts/DiagnosisLayout";
 import { WorkshopLayout } from "./layouts/WorkshopLayout";
 import { Academy } from "./pages/Academy";
 import { Diagnosis } from "./pages/Diagnosis";
+import { ResourcePage } from "./pages/ResourcePage";
 import { SocialReview } from "./pages/SocialReview";
 //import { AcademyLogin } from "./pages/AcademyLogin";
 //import { CourseDetail } from "./pages/CourseDetail";
@@ -27,6 +29,9 @@ function App() {
       <ScrollToTop />
       <RouteMetadata />
       <Routes>
+        {resourcePages.map(page => (
+          <Route key={page.path} path={page.path} element={<ResourcePage />} />
+        ))}
         <Route element={<AppLayout />}>
           <Route
             path="/"
