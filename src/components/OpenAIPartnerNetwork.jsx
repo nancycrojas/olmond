@@ -17,38 +17,38 @@ export function OpenAIPartnerNetwork() {
       bg="#F7F6FB"
       color="#171827"
       borderBottom="1px solid #E1E3EC"
-      py={{ base: 8, md: 10, lg: 12 }}
+      py={{ base: 16, md: 20, lg: 24 }}
       scrollMarginTop="104px"
     >
       <Container maxW="6xl">
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", lg: "row" }}
           align="center"
-          gap={{ base: 6, md: 10, lg: 14 }}
-          textAlign={{ base: "center", md: "left" }}
+          gap={{ base: 10, md: 12, lg: 16 }}
+          textAlign={{ base: "center", lg: "left" }}
         >
           <Box minW={0} flex="1">
             <Text
               color="purple.600"
-              fontSize={{ base: "xs", lg: "sm" }}
+              fontSize={{ base: "xs", md: "sm" }}
               fontWeight="800"
               letterSpacing="0.2em"
               textTransform="uppercase"
-              mb={3}
             >
               Nuestra red
             </Text>
             <Heading
               as="h2"
               id="openai-partner-title"
-              fontSize={{ base: "24px", md: "28px", lg: "38px" }}
-              fontWeight="600"
-              lineHeight="1.2"
-              letterSpacing="-0.035em"
+              mt={{ base: 6, md: 7 }}
+              fontSize={{ base: "40px", sm: "48px", md: "56px", lg: "60px" }}
+              fontWeight="500"
+              lineHeight="1.05"
+              letterSpacing="-0.05em"
             >
               Somos parte de OpenAI Partner Network
             </Heading>
-            <Text mt={3} color="#666A86" fontSize={{ base: "15px", lg: "17px" }} lineHeight="1.65">
+            <Text mt={{ base: 6, md: 7 }} color="#666A86" fontSize={{ base: "17px", md: "18px" }} lineHeight="1.65">
               Integramos la red de socios de OpenAI y acompañamos a las empresas
               en la adopción práctica y responsable de inteligencia artificial.
             </Text>
@@ -74,16 +74,17 @@ export function OpenAIPartnerNetwork() {
             direction="column"
             align="center"
             flexShrink={0}
+            maxW="full"
             color="#171827"
             aria-label="OpenAI Partner Network"
           >
-            <Flex align="center" gap={3}>
-              <Box as={RiOpenaiFill} boxSize={{ base: "42px", lg: "72px" }} flexShrink={0} aria-hidden="true" />
-              <Text fontFamily="Arial, sans-serif" fontSize={{ base: "36px", lg: "60px" }} fontWeight="600" letterSpacing="-0.05em" lineHeight="1">
+            <Flex align="center" gap={{ base: 3, lg: 4 }}>
+              <Box as={RiOpenaiFill} boxSize={{ base: "48px", md: "64px", lg: "88px" }} flexShrink={0} aria-hidden="true" />
+              <Text fontFamily="Arial, sans-serif" fontSize={{ base: "40px", md: "56px", lg: "72px" }} fontWeight="600" letterSpacing="-0.05em" lineHeight="1">
                 OpenAI
               </Text>
             </Flex>
-            <Text mt={2} fontFamily="Arial, sans-serif" fontSize={{ base: "17px", lg: "24px" }} fontWeight="500">
+            <Text mt={3} fontFamily="Arial, sans-serif" fontSize={{ base: "18px", md: "22px", lg: "26px" }} fontWeight="500">
               Partner Network
             </Text>
           </Flex>
