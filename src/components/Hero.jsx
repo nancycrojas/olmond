@@ -117,7 +117,7 @@ export const Hero = () => {
           {/* Contenido */}
           <MotionBox
             w="full"
-            initial={{ opacity: 0, y: 24 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
           >
