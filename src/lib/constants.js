@@ -44,18 +44,21 @@ export const FORM_FIELDS = [
   },
   {
     label: "Tu correo (acá llega tu resultado)",
+    displayLabel: "Su correo (aquí recibe su resultado)",
     type: "email",
     required: true,
     placeholder: "ana@tuempresa.com",
   },
   {
     label: "Nombre de tu empresa",
+    displayLabel: "Nombre de su empresa",
     type: "text",
     required: false,
     placeholder: "Ej: Tienda Norte",
   },
   {
     label: "1. ¿Cuál es tu rol en la empresa?",
+    displayLabel: "1. ¿Cuál es su rol en la empresa?",
     type: "select",
     required: true,
     options: [
@@ -68,6 +71,7 @@ export const FORM_FIELDS = [
   },
   {
     label: "2. ¿Cuántas personas trabajan en tu empresa?",
+    displayLabel: "2. ¿Cuántas personas trabajan en su empresa?",
     type: "select",
     required: true,
     options: [
@@ -80,6 +84,7 @@ export const FORM_FIELDS = [
   },
   {
     label: "3. ¿En qué rubro opera tu empresa?",
+    displayLabel: "3. ¿En qué rubro opera su empresa?",
     type: "select",
     required: true,
     options: [
@@ -92,6 +97,7 @@ export const FORM_FIELDS = [
   },
   {
     label: "4. ¿Cuántas horas semanales dedica tu equipo a tareas repetitivas?",
+    displayLabel: "4. ¿Cuántas horas semanales dedica su equipo a tareas repetitivas?",
     type: "select",
     required: true,
     options: [
@@ -183,6 +189,7 @@ export const FORM_FIELDS = [
   },
   {
     label: "12. ¿Cuál es tu principal freno para avanzar con IA?",
+    displayLabel: "12. ¿Cuál es su principal freno para avanzar con IA?",
     type: "select",
     required: true,
     options: [
