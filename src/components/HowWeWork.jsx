@@ -216,7 +216,7 @@ export const HowWeWork = () => {
         {/* Título */}
         <Heading
           as="h2"
-          mt={7}
+          mt={{ base: 6, md: 7 }}
           maxW="1100px"
           fontSize={{
             base: "40px",
