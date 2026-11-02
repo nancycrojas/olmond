@@ -1,0 +1,172 @@
+{
+  "date": "2026-11-01",
+  "local_http": [
+    {
+      "path": "/",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/diagnostico",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/academy",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/propuesta-de-workshop",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/servicios/consultoria-ia-pymes.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/servicios/automatizacion-ia.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/servicios/automatizacion-n8n.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/servicios/capacitacion-ia-empresas.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/guias/como-empezar-con-ia.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/guias/cuanto-cuesta-implementar-ia.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/guias/automatizar-tareas-repetitivas.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/equipo/patricio-rouan.html",
+      "status": 200,
+      "mime": "text/html"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "mime": "text/plain"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "mime": "application/xml"
+    },
+    {
+      "path": "/geo-test-missing-20261101",
+      "status": 404
+    }
+  ],
+  "production_before_publication": [
+    {
+      "path": "/",
+      "user_agent": "Googlebot",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/",
+      "user_agent": "Bingbot",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/",
+      "user_agent": "OAI-SearchBot",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/",
+      "user_agent": "Claude-SearchBot",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/",
+      "user_agent": "PerplexityBot",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/robots.txt",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/sitemap.xml",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/diagnostico",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    },
+    {
+      "path": "/geo-test-missing-20261101",
+      "user_agent": "Mozilla/5.0",
+      "status": 200,
+      "bytes": 687,
+      "h1": 0,
+      "canonical": [],
+      "content_type": "text/html; charset=utf-8",
+      "x_robots_tag": null
+    }
+  ],
+  "note": "HTTP local no emula Vercel. UA declarado no acredita acceso de IPs oficiales. Sin ejecución de consultas de posicionamiento."
+}
