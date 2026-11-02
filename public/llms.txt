@@ -1,0 +1,32 @@
+# Olmond Consulting
+
+> Consultoría, capacitación y desarrollo de soluciones de inteligencia artificial para PyMEs de Argentina y Latinoamérica. Desde Buenos Aires.
+
+El trabajo comienza por el proceso, sus responsables y los resultados que se desean medir. El alcance, la modalidad, los plazos y los costos se acuerdan para cada proyecto. Este índice complementa el sitio; no reemplaza el sitemap ni garantiza inclusión en buscadores o respuestas de IA.
+
+## Empresa y contacto
+
+- [Olmond Consulting](https://www.olmondconsulting.com/): servicios, metodología y preguntas frecuentes.
+- [Patricio Rouan](https://www.olmondconsulting.com/equipo/patricio-rouan.html): fundador, trayectoria y referencias profesionales.
+- [Diagnóstico gratuito](https://www.olmondconsulting.com/diagnostico): primera orientación sobre la adopción de IA en una empresa.
+- Correo: hola@olmondconsulting.com
+
+## Servicios
+
+- [Consultoría de IA](https://www.olmondconsulting.com/servicios/consultoria-ia-pymes.html): diagnóstico, prioridades y hoja de ruta.
+- [Automatización y agentes de IA](https://www.olmondconsulting.com/servicios/automatizacion-ia.html): agentes, chatbots, WhatsApp e integraciones.
+- [Automatización con n8n](https://www.olmondconsulting.com/servicios/automatizacion-n8n.html): implementación, revisión de flujos y capacitación.
+- [Capacitación de equipos](https://www.olmondconsulting.com/servicios/capacitacion-ia-empresas.html): formación aplicada a tareas de la organización.
+- [Propuesta de workshop](https://www.olmondconsulting.com/propuesta-de-workshop): inteligencia artificial aplicada para empresas.
+- [Formación en inteligencia artificial](https://www.olmondconsulting.com/academy): formación práctica para profesionales no técnicos.
+
+## Guías
+
+- [Cómo empezar con IA en una PyME](https://www.olmondconsulting.com/guias/como-empezar-con-ia.html).
+- [Cuánto cuesta implementar IA](https://www.olmondconsulting.com/guias/cuanto-cuesta-implementar-ia.html).
+- [Cómo automatizar tareas repetitivas](https://www.olmondconsulting.com/guias/automatizar-tareas-repetitivas.html).
+
+## Índice técnico
+
+- [Sitemap](https://www.olmondconsulting.com/sitemap.xml).
+- [Política de rastreo](https://www.olmondconsulting.com/robots.txt).
