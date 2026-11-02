@@ -1,53 +1,9 @@
 import { Box, Button, Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 
 import image from "../assets/logo_academy.jpg";
 
-const INITIAL_TIME = {
-  days: 1,
-  hours: 21,
-  minutes: 38,
-  seconds: 0,
-};
-
 export const AcademyHeader = () => {
-  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        let { days, hours, minutes, seconds } = prev;
-
-        seconds--;
-
-        if (seconds < 0) {
-          seconds = 59;
-          minutes--;
-        }
-
-        if (minutes < 0) {
-          minutes = 59;
-          hours--;
-        }
-
-        if (hours < 0) {
-          hours = 23;
-          days--;
-        }
-
-        // Si llega a 0, reiniciar
-        if (days < 0) {
-          return INITIAL_TIME;
-        }
-
-        return { days, hours, minutes, seconds };
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const whatsappNumber = "5491133872411"; // Reemplaza con tu número (incluye código de país sin +)
   const whatsappMessage = encodeURIComponent(
     "Hola! Quiero información sobre Olmond Academy",
@@ -68,21 +24,9 @@ export const AcademyHeader = () => {
           gap={4}
           flexWrap="wrap"
         >
-          <HStack spacing={2}>
-            <Text fontSize="sm" fontWeight="bold">
-              ⏰ OFERTA TERMINA EN:
-            </Text>
-          </HStack>
-
-          <HStack spacing={2}>
-            <TimeBox value={timeLeft.days} label="DÍAS" />
-            <Text fontWeight="bold">:</Text>
-            <TimeBox value={timeLeft.hours} label="HRS" />
-            <Text fontWeight="bold">:</Text>
-            <TimeBox value={timeLeft.minutes} label="MIN" />
-            <Text fontWeight="bold">:</Text>
-            <TimeBox value={timeLeft.seconds} label="SEG" />
-          </HStack>
+          <Text fontSize="sm" fontWeight="bold" textAlign="center">
+            Formación práctica en IA para profesionales y equipos
+          </Text>
         </Flex>
       </Box>
 
@@ -100,6 +44,7 @@ export const AcademyHeader = () => {
             <Box p={2}>
               <Image
                 src={image}
+                alt="Olmond Academy"
                 boxSize={"50px"}
                 objectFit="cover"
                 borderRadius="2xl"
@@ -157,29 +102,5 @@ export const AcademyHeader = () => {
         </Flex>
       </Box>
     </Box>
-  );
-};
-
-// eslint-disable-next-line react/prop-types
-const TimeBox = ({ value, label }) => {
-  return (
-    <Flex direction="column" align="center">
-      <Box
-        bg="white"
-        color="black"
-        px={3}
-        py={2}
-        borderRadius="md"
-        minW="50px"
-        textAlign="center"
-      >
-        <Text fontSize="lg" fontWeight="bold">
-          {String(value).padStart(2, "0")}
-        </Text>
-      </Box>
-      <Text fontSize="xs" mt={1}>
-        {label}
-      </Text>
-    </Flex>
   );
 };
