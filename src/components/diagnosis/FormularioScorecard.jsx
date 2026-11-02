@@ -83,16 +83,15 @@ export function FormularioScorecard() {
             mb={6}
           />
           <Heading as="h2" size="lg" fontWeight="800" mb={4}>
-            ¡Listo! Tu diagnóstico ya está viajando a tu correo
+            Respuestas recibidas para preparar su diagnóstico
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={6}>
-            Revisá también las pestañas Promociones o Spam. Un dato mientras
-            llega: el 80% de las pymes que completan este diagnóstico tienen al
-            menos una tarea que les consume más de 5 horas semanales y se puede
-            automatizar en menos de un mes.
+            Revise también las carpetas Promociones o Spam. El envío puede
+            demorar unos minutos. Si no recibe el resultado, puede contactar
+            a Olmond en hola@olmondconsulting.com.
           </Text>
           <Text fontSize="lg" fontWeight="600">
-            ¿Querés saber cuál es la tuya? Respondé el correo del resultado con
+            Para conversar sobre sus prioridades, responda el correo del resultado con
             la palabra{" "}
             <Box as="span" color="brand.accent">
               CALL
@@ -109,11 +108,10 @@ export function FormularioScorecard() {
       <Box maxW="2xl" mx="auto" px={6}>
         <SectionLabel>El diagnóstico</SectionLabel>
         <Heading as="h2" size="xl" fontWeight="800" mb={3}>
-          Respondé y recibí tu resultado
+          Responda y reciba su resultado
         </Heading>
         <Text color="gray.600" mb={8}>
-          12 preguntas, 3 minutos. El resultado llega a tu correo apenas
-          terminás.
+          12 preguntas, aproximadamente 3 minutos. Recibirá el resultado por correo.
         </Text>
 
         <Box position="sticky" top={0} zIndex={10} bg="white" py={3} mb={6}>
@@ -147,10 +145,10 @@ export function FormularioScorecard() {
                 isRequired={field.required}
                 isInvalid={isInvalid}
               >
-                <FormLabel fontWeight="600">{field.label}</FormLabel>
+                <FormLabel fontWeight="600">{field.displayLabel ?? field.label}</FormLabel>
                 {field.type === "select" ? (
                   <Select
-                    placeholder="Elegí una opción"
+                    placeholder="Seleccione una opción"
                     size="lg"
                     value={values[field.label] ?? ""}
                     onChange={setField(field.label)}
@@ -179,7 +177,7 @@ export function FormularioScorecard() {
           {touchedSubmit && missing.length > 0 ? (
             <Alert status="warning" borderRadius="xl">
               <AlertIcon />
-              Te faltan {missing.length} respuestas obligatorias para poder
+              Faltan {missing.length} respuestas obligatorias para poder
               enviar.
             </Alert>
           ) : null}
@@ -187,8 +185,8 @@ export function FormularioScorecard() {
           {status === "error" ? (
             <Alert status="error" borderRadius="xl">
               <AlertIcon />
-              No pudimos enviar tus respuestas. Revisá tu conexión y probá de
-              nuevo — tus respuestas siguen cargadas.
+              No pudimos enviar sus respuestas. Revise su conexión e intente de
+              nuevo. Sus respuestas siguen cargadas.
             </Alert>
           ) : null}
 
@@ -200,8 +198,8 @@ export function FormularioScorecard() {
             Ver mi diagnóstico
           </CTA>
           <Text fontSize="sm" color="gray.500">
-            Tus datos se usan solo para enviarte el resultado y contenido
-            relacionado. Sin spam, desuscripción con un click.
+            Sus datos se usan para enviarle el resultado y contenido
+            relacionado. Sin spam, desuscripción con un clic.
           </Text>
         </Stack>
       </Box>
