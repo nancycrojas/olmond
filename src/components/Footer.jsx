@@ -16,15 +16,15 @@ import logo from "../assets/logo-olmond.png";
 const footerLinks = [
   {
     label: "Servicios",
-    href: "#que-hacemos",
+    href: "/#que-hacemos",
   },
   {
     label: "Cómo trabajamos",
-    href: "#como-trabajamos",
+    href: "/#como-trabajamos",
   },
   {
     label: "Nosotros",
-    href: "#nosotros",
+    href: "/#nosotros",
   },
 ];
 
@@ -91,7 +91,7 @@ export const Footer = () => {
           {/* Marca */}
           <Box>
             <Link
-              href="#inicio"
+              href="/"
               aria-label="Olmond Consulting, inicio"
               display="inline-flex"
               alignItems="center"
