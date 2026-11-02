@@ -8,6 +8,7 @@ import {
   Container,
   Grid,
   Heading,
+  Link,
   Text,
 } from "@chakra-ui/react";
 import { LuMinus, LuPlus } from "react-icons/lu";
@@ -18,6 +19,7 @@ const faqs = [
       "¿Por dónde empiezo si todavía no sé cómo aplicar IA en mi empresa?",
     answer:
       "Te ayudamos a identificar qué conviene mejorar y qué necesitás para avanzar: una consultoría para definir prioridades, una capacitación para preparar a tu equipo o un desarrollo para resolver un proceso concreto. Podés empezar con nuestro diagnóstico gratuito para tener una primera orientación.",
+    guide: { href: "/guias/como-empezar-con-ia.html", label: "Cómo elegir el primer proyecto" },
   },
   {
     question: "¿Necesito conocimientos técnicos?",
@@ -28,6 +30,7 @@ const faqs = [
     question: "¿Cuánto cuesta trabajar con Olmond?",
     answer:
       "La inversión depende del servicio, el alcance y la complejidad del trabajo. Antes de empezar, recibís una propuesta por escrito con el precio, los entregables y los plazos, para que sepas qué estás contratando y puedas decidir con información clara.",
+    guide: { href: "/guias/cuanto-cuesta-implementar-ia.html", label: "Qué tener en cuenta al evaluar costos" },
   },
   {
     question: "¿Cuánto tiempo tiene que dedicar mi equipo?",
@@ -38,6 +41,7 @@ const faqs = [
     question: "¿Pueden trabajar con las herramientas que ya usamos?",
     answer:
       "Buscamos aprovechar las herramientas que ya usa tu equipo. Antes de definir el desarrollo, revisamos qué sistemas pueden conectarse con la solución y qué ajustes harían falta. Las posibilidades dependen de cada herramienta y de lo que necesite el proyecto.",
+    guide: { href: "/guias/automatizar-tareas-repetitivas.html", label: "Cómo empezar a automatizar tareas" },
   },
 ];
 
@@ -118,7 +122,7 @@ export const GeneralFAQ = () => {
 
           {/* Acordeón */}
           <Accordion allowToggle borderTop="1px solid" borderColor="#E1E3EC">
-            {faqs.map(({ question, answer }) => (
+            {faqs.map(({ question, answer, guide }) => (
               <AccordionItem
                 key={question}
                 border="none"
@@ -188,6 +192,13 @@ export const GeneralFAQ = () => {
                         color="#666A86"
                       >
                         {answer}
+                        {guide && (
+                          <>
+                            {" "}<Link href={guide.href} color="purple.600" textDecoration="underline">
+                              {guide.label}
+                            </Link>.
+                          </>
+                        )}
                       </Text>
                     </AccordionPanel>
                   </>

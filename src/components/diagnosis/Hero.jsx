@@ -53,7 +53,7 @@ export function Hero() {
             lineHeight="1.15"
             maxW="3xl"
           >
-            ¿Qué tan lista está tu pyme para la{" "}
+            ¿Qué tan lista está su pyme para la{" "}
             <Box
               as="span"
               bgImage={BRAND_GRADIENT}
@@ -70,14 +70,14 @@ export function Hero() {
             maxW="2xl"
             color="whiteAlpha.800"
           >
-            Descubrilo en 3 minutos con el diagnóstico gratuito para dueños y
-            directivos. Recibís tu nivel de madurez y tus 3 prioridades
+            Descúbralo en aproximadamente 3 minutos con el diagnóstico gratuito para dueños y
+            directivos. Recibirá su nivel de madurez y sus 3 prioridades
             concretas para avanzar.
           </Text>
           <Box mt={10}>
             <CTA onClick={scrollToForm}>Hacer mi diagnóstico gratis</CTA>
             <Text mt={4} fontSize="sm" color="whiteAlpha.700">
-              12 preguntas · 3 minutos · Resultado inmediato en tu correo
+              12 preguntas · Aproximadamente 3 minutos · Resultado por correo
             </Text>
           </Box>
         </MotionBox>

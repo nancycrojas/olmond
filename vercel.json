@@ -39,6 +39,57 @@
       "source": "/servicios/chatbot-ia-whatsapp.html",
       "destination": "/servicios/automatizacion-ia.html",
       "permanent": true
+    },
+    {
+      "source": "/consultoria",
+      "destination": "/servicios/consultoria-ia-pymes.html",
+      "permanent": true
+    },
+    {
+      "source": "/desarrollos",
+      "destination": "/servicios/automatizacion-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/workshops",
+      "destination": "/servicios/capacitacion-ia-empresas.html",
+      "permanent": true
+    },
+    {
+      "source": "/automatizacion-n8n",
+      "destination": "/servicios/automatizacion-n8n.html",
+      "permanent": true
+    },
+    {
+      "source": "/patricio-rouan",
+      "destination": "/equipo/patricio-rouan.html",
+      "permanent": true
+    },
+    {
+      "source": "/guias/como-usar-ia-en-mi-pyme",
+      "destination": "/guias/como-empezar-con-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/guias/cuanto-cuesta-implementar-ia-en-una-pyme",
+      "destination": "/guias/cuanto-cuesta-implementar-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/guias/como-automatizar-tareas-repetitivas",
+      "destination": "/guias/automatizar-tareas-repetitivas.html",
+      "permanent": true
+    },
+    {
+      "source": "/guias/por-donde-empezar-ia-pyme",
+      "destination": "/guias/como-empezar-con-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/guias/cuanto-cuesta-implementar-ia-pyme",
+      "destination": "/guias/cuanto-cuesta-implementar-ia.html",
+      "permanent": true
     }
-  ]
+  ],
+  "trailingSlash": false
 }

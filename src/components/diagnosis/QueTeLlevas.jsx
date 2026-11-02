@@ -7,26 +7,26 @@ import { SectionShell } from "../ui/SectionShell.jsx";
 const items = [
   {
     icon: LuMap,
-    title: "Tu nivel de madurez en IA",
-    text: "De Pyme Manual a Pyme Aumentada: una referencia clara de dónde está parada tu empresa frente al mercado.",
+    title: "Su nivel de madurez en IA",
+    text: "De Pyme Manual a Pyme Aumentada: una orientación sobre el estado de su empresa a partir de sus respuestas.",
   },
   {
     icon: LuListChecks,
-    title: "Tus 3 prioridades específicas",
-    text: "Elaboradas a partir de tus respuestas. No es un consejo genérico: es un punto de partida concreto para tu operación.",
+    title: "Sus 3 prioridades específicas",
+    text: "Elaboradas a partir de sus respuestas como punto de partida para evaluar mejoras en su operación.",
   },
   {
     icon: GoAlert,
-    title: "El error típico de tu nivel",
-    text: "El que lleva a la mayoría de las pymes a invertir en tecnología que después no se usa. Identificarlo a tiempo evita gastos innecesarios.",
+    title: "Un riesgo a revisar según su nivel",
+    text: "Una situación que conviene revisar antes de invertir en tecnología. Requiere validación con los responsables del proceso.",
   },
 ];
 
 export function QueTeLlevas() {
   return (
     <SectionShell
-      label="Qué te llevás"
-      title="En 3 minutos te llevás:"
+      label="Qué recibe"
+      title="Qué incluye el resultado:"
       bg="gray.50"
     >
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>

@@ -19,6 +19,7 @@ const services = [
   {
     icon: LuGitBranch,
     title: "Consultoría",
+    href: "/servicios/consultoria-ia-pymes.html",
     headline: "Definimos dónde aplicar IA y en qué orden.",
     description:
       "Analizamos tus procesos y priorizamos según impacto, costo y simplicidad.",
@@ -30,6 +31,7 @@ const services = [
   {
     icon: LuMonitor,
     title: "Capacitaciones",
+    href: "/servicios/capacitacion-ia-empresas.html",
     headline: "Preparamos a tu equipo para usar IA con criterio.",
     description:
       "Talleres prácticos con las tareas reales de cada área, sin tecnicismos.",
@@ -40,6 +42,7 @@ const services = [
   {
     icon: LuCode2,
     title: "Desarrollos",
+    href: "/servicios/automatizacion-ia.html",
     headline: "Implementamos soluciones de IA y automatización a medida.",
     description:
       "Asistentes y flujos conectados a las herramientas que ya usás, con tecnología simple de mantener.",
@@ -52,6 +55,7 @@ const services = [
 function ServiceColumn({
   icon: Icon,
   title,
+  href,
   headline,
   description,
   receives,
@@ -123,7 +127,9 @@ function ServiceColumn({
         fontWeight="600"
         color="#171827"
       >
-        {title}
+        <Box as="a" href={href} color="inherit" _hover={{ textDecoration: "underline" }}>
+          {title}
+        </Box>
       </Heading>
 
       <Text

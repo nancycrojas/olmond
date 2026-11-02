@@ -12,11 +12,11 @@ import { SectionShell } from "../ui/SectionShell.jsx";
 const faqs = [
   {
     q: "¿Es gratuito?",
-    a: "Sí, completamente. El diagnóstico, el informe con tu nivel de madurez y tus 3 prioridades no tienen costo ni compromiso posterior. Es la primera etapa de la metodología de trabajo de Olmond Consulting: antes de hablar de soluciones, entender el punto de partida. Si después del resultado querés profundizar, la decisión es tuya.",
+    a: "Sí, completamente. El diagnóstico, el informe con su nivel de madurez y sus 3 prioridades no tienen costo ni compromiso posterior. Es la primera etapa de la metodología de trabajo de Olmond Consulting: antes de hablar de soluciones, entender el punto de partida. Si después del resultado desea profundizar, la decisión es suya.",
   },
   {
     q: "¿Qué tratamiento se le da a mis datos?",
-    a: "Tus respuestas y tu correo se utilizan exclusivamente para generar y enviarte el resultado del diagnóstico. No se ceden a terceros ni se usan con fines comerciales ajenos a este proceso. Eventualmente podés recibir contenido de valor sobre IA aplicada a pymes, y en cualquier momento podés darte de baja con un clic.",
+    a: "Sus respuestas y su correo se utilizan exclusivamente para generar y enviarle el resultado del diagnóstico. No se ceden a terceros ni se usan con fines comerciales ajenos a este proceso. Eventualmente puede recibir contenido de valor sobre IA aplicada a pymes, y en cualquier momento puede darse de baja con un clic.",
   },
   {
     q: "¿Sirve si mi empresa es muy chica?",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "¿Necesito saber de tecnología para responderlo?",
-    a: "No, en absoluto. Las 12 preguntas están pensadas para dueños y directivos, no para perfiles técnicos. Se refieren a cómo opera tu empresa en el día a día: cómo se cargan los datos, cómo se responde a los clientes, cómo se arman los reportes. Si conocés tu negocio, tenés todo lo necesario para completarlo.",
+    a: "No, en absoluto. Las 12 preguntas están pensadas para dueños y directivos, no para perfiles técnicos. Se refieren a cómo opera su empresa en el día a día: cómo se cargan los datos, cómo se responde a los clientes, cómo se arman los reportes. Si conoce su negocio, tiene todo lo necesario para completarlo.",
   },
 ];
 

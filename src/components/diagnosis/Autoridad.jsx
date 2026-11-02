@@ -7,7 +7,7 @@ export function Autoridad() {
   return (
     <SectionShell
       label="La metodología detrás del diagnóstico"
-      title="Un modelo de evaluación probado, adaptado a la realidad operativa de las pymes"
+      title="Una primera evaluación de la preparación de su empresa para aplicar IA"
     >
       <Flex
         gap={10}
@@ -25,25 +25,24 @@ export function Autoridad() {
         />
         <Box maxW="2xl">
           <Text fontSize="lg" mb={4}>
-            Este diagnóstico se basa en una metodología propia de evaluación de
-            madurez en IA, alineada con los marcos internacionales de referencia
-            y adaptada a la realidad operativa de las pymes.
+            Este diagnóstico organiza una primera evaluación de procesos, datos,
+            equipo y uso de herramientas para orientar la adopción de IA
+            en pequeñas y medianas empresas.
           </Text>
           <GradientDivider />
           <Text fontSize="lg" color="gray.600">
             El modelo evalúa las dimensiones clave que determinan la capacidad
             de una empresa para adoptar inteligencia artificial con resultados:
             sus procesos, sus datos, su equipo y su forma de tomar decisiones. A
-            partir de tus respuestas, el sistema identifica tu nivel de madurez
-            y las prioridades con mayor impacto para tu etapa.
+            partir de sus respuestas, el sistema orienta sobre su nivel de madurez
+            y las prioridades a evaluar en su etapa.
           </Text>
           <GradientDivider />
           <Text fontSize="lg" color="gray.600">
-            No es un test genérico: fue desarrollado y perfeccionado a partir de
-            la experiencia de implementación en pymes reales y de la formación
-            de profesionales en programas universitarios de IA aplicada. Cada
-            resultado refleja lo que funciona en empresas como la tuya, no
-            teoría importada de otros contextos.
+            El resultado depende de la información declarada. Es una orientación
+            inicial: las recomendaciones deben contrastarse con los datos,
+            las restricciones y las personas responsables de cada proceso
+            antes de tomar una decisión de implementación.
           </Text>
         </Box>
       </Flex>

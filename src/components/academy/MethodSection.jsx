@@ -102,7 +102,7 @@ export const MethodSection = () => {
               color="gray.600"
               maxW="3xl"
             >
-              Para aumentar tu Productividad entre un 20% y un 50%
+              Para aplicar IA a tareas concretas y medir los resultados
             </Text>
           </VStack>
 
