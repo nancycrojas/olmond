@@ -1,3 +1,44 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    {
+      "source": "/diagnostico",
+      "destination": "/diagnostico/index.html"
+    },
+    {
+      "source": "/academy",
+      "destination": "/academy/index.html"
+    },
+    {
+      "source": "/revision-contenido",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/propuesta-distribuidora-lagostena",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/propuesta-maprin",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/propuesta-colegio-de-abogados-san-martin",
+      "destination": "/spa.html"
+    },
+    {
+      "source": "/propuesta-de-workshop",
+      "destination": "/propuesta-de-workshop/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/servicios/agentes-ia-empresas.html",
+      "destination": "/servicios/automatizacion-ia.html",
+      "permanent": true
+    },
+    {
+      "source": "/servicios/chatbot-ia-whatsapp.html",
+      "destination": "/servicios/automatizacion-ia.html",
+      "permanent": true
+    }
+  ]
 }
