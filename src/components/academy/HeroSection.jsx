@@ -48,15 +48,15 @@ export const HeroSection = () => {
           maxW="5xl"
           lineHeight="shorter"
         >
-          Cómo Profesionales No Técnicos Aumentan Entre Un{" "}
+          Inteligencia artificial aplicada para{" "}
           <Box
             as="span"
             bgGradient="linear(to-r, #4318FF, #EC4899)"
             bgClip="text"
           >
-            20% y 50%
+            profesionales no técnicos
           </Box>{" "}
-          Su Productividad y Eficiencia Con Inteligencia Artificial
+          con Olmond Academy
         </Heading>
 
         <Text
