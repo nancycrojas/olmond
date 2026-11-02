@@ -42,7 +42,7 @@ export function Hero() {
       />
       <Container maxW="5xl" position="relative" py={{ base: 24, md: 36 }}>
         <MotionBox
-          initial={{ opacity: 0, y: 24 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
