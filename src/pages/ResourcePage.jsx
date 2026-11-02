@@ -45,7 +45,7 @@ export function ResourcePage() {
             <Heading as="h1" mt={6} maxW="1000px" fontSize={{ base: "40px", sm: "48px", md: "60px", lg: "68px" }}
               fontWeight="500" letterSpacing="-.045em" lineHeight="1.08">
               {page.title}{" "}
-              <Box as="span" display="block" color="#BCA6FF">{page.accent}</Box>
+              <Box as="span" display="block" bgImage={BRAND_GRADIENT} bgClip="text">{page.accent}</Box>
             </Heading>
             <Text mt={7} maxW="760px" fontSize={{ base: "18px", md: "21px" }} lineHeight="1.65" color="#C8CAD9">
               {page.intro}
@@ -132,6 +132,10 @@ export function ResourcePage() {
                 </Text>
               </Box>
               <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" display="inline-flex"
+                data-geo-event="contact_click"
+                onClick={() => window.dispatchEvent(new CustomEvent("olmond:geo", {
+                  detail: { event: "contact_click", page_path: pathname },
+                }))}
                 alignItems="center" justifyContent="center" gap={3} minH="54px" px={8} py={3}
                 w={{ base: "full", sm: "fit-content" }} borderRadius="full" bgImage={BRAND_GRADIENT}
                 color="white" fontWeight="700" fontSize="17px" boxShadow="0 12px 30px rgba(103,78,210,.18)"
