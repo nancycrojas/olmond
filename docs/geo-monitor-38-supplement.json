@@ -1,0 +1,291 @@
+{
+  "version": "geo38-v1",
+  "status": "PREPARADO_NO_ACTIVADO",
+  "purpose": "Panel complementario; conservar geo_prompts IDs 1–30 y W44 para comparación longitudinal. No reemplazar el monitor existente.",
+  "engines_requested": [
+    "ChatGPT",
+    "Claude",
+    "Perplexity",
+    "Gemini",
+    "Google AI Mode",
+    "Copilot"
+  ],
+  "queries": [
+    {
+      "id": "geo38-01",
+      "consulta": "Olmond",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-02",
+      "consulta": "Olmond Consulting",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-03",
+      "consulta": "Olmond consultora IA",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-04",
+      "consulta": "Olmond Academy",
+      "cluster": "A",
+      "pagina_objetivo": "/academy",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-05",
+      "consulta": "Olmon consulting",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": true
+    },
+    {
+      "id": "geo38-06",
+      "consulta": "Almond consulting IA",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": true
+    },
+    {
+      "id": "geo38-07",
+      "consulta": "Olmont consultora",
+      "cluster": "A",
+      "pagina_objetivo": "/",
+      "es_variante_marca": true
+    },
+    {
+      "id": "geo38-08",
+      "consulta": "Patricio Rouan",
+      "cluster": "B",
+      "pagina_objetivo": "/equipo/patricio-rouan.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-09",
+      "consulta": "Patricio Rouan IA",
+      "cluster": "B",
+      "pagina_objetivo": "/equipo/patricio-rouan.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-10",
+      "consulta": "Patricio Rouan SAIA",
+      "cluster": "B",
+      "pagina_objetivo": "/equipo/patricio-rouan.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-11",
+      "consulta": "Patricio Rouan UCEMA",
+      "cluster": "B",
+      "pagina_objetivo": "/equipo/patricio-rouan.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-12",
+      "consulta": "Patricio Rouan UTN",
+      "cluster": "B",
+      "pagina_objetivo": "/equipo/patricio-rouan.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-13",
+      "consulta": "consultoría IA pymes Argentina",
+      "cluster": "C",
+      "pagina_objetivo": "/servicios/consultoria-ia-pymes.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-14",
+      "consulta": "consultora inteligencia artificial Buenos Aires",
+      "cluster": "C",
+      "pagina_objetivo": "/servicios/consultoria-ia-pymes.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-15",
+      "consulta": "consultoría en inteligencia artificial para empresas",
+      "cluster": "C",
+      "pagina_objetivo": "/servicios/consultoria-ia-pymes.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-16",
+      "consulta": "implementar IA en mi empresa",
+      "cluster": "C",
+      "pagina_objetivo": "/servicios/consultoria-ia-pymes.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-17",
+      "consulta": "automatización de procesos con IA",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-18",
+      "consulta": "automatización con IA para pymes",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-19",
+      "consulta": "desarrollo de agentes IA para empresas",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-20",
+      "consulta": "agencia de automatización Argentina",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-21",
+      "consulta": "integrar ChatGPT con WhatsApp",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-22",
+      "consulta": "chatbot con IA para pymes",
+      "cluster": "D",
+      "pagina_objetivo": "/servicios/automatizacion-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-23",
+      "consulta": "consultor n8n Argentina",
+      "cluster": "E",
+      "pagina_objetivo": "/servicios/automatizacion-n8n.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-24",
+      "consulta": "experto n8n Buenos Aires",
+      "cluster": "E",
+      "pagina_objetivo": "/servicios/automatizacion-n8n.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-25",
+      "consulta": "automatizar con n8n",
+      "cluster": "E",
+      "pagina_objetivo": "/servicios/automatizacion-n8n.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-26",
+      "consulta": "capacitación IA para empresas",
+      "cluster": "F",
+      "pagina_objetivo": "/servicios/capacitacion-ia-empresas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-27",
+      "consulta": "workshop IA para equipos",
+      "cluster": "F",
+      "pagina_objetivo": "/servicios/capacitacion-ia-empresas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-28",
+      "consulta": "curso IA in company Buenos Aires",
+      "cluster": "F",
+      "pagina_objetivo": "/servicios/capacitacion-ia-empresas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-29",
+      "consulta": "capacitación ChatGPT empresas",
+      "cluster": "F",
+      "pagina_objetivo": "/servicios/capacitacion-ia-empresas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-30",
+      "consulta": "formación en IA para empleados",
+      "cluster": "F",
+      "pagina_objetivo": "/servicios/capacitacion-ia-empresas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-31",
+      "consulta": "diagnóstico de IA para empresas",
+      "cluster": "G",
+      "pagina_objetivo": "/diagnostico",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-32",
+      "consulta": "cómo usar IA en mi pyme",
+      "cluster": "H",
+      "pagina_objetivo": "/guias/como-empezar-con-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-33",
+      "consulta": "por dónde empezar con IA en mi empresa",
+      "cluster": "H",
+      "pagina_objetivo": "/guias/como-empezar-con-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-34",
+      "consulta": "cuánto cuesta implementar IA en una pyme",
+      "cluster": "H",
+      "pagina_objetivo": "/guias/cuanto-cuesta-implementar-ia.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-35",
+      "consulta": "cómo automatizar tareas repetitivas",
+      "cluster": "H",
+      "pagina_objetivo": "/guias/automatizar-tareas-repetitivas.html",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-36",
+      "consulta": "partner OpenAI Argentina",
+      "cluster": "I",
+      "pagina_objetivo": "EXTERNO",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-37",
+      "consulta": "consultora IA cerca de mí",
+      "cluster": "I",
+      "pagina_objetivo": "EXTERNO",
+      "es_variante_marca": false
+    },
+    {
+      "id": "geo38-38",
+      "consulta": "qué consultora de IA para pymes me recomendás en Argentina",
+      "cluster": "I",
+      "pagina_objetivo": "EXTERNO",
+      "es_variante_marca": false
+    }
+  ],
+  "measurement_rules": [
+    "Guardar modelo, fecha, país, idioma, prompt, evidencia y URLs citadas.",
+    "Separar marca/persona, variantes de marca y consultas sin marca.",
+    "Dividir menciones válidas por respuestas válidas; reportar intentos y fallos aparte.",
+    "No interpretar un error, timeout, rechazo o respuesta sin búsqueda como ausencia de marca.",
+    "Registrar null si no hay ranking explícito; no inferir posición de una frase.",
+    "No equiparar un modelo API con la interfaz de consumo del proveedor.",
+    "Conservar 30 preguntas históricas y ejecutar el panel de 38 como versión adicional.",
+    "No reintentar indefinidamente; para rate_limit respetar Retry-After y backoff; insufficient_quota requiere resolver cuota o facturación."
+  ]
+}
