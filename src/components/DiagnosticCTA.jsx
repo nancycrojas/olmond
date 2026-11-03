@@ -75,6 +75,7 @@ export const DiagnosticCTA = () => {
         }}
       >
         <Grid
+          data-reveal=""
           templateColumns={{
             base: "1fr",
             lg: "0.95fr 1.05fr",
@@ -173,7 +174,8 @@ export const DiagnosticCTA = () => {
                 md: "18px",
               }}
             >
-              Hacer el diagnóstico gratis &nbsp; ↗
+              Hacer el diagnóstico gratis &nbsp;
+              <Box as="span" data-motion-arrow="" aria-hidden="true">↗</Box>
             </CTA>
 
             <Text
