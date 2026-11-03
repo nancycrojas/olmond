@@ -22,6 +22,7 @@ export function OpenAIPartnerNetwork() {
     >
       <Container maxW="6xl">
         <Flex
+          data-reveal=""
           direction={{ base: "column", lg: "row" }}
           align="center"
           gap={{ base: 10, md: 12, lg: 16 }}
@@ -53,6 +54,7 @@ export function OpenAIPartnerNetwork() {
               en la adopción práctica y responsable de inteligencia artificial.
             </Text>
             <Link
+              data-motion-cta=""
               display="inline-flex"
               alignItems="center"
               gap={2}
@@ -67,7 +69,7 @@ export function OpenAIPartnerNetwork() {
               _focusVisible={{ outline: "3px solid #805AD5", outlineOffset: "4px" }}
             >
               Conversemos sobre tu empresa
-              <ArrowForwardIcon aria-hidden="true" />
+              <ArrowForwardIcon data-motion-arrow="" aria-hidden="true" />
             </Link>
           </Box>
           <Flex

@@ -1,0 +1,94 @@
+/* Scoped to Home. No hidden initial state, layout animation, or continuous loops. */
+[data-motion-root] {
+  --olmond-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-motion-root] [data-motion-cta] {
+  transition: color 180ms ease, background-color 180ms ease,
+    opacity 180ms ease, box-shadow 180ms ease;
+}
+
+[data-motion-root] [data-motion-cta]:focus-visible {
+  outline: 2px solid #814bff;
+  outline-offset: 4px;
+}
+
+[data-motion-root] [data-motion-card] {
+  transition: background-color 220ms ease, box-shadow 220ms ease;
+}
+
+[data-motion-root] [data-motion-card]:focus-within {
+  background-color: #f1edff;
+  box-shadow: 0 16px 38px rgba(91, 65, 177, 0.12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-motion-root] [data-revealed="true"]:not([data-reveal="portrait"]) {
+    animation: olmond-reveal 700ms var(--olmond-motion-ease)
+      var(--olmond-reveal-delay, 0ms) backwards;
+  }
+
+  [data-motion-root] [data-reveal="portrait"][data-revealed="true"] img {
+    transform-origin: 50% 40%;
+    animation: olmond-portrait 1800ms cubic-bezier(0.25, 0.45, 0.35, 1) both;
+  }
+
+  [data-motion-root] [data-reveal="portrait"][data-revealed="true"]::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    box-shadow: 0 0 0 1px rgba(129, 75, 255, 0.2),
+      0 12px 38px rgba(129, 75, 255, 0.1);
+    pointer-events: none;
+    animation: olmond-halo 1400ms ease-out backwards;
+  }
+
+  [data-motion-root] [data-motion-cta] {
+    transition: transform 180ms ease, color 180ms ease,
+      background-color 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+  }
+
+  [data-motion-root] [data-motion-arrow] {
+    transition: transform 180ms ease;
+  }
+
+  [data-motion-root] [data-motion-cta]:focus-visible [data-motion-arrow] {
+    transform: translateX(3px);
+  }
+
+  @media (min-width: 48em) {
+    [data-motion-root] [data-reveal-order="1"] { --olmond-reveal-delay: 60ms; }
+    [data-motion-root] [data-reveal-order="2"] { --olmond-reveal-delay: 120ms; }
+    [data-motion-root] [data-reveal-order="3"] { --olmond-reveal-delay: 180ms; }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    [data-motion-root] [data-motion-cta]:hover [data-motion-arrow] {
+      transform: translateX(3px);
+    }
+  }
+}
+
+/* Override existing hover translations on touch devices and for reduced motion. */
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  [data-motion-root] [data-motion-cta]:is(:hover, :focus-visible, :active),
+  [data-motion-root] [data-motion-card]:is(:hover, :focus-within) [data-service-icon] {
+    transform: none;
+  }
+}
+
+@keyframes olmond-reveal {
+  from { opacity: 0.65; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes olmond-portrait {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes olmond-halo {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

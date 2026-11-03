@@ -36,7 +36,7 @@ const steps = [
 
 const ProcessStep = ({ number, title, description, deliverable }) => {
   return (
-    <Box w="full" minW={0} textAlign="center">
+    <Box data-reveal="" data-reveal-order={Number(number) - 1} w="full" minW={0} textAlign="center">
       {/* Línea superior */}
       <Box position="relative" h="1px" bg="whiteAlpha.200" mb={7}>
         <Box
@@ -215,6 +215,7 @@ export const HowWeWork = () => {
 
         {/* Título */}
         <Heading
+          data-reveal=""
           as="h2"
           mt={{ base: 6, md: 7 }}
           maxW="1100px"

@@ -41,6 +41,7 @@ const variants = {
 export function CTA({ variant = "primary", children, ...props }) {
   return (
     <Button
+      data-motion-cta=""
       size="lg"
       px={8}
       py={7}

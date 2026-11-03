@@ -64,6 +64,9 @@ function ServiceColumn({
 }) {
   return (
     <Flex
+      data-reveal=""
+      data-reveal-order={index}
+      data-motion-card=""
       role="group"
       position="relative"
       zIndex={1}
@@ -87,8 +90,6 @@ function ServiceColumn({
         md: "none",
       }}
       borderColor="#E1E3EC"
-      transition="all 0.3s cubic-bezier(0.22, 1, 0.36, 1)"
-      transformOrigin="center"
       _hover={{
         bg: "#F1EDFF",
         zIndex: 2,
@@ -97,6 +98,7 @@ function ServiceColumn({
     >
       {/* Ícono */}
       <Flex
+        data-service-icon=""
         w="64px"
         h="64px"
         align="center"
@@ -105,9 +107,9 @@ function ServiceColumn({
         bgImage={BRAND_GRADIENT}
         color="white"
         boxShadow="0 12px 28px rgba(104, 72, 196, 0.18)"
-        transition="all 0.3s ease"
+        transition="transform 220ms ease, box-shadow 220ms ease"
         _groupHover={{
-          transform: "translateY(-4px) scale(1.04)",
+          transform: "translateY(-2px)",
           boxShadow: "0 18px 38px rgba(104, 72, 196, 0.28)",
         }}
       >
@@ -229,6 +231,7 @@ export const WhatWeDo = () => {
       >
         {/* Encabezado */}
         <Grid
+          data-reveal=""
           templateColumns={{
             base: "1fr",
             lg: "1.15fr 0.85fr",
@@ -404,6 +407,7 @@ export const WhatWeDo = () => {
             </Text>
 
             <Flex
+              data-motion-cta=""
               as="a"
               href="https://wa.me/5491133872411?text=Hola%2C%20vi%20la%20web%20de%20Olmond%20Consulting%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20c%C3%B3mo%20aplicar%20IA%20en%20mi%20empresa."
               target="_blank"
@@ -427,7 +431,6 @@ export const WhatWeDo = () => {
               fontWeight="700"
               textDecoration="none"
               boxShadow="0 12px 30px rgba(103, 78, 210, 0.18)"
-              transition="all 0.25s ease"
               _hover={{
                 textDecoration: "none",
                 color: "white",

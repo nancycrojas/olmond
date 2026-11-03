@@ -27,6 +27,7 @@ const principles = [
 function Principle({ title, description }) {
   return (
     <Box
+      data-reveal=""
       pt={{
         base: 7,
         md: 8,
@@ -120,6 +121,7 @@ export const WhyOlmond = () => {
       >
         {/* Encabezado */}
         <Grid
+          data-reveal=""
           templateColumns={{
             base: "1fr",
             lg: "1.05fr 0.95fr",

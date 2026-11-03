@@ -123,6 +123,7 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
           <Flex direction="column" align="center" justify="center">
             {/* Foto */}
             <Box
+              data-reveal="portrait"
               position="relative"
               w={{
                 base: "260px",
@@ -143,16 +144,18 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
               borderColor="#DCE4FF"
               boxShadow="0 18px 50px rgba(37, 45, 82, 0.08)"
             >
-              <Image
-                src={photoSrc}
-                alt="Patricio Rouan"
-                w="100%"
-                h="100%"
-                borderRadius="full"
-                objectFit="cover"
-                objectPosition="center"
-                display="block"
-              />
+              <Box w="full" h="full" borderRadius="full" overflow="hidden">
+                <Image
+                  src={photoSrc}
+                  alt="Patricio Rouan"
+                  w="100%"
+                  h="100%"
+                  borderRadius="full"
+                  objectFit="cover"
+                  objectPosition="center"
+                  display="block"
+                />
+              </Box>
             </Box>
 
             {/* Nombre */}
@@ -193,7 +196,7 @@ export const AboutPatricio = ({ photoSrc = "/patricio-rouan.jpeg" }) => {
           {/* =========================================
               COLUMNA DERECHA
           ========================================= */}
-          <Box>
+          <Box data-reveal="">
             {/* Etiqueta */}
             <Flex
               align="center"
