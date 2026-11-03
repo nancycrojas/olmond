@@ -98,6 +98,7 @@ export const GeneralFAQ = () => {
         >
           {/* Columna izquierda */}
           <Box
+            data-reveal=""
             position={{
               base: "static",
               lg: "sticky",
