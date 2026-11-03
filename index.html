@@ -9,6 +9,34 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Olmond Consulting</title>
+    <style>
+      @media (prefers-reduced-motion: no-preference) {
+        @supports (animation-timeline: view()) and (animation-range: entry 0% cover 50%) {
+          #nosotros img[alt="Patricio Rouan"] {
+            animation: olmond-portrait-zoom linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 50%;
+          }
+
+          #como-trabajamos h2,
+          #por-que-olmond h2 {
+            animation: olmond-heading-lift ease-out both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 35%;
+          }
+        }
+      }
+
+      @keyframes olmond-portrait-zoom {
+        from { transform: scale(1); }
+        to { transform: scale(1.06); }
+      }
+
+      @keyframes olmond-heading-lift {
+        from { transform: translateY(8px); }
+        to { transform: translateY(0); }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
