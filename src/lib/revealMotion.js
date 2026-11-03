@@ -7,28 +7,65 @@ export function observeReveals(root) {
   if (!preference.matches) return () => {};
 
   const targets = [...root.querySelectorAll("[data-reveal]")];
-  const observer = new view.IntersectionObserver((entries) => {
-    for (const { target, isIntersecting } of entries) {
-      if (!isIntersecting || !preference.matches) continue;
-      if (!target.dataset.revealed) target.dataset.revealed = "true";
-      observer.unobserve(target);
-    }
-  }, { threshold: 0.12 });
+  const portrait = targets.find((target) => target.dataset.reveal === "portrait");
+  const scaleProperty = "--olmond-portrait-scale";
+  let frame = null;
+  let active = true;
 
-  for (const target of targets) {
-    if (!target.dataset.revealed) observer.observe(target);
+  const updatePortrait = () => {
+    frame = null;
+    if (!active || !preference.matches || !portrait?.dataset.revealed) return;
+    const { top, height } = portrait.getBoundingClientRect();
+    const position = (top + height / 2) / view.innerHeight;
+    const progress = Math.max(0, 1 - Math.abs(position - 0.5) / 0.45);
+    const eased = progress * progress * (3 - 2 * progress);
+    portrait.style.setProperty(scaleProperty, (1 + 0.1 * eased).toFixed(4));
+  };
+
+  const schedulePortrait = () => {
+    if (!active || !preference.matches || !portrait?.dataset.revealed || frame !== null) return;
+    frame = view.requestAnimationFrame(updatePortrait);
+  };
+
+  const observer = new view.IntersectionObserver((entries) => {
+    if (!active || !preference.matches) return;
+    for (const { target, isIntersecting } of entries) {
+      if (isIntersecting) {
+        target.dataset.revealed = "true";
+        if (target === portrait) schedulePortrait();
+      } else {
+        delete target.dataset.revealed;
+        if (target === portrait) portrait.style.removeProperty(scaleProperty);
+      }
+    }
+  });
+
+  for (const target of targets) observer.observe(target);
+  if (portrait) {
+    view.addEventListener("scroll", schedulePortrait, { passive: true });
+    view.addEventListener("resize", schedulePortrait);
   }
 
-  // Stop immediately if the OS preference changes; do not replay completed reveals.
-  const handlePreferenceChange = () => {
-    if (preference.matches) return;
+  const stop = () => {
+    if (!active) return;
+    active = false;
     observer.disconnect();
-    for (const target of targets) target.dataset.revealed = "static";
+    if (frame !== null) view.cancelAnimationFrame(frame);
+    if (portrait) {
+      view.removeEventListener("scroll", schedulePortrait);
+      view.removeEventListener("resize", schedulePortrait);
+      portrait.style.removeProperty(scaleProperty);
+    }
+    for (const target of targets) delete target.dataset.revealed;
+  };
+
+  const handlePreferenceChange = () => {
+    if (!preference.matches) stop();
   };
   preference.addEventListener?.("change", handlePreferenceChange);
 
   return () => {
-    observer.disconnect();
+    stop();
     preference.removeEventListener?.("change", handlePreferenceChange);
   };
 }
