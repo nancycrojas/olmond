@@ -86,8 +86,8 @@ export function FormularioScorecard() {
             Respuestas recibidas para preparar su diagnóstico
           </Heading>
           <Text fontSize="lg" color="gray.600" mb={6}>
-            Revise también las carpetas Promociones o Spam. El envío puede
-            demorar unos minutos. Si no recibe el resultado, puede contactar
+            El resultado se envía por correo. Revise también las carpetas
+            Promociones o Spam. Si no recibe el resultado, puede contactar
             a Olmond en hola@olmondconsulting.com.
           </Text>
           <Text fontSize="lg" fontWeight="600">
@@ -195,7 +195,7 @@ export function FormularioScorecard() {
             isLoading={status === "sending"}
             loadingText="Enviando..."
           >
-            Ver mi diagnóstico
+            Solicitar mi diagnóstico
           </CTA>
           <Text fontSize="sm" color="gray.500">
             Sus datos se usan para enviarle el resultado y contenido
