@@ -120,11 +120,11 @@ export const DiagnosticCTA = () => {
               fontWeight="500"
               color="white"
             >
-              Empecemos
+              Conocé
               <Box as="span" display="block">
-                por{" "}
+                tu{" "}
                 <Box as="span" bgImage={BRAND_GRADIENT} bgClip="text">
-                  un proceso.
+                  madurez en IA.
                 </Box>
               </Box>
             </Heading>
@@ -143,9 +143,9 @@ export const DiagnosticCTA = () => {
               lineHeight="1.7"
               color="whiteAlpha.600"
             >
-              Contestá unas preguntas y sabé si conviene automatizarlo.
+              Respondé 12 preguntas sobre procesos, datos y equipo.
               <Box as="span" display="block">
-                Resultado inmediato, sin compromiso.
+                Orientación inicial por correo, sin compromiso.
               </Box>
             </Text>
           </Box>
@@ -188,7 +188,7 @@ export const DiagnosticCTA = () => {
               lineHeight="1.5"
               color="whiteAlpha.400"
             >
-              Si tu proceso no califica, te lo decimos.
+              No reemplaza la evaluación de un proceso concreto.
             </Text>
           </Stack>
         </Grid>
